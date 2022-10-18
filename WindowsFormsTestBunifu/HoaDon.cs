@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsTestBunifu
 {
-    public partial class HoaDon : Form
+    public partial class frmHoaDon : Form
     {
-        public HoaDon()
+        public frmHoaDon()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsTestBunifu
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btxtUserName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btxtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -56,10 +56,9 @@
             this.btxtUserName.LineIdleColor = System.Drawing.Color.Gray;
             this.btxtUserName.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.btxtUserName.LineThickness = 3;
-            this.btxtUserName.Location = new System.Drawing.Point(158, 115);
-            this.btxtUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.btxtUserName.Location = new System.Drawing.Point(118, 93);
             this.btxtUserName.Name = "btxtUserName";
-            this.btxtUserName.Size = new System.Drawing.Size(341, 44);
+            this.btxtUserName.Size = new System.Drawing.Size(256, 36);
             this.btxtUserName.TabIndex = 2;
             this.btxtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -76,10 +75,9 @@
             this.btxtPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.btxtPassword.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.btxtPassword.LineThickness = 3;
-            this.btxtPassword.Location = new System.Drawing.Point(158, 213);
-            this.btxtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.btxtPassword.Location = new System.Drawing.Point(118, 173);
             this.btxtPassword.Name = "btxtPassword";
-            this.btxtPassword.Size = new System.Drawing.Size(341, 44);
+            this.btxtPassword.Size = new System.Drawing.Size(256, 36);
             this.btxtPassword.TabIndex = 3;
             this.btxtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btxtPassword.OnValueChanged += new System.EventHandler(this.btxtPassword_OnValueChanged);
@@ -89,9 +87,10 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(206, 18);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(154, 15);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(186, 34);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(143, 26);
             this.bunifuCustomLabel1.TabIndex = 7;
             this.bunifuCustomLabel1.Text = "ĐĂNG NHẬP";
             // 
@@ -100,9 +99,10 @@
             this.blblFogotPassword.AutoSize = true;
             this.blblFogotPassword.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blblFogotPassword.ForeColor = System.Drawing.Color.SeaGreen;
-            this.blblFogotPassword.Location = new System.Drawing.Point(416, 359);
+            this.blblFogotPassword.Location = new System.Drawing.Point(312, 292);
+            this.blblFogotPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.blblFogotPassword.Name = "blblFogotPassword";
-            this.blblFogotPassword.Size = new System.Drawing.Size(117, 16);
+            this.blblFogotPassword.Size = new System.Drawing.Size(96, 15);
             this.blblFogotPassword.TabIndex = 10;
             this.blblFogotPassword.Text = "quên mật khẩu ?";
             // 
@@ -111,9 +111,10 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(125, 478);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(94, 388);
+            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(205, 19);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(173, 17);
             this.bunifuCustomLabel2.TabIndex = 11;
             this.bunifuCustomLabel2.Text = "Bạn chưa có tài khoản ?";
             // 
@@ -122,9 +123,10 @@
             this.blblRegister.AutoSize = true;
             this.blblRegister.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blblRegister.ForeColor = System.Drawing.Color.SeaGreen;
-            this.blblRegister.Location = new System.Drawing.Point(347, 475);
+            this.blblRegister.Location = new System.Drawing.Point(260, 386);
+            this.blblRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.blblRegister.Name = "blblRegister";
-            this.blblRegister.Size = new System.Drawing.Size(86, 23);
+            this.blblRegister.Size = new System.Drawing.Size(71, 21);
             this.blblRegister.TabIndex = 12;
             this.blblRegister.Text = "Đăng kí";
             // 
@@ -133,9 +135,10 @@
             this.bimgUser.BackColor = System.Drawing.SystemColors.Control;
             this.bimgUser.Image = ((System.Drawing.Image)(resources.GetObject("bimgUser.Image")));
             this.bimgUser.ImageActive = null;
-            this.bimgUser.Location = new System.Drawing.Point(77, 115);
+            this.bimgUser.Location = new System.Drawing.Point(58, 93);
+            this.bimgUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bimgUser.Name = "bimgUser";
-            this.bimgUser.Size = new System.Drawing.Size(57, 56);
+            this.bimgUser.Size = new System.Drawing.Size(43, 46);
             this.bimgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bimgUser.TabIndex = 14;
             this.bimgUser.TabStop = false;
@@ -146,9 +149,10 @@
             this.bimgEye.BackColor = System.Drawing.SystemColors.Control;
             this.bimgEye.Image = ((System.Drawing.Image)(resources.GetObject("bimgEye.Image")));
             this.bimgEye.ImageActive = null;
-            this.bimgEye.Location = new System.Drawing.Point(506, 243);
+            this.bimgEye.Location = new System.Drawing.Point(380, 197);
+            this.bimgEye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bimgEye.Name = "bimgEye";
-            this.bimgEye.Size = new System.Drawing.Size(27, 26);
+            this.bimgEye.Size = new System.Drawing.Size(20, 21);
             this.bimgEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bimgEye.TabIndex = 15;
             this.bimgEye.TabStop = false;
@@ -173,10 +177,10 @@
             this.bbtnLogin.IdleFillColor = System.Drawing.Color.White;
             this.bbtnLogin.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bbtnLogin.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bbtnLogin.Location = new System.Drawing.Point(212, 316);
-            this.bbtnLogin.Margin = new System.Windows.Forms.Padding(5);
+            this.bbtnLogin.Location = new System.Drawing.Point(159, 257);
+            this.bbtnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bbtnLogin.Name = "bbtnLogin";
-            this.bbtnLogin.Size = new System.Drawing.Size(193, 59);
+            this.bbtnLogin.Size = new System.Drawing.Size(145, 48);
             this.bbtnLogin.TabIndex = 1;
             this.bbtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -185,19 +189,20 @@
             this.bimgPassword.BackColor = System.Drawing.SystemColors.Control;
             this.bimgPassword.Image = ((System.Drawing.Image)(resources.GetObject("bimgPassword.Image")));
             this.bimgPassword.ImageActive = null;
-            this.bimgPassword.Location = new System.Drawing.Point(77, 213);
+            this.bimgPassword.Location = new System.Drawing.Point(58, 173);
+            this.bimgPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bimgPassword.Name = "bimgPassword";
-            this.bimgPassword.Size = new System.Drawing.Size(57, 56);
+            this.bimgPassword.Size = new System.Drawing.Size(43, 46);
             this.bimgPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bimgPassword.TabIndex = 13;
             this.bimgPassword.TabStop = false;
             this.bimgPassword.Zoom = 10;
             // 
-            // Login
+            // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 552);
+            this.ClientSize = new System.Drawing.Size(446, 448);
             this.Controls.Add(this.blblRegister);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.blblFogotPassword);
@@ -208,7 +213,8 @@
             this.Controls.Add(this.btxtPassword);
             this.Controls.Add(this.btxtUserName);
             this.Controls.Add(this.bbtnLogin);
-            this.Name = "Login";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
