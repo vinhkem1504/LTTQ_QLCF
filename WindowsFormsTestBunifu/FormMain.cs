@@ -34,11 +34,20 @@ namespace WindowsFormsTestBunifu
             bpaPages.SelectedIndex = 1;
         }
 
-        private void bbtnFinace_Click(object sender, EventArgs e)
+        private void bbtnIngredientStorage_Click(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 2;
         }
 
+        private void bbtnBill_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 3;
+        }
         #endregion
+
+        private void bbtnCreateBill_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 4;
+        }
     }
 }
