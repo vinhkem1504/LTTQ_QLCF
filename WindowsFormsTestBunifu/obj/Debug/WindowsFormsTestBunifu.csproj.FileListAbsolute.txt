@@ -48,3 +48,4 @@ D:\Workspace\VS source\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFor
 D:\Workspace\VS source\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.csproj.CopyComplete
 D:\Workspace\VS source\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.exe
 D:\Workspace\VS source\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.pdb
+D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.frmPhieuNhap.resources
