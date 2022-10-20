@@ -45,5 +45,10 @@ namespace WindowsFormsTestBunifu
             
         }
         #endregion
+
+        private void bimgUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

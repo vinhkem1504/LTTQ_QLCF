@@ -49,5 +49,12 @@ namespace WindowsFormsTestBunifu
         {
             bpaPages.SelectedIndex = 4;
         }
+
+        private void bbtnSale_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 5;
+        }
+
+        
     }
 }
