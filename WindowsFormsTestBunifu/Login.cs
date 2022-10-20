@@ -17,6 +17,12 @@ namespace WindowsFormsTestBunifu
             InitializeComponent();
         }
         #region Methods
+
+        private void makeEmpty()
+        {
+
+        }
+
         #endregion
         #region events
         private void btxtPassword_OnValueChanged(object sender, EventArgs e)
@@ -44,6 +50,37 @@ namespace WindowsFormsTestBunifu
             }
             
         }
+
+        private void blblRegister_Click(object sender, EventArgs e)
+        {
+            pageLogin.SelectedIndex = 1;
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bunifuLabel3_Click(object sender, EventArgs e)
+        {
+            pageLogin.SelectedIndex = 0;
+        }
+
+
         #endregion
+
+        private void lblLogin_MouseHover(object sender, EventArgs e)
+        {
+            Label lbl = sender as Label;
+            lbl.Font = new Font(lbl.Font.Name, lbl.Font.Size +1, lbl.Font.Style);
+            lbl.Location = new Point(lbl.Location.X + 1, lbl.Location.Y - 3);
+        }
+
+        private void lblLogin_MouseLeave(object sender, EventArgs e)
+        {
+            Label lbl = sender as Label;
+            lbl.Font = new Font(lbl.Font.Name, lbl.Font.Size - 1, lbl.Font.Style);
+            lbl.Location = new Point(lbl.Location.X - 1, lbl.Location.Y +3 );
+        }
     }
 }

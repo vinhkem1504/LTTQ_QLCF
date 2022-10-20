@@ -48,3 +48,24 @@ D:\Workspace\VS source\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFor
 D:\Workspace\VS source\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.csproj.CopyComplete
 D:\Workspace\VS source\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.exe
 D:\Workspace\VS source\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.pdb
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\WindowsFormsTestBunifu.exe.config
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\WindowsFormsTestBunifu.exe
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\WindowsFormsTestBunifu.pdb
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\Bunifu_UI_v1.52.dll
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.csproj.AssemblyReference.cache
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.csproj.SuggestedBindingRedirects.cache
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.frmMain.resources
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.frmHoaDon.resources
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.frmLogin.resources
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.Properties.Resources.resources
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.csproj.GenerateResource.cache
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.exe.licenses
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.csproj.CoreCompileInputs.cache
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.csproj.CopyComplete
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.exe
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.pdb
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
