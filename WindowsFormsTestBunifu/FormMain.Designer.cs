@@ -122,7 +122,6 @@ namespace WindowsFormsTestBunifu
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.bbtnCreateBill = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label20 = new System.Windows.Forms.Label();
@@ -151,7 +150,6 @@ namespace WindowsFormsTestBunifu
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
             this.tabDoanhThu = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
             this.bunifuDataGridView3 = new Bunifu.UI.WinForms.BunifuDataGridView();
@@ -535,7 +533,7 @@ namespace WindowsFormsTestBunifu
             // bpaPages
             // 
             this.bpaPages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.bpaPages.AllowTransitions = true;
+            this.bpaPages.AllowTransitions = false;
             this.bpaPages.Controls.Add(this.tabNhanVien);
             this.bpaPages.Controls.Add(this.tabSanPham);
             this.bpaPages.Controls.Add(this.tabKhoNL);
@@ -1417,7 +1415,6 @@ namespace WindowsFormsTestBunifu
             this.panel12.Controls.Add(this.textBox21);
             this.panel12.Controls.Add(this.label23);
             this.panel12.Controls.Add(this.textBox16);
-            this.panel12.Controls.Add(this.textBox14);
             this.panel12.Controls.Add(this.textBox13);
             this.panel12.Controls.Add(this.bbtnCreateBill);
             this.panel12.Controls.Add(this.label20);
@@ -1469,14 +1466,6 @@ namespace WindowsFormsTestBunifu
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(164, 95);
             this.textBox16.TabIndex = 9;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(103, 98);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(164, 21);
-            this.textBox14.TabIndex = 7;
             // 
             // textBox13
             // 
@@ -1683,7 +1672,6 @@ namespace WindowsFormsTestBunifu
             this.panel14.Controls.Add(this.textBox17);
             this.panel14.Controls.Add(this.textBox18);
             this.panel14.Controls.Add(this.textBox19);
-            this.panel14.Controls.Add(this.textBox20);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(2, 2);
             this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -1849,15 +1837,6 @@ namespace WindowsFormsTestBunifu
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(191, 21);
             this.textBox19.TabIndex = 35;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(76, 104);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(191, 21);
-            this.textBox20.TabIndex = 34;
             // 
             // tabDoanhThu
             // 
@@ -2376,6 +2355,7 @@ namespace WindowsFormsTestBunifu
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý cafe";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
@@ -2502,7 +2482,6 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox13;
         private BunifuThinButton2 bbtnCreateBill;
         private System.Windows.Forms.Label label20;
@@ -2528,7 +2507,6 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label23;
