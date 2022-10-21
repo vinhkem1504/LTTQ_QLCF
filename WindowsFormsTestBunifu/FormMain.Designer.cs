@@ -132,6 +132,7 @@ namespace WindowsFormsTestBunifu
             this.bunifuTextbox2 = new Bunifu.Framework.UI.BunifuTextbox();
             this.label21 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -152,6 +153,7 @@ namespace WindowsFormsTestBunifu
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label22 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -164,8 +166,6 @@ namespace WindowsFormsTestBunifu
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bpicLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -507,7 +507,7 @@ namespace WindowsFormsTestBunifu
             // bpaPages
             // 
             this.bpaPages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.bpaPages.AllowTransitions = true;
+            this.bpaPages.AllowTransitions = false;
             this.bpaPages.Controls.Add(this.tabNhanVien);
             this.bpaPages.Controls.Add(this.tabSanPham);
             this.bpaPages.Controls.Add(this.tabKhoNL);
@@ -518,10 +518,10 @@ namespace WindowsFormsTestBunifu
             this.bpaPages.Margin = new System.Windows.Forms.Padding(2);
             this.bpaPages.Multiline = true;
             this.bpaPages.Name = "bpaPages";
-            this.bpaPages.Page = this.tabSanPham;
-            this.bpaPages.PageIndex = 1;
-            this.bpaPages.PageName = "tabSanPham";
-            this.bpaPages.PageTitle = "Sản phẩm";
+            this.bpaPages.Page = this.tabKhoNL;
+            this.bpaPages.PageIndex = 2;
+            this.bpaPages.PageName = "tabKhoNL";
+            this.bpaPages.PageTitle = "Kho Nguyên Liệu";
             this.bpaPages.SelectedIndex = 0;
             this.bpaPages.Size = new System.Drawing.Size(629, 381);
             this.bpaPages.TabIndex = 2;
@@ -1682,6 +1682,14 @@ namespace WindowsFormsTestBunifu
             this.panel12.Size = new System.Drawing.Size(287, 351);
             this.panel12.TabIndex = 1;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(103, 98);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(164, 23);
+            this.comboBox2.TabIndex = 11;
+            // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -1932,6 +1940,14 @@ namespace WindowsFormsTestBunifu
             this.panel14.Size = new System.Drawing.Size(287, 351);
             this.panel14.TabIndex = 0;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(76, 104);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(191, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.SeaGreen;
@@ -2090,22 +2106,6 @@ namespace WindowsFormsTestBunifu
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(191, 21);
             this.textBox19.TabIndex = 35;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(76, 104);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 21);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(103, 98);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(164, 23);
-            this.comboBox2.TabIndex = 11;
             // 
             // frmMain
             // 
