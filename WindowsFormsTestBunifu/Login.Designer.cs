@@ -373,6 +373,7 @@
             this.bimgUser.TabIndex = 44;
             this.bimgUser.TabStop = false;
             this.bimgUser.Zoom = 10;
+            //this.bimgUser.Click += new System.EventHandler(this.bimgUser_Click);
             // 
             // bunifuCustomLabel1
             // 

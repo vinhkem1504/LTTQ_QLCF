@@ -21,6 +21,7 @@ namespace WindowsFormsTestBunifu
         private void frmMain_Load(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 0;
+            bpaPages.AllowTransitions = false;
         }
         
         private void bbtnUser_Click(object sender, EventArgs e)
@@ -48,6 +49,16 @@ namespace WindowsFormsTestBunifu
         private void bbtnCreateBill_Click(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 4;
+        }
+
+        private void bbtnSale_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 5;
+        }
+
+        private void bbtnTK_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
