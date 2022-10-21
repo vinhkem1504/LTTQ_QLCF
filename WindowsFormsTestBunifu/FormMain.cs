@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Utilities.BunifuDataGridView.Transitions;
 
 namespace WindowsFormsTestBunifu
 {
@@ -44,17 +36,18 @@ namespace WindowsFormsTestBunifu
         {
             bpaPages.SelectedIndex = 3;
         }
-        #endregion
 
         private void bbtnCreateBill_Click(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 4;
         }
-
+        
         private void bbtnSale_Click(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 5;
         }
+        #endregion
+
 
         private void bbtnTK_Click(object sender, EventArgs e)
         {
