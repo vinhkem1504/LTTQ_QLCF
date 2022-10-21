@@ -69,3 +69,5 @@ E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTe
 E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.exe
 E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.pdb
 E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+E:\Nam 3\Ki 1\LTTQ\BTL\LTTQ_QLCF\WindowsFormsTestBunifu\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
