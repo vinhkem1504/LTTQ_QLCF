@@ -102,9 +102,19 @@ namespace WindowsFormsTestBunifu
         //click Đăng nhập
         private void bbtnLogin_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            frmMain main = new frmMain();
+            main.ShowDialog();
+            this.Show();
+        }
 
+        //thoát không đăng nhập
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
         #endregion
+
 
     }
 }

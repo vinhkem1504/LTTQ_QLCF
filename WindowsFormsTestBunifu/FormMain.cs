@@ -5,6 +5,7 @@ namespace WindowsFormsTestBunifu
 {
     public partial class frmMain : Form
     {
+        bool exit = true;
         public frmMain()
         {
             InitializeComponent();
@@ -52,6 +53,41 @@ namespace WindowsFormsTestBunifu
         private void bbtnTK_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuThinButton24_Click(object sender, EventArgs e)
+        {
+            frmHoaDon cTietHDB = new frmHoaDon();
+            
+            cTietHDB.ShowDialog();
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (exit)
+            {
+                if (MessageBox.Show("Thoát chương trình ?", "Thoát ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Environment.Exit(1);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+
+        }
+
+        private void bunifuImageButton15_Click(object sender, EventArgs e)
+        {
+            frmPhieuNhap nhap = new frmPhieuNhap();
+            nhap.ShowDialog();
+        }
+
+        private void bbtnLogout_Click(object sender, EventArgs e)
+        {
+            exit = false;
+            this.Close();
         }
     }
 }

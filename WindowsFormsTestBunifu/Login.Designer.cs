@@ -373,7 +373,6 @@
             this.bimgUser.TabIndex = 44;
             this.bimgUser.TabStop = false;
             this.bimgUser.Zoom = 10;
-            //this.bimgUser.Click += new System.EventHandler(this.bimgUser_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -1023,6 +1022,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             this.pageLogin.ResumeLayout(false);
             this.tabLogin.ResumeLayout(false);
