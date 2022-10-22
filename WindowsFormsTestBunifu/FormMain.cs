@@ -58,7 +58,6 @@ namespace WindowsFormsTestBunifu
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
             frmHoaDon cTietHDB = new frmHoaDon();
-            
             cTietHDB.ShowDialog();
         }
 
@@ -88,6 +87,8 @@ namespace WindowsFormsTestBunifu
         {
             exit = false;
             this.Close();
+            //Form frm = Application.OpenForms["frmLogin"];
+            //frm.ShowDialog();
         }
     }
 }

@@ -46,6 +46,7 @@ namespace WindowsFormsTestBunifu
         {
             if(MessageBox.Show("Đã in hóa đơn thành công !","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
+                success = true;
                 this.Close();
             }
             

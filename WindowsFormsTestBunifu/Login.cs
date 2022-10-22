@@ -12,6 +12,8 @@ namespace WindowsFormsTestBunifu
 {
     public partial class frmLogin : Form
     {
+        private string AdminCode = "";
+
         public frmLogin()
         {
             InitializeComponent();
@@ -102,16 +104,17 @@ namespace WindowsFormsTestBunifu
         //click Đăng nhập
         private void bbtnLogin_Click(object sender, EventArgs e)
         {
+            frmMain frmMain = new frmMain();
             this.Hide();
-            frmMain main = new frmMain();
-            main.ShowDialog();
+            
+            frmMain.ShowDialog();
             this.Show();
         }
 
         //thoát không đăng nhập
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            e.Cancel = false;
         }
         #endregion
 
