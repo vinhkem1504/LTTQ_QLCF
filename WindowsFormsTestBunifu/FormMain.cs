@@ -13,14 +13,13 @@ namespace WindowsFormsTestBunifu
         #region Events
         private void frmMain_Load(object sender, EventArgs e)
         {
-            bpaPages.SelectedIndex = 0;
+            bpaPages.SelectedIndex = 8;
             bpaPages.AllowTransitions = false;
         }
         
         private void bbtnUser_Click(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 0;
-            //bpaPages.Transition.MinTime = 1000;
         }
 
         private void bbtnProduct_Click(object sender, EventArgs e)
@@ -89,6 +88,21 @@ namespace WindowsFormsTestBunifu
             this.Close();
             //Form frm = Application.OpenForms["frmLogin"];
             //frm.ShowDialog();
+        }
+
+        private void btnBan_Them_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 1;
+        }
+
+        private void bpicLogo_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 8;
+        }
+
+        private void btnBan_ThanhToan_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 4;
         }
     }
 }
