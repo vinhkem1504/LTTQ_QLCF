@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="01fbf1d9e6a84a3696fb4f8325c024ed" Name="Diagram1">
+        <EntityTypeShape EntityType="QLCafeModel.Ban" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.DoUong" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.HoaDonBan" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.HoaDonNhap" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.NguyenLieu" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.NhaCungCap" Width="1.5" PointX="3.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.NhanVien" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.sysdiagram" Width="1.5" PointX="2.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.TaiKhoan" Width="1.5" PointX="0.625" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.ChiTietHDB" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.ChiTietHDN" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.CongThucDoUong" Width="1.5" PointX="8.25" PointY="1.875" IsExpanded="true" />
+        <AssociationConnector Association="QLCafeModel.FK__HoaDonBan__MaBan__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietHDB__MaDU__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__CongThucDo__MaDU__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietHD__MaHDB__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__HoaDonBan__MaNV__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietHD__MaHDN__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__HoaDonNha__MaNCC__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__HoaDonNhap__MaNV__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietHDN__MaNL__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__CongThucDo__MaNL__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCafeModel.FK__TaiKhoan__MaNV__38996AB5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

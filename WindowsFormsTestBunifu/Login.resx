@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>73</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btxtPassword.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -551,69 +557,6 @@
         tASEeAglIO5DCYj7UALiPpSAOE/R/gJYTki0X0GbkwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAUMAAAApCAYAAACvK0uPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC2SURBVHhe7dQxDQMxAARB80fll2EERgDk15KbYPCMdM0B
-        2AHAsdb6zDl/Zma3bffvpHCMfQDcaPfvpFAMgXuJIUDEECBiCBAxBIgYAkQMASKGABFDgIghQMQQIGII
-        EDEEiBgCRAwBIoYAEUOAiCFAxBAgYggQMQSIGAJEDAEihgARQ4CIIUDEECBiCBAxBIgYAkQMASKGABFD
-        gIghQMQQIGIIkL8YPs/z3YeZ2W3b/TspBLjdGC+Lk9LB4Q47PAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnDangki.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANgAAAA1CAYAAAAj+iWxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALGSURBVHhe7d3PSxRxHMbx/qJOXbp16VJB0cWDh7wYGFkU
-        QlQYFNsvAjdww1ylJFzTqLYNSxNLRc3UYqulLA8GgYeKKMKD1OETz+y4uuxq6c7n5PsFDwSr3t44M8Z8
-        t+RyOWOM+YzAGHMcgTHmOAJjzHEExpjjCIwxx60Z2KvXWUsOdFtdV8yqO07azpY623qlirFNPXWgHmpT
-        Z+1af8oms9Nl+9FWDazzWTr4QQ2ZuPXNjNv053c2//OrAZudOlAPT2en7PSjRNCJQivXUUlgqvFozyU7
-        2BOzbws/wh8JYDW/FhfsVG+zHbjVaKMvJ4p6KgpMce1rP27pt0PhtwL4X2NzWavqOGFDU2PlA9NvLuIC
-        Nk6Xjro/KwlM91y6LARQmabhTrv4MLkcmJ4W6kaNey6gcot/ftv+Gw325MVwPjA9AdHTEADRaJ9IW2O6
-        OR+YnufrkSOAaHz48sn2th3LB7br+mGb+z4ffgSgUrpM3NZUnQ9s+9Wa4Fk+gOjof30EgekfAKJFYIAj
-        AgMcERjgiMAARwQGOCIwwBGBAY4IDHBEYIAjAgMcERjgiMAARwQGOCIwwBGBAY4IDHBEYIAjAgMcERjg
-        qBCY3n6jt+AAiE4hML3Vl6OJgGgVAtOxKzoZAkA09J5RvW80COxCptXiI6nwIwCVepAbDk4rCgLTeUZ7
-        kke4DwMiUn/vst0cvJsPTDuXabHEaE/4MYCNevx+zA7dPl98PpiOMNLBYW/mZ8MvA7BeOgJsd2t94WD0
-        QmCazjPSuUYcBAGsn+KqSZ2xOyO9haaKAtPSo/3BOc1tz++H3wbgXwY/Tga/uVbGpZUEpulyUYeHqUY9
-        DeHkS6CUTiTqmxm3hkw8OGNv6bJw5coGtjTVqEeNOxK1wR/NGGPL07FfdV0xSw50l+1HWzMwxlhlIzDG
-        HEdgjDmOwBhzHIEx5rac/QVxbXrq7eCc1AAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="txtRegiter_Password.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAUMAAAApCAYAAACvK0uPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC2SURBVHhe7dQxDQMxAARB80fll2EERgDk15KbYPCMdM0B
-        2AHAsdb6zDl/Zma3bffvpHCMfQDcaPfvpFAMgXuJIUDEECBiCBAxBIgYAkQMASKGABFDgIghQMQQIGII
-        EDEEiBgCRAwBIoYAEUOAiCFAxBAgYggQMQSIGAJEDAEihgARQ4CIIUDEECBiCBAxBIgYAkQMASKGABFD
-        gIghQMQQIGIIkL8YPs/z3YeZ2W3b/TspBLjdGC+Lk9LB4Q47PAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="txtRegiter_Password_Confirm.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAUMAAAApCAYAAACvK0uPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC2SURBVHhe7dQxDQMxAARB80fll2EERgDk15KbYPCMdM0B
-        2AHAsdb6zDl/Zma3bffvpHCMfQDcaPfvpFAMgXuJIUDEECBiCBAxBIgYAkQMASKGABFDgIghQMQQIGII
-        EDEEiBgCRAwBIoYAEUOAiCFAxBAgYggQMQSIGAJEDAEihgARQ4CIIUDEECBiCBAxBIgYAkQMASKGABFD
-        gIghQMQQIGIIkL8YPs/z3YeZ2W3b/TspBLjdGC+Lk9LB4Q47PAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="txtRegiter_Email.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAUMAAAApCAYAAACvK0uPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC2SURBVHhe7dQxDQMxAARB80fll2EERgDk15KbYPCMdM0B
-        2AHAsdb6zDl/Zma3bffvpHCMfQDcaPfvpFAMgXuJIUDEECBiCBAxBIgYAkQMASKGABFDgIghQMQQIGII
-        EDEEiBgCRAwBIoYAEUOAiCFAxBAgYggQMQSIGAJEDAEihgARQ4CIIUDEECBiCBAxBIgYAkQMASKGABFD
-        gIghQMQQIGIIkL8YPs/z3YeZ2W3b/TspBLjdGC+Lk9LB4Q47PAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="txtRegister_Username.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAUMAAAApCAYAAACvK0uPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC2SURBVHhe7dQxDQMxAARB80fll2EERgDk15KbYPCMdM0B
-        2AHAsdb6zDl/Zma3bffvpHCMfQDcaPfvpFAMgXuJIUDEECBiCBAxBIgYAkQMASKGABFDgIghQMQQIGII
-        EDEEiBgCRAwBIoYAEUOAiCFAxBAgYggQMQSIGAJEDAEihgARQ4CIIUDEECBiCBAxBIgYAkQMASKGABFD
-        gIghQMQQIGIIkL8YPs/z3YeZ2W3b/TspBLjdGC+Lk9LB4Q47PAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="btnResetPassword.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAM0AAAAzCAYAAAA0JIwAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -677,10 +620,4 @@
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAgD8L
 </value>
   </data>
-  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>73</value>
-  </metadata>
 </root>

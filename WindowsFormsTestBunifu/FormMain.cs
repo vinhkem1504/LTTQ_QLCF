@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace WindowsFormsTestBunifu
 {
     public partial class frmMain : Form
     {
+
+        QLCafeEntities db = new QLCafeEntities();
+
         bool exit = true;
         public frmMain()
         {
@@ -20,6 +25,7 @@ namespace WindowsFormsTestBunifu
         private void bbtnUser_Click(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 0;
+            LoadDataNhanVien();
         }
 
         private void bbtnProduct_Click(object sender, EventArgs e)
@@ -45,13 +51,6 @@ namespace WindowsFormsTestBunifu
         private void bbtnSale_Click(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 5;
-        }
-        #endregion
-
-
-        private void bbtnTK_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
@@ -103,6 +102,63 @@ namespace WindowsFormsTestBunifu
         private void btnBan_ThanhToan_Click(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 4;
+        }
+
+        private void btnSP_CTSP_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 6;
+        }
+
+        private void btnChiTietSP_Return_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 1;
+        }
+
+        // Cell Click nhân viên
+        private void dgvNhanVien_DSNV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ChiTietLoadNhanVien();
+        }
+        #endregion
+        #region Method
+        void LoadDataNhanVien()
+        {
+            dgvNhanVien_DSNV.DataSource = db.NhanViens.ToList();
+        }
+
+        //In thông tin nhân viên
+        void ChiTietLoadNhanVien()
+        {
+            txtNV_MaNV.Text = dgvNhanVien_DSNV.CurrentRow.Cells[0].Value.ToString();
+            txtNV_TenNV.Text = dgvNhanVien_DSNV.CurrentRow.Cells[1].Value.ToString();
+            txtNV_DiaChi.Text = dgvNhanVien_DSNV.CurrentRow.Cells[2].Value.ToString();
+            txtNV_SDT.Text = dgvNhanVien_DSNV.CurrentRow.Cells[3].Value.ToString();
+            dtNV_NTNS.Value =DateTime.Parse(dgvNhanVien_DSNV.CurrentRow.Cells[4].Value.ToString());
+            dtNV_NgayNhanViec.Value = DateTime.Parse(dgvNhanVien_DSNV.CurrentRow.Cells[5].Value.ToString());
+            txtNV_LuongCB.Text = dgvNhanVien_DSNV.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        // Tìm kiếm nhân viên
+        void Search_DSNV(string s)
+        {
+
+            var result = from c in db.NhanViens
+                         where c.MaNV == s
+                         select c;
+            dgvNhanVien_DSNV.DataSource = result.ToList();
+        }
+
+        // Load
+        #endregion
+
+        private void btxtNV_Search_Click(object sender, EventArgs e)
+        {
+            Search_DSNV(btxtNV_Search.Text);
+        }
+
+        private void btxtNV_Search_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
