@@ -12,6 +12,8 @@ namespace WindowsFormsTestBunifu
 {
     public partial class frmLogin : Form
     {
+        private string AdminCode = "";
+
         public frmLogin()
         {
             InitializeComponent();
@@ -57,17 +59,6 @@ namespace WindowsFormsTestBunifu
             
         }
 
-        // click Đăng kí
-        private void blblRegister_Click(object sender, EventArgs e)
-        {
-            pageLogin.SelectedIndex = 1;
-        }
-
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void bunifuLabel3_Click(object sender, EventArgs e)
         {
             pageLogin.SelectedIndex = 0;
@@ -96,15 +87,26 @@ namespace WindowsFormsTestBunifu
         // click Quên MK
         private void blblFogotPassword_Click(object sender, EventArgs e)
         {
-            pageLogin.SelectedIndex = 2;
+            pageLogin.SelectedIndex = 1;
         }
 
         //click Đăng nhập
         private void bbtnLogin_Click(object sender, EventArgs e)
         {
+            frmMain frmMain = new frmMain();
+            this.Hide();
+            
+            frmMain.ShowDialog();
+            this.Show();
+        }
 
+        //thoát không đăng nhập
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = false;
         }
         #endregion
+
 
     }
 }
