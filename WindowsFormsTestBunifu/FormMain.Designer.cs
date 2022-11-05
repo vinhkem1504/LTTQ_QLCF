@@ -36,9 +36,6 @@ namespace WindowsFormsTestBunifu
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -46,9 +43,6 @@ namespace WindowsFormsTestBunifu
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -57,9 +51,13 @@ namespace WindowsFormsTestBunifu
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bbtnIngredientStorage = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bbtnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -102,20 +100,18 @@ namespace WindowsFormsTestBunifu
             this.btnNV_XoaNV = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnNV_ThemNV = new Bunifu.Framework.UI.BunifuImageButton();
             this.tabSanPham = new System.Windows.Forms.TabPage();
-            this.dgvSP_DSSP = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.dgvSP_DSSP = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txtSearch_SP = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnSP_ThemVaoHD = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSP_CTSP = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtSP_GhiChu = new System.Windows.Forms.TextBox();
-            this.txtSP_SL = new System.Windows.Forms.TextBox();
             this.txtSP_DonGia = new System.Windows.Forms.TextBox();
             this.txtSP_TenSp = new System.Windows.Forms.TextBox();
             this.txtSP_MaSp = new System.Windows.Forms.TextBox();
@@ -124,9 +120,10 @@ namespace WindowsFormsTestBunifu
             this.btnSP_SuaSp = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnSP_ThemSp = new Bunifu.Framework.UI.BunifuImageButton();
             this.tabKhoNL = new System.Windows.Forms.TabPage();
-            this.dgvKho = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.dgvKho = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.btnNhapHang = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btxtSearch_NL = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnLsuNhap = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -145,7 +142,7 @@ namespace WindowsFormsTestBunifu
             this.panel13 = new System.Windows.Forms.Panel();
             this.dgvHD_DSHD = new System.Windows.Forms.DataGridView();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.bunifuTextBox3 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txtSearch_HDB = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.txtHD_MaNV = new System.Windows.Forms.TextBox();
@@ -166,9 +163,12 @@ namespace WindowsFormsTestBunifu
             this.btnHD_ThemHD = new Bunifu.Framework.UI.BunifuImageButton();
             this.tabCTHoaDon = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.dgvCTB_DSSP = new System.Windows.Forms.DataGridView();
             this.label22 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
+            this.txtCTB_TongTien = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.txtCTB_TenSP = new System.Windows.Forms.TextBox();
             this.btnCTB_XoaSP = new System.Windows.Forms.Button();
@@ -198,7 +198,7 @@ namespace WindowsFormsTestBunifu
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnChiTietSP_Return = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCTSP_DSNL = new System.Windows.Forms.DataGridView();
             this.label43 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -206,9 +206,9 @@ namespace WindowsFormsTestBunifu
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCTSP_DonGia = new System.Windows.Forms.TextBox();
+            this.txtCTSP_TenSp = new System.Windows.Forms.TextBox();
+            this.txtCTSP_MaSp = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel26 = new System.Windows.Forms.Panel();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -236,6 +236,45 @@ namespace WindowsFormsTestBunifu
             this.dgvBan_ListHDB = new System.Windows.Forms.DataGridView();
             this.panel22 = new System.Windows.Forms.Panel();
             this.floBan_ListBan = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabHoaDonNhap = new System.Windows.Forms.TabPage();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.dgvHDN_DSNhap = new System.Windows.Forms.DataGridView();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.txtSearch_HDN = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.txtHDN_MaNCC = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtHDN_MaNV = new System.Windows.Forms.TextBox();
+            this.dtHDN_NgayNhap = new System.Windows.Forms.DateTimePicker();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtHDN_MaHDN = new System.Windows.Forms.TextBox();
+            this.btnHDN_ChiTiet = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.tabChiTietNhap = new System.Windows.Forms.TabPage();
+            this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.dgvCTN_DSNL = new System.Windows.Forms.DataGridView();
+            this.label56 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txtCTN_TongTien = new System.Windows.Forms.TextBox();
+            this.txtCTN_TenNCC = new System.Windows.Forms.TextBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txtCTN_TenNL = new System.Windows.Forms.TextBox();
+            this.lblCTN_TenHDN = new System.Windows.Forms.Label();
+            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtCTN_SoLuong = new System.Windows.Forms.TextBox();
+            this.txtCTN_DonGia = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bpicLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -276,6 +315,7 @@ namespace WindowsFormsTestBunifu
             ((System.ComponentModel.ISupportInitialize)(this.btnHD_ThemHD)).BeginInit();
             this.tabCTHoaDon.SuspendLayout();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTB_DSSP)).BeginInit();
             this.panel14.SuspendLayout();
             this.tabDoanhThu.SuspendLayout();
@@ -286,7 +326,7 @@ namespace WindowsFormsTestBunifu
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTSP_DSNL)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel26.SuspendLayout();
             this.tabBan.SuspendLayout();
@@ -295,6 +335,15 @@ namespace WindowsFormsTestBunifu
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan_ListHDB)).BeginInit();
             this.panel22.SuspendLayout();
+            this.tabHoaDonNhap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHDN_DSNhap)).BeginInit();
+            this.panel29.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.tabChiTietNhap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTN_DSNL)).BeginInit();
+            this.panel30.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -614,15 +663,17 @@ namespace WindowsFormsTestBunifu
             this.bpaPages.Controls.Add(this.tabPage1);
             this.bpaPages.Controls.Add(this.tabPage2);
             this.bpaPages.Controls.Add(this.tabBan);
+            this.bpaPages.Controls.Add(this.tabHoaDonNhap);
+            this.bpaPages.Controls.Add(this.tabChiTietNhap);
             this.bpaPages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bpaPages.Location = new System.Drawing.Point(173, 118);
             this.bpaPages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bpaPages.Multiline = true;
             this.bpaPages.Name = "bpaPages";
-            this.bpaPages.Page = this.tabNhanVien;
-            this.bpaPages.PageIndex = 0;
-            this.bpaPages.PageName = "tabNhanVien";
-            this.bpaPages.PageTitle = "Nhân viên";
+            this.bpaPages.Page = this.tabHoaDon;
+            this.bpaPages.PageIndex = 3;
+            this.bpaPages.PageName = "tabHoaDon";
+            this.bpaPages.PageTitle = "Hóa đơn bán";
             this.bpaPages.SelectedIndex = 0;
             this.bpaPages.Size = new System.Drawing.Size(673, 369);
             this.bpaPages.TabIndex = 2;
@@ -679,7 +730,7 @@ namespace WindowsFormsTestBunifu
             this.dgvNhanVien_DSNV.Name = "dgvNhanVien_DSNV";
             this.dgvNhanVien_DSNV.RowHeadersWidth = 51;
             this.dgvNhanVien_DSNV.RowTemplate.Height = 24;
-            this.dgvNhanVien_DSNV.Size = new System.Drawing.Size(286, 234);
+            this.dgvNhanVien_DSNV.Size = new System.Drawing.Size(286, 252);
             this.dgvNhanVien_DSNV.TabIndex = 12;
             this.dgvNhanVien_DSNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_DSNV_CellClick);
             // 
@@ -704,7 +755,7 @@ namespace WindowsFormsTestBunifu
             this.btxtNV_Search.BorderColorActive = System.Drawing.Color.DodgerBlue;
             this.btxtNV_Search.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btxtNV_Search.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btxtNV_Search.BorderColorIdle = System.Drawing.Color.Silver;
+            this.btxtNV_Search.BorderColorIdle = System.Drawing.SystemColors.ScrollBar;
             this.btxtNV_Search.BorderRadius = 30;
             this.btxtNV_Search.BorderThickness = 1;
             this.btxtNV_Search.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -717,7 +768,7 @@ namespace WindowsFormsTestBunifu
             this.btxtNV_Search.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.btxtNV_Search.IconPadding = 10;
             this.btxtNV_Search.IconRight = ((System.Drawing.Image)(resources.GetObject("btxtNV_Search.IconRight")));
-            this.btxtNV_Search.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.btxtNV_Search.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.btxtNV_Search.Lines = new string[0];
             this.btxtNV_Search.Location = new System.Drawing.Point(0, 0);
             this.btxtNV_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -741,7 +792,7 @@ namespace WindowsFormsTestBunifu
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.btxtNV_Search.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.BorderColor = System.Drawing.SystemColors.ScrollBar;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -749,7 +800,7 @@ namespace WindowsFormsTestBunifu
             this.btxtNV_Search.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btxtNV_Search.PasswordChar = '\0';
             this.btxtNV_Search.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.btxtNV_Search.PlaceholderText = "Enter MaNV";
+            this.btxtNV_Search.PlaceholderText = "Nhập mã nhân viên";
             this.btxtNV_Search.ReadOnly = false;
             this.btxtNV_Search.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.btxtNV_Search.SelectedText = "";
@@ -763,10 +814,9 @@ namespace WindowsFormsTestBunifu
             this.btxtNV_Search.TextMarginBottom = 0;
             this.btxtNV_Search.TextMarginLeft = 3;
             this.btxtNV_Search.TextMarginTop = 0;
-            this.btxtNV_Search.TextPlaceholder = "Enter MaNV";
+            this.btxtNV_Search.TextPlaceholder = "Nhập mã nhân viên";
             this.btxtNV_Search.UseSystemPasswordChar = false;
             this.btxtNV_Search.WordWrap = true;
-            this.btxtNV_Search.TextChanged += new System.EventHandler(this.btxtNV_Search_TextChanged);
             this.btxtNV_Search.OnIconRightClick += new System.EventHandler(this.btxtNV_Search_Click);
             // 
             // label29
@@ -1053,69 +1103,20 @@ namespace WindowsFormsTestBunifu
             // 
             // dgvSP_DSSP
             // 
-            this.dgvSP_DSSP.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvSP_DSSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvSP_DSSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSP_DSSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSP_DSSP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvSP_DSSP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSP_DSSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSP_DSSP.ColumnHeadersHeight = 40;
-            this.dgvSP_DSSP.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvSP_DSSP.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvSP_DSSP.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvSP_DSSP.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvSP_DSSP.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSP_DSSP.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvSP_DSSP.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvSP_DSSP.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvSP_DSSP.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvSP_DSSP.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvSP_DSSP.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvSP_DSSP.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvSP_DSSP.CurrentTheme.Name = null;
-            this.dgvSP_DSSP.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvSP_DSSP.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvSP_DSSP.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvSP_DSSP.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvSP_DSSP.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSP_DSSP.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSP_DSSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSP_DSSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSP_DSSP.EnableHeadersVisualStyles = false;
-            this.dgvSP_DSSP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvSP_DSSP.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvSP_DSSP.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvSP_DSSP.HeaderForeColor = System.Drawing.Color.White;
             this.dgvSP_DSSP.Location = new System.Drawing.Point(377, 89);
             this.dgvSP_DSSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvSP_DSSP.Name = "dgvSP_DSSP";
-            this.dgvSP_DSSP.RowHeadersVisible = false;
             this.dgvSP_DSSP.RowHeadersWidth = 51;
-            this.dgvSP_DSSP.RowTemplate.Height = 40;
-            this.dgvSP_DSSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSP_DSSP.RowTemplate.Height = 24;
             this.dgvSP_DSSP.Size = new System.Drawing.Size(286, 252);
             this.dgvSP_DSSP.TabIndex = 11;
-            this.dgvSP_DSSP.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvSP_DSSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSP_DSSP_CellClick);
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.bunifuTextBox1);
+            this.panel11.Controls.Add(this.txtSearch_SP);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(377, 33);
             this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -1123,80 +1124,82 @@ namespace WindowsFormsTestBunifu
             this.panel11.Size = new System.Drawing.Size(286, 56);
             this.panel11.TabIndex = 10;
             // 
-            // bunifuTextBox1
+            // txtSearch_SP
             // 
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.AnimationSpeed = 200;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.BorderRadius = 30;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.bunifuTextBox1.DefaultText = "";
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = null;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.IconRight")));
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Multiline = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
+            this.txtSearch_SP.AcceptsReturn = false;
+            this.txtSearch_SP.AcceptsTab = false;
+            this.txtSearch_SP.AnimationSpeed = 200;
+            this.txtSearch_SP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtSearch_SP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtSearch_SP.BackColor = System.Drawing.Color.White;
+            this.txtSearch_SP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSearch_SP.BackgroundImage")));
+            this.txtSearch_SP.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtSearch_SP.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtSearch_SP.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtSearch_SP.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtSearch_SP.BorderRadius = 30;
+            this.txtSearch_SP.BorderThickness = 1;
+            this.txtSearch_SP.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSearch_SP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch_SP.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtSearch_SP.DefaultText = "";
+            this.txtSearch_SP.FillColor = System.Drawing.Color.White;
+            this.txtSearch_SP.HideSelection = true;
+            this.txtSearch_SP.IconLeft = null;
+            this.txtSearch_SP.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch_SP.IconPadding = 10;
+            this.txtSearch_SP.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearch_SP.IconRight")));
+            this.txtSearch_SP.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearch_SP.Lines = new string[0];
+            this.txtSearch_SP.Location = new System.Drawing.Point(0, 0);
+            this.txtSearch_SP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch_SP.MaxLength = 32767;
+            this.txtSearch_SP.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtSearch_SP.Modified = false;
+            this.txtSearch_SP.Multiline = false;
+            this.txtSearch_SP.Name = "txtSearch_SP";
             stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties5.FillColor = System.Drawing.Color.Empty;
             stateProperties5.ForeColor = System.Drawing.Color.Empty;
             stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnActiveState = stateProperties5;
+            this.txtSearch_SP.OnActiveState = stateProperties5;
             stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox1.OnDisabledState = stateProperties6;
+            this.txtSearch_SP.OnDisabledState = stateProperties6;
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties7.FillColor = System.Drawing.Color.Empty;
             stateProperties7.ForeColor = System.Drawing.Color.Empty;
             stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnHoverState = stateProperties7;
+            this.txtSearch_SP.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.White;
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnIdleState = stateProperties8;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.PlaceholderText = "Enter MaNV";
-            this.bunifuTextBox1.ReadOnly = false;
-            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox1.SelectedText = "";
-            this.bunifuTextBox1.SelectionLength = 0;
-            this.bunifuTextBox1.SelectionStart = 0;
-            this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(195, 33);
-            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox1.TabIndex = 1;
-            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox1.TextMarginBottom = 0;
-            this.bunifuTextBox1.TextMarginLeft = 3;
-            this.bunifuTextBox1.TextMarginTop = 0;
-            this.bunifuTextBox1.TextPlaceholder = "Enter MaNV";
-            this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.WordWrap = true;
+            this.txtSearch_SP.OnIdleState = stateProperties8;
+            this.txtSearch_SP.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch_SP.PasswordChar = '\0';
+            this.txtSearch_SP.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSearch_SP.PlaceholderText = "Nhập mã sản phẩm";
+            this.txtSearch_SP.ReadOnly = false;
+            this.txtSearch_SP.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch_SP.SelectedText = "";
+            this.txtSearch_SP.SelectionLength = 0;
+            this.txtSearch_SP.SelectionStart = 0;
+            this.txtSearch_SP.ShortcutsEnabled = true;
+            this.txtSearch_SP.Size = new System.Drawing.Size(195, 33);
+            this.txtSearch_SP.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtSearch_SP.TabIndex = 1;
+            this.txtSearch_SP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSearch_SP.TextMarginBottom = 0;
+            this.txtSearch_SP.TextMarginLeft = 3;
+            this.txtSearch_SP.TextMarginTop = 0;
+            this.txtSearch_SP.TextPlaceholder = "Nhập mã sản phẩm";
+            this.txtSearch_SP.UseSystemPasswordChar = false;
+            this.txtSearch_SP.WordWrap = true;
+            this.txtSearch_SP.TextChanged += new System.EventHandler(this.bunifuTextBox1_TextChanged);
+            this.txtSearch_SP.OnIconRightClick += new System.EventHandler(this.bunifuTextBox1_OnIconRightClick);
             // 
             // label27
             // 
@@ -1215,13 +1218,11 @@ namespace WindowsFormsTestBunifu
             // 
             this.panel10.Controls.Add(this.btnSP_ThemVaoHD);
             this.panel10.Controls.Add(this.btnSP_CTSP);
-            this.panel10.Controls.Add(this.label14);
             this.panel10.Controls.Add(this.label15);
             this.panel10.Controls.Add(this.label16);
             this.panel10.Controls.Add(this.label17);
             this.panel10.Controls.Add(this.label18);
             this.panel10.Controls.Add(this.txtSP_GhiChu);
-            this.panel10.Controls.Add(this.txtSP_SL);
             this.panel10.Controls.Add(this.txtSP_DonGia);
             this.panel10.Controls.Add(this.txtSP_TenSp);
             this.panel10.Controls.Add(this.txtSP_MaSp);
@@ -1322,22 +1323,11 @@ namespace WindowsFormsTestBunifu
             this.btnSP_CTSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSP_CTSP.Click += new System.EventHandler(this.btnSP_CTSP_Click);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(9, 159);
-            this.label14.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 15);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Số Lượng";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(17, 130);
+            this.label15.Location = new System.Drawing.Point(17, 148);
             this.label15.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(52, 15);
@@ -1348,7 +1338,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(22, 101);
+            this.label16.Location = new System.Drawing.Point(22, 110);
             this.label16.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(47, 15);
@@ -1387,19 +1377,10 @@ namespace WindowsFormsTestBunifu
             this.txtSP_GhiChu.Size = new System.Drawing.Size(247, 76);
             this.txtSP_GhiChu.TabIndex = 26;
             // 
-            // txtSP_SL
-            // 
-            this.txtSP_SL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSP_SL.Location = new System.Drawing.Point(78, 156);
-            this.txtSP_SL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtSP_SL.Name = "txtSP_SL";
-            this.txtSP_SL.Size = new System.Drawing.Size(189, 21);
-            this.txtSP_SL.TabIndex = 24;
-            // 
             // txtSP_DonGia
             // 
             this.txtSP_DonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSP_DonGia.Location = new System.Drawing.Point(78, 127);
+            this.txtSP_DonGia.Location = new System.Drawing.Point(78, 145);
             this.txtSP_DonGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSP_DonGia.Name = "txtSP_DonGia";
             this.txtSP_DonGia.Size = new System.Drawing.Size(189, 21);
@@ -1408,7 +1389,7 @@ namespace WindowsFormsTestBunifu
             // txtSP_TenSp
             // 
             this.txtSP_TenSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSP_TenSp.Location = new System.Drawing.Point(78, 98);
+            this.txtSP_TenSp.Location = new System.Drawing.Point(78, 107);
             this.txtSP_TenSp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSP_TenSp.Name = "txtSP_TenSp";
             this.txtSP_TenSp.Size = new System.Drawing.Size(189, 21);
@@ -1494,70 +1475,22 @@ namespace WindowsFormsTestBunifu
             // 
             // dgvKho
             // 
-            this.dgvKho.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvKho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvKho.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvKho.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvKho.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvKho.ColumnHeadersHeight = 40;
-            this.dgvKho.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvKho.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvKho.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvKho.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvKho.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvKho.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvKho.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvKho.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvKho.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvKho.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvKho.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvKho.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvKho.CurrentTheme.Name = null;
-            this.dgvKho.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvKho.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvKho.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvKho.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvKho.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKho.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvKho.EnableHeadersVisualStyles = false;
-            this.dgvKho.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvKho.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvKho.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvKho.HeaderForeColor = System.Drawing.Color.White;
             this.dgvKho.Location = new System.Drawing.Point(90, 170);
             this.dgvKho.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvKho.Name = "dgvKho";
-            this.dgvKho.RowHeadersVisible = false;
             this.dgvKho.RowHeadersWidth = 51;
-            this.dgvKho.RowTemplate.Height = 40;
-            this.dgvKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKho.RowTemplate.Height = 24;
             this.dgvKho.Size = new System.Drawing.Size(573, 171);
-            this.dgvKho.TabIndex = 42;
-            this.dgvKho.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvKho.TabIndex = 41;
+            this.dgvKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKho_CellClick);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.bunifuTextBox2);
+            this.groupBox1.Controls.Add(this.btnNhapHang);
+            this.groupBox1.Controls.Add(this.btxtSearch_NL);
             this.groupBox1.Controls.Add(this.btnLsuNhap);
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.Controls.Add(this.label33);
@@ -1576,80 +1509,108 @@ namespace WindowsFormsTestBunifu
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Nguyên Liệu";
             // 
-            // bunifuTextBox2
+            // btnNhapHang
             // 
-            this.bunifuTextBox2.AcceptsReturn = false;
-            this.bunifuTextBox2.AcceptsTab = false;
-            this.bunifuTextBox2.AnimationSpeed = 200;
-            this.bunifuTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox2.BackColor = System.Drawing.Color.White;
-            this.bunifuTextBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox2.BackgroundImage")));
-            this.bunifuTextBox2.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox2.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox2.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox2.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox2.BorderRadius = 30;
-            this.bunifuTextBox2.BorderThickness = 1;
-            this.bunifuTextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox2.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.bunifuTextBox2.DefaultText = "";
-            this.bunifuTextBox2.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox2.HideSelection = true;
-            this.bunifuTextBox2.IconLeft = null;
-            this.bunifuTextBox2.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox2.IconPadding = 10;
-            this.bunifuTextBox2.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox2.IconRight")));
-            this.bunifuTextBox2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox2.Lines = new string[0];
-            this.bunifuTextBox2.Location = new System.Drawing.Point(35, 86);
-            this.bunifuTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bunifuTextBox2.MaxLength = 32767;
-            this.bunifuTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox2.Modified = false;
-            this.bunifuTextBox2.Multiline = false;
-            this.bunifuTextBox2.Name = "bunifuTextBox2";
+            this.btnNhapHang.ActiveBorderThickness = 1;
+            this.btnNhapHang.ActiveCornerRadius = 20;
+            this.btnNhapHang.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnNhapHang.ActiveForecolor = System.Drawing.Color.White;
+            this.btnNhapHang.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnNhapHang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnNhapHang.BackColor = System.Drawing.Color.Transparent;
+            this.btnNhapHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNhapHang.BackgroundImage")));
+            this.btnNhapHang.ButtonText = "Nhập Hàng";
+            this.btnNhapHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNhapHang.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhapHang.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnNhapHang.IdleBorderThickness = 1;
+            this.btnNhapHang.IdleCornerRadius = 20;
+            this.btnNhapHang.IdleFillColor = System.Drawing.Color.White;
+            this.btnNhapHang.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnNhapHang.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnNhapHang.Location = new System.Drawing.Point(365, 105);
+            this.btnNhapHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNhapHang.Name = "btnNhapHang";
+            this.btnNhapHang.Size = new System.Drawing.Size(175, 32);
+            this.btnNhapHang.TabIndex = 57;
+            this.btnNhapHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
+            // 
+            // btxtSearch_NL
+            // 
+            this.btxtSearch_NL.AcceptsReturn = false;
+            this.btxtSearch_NL.AcceptsTab = false;
+            this.btxtSearch_NL.AnimationSpeed = 200;
+            this.btxtSearch_NL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.btxtSearch_NL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.btxtSearch_NL.BackColor = System.Drawing.Color.White;
+            this.btxtSearch_NL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btxtSearch_NL.BackgroundImage")));
+            this.btxtSearch_NL.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.btxtSearch_NL.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btxtSearch_NL.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btxtSearch_NL.BorderColorIdle = System.Drawing.Color.Silver;
+            this.btxtSearch_NL.BorderRadius = 30;
+            this.btxtSearch_NL.BorderThickness = 1;
+            this.btxtSearch_NL.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.btxtSearch_NL.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btxtSearch_NL.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.btxtSearch_NL.DefaultText = "";
+            this.btxtSearch_NL.FillColor = System.Drawing.Color.White;
+            this.btxtSearch_NL.HideSelection = true;
+            this.btxtSearch_NL.IconLeft = null;
+            this.btxtSearch_NL.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.btxtSearch_NL.IconPadding = 10;
+            this.btxtSearch_NL.IconRight = ((System.Drawing.Image)(resources.GetObject("btxtSearch_NL.IconRight")));
+            this.btxtSearch_NL.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btxtSearch_NL.Lines = new string[0];
+            this.btxtSearch_NL.Location = new System.Drawing.Point(35, 93);
+            this.btxtSearch_NL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btxtSearch_NL.MaxLength = 32767;
+            this.btxtSearch_NL.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btxtSearch_NL.Modified = false;
+            this.btxtSearch_NL.Multiline = false;
+            this.btxtSearch_NL.Name = "btxtSearch_NL";
             stateProperties11.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties11.FillColor = System.Drawing.Color.Empty;
             stateProperties11.ForeColor = System.Drawing.Color.Empty;
             stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnActiveState = stateProperties11;
+            this.btxtSearch_NL.OnActiveState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox2.OnDisabledState = stateProperties12;
+            this.btxtSearch_NL.OnDisabledState = stateProperties12;
             stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties13.FillColor = System.Drawing.Color.Empty;
             stateProperties13.ForeColor = System.Drawing.Color.Empty;
             stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnHoverState = stateProperties13;
+            this.btxtSearch_NL.OnHoverState = stateProperties13;
             stateProperties14.BorderColor = System.Drawing.Color.Silver;
             stateProperties14.FillColor = System.Drawing.Color.White;
             stateProperties14.ForeColor = System.Drawing.Color.Empty;
             stateProperties14.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnIdleState = stateProperties14;
-            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bunifuTextBox2.PasswordChar = '\0';
-            this.bunifuTextBox2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox2.PlaceholderText = "Enter MaNV";
-            this.bunifuTextBox2.ReadOnly = false;
-            this.bunifuTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox2.SelectedText = "";
-            this.bunifuTextBox2.SelectionLength = 0;
-            this.bunifuTextBox2.SelectionStart = 0;
-            this.bunifuTextBox2.ShortcutsEnabled = true;
-            this.bunifuTextBox2.Size = new System.Drawing.Size(228, 30);
-            this.bunifuTextBox2.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox2.TabIndex = 56;
-            this.bunifuTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox2.TextMarginBottom = 0;
-            this.bunifuTextBox2.TextMarginLeft = 3;
-            this.bunifuTextBox2.TextMarginTop = 0;
-            this.bunifuTextBox2.TextPlaceholder = "Enter MaNV";
-            this.bunifuTextBox2.UseSystemPasswordChar = false;
-            this.bunifuTextBox2.WordWrap = true;
+            this.btxtSearch_NL.OnIdleState = stateProperties14;
+            this.btxtSearch_NL.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btxtSearch_NL.PasswordChar = '\0';
+            this.btxtSearch_NL.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.btxtSearch_NL.PlaceholderText = "Nhập mã nguyên liệu";
+            this.btxtSearch_NL.ReadOnly = false;
+            this.btxtSearch_NL.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.btxtSearch_NL.SelectedText = "";
+            this.btxtSearch_NL.SelectionLength = 0;
+            this.btxtSearch_NL.SelectionStart = 0;
+            this.btxtSearch_NL.ShortcutsEnabled = true;
+            this.btxtSearch_NL.Size = new System.Drawing.Size(228, 30);
+            this.btxtSearch_NL.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.btxtSearch_NL.TabIndex = 56;
+            this.btxtSearch_NL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btxtSearch_NL.TextMarginBottom = 0;
+            this.btxtSearch_NL.TextMarginLeft = 3;
+            this.btxtSearch_NL.TextMarginTop = 0;
+            this.btxtSearch_NL.TextPlaceholder = "Nhập mã nguyên liệu";
+            this.btxtSearch_NL.UseSystemPasswordChar = false;
+            this.btxtSearch_NL.WordWrap = true;
+            this.btxtSearch_NL.OnIconRightClick += new System.EventHandler(this.bunifuTextBox2_OnIconRightClick);
             // 
             // btnLsuNhap
             // 
@@ -1670,19 +1631,20 @@ namespace WindowsFormsTestBunifu
             this.btnLsuNhap.IdleFillColor = System.Drawing.Color.White;
             this.btnLsuNhap.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnLsuNhap.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnLsuNhap.Location = new System.Drawing.Point(361, 86);
+            this.btnLsuNhap.Location = new System.Drawing.Point(365, 71);
             this.btnLsuNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLsuNhap.Name = "btnLsuNhap";
-            this.btnLsuNhap.Size = new System.Drawing.Size(180, 40);
+            this.btnLsuNhap.Size = new System.Drawing.Size(175, 32);
             this.btnLsuNhap.TabIndex = 55;
             this.btnLsuNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLsuNhap.Click += new System.EventHandler(this.btnLsuNhap_Click);
             // 
             // label32
             // 
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(309, 31);
+            this.label32.Location = new System.Drawing.Point(309, 22);
             this.label32.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(43, 15);
@@ -1694,7 +1656,7 @@ namespace WindowsFormsTestBunifu
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(309, 60);
+            this.label33.Location = new System.Drawing.Point(309, 51);
             this.label33.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(46, 15);
@@ -1705,7 +1667,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.txtKho_Donvi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtKho_Donvi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKho_Donvi.Location = new System.Drawing.Point(365, 28);
+            this.txtKho_Donvi.Location = new System.Drawing.Point(365, 19);
             this.txtKho_Donvi.Margin = new System.Windows.Forms.Padding(2, 2, 7, 2);
             this.txtKho_Donvi.Name = "txtKho_Donvi";
             this.txtKho_Donvi.Size = new System.Drawing.Size(176, 21);
@@ -1715,7 +1677,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.txtKho_SL.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtKho_SL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKho_SL.Location = new System.Drawing.Point(365, 54);
+            this.txtKho_SL.Location = new System.Drawing.Point(365, 45);
             this.txtKho_SL.Margin = new System.Windows.Forms.Padding(2, 2, 7, 2);
             this.txtKho_SL.Name = "txtKho_SL";
             this.txtKho_SL.Size = new System.Drawing.Size(176, 21);
@@ -1726,7 +1688,7 @@ namespace WindowsFormsTestBunifu
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(32, 31);
+            this.label35.Location = new System.Drawing.Point(32, 22);
             this.label35.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(44, 15);
@@ -1737,7 +1699,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.txtKho_MaNL.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtKho_MaNL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKho_MaNL.Location = new System.Drawing.Point(87, 28);
+            this.txtKho_MaNL.Location = new System.Drawing.Point(87, 19);
             this.txtKho_MaNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtKho_MaNL.Name = "txtKho_MaNL";
             this.txtKho_MaNL.Size = new System.Drawing.Size(176, 21);
@@ -1748,7 +1710,7 @@ namespace WindowsFormsTestBunifu
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(32, 60);
+            this.label36.Location = new System.Drawing.Point(32, 51);
             this.label36.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(47, 15);
@@ -1759,7 +1721,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.txtKho_TenNL.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtKho_TenNL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKho_TenNL.Location = new System.Drawing.Point(87, 57);
+            this.txtKho_TenNL.Location = new System.Drawing.Point(87, 48);
             this.txtKho_TenNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtKho_TenNL.Name = "txtKho_TenNL";
             this.txtKho_TenNL.Size = new System.Drawing.Size(176, 21);
@@ -1841,9 +1803,9 @@ namespace WindowsFormsTestBunifu
             this.tabHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabHoaDon.Name = "tabHoaDon";
             this.tabHoaDon.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabHoaDon.Size = new System.Drawing.Size(665, 343);
+            this.tabHoaDon.Size = new System.Drawing.Size(665, 325);
             this.tabHoaDon.TabIndex = 2;
-            this.tabHoaDon.Text = "Hóa đơn";
+            this.tabHoaDon.Text = "Hóa đơn bán";
             this.tabHoaDon.UseVisualStyleBackColor = true;
             // 
             // panel13
@@ -1855,7 +1817,7 @@ namespace WindowsFormsTestBunifu
             this.panel13.Location = new System.Drawing.Point(377, 2);
             this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(286, 339);
+            this.panel13.Size = new System.Drawing.Size(286, 321);
             this.panel13.TabIndex = 2;
             // 
             // dgvHD_DSHD
@@ -1866,12 +1828,13 @@ namespace WindowsFormsTestBunifu
             this.dgvHD_DSHD.Location = new System.Drawing.Point(0, 87);
             this.dgvHD_DSHD.Name = "dgvHD_DSHD";
             this.dgvHD_DSHD.RowHeadersWidth = 62;
-            this.dgvHD_DSHD.Size = new System.Drawing.Size(286, 252);
+            this.dgvHD_DSHD.Size = new System.Drawing.Size(286, 234);
             this.dgvHD_DSHD.TabIndex = 10;
+            this.dgvHD_DSHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHD_DSHD_CellClick);
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.bunifuTextBox3);
+            this.panel16.Controls.Add(this.txtSearch_HDB);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(0, 31);
             this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -1879,80 +1842,81 @@ namespace WindowsFormsTestBunifu
             this.panel16.Size = new System.Drawing.Size(286, 56);
             this.panel16.TabIndex = 9;
             // 
-            // bunifuTextBox3
+            // txtSearch_HDB
             // 
-            this.bunifuTextBox3.AcceptsReturn = false;
-            this.bunifuTextBox3.AcceptsTab = false;
-            this.bunifuTextBox3.AnimationSpeed = 200;
-            this.bunifuTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox3.BackColor = System.Drawing.Color.White;
-            this.bunifuTextBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox3.BackgroundImage")));
-            this.bunifuTextBox3.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox3.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox3.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox3.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox3.BorderRadius = 30;
-            this.bunifuTextBox3.BorderThickness = 1;
-            this.bunifuTextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox3.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.bunifuTextBox3.DefaultText = "";
-            this.bunifuTextBox3.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox3.HideSelection = true;
-            this.bunifuTextBox3.IconLeft = null;
-            this.bunifuTextBox3.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox3.IconPadding = 10;
-            this.bunifuTextBox3.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox3.IconRight")));
-            this.bunifuTextBox3.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox3.Lines = new string[0];
-            this.bunifuTextBox3.Location = new System.Drawing.Point(0, 0);
-            this.bunifuTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bunifuTextBox3.MaxLength = 32767;
-            this.bunifuTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox3.Modified = false;
-            this.bunifuTextBox3.Multiline = false;
-            this.bunifuTextBox3.Name = "bunifuTextBox3";
+            this.txtSearch_HDB.AcceptsReturn = false;
+            this.txtSearch_HDB.AcceptsTab = false;
+            this.txtSearch_HDB.AnimationSpeed = 200;
+            this.txtSearch_HDB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtSearch_HDB.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtSearch_HDB.BackColor = System.Drawing.Color.White;
+            this.txtSearch_HDB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSearch_HDB.BackgroundImage")));
+            this.txtSearch_HDB.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtSearch_HDB.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtSearch_HDB.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtSearch_HDB.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtSearch_HDB.BorderRadius = 30;
+            this.txtSearch_HDB.BorderThickness = 1;
+            this.txtSearch_HDB.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSearch_HDB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch_HDB.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtSearch_HDB.DefaultText = "";
+            this.txtSearch_HDB.FillColor = System.Drawing.Color.White;
+            this.txtSearch_HDB.HideSelection = true;
+            this.txtSearch_HDB.IconLeft = null;
+            this.txtSearch_HDB.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch_HDB.IconPadding = 10;
+            this.txtSearch_HDB.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearch_HDB.IconRight")));
+            this.txtSearch_HDB.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearch_HDB.Lines = new string[0];
+            this.txtSearch_HDB.Location = new System.Drawing.Point(0, 0);
+            this.txtSearch_HDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch_HDB.MaxLength = 32767;
+            this.txtSearch_HDB.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtSearch_HDB.Modified = false;
+            this.txtSearch_HDB.Multiline = false;
+            this.txtSearch_HDB.Name = "txtSearch_HDB";
             stateProperties15.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties15.FillColor = System.Drawing.Color.Empty;
             stateProperties15.ForeColor = System.Drawing.Color.Empty;
             stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox3.OnActiveState = stateProperties15;
+            this.txtSearch_HDB.OnActiveState = stateProperties15;
             stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox3.OnDisabledState = stateProperties16;
+            this.txtSearch_HDB.OnDisabledState = stateProperties16;
             stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties17.FillColor = System.Drawing.Color.Empty;
             stateProperties17.ForeColor = System.Drawing.Color.Empty;
             stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox3.OnHoverState = stateProperties17;
+            this.txtSearch_HDB.OnHoverState = stateProperties17;
             stateProperties18.BorderColor = System.Drawing.Color.Silver;
             stateProperties18.FillColor = System.Drawing.Color.White;
             stateProperties18.ForeColor = System.Drawing.Color.Empty;
             stateProperties18.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox3.OnIdleState = stateProperties18;
-            this.bunifuTextBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bunifuTextBox3.PasswordChar = '\0';
-            this.bunifuTextBox3.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox3.PlaceholderText = "Enter MaNV";
-            this.bunifuTextBox3.ReadOnly = false;
-            this.bunifuTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox3.SelectedText = "";
-            this.bunifuTextBox3.SelectionLength = 0;
-            this.bunifuTextBox3.SelectionStart = 0;
-            this.bunifuTextBox3.ShortcutsEnabled = true;
-            this.bunifuTextBox3.Size = new System.Drawing.Size(195, 33);
-            this.bunifuTextBox3.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox3.TabIndex = 1;
-            this.bunifuTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox3.TextMarginBottom = 0;
-            this.bunifuTextBox3.TextMarginLeft = 3;
-            this.bunifuTextBox3.TextMarginTop = 0;
-            this.bunifuTextBox3.TextPlaceholder = "Enter MaNV";
-            this.bunifuTextBox3.UseSystemPasswordChar = false;
-            this.bunifuTextBox3.WordWrap = true;
+            this.txtSearch_HDB.OnIdleState = stateProperties18;
+            this.txtSearch_HDB.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch_HDB.PasswordChar = '\0';
+            this.txtSearch_HDB.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSearch_HDB.PlaceholderText = "Nhập mã hóa đơn bán";
+            this.txtSearch_HDB.ReadOnly = false;
+            this.txtSearch_HDB.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch_HDB.SelectedText = "";
+            this.txtSearch_HDB.SelectionLength = 0;
+            this.txtSearch_HDB.SelectionStart = 0;
+            this.txtSearch_HDB.ShortcutsEnabled = true;
+            this.txtSearch_HDB.Size = new System.Drawing.Size(195, 33);
+            this.txtSearch_HDB.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtSearch_HDB.TabIndex = 1;
+            this.txtSearch_HDB.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSearch_HDB.TextMarginBottom = 0;
+            this.txtSearch_HDB.TextMarginLeft = 3;
+            this.txtSearch_HDB.TextMarginTop = 0;
+            this.txtSearch_HDB.TextPlaceholder = "Nhập mã hóa đơn bán";
+            this.txtSearch_HDB.UseSystemPasswordChar = false;
+            this.txtSearch_HDB.WordWrap = true;
+            this.txtSearch_HDB.OnIconRightClick += new System.EventHandler(this.bunifuTextBox3_OnIconRightClick);
             // 
             // label21
             // 
@@ -1986,7 +1950,7 @@ namespace WindowsFormsTestBunifu
             this.panel12.Location = new System.Drawing.Point(90, 2);
             this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(287, 339);
+            this.panel12.Size = new System.Drawing.Size(287, 321);
             this.panel12.TabIndex = 1;
             // 
             // txtHD_MaNV
@@ -2005,6 +1969,14 @@ namespace WindowsFormsTestBunifu
             this.dtHD_Ngaylap.Name = "dtHD_Ngaylap";
             this.dtHD_Ngaylap.Size = new System.Drawing.Size(164, 21);
             this.dtHD_Ngaylap.TabIndex = 12;
+            // 
+            // txtHD_TrangThai
+            // 
+            this.txtHD_TrangThai.Location = new System.Drawing.Point(103, 156);
+            this.txtHD_TrangThai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHD_TrangThai.Name = "txtHD_TrangThai";
+            this.txtHD_TrangThai.Size = new System.Drawing.Size(164, 21);
+            this.txtHD_TrangThai.TabIndex = 11;
             // 
             // txtHD_TrangThai
             // 
@@ -2132,7 +2104,7 @@ namespace WindowsFormsTestBunifu
             this.panel6.Location = new System.Drawing.Point(2, 2);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(88, 339);
+            this.panel6.Size = new System.Drawing.Size(88, 321);
             this.panel6.TabIndex = 0;
             // 
             // btnHD_XoaHD
@@ -2188,11 +2160,12 @@ namespace WindowsFormsTestBunifu
             this.tabCTHoaDon.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabCTHoaDon.Size = new System.Drawing.Size(665, 343);
             this.tabCTHoaDon.TabIndex = 3;
-            this.tabCTHoaDon.Text = "Chi tiết hóa đơn";
+            this.tabCTHoaDon.Text = "Chi tiết hóa đơn bán";
             this.tabCTHoaDon.UseVisualStyleBackColor = true;
             // 
             // panel15
             // 
+            this.panel15.Controls.Add(this.bunifuImageButton5);
             this.panel15.Controls.Add(this.dgvCTB_DSSP);
             this.panel15.Controls.Add(this.label22);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2201,6 +2174,21 @@ namespace WindowsFormsTestBunifu
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(374, 339);
             this.panel15.TabIndex = 1;
+            // 
+            // bunifuImageButton5
+            // 
+            this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton5.Image = global::WindowsFormsTestBunifu.Properties.Resources.arrow_small_left;
+            this.bunifuImageButton5.ImageActive = null;
+            this.bunifuImageButton5.Location = new System.Drawing.Point(0, 0);
+            this.bunifuImageButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton5.Name = "bunifuImageButton5";
+            this.bunifuImageButton5.Size = new System.Drawing.Size(30, 25);
+            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton5.TabIndex = 2;
+            this.bunifuImageButton5.TabStop = false;
+            this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.bunifuImageButton5_Click);
             // 
             // dgvCTB_DSSP
             // 
@@ -2213,6 +2201,7 @@ namespace WindowsFormsTestBunifu
             this.dgvCTB_DSSP.RowTemplate.Height = 24;
             this.dgvCTB_DSSP.Size = new System.Drawing.Size(374, 308);
             this.dgvCTB_DSSP.TabIndex = 1;
+            this.dgvCTB_DSSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTB_DSSP_CellClick);
             // 
             // label22
             // 
@@ -2228,6 +2217,8 @@ namespace WindowsFormsTestBunifu
             // 
             // panel14
             // 
+            this.panel14.Controls.Add(this.label63);
+            this.panel14.Controls.Add(this.txtCTB_TongTien);
             this.panel14.Controls.Add(this.label37);
             this.panel14.Controls.Add(this.txtCTB_TenSP);
             this.panel14.Controls.Add(this.btnCTB_XoaSP);
@@ -2248,6 +2239,27 @@ namespace WindowsFormsTestBunifu
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(287, 339);
             this.panel14.TabIndex = 0;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(7, 249);
+            this.label63.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(61, 15);
+            this.label63.TabIndex = 61;
+            this.label63.Text = "Tổng Tiền";
+            // 
+            // txtCTB_TongTien
+            // 
+            this.txtCTB_TongTien.Enabled = false;
+            this.txtCTB_TongTien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCTB_TongTien.Location = new System.Drawing.Point(76, 246);
+            this.txtCTB_TongTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCTB_TongTien.Name = "txtCTB_TongTien";
+            this.txtCTB_TongTien.Size = new System.Drawing.Size(191, 23);
+            this.txtCTB_TongTien.TabIndex = 60;
             // 
             // label37
             // 
@@ -2278,7 +2290,7 @@ namespace WindowsFormsTestBunifu
             this.btnCTB_XoaSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTB_XoaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnCTB_XoaSP.ForeColor = System.Drawing.Color.White;
-            this.btnCTB_XoaSP.Location = new System.Drawing.Point(197, 251);
+            this.btnCTB_XoaSP.Location = new System.Drawing.Point(194, 275);
             this.btnCTB_XoaSP.Name = "btnCTB_XoaSP";
             this.btnCTB_XoaSP.Size = new System.Drawing.Size(70, 24);
             this.btnCTB_XoaSP.TabIndex = 57;
@@ -2295,7 +2307,7 @@ namespace WindowsFormsTestBunifu
             this.btnCTB_SuaSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTB_SuaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnCTB_SuaSP.ForeColor = System.Drawing.Color.White;
-            this.btnCTB_SuaSP.Location = new System.Drawing.Point(107, 251);
+            this.btnCTB_SuaSP.Location = new System.Drawing.Point(104, 275);
             this.btnCTB_SuaSP.Name = "btnCTB_SuaSP";
             this.btnCTB_SuaSP.Size = new System.Drawing.Size(70, 24);
             this.btnCTB_SuaSP.TabIndex = 56;
@@ -2312,7 +2324,7 @@ namespace WindowsFormsTestBunifu
             this.btnCTB_ThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTB_ThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnCTB_ThemSP.ForeColor = System.Drawing.Color.White;
-            this.btnCTB_ThemSP.Location = new System.Drawing.Point(18, 251);
+            this.btnCTB_ThemSP.Location = new System.Drawing.Point(14, 275);
             this.btnCTB_ThemSP.Name = "btnCTB_ThemSP";
             this.btnCTB_ThemSP.Size = new System.Drawing.Size(70, 24);
             this.btnCTB_ThemSP.TabIndex = 55;
@@ -2348,7 +2360,7 @@ namespace WindowsFormsTestBunifu
             this.btnCTB_ThanhToanHoaDon.IdleFillColor = System.Drawing.Color.White;
             this.btnCTB_ThanhToanHoaDon.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnCTB_ThanhToanHoaDon.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCTB_ThanhToanHoaDon.Location = new System.Drawing.Point(57, 297);
+            this.btnCTB_ThanhToanHoaDon.Location = new System.Drawing.Point(57, 306);
             this.btnCTB_ThanhToanHoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCTB_ThanhToanHoaDon.Name = "btnCTB_ThanhToanHoaDon";
             this.btnCTB_ThanhToanHoaDon.Size = new System.Drawing.Size(172, 47);
@@ -2393,12 +2405,12 @@ namespace WindowsFormsTestBunifu
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(53, 16);
+            this.label28.Location = new System.Drawing.Point(72, 16);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(157, 21);
+            this.label28.Size = new System.Drawing.Size(151, 21);
             this.label28.TabIndex = 38;
-            this.label28.Text = "Thông Tin Sản Phẩm";
+            this.label28.Text = "Thông Tin Hóa Đơn";
             // 
             // txtCTB_GhiChu
             // 
@@ -2455,21 +2467,21 @@ namespace WindowsFormsTestBunifu
             // dgvDoanhThu
             // 
             this.dgvDoanhThu.AllowCustomTheming = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgvDoanhThu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvDoanhThu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDoanhThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDoanhThu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDoanhThu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDoanhThu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDoanhThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDoanhThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDoanhThu.ColumnHeadersHeight = 40;
             this.dgvDoanhThu.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvDoanhThu.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -2489,14 +2501,14 @@ namespace WindowsFormsTestBunifu
             this.dgvDoanhThu.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvDoanhThu.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgvDoanhThu.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDoanhThu.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDoanhThu.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDoanhThu.EnableHeadersVisualStyles = false;
             this.dgvDoanhThu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
@@ -2706,7 +2718,7 @@ namespace WindowsFormsTestBunifu
             // 
             // panel25
             // 
-            this.panel25.Controls.Add(this.dataGridView1);
+            this.panel25.Controls.Add(this.dgvCTSP_DSNL);
             this.panel25.Controls.Add(this.label43);
             this.panel25.Controls.Add(this.textBox1);
             this.panel25.Controls.Add(this.label38);
@@ -2714,31 +2726,31 @@ namespace WindowsFormsTestBunifu
             this.panel25.Controls.Add(this.label40);
             this.panel25.Controls.Add(this.label41);
             this.panel25.Controls.Add(this.label42);
-            this.panel25.Controls.Add(this.textBox3);
-            this.panel25.Controls.Add(this.textBox4);
-            this.panel25.Controls.Add(this.textBox5);
+            this.panel25.Controls.Add(this.txtCTSP_DonGia);
+            this.panel25.Controls.Add(this.txtCTSP_TenSp);
+            this.panel25.Controls.Add(this.txtCTSP_MaSp);
             this.panel25.Location = new System.Drawing.Point(110, 2);
             this.panel25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(436, 340);
             this.panel25.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvCTSP_DSNL
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(120, 206);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(270, 131);
-            this.dataGridView1.TabIndex = 45;
+            this.dgvCTSP_DSNL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCTSP_DSNL.Location = new System.Drawing.Point(120, 206);
+            this.dgvCTSP_DSNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCTSP_DSNL.Name = "dgvCTSP_DSNL";
+            this.dgvCTSP_DSNL.RowHeadersWidth = 51;
+            this.dgvCTSP_DSNL.RowTemplate.Height = 24;
+            this.dgvCTSP_DSNL.Size = new System.Drawing.Size(270, 131);
+            this.dgvCTSP_DSNL.TabIndex = 45;
             // 
             // label43
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(51, 141);
+            this.label43.Location = new System.Drawing.Point(44, 141);
             this.label43.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(51, 15);
@@ -2759,7 +2771,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(51, 206);
+            this.label38.Location = new System.Drawing.Point(44, 206);
             this.label38.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(74, 15);
@@ -2770,7 +2782,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(51, 109);
+            this.label39.Location = new System.Drawing.Point(44, 109);
             this.label39.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(52, 15);
@@ -2781,7 +2793,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(51, 83);
+            this.label40.Location = new System.Drawing.Point(44, 83);
             this.label40.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(47, 15);
@@ -2792,7 +2804,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(51, 51);
+            this.label41.Location = new System.Drawing.Point(44, 51);
             this.label41.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(44, 15);
@@ -2810,32 +2822,32 @@ namespace WindowsFormsTestBunifu
             this.label42.TabIndex = 37;
             this.label42.Text = "Thông Tin Chi Tiết Sản Phẩm";
             // 
-            // textBox3
+            // txtCTSP_DonGia
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(120, 106);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(271, 21);
-            this.textBox3.TabIndex = 34;
+            this.txtCTSP_DonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCTSP_DonGia.Location = new System.Drawing.Point(120, 106);
+            this.txtCTSP_DonGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCTSP_DonGia.Name = "txtCTSP_DonGia";
+            this.txtCTSP_DonGia.Size = new System.Drawing.Size(271, 21);
+            this.txtCTSP_DonGia.TabIndex = 34;
             // 
-            // textBox4
+            // txtCTSP_TenSp
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(120, 78);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(271, 21);
-            this.textBox4.TabIndex = 33;
+            this.txtCTSP_TenSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCTSP_TenSp.Location = new System.Drawing.Point(120, 78);
+            this.txtCTSP_TenSp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCTSP_TenSp.Name = "txtCTSP_TenSp";
+            this.txtCTSP_TenSp.Size = new System.Drawing.Size(271, 21);
+            this.txtCTSP_TenSp.TabIndex = 33;
             // 
-            // textBox5
+            // txtCTSP_MaSp
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(120, 49);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(271, 21);
-            this.textBox5.TabIndex = 32;
+            this.txtCTSP_MaSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCTSP_MaSp.Location = new System.Drawing.Point(120, 49);
+            this.txtCTSP_MaSp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCTSP_MaSp.Name = "txtCTSP_MaSp";
+            this.txtCTSP_MaSp.Size = new System.Drawing.Size(271, 21);
+            this.txtCTSP_MaSp.TabIndex = 32;
             // 
             // tabPage2
             // 
@@ -2872,6 +2884,31 @@ namespace WindowsFormsTestBunifu
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(390, 336);
             this.panel26.TabIndex = 0;
+            // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Cập Nhật";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(120, 284);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(176, 38);
+            this.bunifuThinButton22.TabIndex = 51;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuThinButton22
             // 
@@ -3211,6 +3248,552 @@ namespace WindowsFormsTestBunifu
             this.floBan_ListBan.Size = new System.Drawing.Size(375, 340);
             this.floBan_ListBan.TabIndex = 0;
             // 
+            // tabHoaDonNhap
+            // 
+            this.tabHoaDonNhap.Controls.Add(this.bunifuImageButton1);
+            this.tabHoaDonNhap.Controls.Add(this.dgvHDN_DSNhap);
+            this.tabHoaDonNhap.Controls.Add(this.panel29);
+            this.tabHoaDonNhap.Controls.Add(this.label55);
+            this.tabHoaDonNhap.Controls.Add(this.panel28);
+            this.tabHoaDonNhap.Location = new System.Drawing.Point(4, 4);
+            this.tabHoaDonNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabHoaDonNhap.Name = "tabHoaDonNhap";
+            this.tabHoaDonNhap.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabHoaDonNhap.Size = new System.Drawing.Size(665, 325);
+            this.tabHoaDonNhap.TabIndex = 9;
+            this.tabHoaDonNhap.Text = "Hóa Đơn Nhập";
+            this.tabHoaDonNhap.UseVisualStyleBackColor = true;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = global::WindowsFormsTestBunifu.Properties.Resources.arrow_small_left;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(290, 0);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 24);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 14;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // dgvHDN_DSNhap
+            // 
+            this.dgvHDN_DSNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHDN_DSNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHDN_DSNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHDN_DSNhap.Location = new System.Drawing.Point(289, 89);
+            this.dgvHDN_DSNhap.Name = "dgvHDN_DSNhap";
+            this.dgvHDN_DSNhap.RowHeadersWidth = 62;
+            this.dgvHDN_DSNhap.Size = new System.Drawing.Size(374, 234);
+            this.dgvHDN_DSNhap.TabIndex = 13;
+            this.dgvHDN_DSNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDN_DSNhap_CellClick);
+            // 
+            // panel29
+            // 
+            this.panel29.Controls.Add(this.txtSearch_HDN);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel29.Location = new System.Drawing.Point(289, 33);
+            this.panel29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(374, 56);
+            this.panel29.TabIndex = 12;
+            // 
+            // txtSearch_HDN
+            // 
+            this.txtSearch_HDN.AcceptsReturn = false;
+            this.txtSearch_HDN.AcceptsTab = false;
+            this.txtSearch_HDN.AnimationSpeed = 200;
+            this.txtSearch_HDN.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtSearch_HDN.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtSearch_HDN.BackColor = System.Drawing.Color.White;
+            this.txtSearch_HDN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSearch_HDN.BackgroundImage")));
+            this.txtSearch_HDN.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtSearch_HDN.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtSearch_HDN.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtSearch_HDN.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtSearch_HDN.BorderRadius = 30;
+            this.txtSearch_HDN.BorderThickness = 1;
+            this.txtSearch_HDN.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSearch_HDN.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch_HDN.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtSearch_HDN.DefaultText = "";
+            this.txtSearch_HDN.FillColor = System.Drawing.Color.White;
+            this.txtSearch_HDN.HideSelection = true;
+            this.txtSearch_HDN.IconLeft = null;
+            this.txtSearch_HDN.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch_HDN.IconPadding = 10;
+            this.txtSearch_HDN.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearch_HDN.IconRight")));
+            this.txtSearch_HDN.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearch_HDN.Lines = new string[0];
+            this.txtSearch_HDN.Location = new System.Drawing.Point(0, 0);
+            this.txtSearch_HDN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch_HDN.MaxLength = 32767;
+            this.txtSearch_HDN.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtSearch_HDN.Modified = false;
+            this.txtSearch_HDN.Multiline = false;
+            this.txtSearch_HDN.Name = "txtSearch_HDN";
+            stateProperties19.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch_HDN.OnActiveState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch_HDN.OnDisabledState = stateProperties20;
+            stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch_HDN.OnHoverState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.Silver;
+            stateProperties22.FillColor = System.Drawing.Color.White;
+            stateProperties22.ForeColor = System.Drawing.Color.Empty;
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch_HDN.OnIdleState = stateProperties22;
+            this.txtSearch_HDN.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch_HDN.PasswordChar = '\0';
+            this.txtSearch_HDN.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSearch_HDN.PlaceholderText = "Nhập mã hóa đơn nhập";
+            this.txtSearch_HDN.ReadOnly = false;
+            this.txtSearch_HDN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch_HDN.SelectedText = "";
+            this.txtSearch_HDN.SelectionLength = 0;
+            this.txtSearch_HDN.SelectionStart = 0;
+            this.txtSearch_HDN.ShortcutsEnabled = true;
+            this.txtSearch_HDN.Size = new System.Drawing.Size(195, 33);
+            this.txtSearch_HDN.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtSearch_HDN.TabIndex = 1;
+            this.txtSearch_HDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSearch_HDN.TextMarginBottom = 0;
+            this.txtSearch_HDN.TextMarginLeft = 3;
+            this.txtSearch_HDN.TextMarginTop = 0;
+            this.txtSearch_HDN.TextPlaceholder = "Nhập mã hóa đơn nhập";
+            this.txtSearch_HDN.UseSystemPasswordChar = false;
+            this.txtSearch_HDN.WordWrap = true;
+            this.txtSearch_HDN.OnIconRightClick += new System.EventHandler(this.txtSearch_HDN_OnIconRightClick);
+            // 
+            // label55
+            // 
+            this.label55.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label55.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(289, 2);
+            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label55.Name = "label55";
+            this.label55.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.label55.Size = new System.Drawing.Size(374, 31);
+            this.label55.TabIndex = 11;
+            this.label55.Text = "Danh Sách Hóa Đơn Nhập";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel28
+            // 
+            this.panel28.Controls.Add(this.txtHDN_MaNCC);
+            this.panel28.Controls.Add(this.label8);
+            this.panel28.Controls.Add(this.txtHDN_MaNV);
+            this.panel28.Controls.Add(this.dtHDN_NgayNhap);
+            this.panel28.Controls.Add(this.textBox5);
+            this.panel28.Controls.Add(this.txtHDN_MaHDN);
+            this.panel28.Controls.Add(this.btnHDN_ChiTiet);
+            this.panel28.Controls.Add(this.label14);
+            this.panel28.Controls.Add(this.label51);
+            this.panel28.Controls.Add(this.label52);
+            this.panel28.Controls.Add(this.label53);
+            this.panel28.Controls.Add(this.label54);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel28.Location = new System.Drawing.Point(2, 2);
+            this.panel28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(287, 321);
+            this.panel28.TabIndex = 2;
+            // 
+            // txtHDN_MaNCC
+            // 
+            this.txtHDN_MaNCC.Location = new System.Drawing.Point(103, 128);
+            this.txtHDN_MaNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHDN_MaNCC.Name = "txtHDN_MaNCC";
+            this.txtHDN_MaNCC.Size = new System.Drawing.Size(164, 21);
+            this.txtHDN_MaNCC.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(4, 133);
+            this.label8.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 15);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Nhà Cung Cấp";
+            // 
+            // txtHDN_MaNV
+            // 
+            this.txtHDN_MaNV.Location = new System.Drawing.Point(103, 98);
+            this.txtHDN_MaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHDN_MaNV.Name = "txtHDN_MaNV";
+            this.txtHDN_MaNV.Size = new System.Drawing.Size(164, 21);
+            this.txtHDN_MaNV.TabIndex = 13;
+            // 
+            // dtHDN_NgayNhap
+            // 
+            this.dtHDN_NgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtHDN_NgayNhap.Location = new System.Drawing.Point(103, 162);
+            this.dtHDN_NgayNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtHDN_NgayNhap.Name = "dtHDN_NgayNhap";
+            this.dtHDN_NgayNhap.Size = new System.Drawing.Size(164, 21);
+            this.dtHDN_NgayNhap.TabIndex = 12;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(103, 193);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(164, 77);
+            this.textBox5.TabIndex = 9;
+            // 
+            // txtHDN_MaHDN
+            // 
+            this.txtHDN_MaHDN.Location = new System.Drawing.Point(103, 69);
+            this.txtHDN_MaHDN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHDN_MaHDN.Name = "txtHDN_MaHDN";
+            this.txtHDN_MaHDN.Size = new System.Drawing.Size(164, 21);
+            this.txtHDN_MaHDN.TabIndex = 6;
+            // 
+            // btnHDN_ChiTiet
+            // 
+            this.btnHDN_ChiTiet.ActiveBorderThickness = 1;
+            this.btnHDN_ChiTiet.ActiveCornerRadius = 20;
+            this.btnHDN_ChiTiet.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnHDN_ChiTiet.ActiveForecolor = System.Drawing.Color.White;
+            this.btnHDN_ChiTiet.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnHDN_ChiTiet.BackColor = System.Drawing.Color.Transparent;
+            this.btnHDN_ChiTiet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHDN_ChiTiet.BackgroundImage")));
+            this.btnHDN_ChiTiet.ButtonText = "Chi Tiết";
+            this.btnHDN_ChiTiet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHDN_ChiTiet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHDN_ChiTiet.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnHDN_ChiTiet.IdleBorderThickness = 1;
+            this.btnHDN_ChiTiet.IdleCornerRadius = 20;
+            this.btnHDN_ChiTiet.IdleFillColor = System.Drawing.Color.White;
+            this.btnHDN_ChiTiet.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnHDN_ChiTiet.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnHDN_ChiTiet.Location = new System.Drawing.Point(58, 286);
+            this.btnHDN_ChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHDN_ChiTiet.Name = "btnHDN_ChiTiet";
+            this.btnHDN_ChiTiet.Size = new System.Drawing.Size(159, 47);
+            this.btnHDN_ChiTiet.TabIndex = 5;
+            this.btnHDN_ChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHDN_ChiTiet.Click += new System.EventHandler(this.btnHDN_ChiTiet_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(45, 196);
+            this.label14.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 15);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Ghi chú";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(35, 166);
+            this.label51.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(59, 15);
+            this.label51.TabIndex = 3;
+            this.label51.Text = "Ngày Lập";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(9, 101);
+            this.label52.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(85, 15);
+            this.label52.TabIndex = 2;
+            this.label52.Text = "Mã Nhân Viên";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(14, 72);
+            this.label53.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(80, 15);
+            this.label53.TabIndex = 1;
+            this.label53.Text = "Mã Hóa Đơn ";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(54, 27);
+            this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(194, 21);
+            this.label54.TabIndex = 0;
+            this.label54.Text = "Thông Tin Hóa Đơn Nhập";
+            // 
+            // tabChiTietNhap
+            // 
+            this.tabChiTietNhap.Controls.Add(this.bunifuImageButton6);
+            this.tabChiTietNhap.Controls.Add(this.dgvCTN_DSNL);
+            this.tabChiTietNhap.Controls.Add(this.label56);
+            this.tabChiTietNhap.Controls.Add(this.panel30);
+            this.tabChiTietNhap.Location = new System.Drawing.Point(4, 4);
+            this.tabChiTietNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabChiTietNhap.Name = "tabChiTietNhap";
+            this.tabChiTietNhap.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabChiTietNhap.Size = new System.Drawing.Size(665, 343);
+            this.tabChiTietNhap.TabIndex = 10;
+            this.tabChiTietNhap.Text = "Chi Tiết Nhập";
+            this.tabChiTietNhap.UseVisualStyleBackColor = true;
+            // 
+            // bunifuImageButton6
+            // 
+            this.bunifuImageButton6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton6.Image = global::WindowsFormsTestBunifu.Properties.Resources.arrow_small_left;
+            this.bunifuImageButton6.ImageActive = null;
+            this.bunifuImageButton6.Location = new System.Drawing.Point(290, 2);
+            this.bunifuImageButton6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton6.Name = "bunifuImageButton6";
+            this.bunifuImageButton6.Size = new System.Drawing.Size(30, 24);
+            this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton6.TabIndex = 5;
+            this.bunifuImageButton6.TabStop = false;
+            this.bunifuImageButton6.Zoom = 10;
+            this.bunifuImageButton6.Click += new System.EventHandler(this.bunifuImageButton6_Click);
+            // 
+            // dgvCTN_DSNL
+            // 
+            this.dgvCTN_DSNL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCTN_DSNL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCTN_DSNL.Location = new System.Drawing.Point(289, 33);
+            this.dgvCTN_DSNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCTN_DSNL.Name = "dgvCTN_DSNL";
+            this.dgvCTN_DSNL.RowHeadersWidth = 51;
+            this.dgvCTN_DSNL.RowTemplate.Height = 24;
+            this.dgvCTN_DSNL.Size = new System.Drawing.Size(374, 308);
+            this.dgvCTN_DSNL.TabIndex = 4;
+            this.dgvCTN_DSNL.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTN_DSNL_CellClick);
+            // 
+            // label56
+            // 
+            this.label56.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label56.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(289, 2);
+            this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(374, 31);
+            this.label56.TabIndex = 2;
+            this.label56.Text = "Danh Sách Nguyên Liệu";
+            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel30
+            // 
+            this.panel30.Controls.Add(this.label58);
+            this.panel30.Controls.Add(this.txtCTN_TongTien);
+            this.panel30.Controls.Add(this.txtCTN_TenNCC);
+            this.panel30.Controls.Add(this.label64);
+            this.panel30.Controls.Add(this.label57);
+            this.panel30.Controls.Add(this.txtCTN_TenNL);
+            this.panel30.Controls.Add(this.lblCTN_TenHDN);
+            this.panel30.Controls.Add(this.bunifuThinButton24);
+            this.panel30.Controls.Add(this.label59);
+            this.panel30.Controls.Add(this.label60);
+            this.panel30.Controls.Add(this.label61);
+            this.panel30.Controls.Add(this.label62);
+            this.panel30.Controls.Add(this.textBox12);
+            this.panel30.Controls.Add(this.txtCTN_SoLuong);
+            this.panel30.Controls.Add(this.txtCTN_DonGia);
+            this.panel30.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel30.Location = new System.Drawing.Point(2, 2);
+            this.panel30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(287, 339);
+            this.panel30.TabIndex = 3;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(-2, 275);
+            this.label58.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(61, 15);
+            this.label58.TabIndex = 63;
+            this.label58.Text = "Tổng Tiền";
+            // 
+            // txtCTN_TongTien
+            // 
+            this.txtCTN_TongTien.Enabled = false;
+            this.txtCTN_TongTien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCTN_TongTien.Location = new System.Drawing.Point(68, 271);
+            this.txtCTN_TongTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCTN_TongTien.Name = "txtCTN_TongTien";
+            this.txtCTN_TongTien.Size = new System.Drawing.Size(191, 23);
+            this.txtCTN_TongTien.TabIndex = 62;
+            // 
+            // txtCTN_TenNCC
+            // 
+            this.txtCTN_TenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCTN_TenNCC.Location = new System.Drawing.Point(68, 121);
+            this.txtCTN_TenNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCTN_TenNCC.Name = "txtCTN_TenNCC";
+            this.txtCTN_TenNCC.Size = new System.Drawing.Size(191, 21);
+            this.txtCTN_TenNCC.TabIndex = 61;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(-1, 124);
+            this.label64.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(56, 15);
+            this.label64.TabIndex = 60;
+            this.label64.Text = "Tên NCC";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(5, 216);
+            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(51, 15);
+            this.label57.TabIndex = 59;
+            this.label57.Text = "Ghi Chú";
+            // 
+            // txtCTN_TenNL
+            // 
+            this.txtCTN_TenNL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCTN_TenNL.Location = new System.Drawing.Point(68, 89);
+            this.txtCTN_TenNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCTN_TenNL.Name = "txtCTN_TenNL";
+            this.txtCTN_TenNL.Size = new System.Drawing.Size(191, 21);
+            this.txtCTN_TenNL.TabIndex = 58;
+            // 
+            // lblCTN_TenHDN
+            // 
+            this.lblCTN_TenHDN.AutoSize = true;
+            this.lblCTN_TenHDN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCTN_TenHDN.Location = new System.Drawing.Point(53, 55);
+            this.lblCTN_TenHDN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCTN_TenHDN.Name = "lblCTN_TenHDN";
+            this.lblCTN_TenHDN.Size = new System.Drawing.Size(85, 21);
+            this.lblCTN_TenHDN.TabIndex = 45;
+            this.lblCTN_TenHDN.Text = "Hóa đơn : ";
+            // 
+            // bunifuThinButton24
+            // 
+            this.bunifuThinButton24.ActiveBorderThickness = 1;
+            this.bunifuThinButton24.ActiveCornerRadius = 20;
+            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
+            this.bunifuThinButton24.ButtonText = "Thanh toán hóa đơn";
+            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.IdleBorderThickness = 1;
+            this.bunifuThinButton24.IdleCornerRadius = 20;
+            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.Location = new System.Drawing.Point(57, 297);
+            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuThinButton24.Name = "bunifuThinButton24";
+            this.bunifuThinButton24.Size = new System.Drawing.Size(172, 47);
+            this.bunifuThinButton24.TabIndex = 44;
+            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(-1, 185);
+            this.label59.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(60, 15);
+            this.label59.TabIndex = 42;
+            this.label59.Text = "Số Lượng";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(8, 156);
+            this.label60.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(52, 15);
+            this.label60.TabIndex = 41;
+            this.label60.Text = "Đơn Giá";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(13, 92);
+            this.label61.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(47, 15);
+            this.label61.TabIndex = 40;
+            this.label61.Text = "Tên NL";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(72, 16);
+            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(194, 21);
+            this.label62.TabIndex = 38;
+            this.label62.Text = "Thông Tin Hóa Đơn Nhập";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Location = new System.Drawing.Point(68, 214);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(192, 47);
+            this.textBox12.TabIndex = 37;
+            // 
+            // txtCTN_SoLuong
+            // 
+            this.txtCTN_SoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCTN_SoLuong.Location = new System.Drawing.Point(68, 183);
+            this.txtCTN_SoLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCTN_SoLuong.Name = "txtCTN_SoLuong";
+            this.txtCTN_SoLuong.Size = new System.Drawing.Size(191, 21);
+            this.txtCTN_SoLuong.TabIndex = 36;
+            // 
+            // txtCTN_DonGia
+            // 
+            this.txtCTN_DonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCTN_DonGia.Location = new System.Drawing.Point(68, 154);
+            this.txtCTN_DonGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCTN_DonGia.Name = "txtCTN_DonGia";
+            this.txtCTN_DonGia.Size = new System.Drawing.Size(191, 21);
+            this.txtCTN_DonGia.TabIndex = 35;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3269,6 +3852,7 @@ namespace WindowsFormsTestBunifu
             ((System.ComponentModel.ISupportInitialize)(this.btnHD_ThemHD)).EndInit();
             this.tabCTHoaDon.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTB_DSSP)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
@@ -3282,7 +3866,7 @@ namespace WindowsFormsTestBunifu
             this.tabPage1.ResumeLayout(false);
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTSP_DSNL)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
@@ -3292,6 +3876,17 @@ namespace WindowsFormsTestBunifu
             this.panel23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan_ListHDB)).EndInit();
             this.panel22.ResumeLayout(false);
+            this.tabHoaDonNhap.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHDN_DSNhap)).EndInit();
+            this.panel29.ResumeLayout(false);
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.tabChiTietNhap.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTN_DSNL)).EndInit();
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3318,13 +3913,11 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNV_LuongCB;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtSP_GhiChu;
-        private System.Windows.Forms.TextBox txtSP_SL;
         private System.Windows.Forms.TextBox txtSP_DonGia;
         private System.Windows.Forms.TextBox txtSP_TenSp;
         private System.Windows.Forms.TextBox txtSP_MaSp;
@@ -3374,7 +3967,6 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.TextBox txtHD_TrangThai;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TabPage tabKhoNL;
-        private Bunifu.UI.WinForms.BunifuDataGridView dgvSP_DSSP;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DataGridView dgvHD_DSHD;
@@ -3412,7 +4004,6 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.TextBox txtKho_MaNL;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox txtKho_TenNL;
-        private Bunifu.UI.WinForms.BunifuDataGridView dgvKho;
         private System.Windows.Forms.TextBox txtHD_MaNV;
         private System.Windows.Forms.TextBox txtCTB_TenSP;
         private System.Windows.Forms.Label label37;
@@ -3434,9 +4025,9 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCTSP_DonGia;
+        private System.Windows.Forms.TextBox txtCTSP_TenSp;
+        private System.Windows.Forms.TextBox txtCTSP_MaSp;
         private System.Windows.Forms.DateTimePicker dtNV_NTNS;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -3448,7 +4039,7 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.TextBox txtNV_DiaChi;
         private System.Windows.Forms.TextBox txtNV_TenNV;
         private System.Windows.Forms.TextBox txtNV_MaNV;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCTSP_DSNL;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel26;
@@ -3471,9 +4062,54 @@ namespace WindowsFormsTestBunifu
         private BunifuFlatButton btnChiTietSP_Return;
         private System.Windows.Forms.DataGridView dgvNhanVien_DSNV;
         private Bunifu.UI.WinForms.BunifuTextBox btxtNV_Search;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox3;
+        private Bunifu.UI.WinForms.BunifuTextBox txtSearch_SP;
+        private Bunifu.UI.WinForms.BunifuTextBox btxtSearch_NL;
+        private Bunifu.UI.WinForms.BunifuTextBox txtSearch_HDB;
+        private System.Windows.Forms.DataGridView dgvSP_DSSP;
+        private System.Windows.Forms.DataGridView dgvKho;
+        private System.Windows.Forms.TabPage tabHoaDonNhap;
+        private System.Windows.Forms.DataGridView dgvHDN_DSNhap;
+        private System.Windows.Forms.Panel panel29;
+        private Bunifu.UI.WinForms.BunifuTextBox txtSearch_HDN;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.TextBox txtHDN_MaNV;
+        private System.Windows.Forms.DateTimePicker dtHDN_NgayNhap;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtHDN_MaHDN;
+        private BunifuThinButton2 btnHDN_ChiTiet;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TabPage tabChiTietNhap;
+        private System.Windows.Forms.DataGridView dgvCTN_DSNL;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox txtCTN_TenNL;
+        private System.Windows.Forms.Label lblCTN_TenHDN;
+        private BunifuThinButton2 bunifuThinButton24;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtCTN_SoLuong;
+        private System.Windows.Forms.TextBox txtCTN_DonGia;
+        private BunifuImageButton bunifuImageButton5;
+        private BunifuImageButton bunifuImageButton6;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.TextBox txtCTB_TongTien;
+        private BunifuThinButton2 btnNhapHang;
+        private System.Windows.Forms.TextBox txtHDN_MaNCC;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCTN_TenNCC;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox txtCTN_TongTien;
+        private BunifuImageButton bunifuImageButton1;
     }
 }
 

@@ -109,9 +109,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(16, 64);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(965, 231);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -129,9 +129,9 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(820, 190);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 39);
+            this.button3.Size = new System.Drawing.Size(131, 33);
             this.button3.TabIndex = 68;
             this.button3.Text = "Xóa NCC";
             this.button3.UseVisualStyleBackColor = false;
@@ -148,9 +148,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(681, 190);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 39);
+            this.button1.Size = new System.Drawing.Size(131, 33);
             this.button1.TabIndex = 67;
             this.button1.Text = "Sửa NCC";
             this.button1.UseVisualStyleBackColor = false;
@@ -166,7 +166,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(541, 190);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 34);
             this.button2.TabIndex = 66;
@@ -178,7 +178,7 @@
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(695, 46);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(255, 25);
             this.comboBox2.TabIndex = 3;
@@ -279,7 +279,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 154);
-            this.label1.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 18);
             this.label1.TabIndex = 57;
@@ -301,7 +301,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(145, 114);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(255, 25);
             this.comboBox1.TabIndex = 55;
@@ -311,7 +311,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(9, 118);
-            this.label13.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.label13.Margin = new System.Windows.Forms.Padding(9);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(100, 18);
             this.label13.TabIndex = 53;
@@ -333,7 +333,7 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(9, 82);
-            this.label19.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.label19.Margin = new System.Windows.Forms.Padding(9);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(70, 18);
             this.label19.TabIndex = 51;
@@ -376,9 +376,9 @@
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.groupBox2.Location = new System.Drawing.Point(16, 303);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(965, 117);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -391,7 +391,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(681, 82);
-            this.label11.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.label11.Margin = new System.Windows.Forms.Padding(9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 18);
             this.label11.TabIndex = 74;
@@ -415,7 +415,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(341, 82);
-            this.label10.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.label10.Margin = new System.Windows.Forms.Padding(9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 18);
             this.label10.TabIndex = 72;
@@ -428,7 +428,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(9, 82);
-            this.label9.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.label9.Margin = new System.Windows.Forms.Padding(9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 18);
             this.label9.TabIndex = 70;
@@ -503,7 +503,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(255, 427);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 30);
             this.button4.TabIndex = 91;
@@ -521,7 +521,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(135, 427);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 30);
             this.button5.TabIndex = 90;
@@ -539,7 +539,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(16, 427);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(93, 30);
             this.button6.TabIndex = 89;
@@ -553,7 +553,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(697, 430);
-            this.label12.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.label12.Margin = new System.Windows.Forms.Padding(9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 18);
             this.label12.TabIndex = 88;
@@ -574,7 +574,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 464);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(965, 279);
@@ -599,7 +599,7 @@
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.Location = new System.Drawing.Point(203, 752);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(215, 58);
             this.bunifuThinButton21.TabIndex = 94;
@@ -625,7 +625,7 @@
             this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton24.Location = new System.Drawing.Point(559, 753);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
             this.bunifuThinButton24.Size = new System.Drawing.Size(215, 58);
             this.bunifuThinButton24.TabIndex = 93;
@@ -650,7 +650,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmPhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
