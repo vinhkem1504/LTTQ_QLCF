@@ -28,8 +28,8 @@ namespace WindowsFormsTestBunifu
         public string SDT { get; set; }
         public System.DateTime NgaySinh { get; set; }
         public System.DateTime NgayNhanViec { get; set; }
-        public decimal Luong { get; set; }
     
+        public virtual ChiTietNhanVien ChiTietNhanVien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDonBan> HoaDonBans { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

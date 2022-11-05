@@ -13,10 +13,10 @@ namespace WindowsFormsTestBunifu
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLCafeEntities : DbContext
+    public partial class QLCafeEntities1 : DbContext
     {
-        public QLCafeEntities()
-            : base("name=QLCafeEntities")
+        public QLCafeEntities1()
+            : base("name=QLCafeEntities1")
         {
         }
     
@@ -26,13 +26,13 @@ namespace WindowsFormsTestBunifu
         }
     
         public virtual DbSet<Ban> Bans { get; set; }
+        public virtual DbSet<ChiTietNhanVien> ChiTietNhanViens { get; set; }
         public virtual DbSet<DoUong> DoUongs { get; set; }
         public virtual DbSet<HoaDonBan> HoaDonBans { get; set; }
         public virtual DbSet<HoaDonNhap> HoaDonNhaps { get; set; }
         public virtual DbSet<NguyenLieu> NguyenLieux { get; set; }
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<ChiTietHDB> ChiTietHDBs { get; set; }
         public virtual DbSet<ChiTietHDN> ChiTietHDNs { get; set; }

@@ -12,12 +12,13 @@ namespace WindowsFormsTestBunifu
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class ChiTietNhanVien
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public string MaNV { get; set; }
+        public string ChucVu { get; set; }
+        public decimal Luong { get; set; }
+        public int SoNgayLamViec { get; set; }
+    
+        public virtual NhanVien NhanVien { get; set; }
     }
 }
