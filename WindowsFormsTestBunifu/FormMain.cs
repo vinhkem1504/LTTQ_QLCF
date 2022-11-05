@@ -101,8 +101,7 @@ namespace WindowsFormsTestBunifu
 
         private void bunifuImageButton15_Click(object sender, EventArgs e)
         {
-            frmPhieuNhap nhap = new frmPhieuNhap();
-            nhap.ShowDialog();
+            
         }
 
         private void bbtnLogout_Click(object sender, EventArgs e)
@@ -265,6 +264,17 @@ namespace WindowsFormsTestBunifu
         {
             Search_HDN(txtSearch_HDN.Text);
         }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            frmPhieuNhap nhap = new frmPhieuNhap();
+            nhap.ShowDialog();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            bpaPages.SelectedIndex = 2;
+        }
         #endregion
 
 
@@ -425,7 +435,9 @@ namespace WindowsFormsTestBunifu
             txtCTN_SoLuong.Text = dgvCTN_DSNL.CurrentRow.Cells[3].Value.ToString();
         }
 
+
         #endregion
 
+        
     }
 }
