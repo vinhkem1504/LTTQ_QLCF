@@ -17,6 +17,8 @@ namespace WindowsFormsTestBunifu
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhanVien()
         {
+            this.ChiTietCaLams = new HashSet<ChiTietCaLam>();
+            this.ChiTietLuongs = new HashSet<ChiTietLuong>();
             this.HoaDonBans = new HashSet<HoaDonBan>();
             this.HoaDonNhaps = new HashSet<HoaDonNhap>();
             this.TaiKhoans = new HashSet<TaiKhoan>();
@@ -28,8 +30,12 @@ namespace WindowsFormsTestBunifu
         public string SDT { get; set; }
         public System.DateTime NgaySinh { get; set; }
         public System.DateTime NgayNhanViec { get; set; }
+        public decimal Luong { get; set; }
     
-        public virtual ChiTietNhanVien ChiTietNhanVien { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietCaLam> ChiTietCaLams { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietLuong> ChiTietLuongs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDonBan> HoaDonBans { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

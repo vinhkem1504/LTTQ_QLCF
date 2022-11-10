@@ -9,13 +9,59 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ChiTietNhanViens">
-      <EntityTypeMapping TypeName="QLCafeModel.ChiTietNhanVien">
-        <MappingFragment StoreEntitySet="ChiTietNhanVien">
+    <EntitySetMapping Name="CaLams">
+      <EntityTypeMapping TypeName="QLCafeModel.CaLam">
+        <MappingFragment StoreEntitySet="CaLam">
+          <ScalarProperty Name="MaCa" ColumnName="MaCa" />
+          <ScalarProperty Name="TenCa" ColumnName="TenCa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietCaLams">
+      <EntityTypeMapping TypeName="QLCafeModel.ChiTietCaLam">
+        <MappingFragment StoreEntitySet="ChiTietCaLam">
           <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
-          <ScalarProperty Name="Luong" ColumnName="Luong" />
+          <ScalarProperty Name="MaCa" ColumnName="MaCa" />
+          <ScalarProperty Name="NgayLamViec" ColumnName="NgayLamViec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietHDBs">
+      <EntityTypeMapping TypeName="QLCafeModel.ChiTietHDB">
+        <MappingFragment StoreEntitySet="ChiTietHDB">
+          <ScalarProperty Name="MaHDB" ColumnName="MaHDB" />
+          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+          <ScalarProperty Name="SoLuongBan" ColumnName="SoLuongBan" />
+          <ScalarProperty Name="KhuyenMai" ColumnName="KhuyenMai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietHDNs">
+      <EntityTypeMapping TypeName="QLCafeModel.ChiTietHDN">
+        <MappingFragment StoreEntitySet="ChiTietHDN">
+          <ScalarProperty Name="MaHDN" ColumnName="MaHDN" />
+          <ScalarProperty Name="MaNL" ColumnName="MaNL" />
+          <ScalarProperty Name="SoLuongNhap" ColumnName="SoLuongNhap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietLuongs">
+      <EntityTypeMapping TypeName="QLCafeModel.ChiTietLuong">
+        <MappingFragment StoreEntitySet="ChiTietLuong">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="Nam" ColumnName="Nam" />
           <ScalarProperty Name="SoNgayLamViec" ColumnName="SoNgayLamViec" />
+          <ScalarProperty Name="Luong" ColumnName="Luong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CongThucDoUongs">
+      <EntityTypeMapping TypeName="QLCafeModel.CongThucDoUong">
+        <MappingFragment StoreEntitySet="CongThucDoUong">
+          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+          <ScalarProperty Name="MaNL" ColumnName="MaNL" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -79,6 +125,7 @@
           <ScalarProperty Name="SDT" ColumnName="SDT" />
           <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
           <ScalarProperty Name="NgayNhanViec" ColumnName="NgayNhanViec" />
+          <ScalarProperty Name="Luong" ColumnName="Luong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -90,34 +137,6 @@
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="LoaiTK" ColumnName="LoaiTK" />
           <ScalarProperty Name="Email" ColumnName="Email" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ChiTietHDBs">
-      <EntityTypeMapping TypeName="QLCafeModel.ChiTietHDB">
-        <MappingFragment StoreEntitySet="ChiTietHDB">
-          <ScalarProperty Name="MaHDB" ColumnName="MaHDB" />
-          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
-          <ScalarProperty Name="SoLuongBan" ColumnName="SoLuongBan" />
-          <ScalarProperty Name="KhuyenMai" ColumnName="KhuyenMai" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ChiTietHDNs">
-      <EntityTypeMapping TypeName="QLCafeModel.ChiTietHDN">
-        <MappingFragment StoreEntitySet="ChiTietHDN">
-          <ScalarProperty Name="MaHDN" ColumnName="MaHDN" />
-          <ScalarProperty Name="MaNL" ColumnName="MaNL" />
-          <ScalarProperty Name="SoLuongNhap" ColumnName="SoLuongNhap" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CongThucDoUongs">
-      <EntityTypeMapping TypeName="QLCafeModel.CongThucDoUong">
-        <MappingFragment StoreEntitySet="CongThucDoUong">
-          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
-          <ScalarProperty Name="MaNL" ColumnName="MaNL" />
-          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

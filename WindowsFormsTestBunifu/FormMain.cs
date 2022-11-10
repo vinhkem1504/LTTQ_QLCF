@@ -20,7 +20,11 @@ namespace WindowsFormsTestBunifu
         {
             bpaPages.SelectedIndex = 8;
             bpaPages.AllowTransitions = false;
-            LoadDataNhanVien();
+            LoadInfoNhanVien();
+            if (!UserInfo.chucVu)
+            {
+                LoadDataDSNhanVien();
+            }
             LoadDataHoaDon();
             LoadDataSanPham();
             LoadDataNguyenLieu();
@@ -28,8 +32,15 @@ namespace WindowsFormsTestBunifu
         
         private void bbtnUser_Click(object sender, EventArgs e)
         {
-            bpaPages.SelectedIndex = 0;
-            
+            if (UserInfo.chucVu)
+            {
+                bpaPages.SelectedIndex = 7;
+            }
+            else
+            {
+                bpaPages.SelectedIndex = 0;
+            }
+
         }
 
         private void bbtnProduct_Click(object sender, EventArgs e)
@@ -223,6 +234,7 @@ namespace WindowsFormsTestBunifu
                 dgvCTN_DSNL.DataSource = result.ToList();
 
                 // Load thông tin
+                lblCTN_TenHDN.Text = "Hóa đơn : ";
                 lblCTN_TenHDN.Text = lblCTN_TenHDN.Text + txtHDN_MaHDN.Text;
 
                 //txtCTB_TongTien.Text = (int.Parse(txtCTB_SL.Text) * int.Parse(txtCTB_DonGia.Text)).ToString();
@@ -279,10 +291,23 @@ namespace WindowsFormsTestBunifu
 
 
         #region Method
-        void LoadDataNhanVien()
+
+        //Load info nhân viên
+        void LoadInfoNhanVien()
+        {
+            txtTTNV_MaNV.Enabled = false;
+            var infoNV = db.NhanViens.Find(UserInfo.maNV);
+            txtTTNV_MaNV.Text = infoNV.MaNV.ToString();
+            txtTTNV_HoTen.Text = infoNV.HoTen.ToString();
+            txtTTNV_DiaChi.Text = infoNV.DiaChi.ToString();
+            txtTTNV_SDT.Text = infoNV.SDT.ToString();
+            dtTTNV_NgaySinh.Text = infoNV.NgaySinh.ToString();
+        }
+
+        void LoadDataDSNhanVien()
         {
             var result = from c in db.NhanViens
-                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec, Luong = c.ChiTietNhanVien.Luong.ToString() };
+                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec, Luong = c.Luong.ToString() };
             dgvNhanVien_DSNV.DataSource = result.ToList();
         }
 
@@ -303,7 +328,7 @@ namespace WindowsFormsTestBunifu
         {
             var result = from c in db.NhanViens
                          where c.MaNV == s
-                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec, Luong = c.ChiTietNhanVien.Luong.ToString() };
+                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec, Luong = c.Luong.ToString() };
 
             dgvNhanVien_DSNV.DataSource = result.ToList();
         }
@@ -431,13 +456,33 @@ namespace WindowsFormsTestBunifu
         {
             txtCTN_TenNL.Text = dgvCTN_DSNL.CurrentRow.Cells[0].Value.ToString();
             txtCTN_TenNCC.Text = dgvCTN_DSNL.CurrentRow.Cells[1].Value.ToString();
-            txtCTN_DonGia.Text = dgvCTN_DSNL.CurrentRow.Cells[2].Value.ToString();
-            txtCTN_SoLuong.Text = dgvCTN_DSNL.CurrentRow.Cells[3].Value.ToString();
+            txtCTN_DonGia.Text = dgvCTN_DSNL.CurrentRow.Cells[3].Value.ToString();
+            txtCTN_SoLuong.Text = dgvCTN_DSNL.CurrentRow.Cells[2].Value.ToString();
         }
+
 
 
         #endregion
 
-        
+        private void updateInfoNhanVien()
+        {
+            var result = from c in db.NhanViens
+                         where c.MaNV == txtTTNV_MaNV.Text
+                         select c;
+
+            var userInfo = new NhanVien();
+            userInfo = result.First();
+            userInfo.HoTen = txtTTNV_HoTen.Text;
+            userInfo.DiaChi = txtTTNV_DiaChi.Text;
+            userInfo.SDT = txtTTNV_SDT.Text;
+            userInfo.NgaySinh = DateTime.Parse(dtTTNV_NgaySinh.Text);
+            db.SaveChanges();
+            MessageBox.Show("Cập nhật thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        } 
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            updateInfoNhanVien();
+        }
     }
 }

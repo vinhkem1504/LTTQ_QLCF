@@ -142,6 +142,7 @@
             this.btnResetPassword.Size = new System.Drawing.Size(205, 51);
             this.btnResetPassword.TabIndex = 4;
             this.btnResetPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
             // 
             // txtForgotP_Email
             // 
@@ -507,10 +508,10 @@
             this.pageLogin.Location = new System.Drawing.Point(0, 0);
             this.pageLogin.Multiline = true;
             this.pageLogin.Name = "pageLogin";
-            this.pageLogin.Page = this.tabLogin;
-            this.pageLogin.PageIndex = 0;
-            this.pageLogin.PageName = "tabLogin";
-            this.pageLogin.PageTitle = "Đăng nhập";
+            this.pageLogin.Page = this.tabForgotPassword;
+            this.pageLogin.PageIndex = 1;
+            this.pageLogin.PageName = "tabForgotPassword";
+            this.pageLogin.PageTitle = "Quên mật khẩu";
             this.pageLogin.SelectedIndex = 0;
             this.pageLogin.Size = new System.Drawing.Size(520, 551);
             this.pageLogin.TabIndex = 0;

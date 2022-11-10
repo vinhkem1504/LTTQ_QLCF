@@ -12,14 +12,14 @@ namespace WindowsFormsTestBunifu
     using System;
     using System.Collections.Generic;
     
-    public partial class ChiTietHDB
+    public partial class ChiTietLuong
     {
-        public string MaHDB { get; set; }
-        public string MaDU { get; set; }
-        public Nullable<int> SoLuongBan { get; set; }
-        public string KhuyenMai { get; set; }
+        public string MaNV { get; set; }
+        public int Thang { get; set; }
+        public int Nam { get; set; }
+        public Nullable<int> SoNgayLamViec { get; set; }
+        public Nullable<decimal> Luong { get; set; }
     
-        public virtual HoaDonBan HoaDonBan { get; set; }
-        public virtual DoUong DoUong { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
     }
 }

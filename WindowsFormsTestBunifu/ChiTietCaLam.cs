@@ -12,13 +12,13 @@ namespace WindowsFormsTestBunifu
     using System;
     using System.Collections.Generic;
     
-    public partial class ChiTietNhanVien
+    public partial class ChiTietCaLam
     {
         public string MaNV { get; set; }
-        public string ChucVu { get; set; }
-        public decimal Luong { get; set; }
-        public int SoNgayLamViec { get; set; }
+        public string MaCa { get; set; }
+        public System.DateTime NgayLamViec { get; set; }
     
+        public virtual CaLam CaLam { get; set; }
         public virtual NhanVien NhanVien { get; set; }
     }
 }

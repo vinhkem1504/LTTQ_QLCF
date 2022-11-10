@@ -86,13 +86,19 @@
     <Compile Include="Ban.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="CaLam.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietCaLam.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietHDB.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="ChiTietHDN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ChiTietNhanVien.cs">
+    <Compile Include="ChiTietLuong.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="CongThucDoUong.cs">
@@ -160,6 +166,7 @@
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,9 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsTestBunifu
 {
+
     public partial class frmLogin : Form
     {
-        private string AdminCode = "";
+        private QLCafeEntities1 db = new QLCafeEntities1();
+        private int login = 0;
+        private string username = "";
+        private string password = "";
+        private string email = "";
+        private string maNV = "";
+        private bool chucvu = true;
 
         public frmLogin()
         {
@@ -22,9 +29,69 @@ namespace WindowsFormsTestBunifu
 
         private void makeEmpty()
         {
-
+            btxtPassword.Text = "";
+            btxtUsername.Text = "";
+            //btxtUsername.Focus();
         }
 
+        private bool isCorrectAccount(string username, string password, DataTable dt)
+        {
+            bool login = false;
+
+            foreach(DataRow check in dt.Rows)
+            {
+                if(String.Compare(username, check[0].ToString(), false) == 0 && String.Compare(password, check[1].ToString(), false) == 0) 
+                { 
+                    maNV = check[3].ToString();
+                    //MessageBox.Show(chucvu.ToString());
+                    chucvu = bool.Parse(check[4].ToString());
+                    login = true;
+                    break; 
+                }
+            }
+
+            return login;
+        }
+
+        private bool isCorrectEmail(string email, DataTable dt)
+        {
+            bool corect = false;
+
+            foreach (DataRow check in dt.Rows)
+            {
+                if (String.Compare(email, check[2].ToString(), false) == 0 )
+                { corect = true; break; }
+            }
+
+            return corect;
+        }
+
+        private DataTable createData() {
+            var result = from c in db.TaiKhoans
+                         select new { c.TenTK, c.MatKhau, c.Email, c.NhanVien.MaNV, c.LoaiTK };
+
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add(new DataColumn("tk", typeof(string)));
+            dt.Columns.Add(new DataColumn("mk", typeof(string)));
+            dt.Columns.Add(new DataColumn("email", typeof(string)));
+            dt.Columns.Add(new DataColumn("manv", typeof(string)));
+            dt.Columns.Add(new DataColumn("chucvu", typeof(bool)));
+
+            foreach (var v in result)
+            {
+                DataRow r;
+                r = dt.NewRow();
+                r["tk"] = v.TenTK;
+                r["mk"] = v.MatKhau;
+                r["email"] = v.Email;
+                r["manv"] = v.MaNV;
+                r["chucvu"] = v.LoaiTK;
+                dt.Rows.Add(r);
+            }
+
+            return dt;
+        }
         #endregion
         #region events
         private void btxtPassword_OnValueChanged(object sender, EventArgs e)
@@ -37,11 +104,40 @@ namespace WindowsFormsTestBunifu
         {
             bimgUser.Image = Image.FromFile(Application.StartupPath + "\\Images\\user.png");
             bimgPassword.Image = Image.FromFile(Application.StartupPath + "\\Images\\lock.png");
-            //btxtUsername.LeftIcon.Image = Image.FromFile(Application.StartupPath + "\\Images\\user.png");
-            //btxtPassword.LeftIcon.Image = Image.FromFile(Application.StartupPath + "\\Images\\lock.png");
-            //bimgEye.Image = Image.FromFile(Application.StartupPath + "\\Images\\eye-crossed.png");
             btxtPassword.RightIcon.Image = Image.FromFile(Application.StartupPath + "\\Images\\eye-crossed.png");
             picReturnLogin.Image = Image.FromFile(Application.StartupPath + "\\Images\\arrow-small-left.png");
+        }
+
+        // reset mật khẩu
+        private void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            DataTable dt = createData();
+
+            email = txtForgotP_Email.Text;
+            if (isCorrectEmail(email, dt))
+            {
+                // update mật khẩu cho email X
+                //to do
+                var resetPassword = (from c in db.TaiKhoans
+                                    where c.Email == email
+                                    select c).ToList();
+                //var resetPassword = db.TaiKhoans.Find(email);
+                foreach(var item in resetPassword)
+                {
+                    if(item.Email == email)
+                    {
+                        item.MatKhau = "1";
+                        db.SaveChanges();
+                    }
+                }
+
+                MessageBox.Show("Thay đổi mật khẩu thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            else
+            {
+                MessageBox.Show("Email không đúng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         // Ẩn hiện mật khẩu
@@ -93,11 +189,34 @@ namespace WindowsFormsTestBunifu
         //click Đăng nhập
         private void bbtnLogin_Click(object sender, EventArgs e)
         {
-            frmMain frmMain = new frmMain();
-            this.Hide();
+            DataTable dt = createData();
+
+            username = btxtUsername.Text;
+            password = btxtPassword.Text;
+            if (isCorrectAccount(username, password, dt))
+                login = 1;
+
+            if (login == 1)
+            {
+                frmMain frmMain = new frmMain();
+                this.Hide();
+
+                UserInfo.userName = username;
+                UserInfo.passWord = password;
+                UserInfo.email = email;
+                UserInfo.maNV = maNV;
+                UserInfo.chucVu = chucvu;
+
+                frmMain.ShowDialog();
+                makeEmpty();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btxtUsername.Text = "";
+            }
             
-            frmMain.ShowDialog();
-            this.Show();
         }
 
         //thoát không đăng nhập
@@ -105,8 +224,7 @@ namespace WindowsFormsTestBunifu
         {
             e.Cancel = false;
         }
-        #endregion
 
-
+        #endregion 
     }
 }

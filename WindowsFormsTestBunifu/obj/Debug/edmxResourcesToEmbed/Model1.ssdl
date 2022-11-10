@@ -7,8 +7,23 @@
     <Property Name="MaBan" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="TrangThai" Type="bit" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QLCafe.dbo.ChiTietHDB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CaLam">
+    <Key>
+      <PropertyRef Name="MaCa" />
+    </Key>
+    <Property Name="MaCa" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenCa" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChiTietCaLam">
+    <Key>
+      <PropertyRef Name="MaNV" />
+      <PropertyRef Name="MaCa" />
+      <PropertyRef Name="NgayLamViec" />
+    </Key>
+    <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MaCa" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayLamViec" Type="date" Nullable="false" />
+  </EntityType>
   <EntityType Name="ChiTietHDB">
     <Key>
       <PropertyRef Name="MaHDB" />
@@ -19,8 +34,6 @@ warning 6002: The table/view 'QLCafe.dbo.ChiTietHDB' does not have a primary key
     <Property Name="SoLuongBan" Type="int" />
     <Property Name="KhuyenMai" Type="nvarchar" MaxLength="255" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QLCafe.dbo.ChiTietHDN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="ChiTietHDN">
     <Key>
       <PropertyRef Name="MaHDN" />
@@ -30,17 +43,18 @@ warning 6002: The table/view 'QLCafe.dbo.ChiTietHDN' does not have a primary key
     <Property Name="MaNL" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="SoLuongNhap" Type="float" />
   </EntityType>
-  <EntityType Name="ChiTietNhanVien">
+  <EntityType Name="ChiTietLuong">
     <Key>
       <PropertyRef Name="MaNV" />
+      <PropertyRef Name="Thang" />
+      <PropertyRef Name="Nam" />
     </Key>
     <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="ChucVu" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Luong" Type="money" Nullable="false" />
-    <Property Name="SoNgayLamViec" Type="int" Nullable="false" />
+    <Property Name="Thang" Type="int" Nullable="false" />
+    <Property Name="Nam" Type="int" Nullable="false" />
+    <Property Name="SoNgayLamViec" Type="int" />
+    <Property Name="Luong" Type="money" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="CongThucDoUong">
     <Key>
       <PropertyRef Name="MaDU" />
@@ -106,6 +120,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
     <Property Name="SDT" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="NgaySinh" Type="datetime" Nullable="false" />
     <Property Name="NgayNhanViec" Type="datetime" Nullable="false" />
+    <Property Name="Luong" Type="money" Nullable="false" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -117,7 +132,31 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
     <Property Name="LoaiTK" Type="bit" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
-  <Association Name="FK__ChiTietHD__MaHDB__571DF1D5">
+  <Association Name="FK__ChiTietCaL__MaCa__3B75D760">
+    <End Role="CaLam" Type="Self.CaLam" Multiplicity="1" />
+    <End Role="ChiTietCaLam" Type="Self.ChiTietCaLam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CaLam">
+        <PropertyRef Name="MaCa" />
+      </Principal>
+      <Dependent Role="ChiTietCaLam">
+        <PropertyRef Name="MaCa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietCaL__MaNV__3A81B327">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="ChiTietCaLam" Type="Self.ChiTietCaLam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="ChiTietCaLam">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietHD__MaHDB__5FB337D6">
     <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="1" />
     <End Role="ChiTietHDB" Type="Self.ChiTietHDB" Multiplicity="*" />
     <ReferentialConstraint>
@@ -129,7 +168,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietHD__MaHDN__4CA06362">
+  <Association Name="FK__ChiTietHD__MaHDN__5441852A">
     <End Role="HoaDonNhap" Type="Self.HoaDonNhap" Multiplicity="1" />
     <End Role="ChiTietHDN" Type="Self.ChiTietHDN" Multiplicity="*" />
     <ReferentialConstraint>
@@ -141,7 +180,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietHDB__MaDU__5812160E">
+  <Association Name="FK__ChiTietHDB__MaDU__60A75C0F">
     <End Role="DoUong" Type="Self.DoUong" Multiplicity="1" />
     <End Role="ChiTietHDB" Type="Self.ChiTietHDB" Multiplicity="*" />
     <ReferentialConstraint>
@@ -153,7 +192,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietHDN__MaNL__4D94879B">
+  <Association Name="FK__ChiTietHDN__MaNL__5535A963">
     <End Role="NguyenLieu" Type="Self.NguyenLieu" Multiplicity="1" />
     <End Role="ChiTietHDN" Type="Self.ChiTietHDN" Multiplicity="*" />
     <ReferentialConstraint>
@@ -165,7 +204,19 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CongThucDo__MaDU__45F365D3">
+  <Association Name="FK__ChiTietLuo__MaNV__3E52440B">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="ChiTietLuong" Type="Self.ChiTietLuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="ChiTietLuong">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CongThucDo__MaDU__4CA06362">
     <End Role="DoUong" Type="Self.DoUong" Multiplicity="1" />
     <End Role="CongThucDoUong" Type="Self.CongThucDoUong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -177,7 +228,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CongThucDo__MaNL__46E78A0C">
+  <Association Name="FK__CongThucDo__MaNL__4D94879B">
     <End Role="NguyenLieu" Type="Self.NguyenLieu" Multiplicity="1" />
     <End Role="CongThucDoUong" Type="Self.CongThucDoUong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -189,7 +240,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDonBan__MaBan__534D60F1">
+  <Association Name="FK__HoaDonBan__MaBan__5AEE82B9">
     <End Role="Ban" Type="Self.Ban" Multiplicity="1" />
     <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="*" />
     <ReferentialConstraint>
@@ -201,7 +252,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDonBan__MaNV__5441852A">
+  <Association Name="FK__HoaDonBan__MaNV__5BE2A6F2">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="*" />
     <ReferentialConstraint>
@@ -213,7 +264,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDonNha__MaNCC__49C3F6B7">
+  <Association Name="FK__HoaDonNha__MaNCC__5070F446">
     <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="1" />
     <End Role="HoaDonNhap" Type="Self.HoaDonNhap" Multiplicity="*" />
     <ReferentialConstraint>
@@ -225,7 +276,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDonNhap__MaNV__4AB81AF0">
+  <Association Name="FK__HoaDonNhap__MaNV__5165187F">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="HoaDonNhap" Type="Self.HoaDonNhap" Multiplicity="*" />
     <ReferentialConstraint>
@@ -237,7 +288,7 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TaiKhoan__MaNV__3B75D760">
+  <Association Name="FK__TaiKhoan__MaNV__412EB0B6">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
     <ReferentialConstraint>
@@ -249,21 +300,14 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_ChiTietNhanVien_NhanVien">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-    <End Role="ChiTietNhanVien" Type="Self.ChiTietNhanVien" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="NhanVien">
-        <PropertyRef Name="MaNV" />
-      </Principal>
-      <Dependent Role="ChiTietNhanVien">
-        <PropertyRef Name="MaNV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="QLCafeModelStoreContainer">
     <EntitySet Name="Ban" EntityType="Self.Ban" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ChiTietNhanVien" EntityType="Self.ChiTietNhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CaLam" EntityType="Self.CaLam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietCaLam" EntityType="Self.ChiTietCaLam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietHDB" EntityType="Self.ChiTietHDB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietHDN" EntityType="Self.ChiTietHDN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietLuong" EntityType="Self.ChiTietLuong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CongThucDoUong" EntityType="Self.CongThucDoUong" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DoUong" EntityType="Self.DoUong" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDonBan" EntityType="Self.HoaDonBan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDonNhap" EntityType="Self.HoaDonNhap" Schema="dbo" store:Type="Tables" />
@@ -271,75 +315,61 @@ warning 6002: The table/view 'QLCafe.dbo.CongThucDoUong' does not have a primary
     <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ChiTietHDB" EntityType="Self.ChiTietHDB" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [ChiTietHDB].[MaHDB] AS [MaHDB], 
-    [ChiTietHDB].[MaDU] AS [MaDU], 
-    [ChiTietHDB].[SoLuongBan] AS [SoLuongBan], 
-    [ChiTietHDB].[KhuyenMai] AS [KhuyenMai]
-    FROM [dbo].[ChiTietHDB] AS [ChiTietHDB]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="ChiTietHDN" EntityType="Self.ChiTietHDN" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [ChiTietHDN].[MaHDN] AS [MaHDN], 
-    [ChiTietHDN].[MaNL] AS [MaNL], 
-    [ChiTietHDN].[SoLuongNhap] AS [SoLuongNhap]
-    FROM [dbo].[ChiTietHDN] AS [ChiTietHDN]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="CongThucDoUong" EntityType="Self.CongThucDoUong" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [CongThucDoUong].[MaDU] AS [MaDU], 
-    [CongThucDoUong].[MaNL] AS [MaNL], 
-    [CongThucDoUong].[SoLuong] AS [SoLuong]
-    FROM [dbo].[CongThucDoUong] AS [CongThucDoUong]</DefiningQuery>
-    </EntitySet>
-    <AssociationSet Name="FK__ChiTietHD__MaHDB__571DF1D5" Association="Self.FK__ChiTietHD__MaHDB__571DF1D5">
+    <AssociationSet Name="FK__ChiTietCaL__MaCa__3B75D760" Association="Self.FK__ChiTietCaL__MaCa__3B75D760">
+      <End Role="CaLam" EntitySet="CaLam" />
+      <End Role="ChiTietCaLam" EntitySet="ChiTietCaLam" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietCaL__MaNV__3A81B327" Association="Self.FK__ChiTietCaL__MaNV__3A81B327">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="ChiTietCaLam" EntitySet="ChiTietCaLam" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietHD__MaHDB__5FB337D6" Association="Self.FK__ChiTietHD__MaHDB__5FB337D6">
       <End Role="HoaDonBan" EntitySet="HoaDonBan" />
       <End Role="ChiTietHDB" EntitySet="ChiTietHDB" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHD__MaHDN__4CA06362" Association="Self.FK__ChiTietHD__MaHDN__4CA06362">
+    <AssociationSet Name="FK__ChiTietHD__MaHDN__5441852A" Association="Self.FK__ChiTietHD__MaHDN__5441852A">
       <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
       <End Role="ChiTietHDN" EntitySet="ChiTietHDN" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHDB__MaDU__5812160E" Association="Self.FK__ChiTietHDB__MaDU__5812160E">
+    <AssociationSet Name="FK__ChiTietHDB__MaDU__60A75C0F" Association="Self.FK__ChiTietHDB__MaDU__60A75C0F">
       <End Role="DoUong" EntitySet="DoUong" />
       <End Role="ChiTietHDB" EntitySet="ChiTietHDB" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHDN__MaNL__4D94879B" Association="Self.FK__ChiTietHDN__MaNL__4D94879B">
+    <AssociationSet Name="FK__ChiTietHDN__MaNL__5535A963" Association="Self.FK__ChiTietHDN__MaNL__5535A963">
       <End Role="NguyenLieu" EntitySet="NguyenLieu" />
       <End Role="ChiTietHDN" EntitySet="ChiTietHDN" />
     </AssociationSet>
-    <AssociationSet Name="FK__CongThucDo__MaDU__45F365D3" Association="Self.FK__CongThucDo__MaDU__45F365D3">
+    <AssociationSet Name="FK__ChiTietLuo__MaNV__3E52440B" Association="Self.FK__ChiTietLuo__MaNV__3E52440B">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="ChiTietLuong" EntitySet="ChiTietLuong" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CongThucDo__MaDU__4CA06362" Association="Self.FK__CongThucDo__MaDU__4CA06362">
       <End Role="DoUong" EntitySet="DoUong" />
       <End Role="CongThucDoUong" EntitySet="CongThucDoUong" />
     </AssociationSet>
-    <AssociationSet Name="FK__CongThucDo__MaNL__46E78A0C" Association="Self.FK__CongThucDo__MaNL__46E78A0C">
+    <AssociationSet Name="FK__CongThucDo__MaNL__4D94879B" Association="Self.FK__CongThucDo__MaNL__4D94879B">
       <End Role="NguyenLieu" EntitySet="NguyenLieu" />
       <End Role="CongThucDoUong" EntitySet="CongThucDoUong" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonBan__MaBan__534D60F1" Association="Self.FK__HoaDonBan__MaBan__534D60F1">
+    <AssociationSet Name="FK__HoaDonBan__MaBan__5AEE82B9" Association="Self.FK__HoaDonBan__MaBan__5AEE82B9">
       <End Role="Ban" EntitySet="Ban" />
       <End Role="HoaDonBan" EntitySet="HoaDonBan" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonBan__MaNV__5441852A" Association="Self.FK__HoaDonBan__MaNV__5441852A">
+    <AssociationSet Name="FK__HoaDonBan__MaNV__5BE2A6F2" Association="Self.FK__HoaDonBan__MaNV__5BE2A6F2">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="HoaDonBan" EntitySet="HoaDonBan" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonNha__MaNCC__49C3F6B7" Association="Self.FK__HoaDonNha__MaNCC__49C3F6B7">
+    <AssociationSet Name="FK__HoaDonNha__MaNCC__5070F446" Association="Self.FK__HoaDonNha__MaNCC__5070F446">
       <End Role="NhaCungCap" EntitySet="NhaCungCap" />
       <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonNhap__MaNV__4AB81AF0" Association="Self.FK__HoaDonNhap__MaNV__4AB81AF0">
+    <AssociationSet Name="FK__HoaDonNhap__MaNV__5165187F" Association="Self.FK__HoaDonNhap__MaNV__5165187F">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
     </AssociationSet>
-    <AssociationSet Name="FK__TaiKhoan__MaNV__3B75D760" Association="Self.FK__TaiKhoan__MaNV__3B75D760">
+    <AssociationSet Name="FK__TaiKhoan__MaNV__412EB0B6" Association="Self.FK__TaiKhoan__MaNV__412EB0B6">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="TaiKhoan" EntitySet="TaiKhoan" />
-    </AssociationSet>
-    <AssociationSet Name="fk_ChiTietNhanVien_NhanVien" Association="Self.fk_ChiTietNhanVien_NhanVien">
-      <End Role="NhanVien" EntitySet="NhanVien" />
-      <End Role="ChiTietNhanVien" EntitySet="ChiTietNhanVien" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
