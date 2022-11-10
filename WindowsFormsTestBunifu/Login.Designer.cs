@@ -286,7 +286,7 @@
             this.btxtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.btxtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.btxtPassword.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.btxtPassword.DefaultText = "";
+            this.btxtPassword.DefaultText = "DinhTrung07";
             this.btxtPassword.FillColor = System.Drawing.Color.White;
             this.btxtPassword.HideSelection = true;
             this.btxtPassword.IconLeft = null;
@@ -294,7 +294,8 @@
             this.btxtPassword.IconPadding = 10;
             this.btxtPassword.IconRight = ((System.Drawing.Image)(resources.GetObject("btxtPassword.IconRight")));
             this.btxtPassword.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btxtPassword.Lines = new string[0];
+            this.btxtPassword.Lines = new string[] {
+        "DinhTrung07"};
             this.btxtPassword.Location = new System.Drawing.Point(113, 230);
             this.btxtPassword.MaxLength = 32767;
             this.btxtPassword.MinimumSize = new System.Drawing.Size(1, 1);
@@ -329,7 +330,7 @@
             this.btxtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.btxtPassword.SelectedText = "";
             this.btxtPassword.SelectionLength = 0;
-            this.btxtPassword.SelectionStart = 0;
+            this.btxtPassword.SelectionStart = 11;
             this.btxtPassword.ShortcutsEnabled = true;
             this.btxtPassword.Size = new System.Drawing.Size(341, 41);
             this.btxtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
@@ -362,7 +363,7 @@
             this.btxtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.btxtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.btxtUsername.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.btxtUsername.DefaultText = "";
+            this.btxtUsername.DefaultText = "DangDinhTrung";
             this.btxtUsername.FillColor = System.Drawing.Color.White;
             this.btxtUsername.HideSelection = true;
             this.btxtUsername.IconLeft = null;
@@ -370,7 +371,8 @@
             this.btxtUsername.IconPadding = 10;
             this.btxtUsername.IconRight = null;
             this.btxtUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.btxtUsername.Lines = new string[0];
+            this.btxtUsername.Lines = new string[] {
+        "DangDinhTrung"};
             this.btxtUsername.Location = new System.Drawing.Point(113, 133);
             this.btxtUsername.MaxLength = 32767;
             this.btxtUsername.MinimumSize = new System.Drawing.Size(1, 1);
@@ -405,7 +407,7 @@
             this.btxtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.btxtUsername.SelectedText = "";
             this.btxtUsername.SelectionLength = 0;
-            this.btxtUsername.SelectionStart = 0;
+            this.btxtUsername.SelectionStart = 13;
             this.btxtUsername.ShortcutsEnabled = true;
             this.btxtUsername.Size = new System.Drawing.Size(341, 41);
             this.btxtUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
@@ -508,10 +510,10 @@
             this.pageLogin.Location = new System.Drawing.Point(0, 0);
             this.pageLogin.Multiline = true;
             this.pageLogin.Name = "pageLogin";
-            this.pageLogin.Page = this.tabForgotPassword;
-            this.pageLogin.PageIndex = 1;
-            this.pageLogin.PageName = "tabForgotPassword";
-            this.pageLogin.PageTitle = "Quên mật khẩu";
+            this.pageLogin.Page = this.tabLogin;
+            this.pageLogin.PageIndex = 0;
+            this.pageLogin.PageName = "tabLogin";
+            this.pageLogin.PageTitle = "Đăng nhập";
             this.pageLogin.SelectedIndex = 0;
             this.pageLogin.Size = new System.Drawing.Size(520, 551);
             this.pageLogin.TabIndex = 0;
