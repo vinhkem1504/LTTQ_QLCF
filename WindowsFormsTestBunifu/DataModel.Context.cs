@@ -13,10 +13,10 @@ namespace WindowsFormsTestBunifu
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLCafeEntities1 : DbContext
+    public partial class QLCafeEntities : DbContext
     {
-        public QLCafeEntities1()
-            : base("name=QLCafeEntities1")
+        public QLCafeEntities()
+            : base("name=QLCafeEntities")
         {
         }
     
@@ -26,7 +26,12 @@ namespace WindowsFormsTestBunifu
         }
     
         public virtual DbSet<Ban> Bans { get; set; }
-        public virtual DbSet<ChiTietNhanVien> ChiTietNhanViens { get; set; }
+        public virtual DbSet<CaLam> CaLams { get; set; }
+        public virtual DbSet<ChiTietCaLam> ChiTietCaLams { get; set; }
+        public virtual DbSet<ChiTietHDB> ChiTietHDBs { get; set; }
+        public virtual DbSet<ChiTietHDN> ChiTietHDNs { get; set; }
+        public virtual DbSet<ChiTietLuong> ChiTietLuongs { get; set; }
+        public virtual DbSet<CongThucDoUong> CongThucDoUongs { get; set; }
         public virtual DbSet<DoUong> DoUongs { get; set; }
         public virtual DbSet<HoaDonBan> HoaDonBans { get; set; }
         public virtual DbSet<HoaDonNhap> HoaDonNhaps { get; set; }
@@ -34,8 +39,5 @@ namespace WindowsFormsTestBunifu
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
-        public virtual DbSet<ChiTietHDB> ChiTietHDBs { get; set; }
-        public virtual DbSet<ChiTietHDN> ChiTietHDNs { get; set; }
-        public virtual DbSet<CongThucDoUong> CongThucDoUongs { get; set; }
     }
 }

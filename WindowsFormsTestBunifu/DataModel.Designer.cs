@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Nam 3\Ki 2\Done UI\LTTQ_QLCF\WindowsFormsTestBunifu\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\DataModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -8,8 +9,8 @@ namespace WindowsFormsTestBunifu
     public partial class frmMain : Form
     {
 
-        QLCafeEntities1 db = new QLCafeEntities1();
-
+        QLCafeEntities db = new QLCafeEntities();
+        
         bool exit = true;
         public frmMain()
         {
@@ -282,7 +283,7 @@ namespace WindowsFormsTestBunifu
         void LoadDataNhanVien()
         {
             var result = from c in db.NhanViens
-                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec, Luong = c.ChiTietNhanVien.Luong.ToString() };
+                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec};
             dgvNhanVien_DSNV.DataSource = result.ToList();
         }
 
@@ -303,7 +304,7 @@ namespace WindowsFormsTestBunifu
         {
             var result = from c in db.NhanViens
                          where c.MaNV == s
-                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec, Luong = c.ChiTietNhanVien.Luong.ToString() };
+                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec};
 
             dgvNhanVien_DSNV.DataSource = result.ToList();
         }
@@ -438,6 +439,6 @@ namespace WindowsFormsTestBunifu
 
         #endregion
 
-        
+
     }
 }
