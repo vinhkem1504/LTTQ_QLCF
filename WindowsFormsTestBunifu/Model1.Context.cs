@@ -12,6 +12,8 @@ namespace WindowsFormsTestBunifu
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class QLCafeEntities1 : DbContext
     {
@@ -39,5 +41,40 @@ namespace WindowsFormsTestBunifu
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<Cau1_view> Cau1_view { get; set; }
+        public virtual DbSet<Cau2_view> Cau2_view { get; set; }
+        public virtual DbSet<Cau4_view> Cau4_view { get; set; }
+        public virtual DbSet<Cau5_view> Cau5_view { get; set; }
+        public virtual DbSet<Cau6_view> Cau6_view { get; set; }
+        public virtual DbSet<Cau7_view> Cau7_view { get; set; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public virtual int Cau1_proc(string maDoUong, Nullable<int> nam, ObjectParameter sL)
+        {
+            var maDoUongParameter = maDoUong != null ?
+                new ObjectParameter("MaDoUong", maDoUong) :
+                new ObjectParameter("MaDoUong", typeof(string));
+    
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("Nam", nam) :
+                new ObjectParameter("Nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau1_proc", maDoUongParameter, namParameter, sL);
+        }
     }
 }

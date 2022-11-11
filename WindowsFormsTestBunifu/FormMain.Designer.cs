@@ -235,13 +235,6 @@ namespace WindowsFormsTestBunifu
             this.txtTTNV_HoTen = new System.Windows.Forms.TextBox();
             this.txtTTNV_MaNV = new System.Windows.Forms.TextBox();
             this.tabBan = new System.Windows.Forms.TabPage();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.btnBan_ThanhToan = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.cbbBan_ListSP = new System.Windows.Forms.ComboBox();
-            this.nbrBan_SoLuong = new System.Windows.Forms.NumericUpDown();
-            this.btnBan_Them = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.dgvBan_ListHDB = new System.Windows.Forms.DataGridView();
             this.panel22 = new System.Windows.Forms.Panel();
             this.floBan_ListBan = new System.Windows.Forms.FlowLayoutPanel();
             this.tabHoaDonNhap = new System.Windows.Forms.TabPage();
@@ -283,6 +276,14 @@ namespace WindowsFormsTestBunifu
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.txtCTN_SoLuong = new System.Windows.Forms.TextBox();
             this.txtCTN_DonGia = new System.Windows.Forms.TextBox();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.btnBan_ThanhToan = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.cbbBan_ListSP = new System.Windows.Forms.ComboBox();
+            this.nbrBan_SoLuong = new System.Windows.Forms.NumericUpDown();
+            this.btnBan_Them = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.dgvBan_ListHDB = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bpicLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -338,10 +339,6 @@ namespace WindowsFormsTestBunifu
             this.tabPage2.SuspendLayout();
             this.panel26.SuspendLayout();
             this.tabBan.SuspendLayout();
-            this.panel24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nbrBan_SoLuong)).BeginInit();
-            this.panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBan_ListHDB)).BeginInit();
             this.panel22.SuspendLayout();
             this.tabHoaDonNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -352,6 +349,11 @@ namespace WindowsFormsTestBunifu
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTN_DSNL)).BeginInit();
             this.panel30.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrBan_SoLuong)).BeginInit();
+            this.panel27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBan_ListHDB)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -677,10 +679,10 @@ namespace WindowsFormsTestBunifu
             this.bpaPages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bpaPages.Multiline = true;
             this.bpaPages.Name = "bpaPages";
-            this.bpaPages.Page = this.tabPage2;
-            this.bpaPages.PageIndex = 7;
-            this.bpaPages.PageName = "tabPage2";
-            this.bpaPages.PageTitle = "Thông Tin Nhân Viên";
+            this.bpaPages.Page = this.tabSanPham;
+            this.bpaPages.PageIndex = 1;
+            this.bpaPages.PageName = "tabSanPham";
+            this.bpaPages.PageTitle = "Sản phẩm";
             this.bpaPages.SelectedIndex = 0;
             this.bpaPages.Size = new System.Drawing.Size(897, 454);
             this.bpaPages.TabIndex = 2;
@@ -1221,7 +1223,7 @@ namespace WindowsFormsTestBunifu
             this.btnSP_ThemVaoHD.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(97)))), ((int)(((byte)(61)))));
             this.btnSP_ThemVaoHD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSP_ThemVaoHD.BackgroundImage")));
             this.btnSP_ThemVaoHD.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSP_ThemVaoHD.ButtonText = "Thêm vào hóa đơn";
+            this.btnSP_ThemVaoHD.ButtonText = "Xem số lượng đã bán";
             this.btnSP_ThemVaoHD.ButtonTextMarginLeft = 0;
             this.btnSP_ThemVaoHD.ColorContrastOnClick = 45;
             this.btnSP_ThemVaoHD.ColorContrastOnHover = 45;
@@ -1274,6 +1276,7 @@ namespace WindowsFormsTestBunifu
             this.btnSP_ThemVaoHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSP_ThemVaoHD.TextMarginLeft = 0;
             this.btnSP_ThemVaoHD.UseDefaultRadiusAndThickness = true;
+            this.btnSP_ThemVaoHD.Click += new System.EventHandler(this.btnSP_ThemVaoHD_Click);
             // 
             // btnSP_CTSP
             // 
@@ -2880,9 +2883,9 @@ namespace WindowsFormsTestBunifu
             this.btnTTNV_Luong.Iconimage_Selected = null;
             this.btnTTNV_Luong.IconMarginLeft = 0;
             this.btnTTNV_Luong.IconMarginRight = 0;
-            this.btnTTNV_Luong.IconRightVisible = true;
+            this.btnTTNV_Luong.IconRightVisible = false;
             this.btnTTNV_Luong.IconRightZoom = 0D;
-            this.btnTTNV_Luong.IconVisible = true;
+            this.btnTTNV_Luong.IconVisible = false;
             this.btnTTNV_Luong.IconZoom = 90D;
             this.btnTTNV_Luong.IsTab = false;
             this.btnTTNV_Luong.Location = new System.Drawing.Point(19, 347);
@@ -2953,9 +2956,9 @@ namespace WindowsFormsTestBunifu
             this.btnTTNV_ChamCong.Iconimage_Selected = null;
             this.btnTTNV_ChamCong.IconMarginLeft = 0;
             this.btnTTNV_ChamCong.IconMarginRight = 0;
-            this.btnTTNV_ChamCong.IconRightVisible = true;
+            this.btnTTNV_ChamCong.IconRightVisible = false;
             this.btnTTNV_ChamCong.IconRightZoom = 0D;
-            this.btnTTNV_ChamCong.IconVisible = true;
+            this.btnTTNV_ChamCong.IconVisible = false;
             this.btnTTNV_ChamCong.IconZoom = 90D;
             this.btnTTNV_ChamCong.IsTab = false;
             this.btnTTNV_ChamCong.Location = new System.Drawing.Point(697, 59);
@@ -3181,7 +3184,6 @@ namespace WindowsFormsTestBunifu
             // 
             // tabBan
             // 
-            this.tabBan.Controls.Add(this.panel24);
             this.tabBan.Controls.Add(this.panel23);
             this.tabBan.Controls.Add(this.panel22);
             this.tabBan.Location = new System.Drawing.Point(4, 4);
@@ -3192,132 +3194,13 @@ namespace WindowsFormsTestBunifu
             this.tabBan.Text = "Bàn";
             this.tabBan.UseVisualStyleBackColor = true;
             // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.btnBan_ThanhToan);
-            this.panel24.Controls.Add(this.cbbBan_ListSP);
-            this.panel24.Controls.Add(this.nbrBan_SoLuong);
-            this.panel24.Controls.Add(this.btnBan_Them);
-            this.panel24.Location = new System.Drawing.Point(508, 3);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(373, 67);
-            this.panel24.TabIndex = 2;
-            // 
-            // btnBan_ThanhToan
-            // 
-            this.btnBan_ThanhToan.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnBan_ThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnBan_ThanhToan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBan_ThanhToan.BorderRadius = 0;
-            this.btnBan_ThanhToan.ButtonText = "   Thanh Toán";
-            this.btnBan_ThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBan_ThanhToan.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBan_ThanhToan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBan_ThanhToan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBan_ThanhToan.Iconimage")));
-            this.btnBan_ThanhToan.Iconimage_right = null;
-            this.btnBan_ThanhToan.Iconimage_right_Selected = null;
-            this.btnBan_ThanhToan.Iconimage_Selected = null;
-            this.btnBan_ThanhToan.IconMarginLeft = 0;
-            this.btnBan_ThanhToan.IconMarginRight = 0;
-            this.btnBan_ThanhToan.IconRightVisible = false;
-            this.btnBan_ThanhToan.IconRightZoom = 0D;
-            this.btnBan_ThanhToan.IconVisible = false;
-            this.btnBan_ThanhToan.IconZoom = 90D;
-            this.btnBan_ThanhToan.IsTab = false;
-            this.btnBan_ThanhToan.Location = new System.Drawing.Point(198, 36);
-            this.btnBan_ThanhToan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBan_ThanhToan.Name = "btnBan_ThanhToan";
-            this.btnBan_ThanhToan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnBan_ThanhToan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnBan_ThanhToan.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnBan_ThanhToan.selected = false;
-            this.btnBan_ThanhToan.Size = new System.Drawing.Size(171, 27);
-            this.btnBan_ThanhToan.TabIndex = 4;
-            this.btnBan_ThanhToan.Text = "   Thanh Toán";
-            this.btnBan_ThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBan_ThanhToan.Textcolor = System.Drawing.Color.White;
-            this.btnBan_ThanhToan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBan_ThanhToan.Click += new System.EventHandler(this.btnBan_ThanhToan_Click);
-            // 
-            // cbbBan_ListSP
-            // 
-            this.cbbBan_ListSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbBan_ListSP.FormattingEnabled = true;
-            this.cbbBan_ListSP.Location = new System.Drawing.Point(17, 4);
-            this.cbbBan_ListSP.Name = "cbbBan_ListSP";
-            this.cbbBan_ListSP.Size = new System.Drawing.Size(174, 28);
-            this.cbbBan_ListSP.TabIndex = 3;
-            // 
-            // nbrBan_SoLuong
-            // 
-            this.nbrBan_SoLuong.BackColor = System.Drawing.Color.White;
-            this.nbrBan_SoLuong.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbrBan_SoLuong.Location = new System.Drawing.Point(17, 36);
-            this.nbrBan_SoLuong.Name = "nbrBan_SoLuong";
-            this.nbrBan_SoLuong.Size = new System.Drawing.Size(174, 27);
-            this.nbrBan_SoLuong.TabIndex = 2;
-            // 
-            // btnBan_Them
-            // 
-            this.btnBan_Them.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnBan_Them.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnBan_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBan_Them.BorderRadius = 0;
-            this.btnBan_Them.ButtonText = "Thêm Món";
-            this.btnBan_Them.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBan_Them.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBan_Them.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBan_Them.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBan_Them.Iconimage")));
-            this.btnBan_Them.Iconimage_right = null;
-            this.btnBan_Them.Iconimage_right_Selected = null;
-            this.btnBan_Them.Iconimage_Selected = null;
-            this.btnBan_Them.IconMarginLeft = 0;
-            this.btnBan_Them.IconMarginRight = 0;
-            this.btnBan_Them.IconRightVisible = false;
-            this.btnBan_Them.IconRightZoom = 0D;
-            this.btnBan_Them.IconVisible = false;
-            this.btnBan_Them.IconZoom = 90D;
-            this.btnBan_Them.IsTab = false;
-            this.btnBan_Them.Location = new System.Drawing.Point(198, 5);
-            this.btnBan_Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBan_Them.Name = "btnBan_Them";
-            this.btnBan_Them.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnBan_Them.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnBan_Them.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnBan_Them.selected = false;
-            this.btnBan_Them.Size = new System.Drawing.Size(171, 27);
-            this.btnBan_Them.TabIndex = 0;
-            this.btnBan_Them.Text = "Thêm Món";
-            this.btnBan_Them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBan_Them.Textcolor = System.Drawing.Color.White;
-            this.btnBan_Them.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBan_Them.Click += new System.EventHandler(this.btnBan_Them_Click);
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.dgvBan_ListHDB);
-            this.panel23.Location = new System.Drawing.Point(508, 76);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(373, 346);
-            this.panel23.TabIndex = 1;
-            // 
-            // dgvBan_ListHDB
-            // 
-            this.dgvBan_ListHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBan_ListHDB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBan_ListHDB.Location = new System.Drawing.Point(0, 0);
-            this.dgvBan_ListHDB.Name = "dgvBan_ListHDB";
-            this.dgvBan_ListHDB.RowHeadersWidth = 51;
-            this.dgvBan_ListHDB.RowTemplate.Height = 24;
-            this.dgvBan_ListHDB.Size = new System.Drawing.Size(373, 346);
-            this.dgvBan_ListHDB.TabIndex = 0;
-            // 
             // panel22
             // 
             this.panel22.Controls.Add(this.floBan_ListBan);
-            this.panel22.Location = new System.Drawing.Point(2, 3);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel22.Location = new System.Drawing.Point(3, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(500, 419);
+            this.panel22.Size = new System.Drawing.Size(500, 398);
             this.panel22.TabIndex = 0;
             // 
             // floBan_ListBan
@@ -3325,7 +3208,7 @@ namespace WindowsFormsTestBunifu
             this.floBan_ListBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.floBan_ListBan.Location = new System.Drawing.Point(0, 0);
             this.floBan_ListBan.Name = "floBan_ListBan";
-            this.floBan_ListBan.Size = new System.Drawing.Size(500, 419);
+            this.floBan_ListBan.Size = new System.Drawing.Size(500, 398);
             this.floBan_ListBan.TabIndex = 0;
             // 
             // tabHoaDonNhap
@@ -3861,6 +3744,136 @@ namespace WindowsFormsTestBunifu
             this.txtCTN_DonGia.Size = new System.Drawing.Size(253, 24);
             this.txtCTN_DonGia.TabIndex = 35;
             // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.panel27);
+            this.panel23.Controls.Add(this.panel24);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel23.Location = new System.Drawing.Point(503, 3);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(383, 398);
+            this.panel23.TabIndex = 1;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.btnBan_ThanhToan);
+            this.panel24.Controls.Add(this.cbbBan_ListSP);
+            this.panel24.Controls.Add(this.nbrBan_SoLuong);
+            this.panel24.Controls.Add(this.btnBan_Them);
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel24.Location = new System.Drawing.Point(0, 0);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(383, 67);
+            this.panel24.TabIndex = 4;
+            // 
+            // btnBan_ThanhToan
+            // 
+            this.btnBan_ThanhToan.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBan_ThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBan_ThanhToan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBan_ThanhToan.BorderRadius = 0;
+            this.btnBan_ThanhToan.ButtonText = "   Thanh Toán";
+            this.btnBan_ThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBan_ThanhToan.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBan_ThanhToan.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBan_ThanhToan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBan_ThanhToan.Iconimage")));
+            this.btnBan_ThanhToan.Iconimage_right = null;
+            this.btnBan_ThanhToan.Iconimage_right_Selected = null;
+            this.btnBan_ThanhToan.Iconimage_Selected = null;
+            this.btnBan_ThanhToan.IconMarginLeft = 0;
+            this.btnBan_ThanhToan.IconMarginRight = 0;
+            this.btnBan_ThanhToan.IconRightVisible = false;
+            this.btnBan_ThanhToan.IconRightZoom = 0D;
+            this.btnBan_ThanhToan.IconVisible = false;
+            this.btnBan_ThanhToan.IconZoom = 90D;
+            this.btnBan_ThanhToan.IsTab = false;
+            this.btnBan_ThanhToan.Location = new System.Drawing.Point(198, 36);
+            this.btnBan_ThanhToan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBan_ThanhToan.Name = "btnBan_ThanhToan";
+            this.btnBan_ThanhToan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBan_ThanhToan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnBan_ThanhToan.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnBan_ThanhToan.selected = false;
+            this.btnBan_ThanhToan.Size = new System.Drawing.Size(171, 27);
+            this.btnBan_ThanhToan.TabIndex = 4;
+            this.btnBan_ThanhToan.Text = "   Thanh Toán";
+            this.btnBan_ThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBan_ThanhToan.Textcolor = System.Drawing.Color.White;
+            this.btnBan_ThanhToan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // cbbBan_ListSP
+            // 
+            this.cbbBan_ListSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbBan_ListSP.FormattingEnabled = true;
+            this.cbbBan_ListSP.Location = new System.Drawing.Point(17, 4);
+            this.cbbBan_ListSP.Name = "cbbBan_ListSP";
+            this.cbbBan_ListSP.Size = new System.Drawing.Size(174, 28);
+            this.cbbBan_ListSP.TabIndex = 3;
+            // 
+            // nbrBan_SoLuong
+            // 
+            this.nbrBan_SoLuong.BackColor = System.Drawing.Color.White;
+            this.nbrBan_SoLuong.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbrBan_SoLuong.Location = new System.Drawing.Point(17, 36);
+            this.nbrBan_SoLuong.Name = "nbrBan_SoLuong";
+            this.nbrBan_SoLuong.Size = new System.Drawing.Size(174, 27);
+            this.nbrBan_SoLuong.TabIndex = 2;
+            // 
+            // btnBan_Them
+            // 
+            this.btnBan_Them.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBan_Them.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBan_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBan_Them.BorderRadius = 0;
+            this.btnBan_Them.ButtonText = "Thêm Món";
+            this.btnBan_Them.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBan_Them.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBan_Them.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBan_Them.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBan_Them.Iconimage")));
+            this.btnBan_Them.Iconimage_right = null;
+            this.btnBan_Them.Iconimage_right_Selected = null;
+            this.btnBan_Them.Iconimage_Selected = null;
+            this.btnBan_Them.IconMarginLeft = 0;
+            this.btnBan_Them.IconMarginRight = 0;
+            this.btnBan_Them.IconRightVisible = false;
+            this.btnBan_Them.IconRightZoom = 0D;
+            this.btnBan_Them.IconVisible = false;
+            this.btnBan_Them.IconZoom = 90D;
+            this.btnBan_Them.IsTab = false;
+            this.btnBan_Them.Location = new System.Drawing.Point(198, 5);
+            this.btnBan_Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBan_Them.Name = "btnBan_Them";
+            this.btnBan_Them.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBan_Them.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnBan_Them.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnBan_Them.selected = false;
+            this.btnBan_Them.Size = new System.Drawing.Size(171, 27);
+            this.btnBan_Them.TabIndex = 0;
+            this.btnBan_Them.Text = "Thêm Món";
+            this.btnBan_Them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBan_Them.Textcolor = System.Drawing.Color.White;
+            this.btnBan_Them.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel27
+            // 
+            this.panel27.Controls.Add(this.dgvBan_ListHDB);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel27.Location = new System.Drawing.Point(0, 67);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(383, 331);
+            this.panel27.TabIndex = 4;
+            // 
+            // dgvBan_ListHDB
+            // 
+            this.dgvBan_ListHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBan_ListHDB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBan_ListHDB.Location = new System.Drawing.Point(0, 0);
+            this.dgvBan_ListHDB.Name = "dgvBan_ListHDB";
+            this.dgvBan_ListHDB.RowHeadersWidth = 51;
+            this.dgvBan_ListHDB.RowTemplate.Height = 24;
+            this.dgvBan_ListHDB.Size = new System.Drawing.Size(383, 331);
+            this.dgvBan_ListHDB.TabIndex = 0;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3939,10 +3952,6 @@ namespace WindowsFormsTestBunifu
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
             this.tabBan.ResumeLayout(false);
-            this.panel24.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nbrBan_SoLuong)).EndInit();
-            this.panel23.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBan_ListHDB)).EndInit();
             this.panel22.ResumeLayout(false);
             this.tabHoaDonNhap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -3955,6 +3964,11 @@ namespace WindowsFormsTestBunifu
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTN_DSNL)).EndInit();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nbrBan_SoLuong)).EndInit();
+            this.panel27.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBan_ListHDB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4076,15 +4090,8 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabBan;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.ComboBox cbbBan_ListSP;
-        private System.Windows.Forms.NumericUpDown nbrBan_SoLuong;
-        private BunifuFlatButton btnBan_Them;
-        private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.FlowLayoutPanel floBan_ListBan;
-        private BunifuFlatButton btnBan_ThanhToan;
-        private System.Windows.Forms.DataGridView dgvBan_ListHDB;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
@@ -4186,6 +4193,14 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtTTNV_Luong;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel24;
+        private BunifuFlatButton btnBan_ThanhToan;
+        private System.Windows.Forms.ComboBox cbbBan_ListSP;
+        private System.Windows.Forms.NumericUpDown nbrBan_SoLuong;
+        private BunifuFlatButton btnBan_Them;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.DataGridView dgvBan_ListHDB;
     }
 }
 

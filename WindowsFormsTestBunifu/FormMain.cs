@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.Entity.Core.Objects;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ namespace WindowsFormsTestBunifu
         QLCafeEntities1 db = new QLCafeEntities1();
 
         bool exit = true;
+
         public frmMain()
         {
             InitializeComponent();
@@ -583,12 +585,30 @@ namespace WindowsFormsTestBunifu
         private void LoadListHDB_Ban(Object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            var result = from hdb in db.HoaDonBans join ctb in db.ChiTietHDBs on hdb.MaHDB equals ctb.MaHDB join du in db.DoUongs on ctb.MaDU equals du.MaDU
+            /*var result = from hdb in db.HoaDonBans join ctb in db.ChiTietHDBs on hdb.MaHDB equals ctb.MaHDB join du in db.DoUongs on ctb.MaDU equals du.MaDU
                          where hdb.MaBan == btn.Text && hdb.TrangThai == true
                          select new { hdb.MaHDB, hdb.MaNV, hdb.TrangThai};
+            dgvBan_ListHDB.DataSource = result.ToList();*/
+
+            var result = from v in db.Cau6_view
+                         join hdb in db.HoaDonBans on v.MaHDB equals hdb.MaHDB
+                         where hdb.MaBan == btn.Text
+                         select new { v.MaHDB, v.MaNV, v.NgayLap, v.TriGia };
             dgvBan_ListHDB.DataSource = result.ToList();
         }
 
-
+        private void btnSP_ThemVaoHD_Click(object sender, EventArgs e)
+        {
+            ObjectParameter sl = new ObjectParameter("sL", typeof(int));
+            db.Cau1_proc(txtSP_MaSp.Text, 2022, sl);
+            if(sl.Value.ToString() != "")
+            {
+                MessageBox.Show("Đã bán được " + sl.Value.ToString() + " sản phẩm");
+            }
+            else
+            {
+                MessageBox.Show("Đã bán được 0 sản phẩm");
+            }
+        }
     }
 }

@@ -399,5 +399,76 @@
       <End Role="NhanVien" EntitySet="NhanViens" />
       <End Role="TaiKhoan" EntitySet="TaiKhoans" />
     </AssociationSet>
+    <EntitySet Name="Cau1_view" EntityType="QLCafeModel.Cau1_view" />
+    <EntitySet Name="Cau2_view" EntityType="QLCafeModel.Cau2_view" />
+    <EntitySet Name="Cau4_view" EntityType="QLCafeModel.Cau4_view" />
+    <EntitySet Name="Cau5_view" EntityType="QLCafeModel.Cau5_view" />
+    <EntitySet Name="Cau6_view" EntityType="QLCafeModel.Cau6_view" />
+    <EntitySet Name="Cau7_view" EntityType="QLCafeModel.Cau7_view" />
+    <FunctionImport Name="Cau1_proc">
+      <Parameter Name="MaDoUong" Mode="In" Type="String" />
+      <Parameter Name="Nam" Mode="In" Type="Int32" />
+      <Parameter Name="SL" Mode="InOut" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
+  <EntityType Name="Cau1_view">
+    <Key>
+      <PropertyRef Name="MaDU" />
+      <PropertyRef Name="TenDU" />
+      <PropertyRef Name="DonGia" />
+      <PropertyRef Name="MaNL" />
+    </Key>
+    <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="MaNL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Cau2_view">
+    <Key>
+      <PropertyRef Name="MaDU" />
+      <PropertyRef Name="TenDU" />
+    </Key>
+    <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SLBan" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Cau4_view">
+    <Key>
+      <PropertyRef Name="MaDU" />
+      <PropertyRef Name="TenDU" />
+      <PropertyRef Name="DonGia" />
+    </Key>
+    <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Cau5_view">
+    <Key>
+      <PropertyRef Name="MaNL" />
+      <PropertyRef Name="TenNL" />
+      <PropertyRef Name="DonVi" />
+    </Key>
+    <Property Name="MaNL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TenNL" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DonVi" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuongTieuThu" Type="Double" />
+  </EntityType>
+  <EntityType Name="Cau6_view">
+    <Key>
+      <PropertyRef Name="MaHDB" />
+      <PropertyRef Name="NgayLap" />
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaHDB" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TriGia" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Cau7_view">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SoLanDiLam" Type="Int32" />
+  </EntityType>
 </Schema>

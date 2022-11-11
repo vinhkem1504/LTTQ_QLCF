@@ -140,5 +140,62 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Cau1_view">
+      <EntityTypeMapping TypeName="QLCafeModel.Cau1_view">
+        <MappingFragment StoreEntitySet="Cau1_view">
+          <ScalarProperty Name="MaNL" ColumnName="MaNL" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cau2_view">
+      <EntityTypeMapping TypeName="QLCafeModel.Cau2_view">
+        <MappingFragment StoreEntitySet="Cau2_view">
+          <ScalarProperty Name="SLBan" ColumnName="SLBan" />
+          <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cau4_view">
+      <EntityTypeMapping TypeName="QLCafeModel.Cau4_view">
+        <MappingFragment StoreEntitySet="Cau4_view">
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cau5_view">
+      <EntityTypeMapping TypeName="QLCafeModel.Cau5_view">
+        <MappingFragment StoreEntitySet="Cau5_view">
+          <ScalarProperty Name="SoLuongTieuThu" ColumnName="SoLuongTieuThu" />
+          <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+          <ScalarProperty Name="TenNL" ColumnName="TenNL" />
+          <ScalarProperty Name="MaNL" ColumnName="MaNL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cau6_view">
+      <EntityTypeMapping TypeName="QLCafeModel.Cau6_view">
+        <MappingFragment StoreEntitySet="Cau6_view">
+          <ScalarProperty Name="TriGia" ColumnName="TriGia" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+          <ScalarProperty Name="MaHDB" ColumnName="MaHDB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cau7_view">
+      <EntityTypeMapping TypeName="QLCafeModel.Cau7_view">
+        <MappingFragment StoreEntitySet="Cau7_view">
+          <ScalarProperty Name="SoLanDiLam" ColumnName="SoLanDiLam" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Cau1_proc" FunctionName="QLCafeModel.Store.Cau1_proc" />
   </EntityContainerMapping>
 </Mapping>

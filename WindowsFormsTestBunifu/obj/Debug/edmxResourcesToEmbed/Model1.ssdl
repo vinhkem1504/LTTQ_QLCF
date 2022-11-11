@@ -132,6 +132,78 @@
     <Property Name="LoaiTK" Type="bit" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau1_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Cau1_view">
+    <Key>
+      <PropertyRef Name="MaDU" />
+      <PropertyRef Name="TenDU" />
+      <PropertyRef Name="DonGia" />
+      <PropertyRef Name="MaNL" />
+    </Key>
+    <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DonGia" Type="money" Nullable="false" />
+    <Property Name="MaNL" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau2_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Cau2_view">
+    <Key>
+      <PropertyRef Name="MaDU" />
+      <PropertyRef Name="TenDU" />
+    </Key>
+    <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="SLBan" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau4_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Cau4_view">
+    <Key>
+      <PropertyRef Name="MaDU" />
+      <PropertyRef Name="TenDU" />
+      <PropertyRef Name="DonGia" />
+    </Key>
+    <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DonGia" Type="money" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau5_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Cau5_view">
+    <Key>
+      <PropertyRef Name="MaNL" />
+      <PropertyRef Name="TenNL" />
+      <PropertyRef Name="DonVi" />
+    </Key>
+    <Property Name="MaNL" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenNL" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DonVi" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="SoLuongTieuThu" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau6_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Cau6_view">
+    <Key>
+      <PropertyRef Name="MaHDB" />
+      <PropertyRef Name="NgayLap" />
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaHDB" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayLap" Type="datetime" Nullable="false" />
+    <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TriGia" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Cau7_view">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SoLanDiLam" Type="int" />
+  </EntityType>
   <Association Name="FK__ChiTietCaL__MaCa__3B75D760">
     <End Role="CaLam" Type="Self.CaLam" Multiplicity="1" />
     <End Role="ChiTietCaLam" Type="Self.ChiTietCaLam" Multiplicity="*" />
@@ -300,6 +372,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="Cau1_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaDoUong" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nam" Type="int" Mode="In" />
+    <Parameter Name="SL" Type="int" Mode="InOut" />
+  </Function>
   <EntityContainer Name="QLCafeModelStoreContainer">
     <EntitySet Name="Ban" EntityType="Self.Ban" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CaLam" EntityType="Self.CaLam" Schema="dbo" store:Type="Tables" />
@@ -315,6 +392,50 @@
     <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cau1_view" EntityType="Self.Cau1_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Cau1_view].[MaDU] AS [MaDU], 
+    [Cau1_view].[TenDU] AS [TenDU], 
+    [Cau1_view].[DonGia] AS [DonGia], 
+    [Cau1_view].[MaNL] AS [MaNL]
+    FROM [dbo].[Cau1_view] AS [Cau1_view]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Cau2_view" EntityType="Self.Cau2_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Cau2_view].[MaDU] AS [MaDU], 
+    [Cau2_view].[TenDU] AS [TenDU], 
+    [Cau2_view].[SLBan] AS [SLBan]
+    FROM [dbo].[Cau2_view] AS [Cau2_view]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Cau4_view" EntityType="Self.Cau4_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Cau4_view].[MaDU] AS [MaDU], 
+    [Cau4_view].[TenDU] AS [TenDU], 
+    [Cau4_view].[DonGia] AS [DonGia]
+    FROM [dbo].[Cau4_view] AS [Cau4_view]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Cau5_view" EntityType="Self.Cau5_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Cau5_view].[MaNL] AS [MaNL], 
+    [Cau5_view].[TenNL] AS [TenNL], 
+    [Cau5_view].[DonVi] AS [DonVi], 
+    [Cau5_view].[SoLuongTieuThu] AS [SoLuongTieuThu]
+    FROM [dbo].[Cau5_view] AS [Cau5_view]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Cau6_view" EntityType="Self.Cau6_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Cau6_view].[MaHDB] AS [MaHDB], 
+    [Cau6_view].[NgayLap] AS [NgayLap], 
+    [Cau6_view].[MaNV] AS [MaNV], 
+    [Cau6_view].[TriGia] AS [TriGia]
+    FROM [dbo].[Cau6_view] AS [Cau6_view]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Cau7_view" EntityType="Self.Cau7_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Cau7_view].[MaNV] AS [MaNV], 
+    [Cau7_view].[SoLanDiLam] AS [SoLanDiLam]
+    FROM [dbo].[Cau7_view] AS [Cau7_view]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK__ChiTietCaL__MaCa__3B75D760" Association="Self.FK__ChiTietCaL__MaCa__3B75D760">
       <End Role="CaLam" EntitySet="CaLam" />
       <End Role="ChiTietCaLam" EntitySet="ChiTietCaLam" />
