@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -10,7 +10,7 @@ namespace WindowsFormsTestBunifu
     {
 
         QLCafeEntities db = new QLCafeEntities();
-        
+
         bool exit = true;
         public frmMain()
         {
@@ -21,16 +21,28 @@ namespace WindowsFormsTestBunifu
         {
             bpaPages.SelectedIndex = 8;
             bpaPages.AllowTransitions = false;
-            LoadDataNhanVien();
+            LoadInfoNhanVien();
+            if (!UserInfo.chucVu)
+            {
+                LoadDataDSNhanVien();
+            }
             LoadDataHoaDon();
             LoadDataSanPham();
             LoadDataNguyenLieu();
+            LoadListBan();
         }
-        
+
         private void bbtnUser_Click(object sender, EventArgs e)
         {
-            bpaPages.SelectedIndex = 0;
-            
+            if (UserInfo.chucVu)
+            {
+                bpaPages.SelectedIndex = 7;
+            }
+            else
+            {
+                bpaPages.SelectedIndex = 0;
+            }
+
         }
 
         private void bbtnProduct_Click(object sender, EventArgs e)
@@ -56,7 +68,7 @@ namespace WindowsFormsTestBunifu
                 // Load thành danh sách SP theo hóa đơn
                 var result = from c in db.ChiTietHDBs
                              where c.MaHDB == txtHD_MaHD.Text
-                             select new {Ten = c.DoUong.TenDU, SoLuong = c.SoLuongBan, DonGia = c.DoUong.DonGia};
+                             select new { Ten = c.DoUong.TenDU, SoLuong = c.SoLuongBan, DonGia = c.DoUong.DonGia };
                 dgvCTB_DSSP.DataSource = result.ToList();
 
                 // Load thông tin
@@ -72,13 +84,13 @@ namespace WindowsFormsTestBunifu
             }
 
         }
-        
+
         private void bbtnSale_Click(object sender, EventArgs e)
         {
             bpaPages.SelectedIndex = 5;
         }
 
-        private void bunifuThinButton24_Click(object sender, EventArgs e)
+        private void btnCTB_ThanhToanHoaDon_Click(object sender, EventArgs e)
         {
             frmHoaDon cTietHDB = new frmHoaDon();
             cTietHDB.ShowDialog();
@@ -102,7 +114,7 @@ namespace WindowsFormsTestBunifu
 
         private void bunifuImageButton15_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void bbtnLogout_Click(object sender, EventArgs e)
@@ -130,7 +142,7 @@ namespace WindowsFormsTestBunifu
 
         private void btnSP_CTSP_Click(object sender, EventArgs e)
         {
-            if(txtSP_MaSp.Text != "")
+            if (txtSP_MaSp.Text != "")
             {
                 // Load thành phần nguyên liệu
                 var result = from c in db.CongThucDoUongs
@@ -224,6 +236,7 @@ namespace WindowsFormsTestBunifu
                 dgvCTN_DSNL.DataSource = result.ToList();
 
                 // Load thông tin
+                lblCTN_TenHDN.Text = "Hóa đơn : ";
                 lblCTN_TenHDN.Text = lblCTN_TenHDN.Text + txtHDN_MaHDN.Text;
 
                 //txtCTB_TongTien.Text = (int.Parse(txtCTB_SL.Text) * int.Parse(txtCTB_DonGia.Text)).ToString();
@@ -276,14 +289,91 @@ namespace WindowsFormsTestBunifu
         {
             bpaPages.SelectedIndex = 2;
         }
+
+        // cập nhật thông tin nhân viên
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            updateInfoNhanVien();
+        }
+
+        // nhân viên chấm công
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            var chamCong = new ChiTietCaLam();
+            var calam = from ca in db.CaLams
+                        where ca.TenCa == cbbTTNV_CaLV.Text
+                        select ca;
+            var c = calam.First();
+
+            chamCong.MaNV = txtTTNV_MaNV.Text;
+            chamCong.MaCa = c.MaCa;
+            chamCong.NgayLamViec = DateTime.Now;
+
+            try
+            {
+                db.ChiTietCaLams.Add(chamCong);
+                db.SaveChanges();
+                MessageBox.Show("Chấm công thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hôm nay đã chấm công rồi !");
+            }
+
+        }
+
+        // xem lương
+        private void btnTTNV_Luong_Click(object sender, EventArgs e)
+        {
+            int thang = int.Parse(cbbTTNV_Thang.Text);
+            int nam = int.Parse(txtTTNV_Nam.Text);
+            try
+            {
+                var ctl = from ct in db.ChiTietLuongs
+                          where ct.MaNV == txtTTNV_MaNV.Text && ct.Thang == thang && nam == ct.Nam
+                          select ct;
+                var luong = ctl.First();
+                txtTTNV_Luong.Text = luong.Luong.ToString();
+            }
+            catch (Exception ex)
+            {
+                txtTTNV_Luong.Text = "0";
+            }
+
+        }
         #endregion
 
 
         #region Method
-        void LoadDataNhanVien()
+
+        //Load info nhân viên
+        void LoadInfoNhanVien()
         {
+            txtTTNV_MaNV.Enabled = false;
+            var infoNV = db.NhanViens.Find(UserInfo.maNV);
+            txtTTNV_MaNV.Text = infoNV.MaNV.ToString();
+            txtTTNV_HoTen.Text = infoNV.HoTen.ToString();
+            txtTTNV_DiaChi.Text = infoNV.DiaChi.ToString();
+            txtTTNV_SDT.Text = infoNV.SDT.ToString();
+            dtTTNV_NgaySinh.Text = infoNV.NgaySinh.ToString();
+
+            for (int i = 1; i < 13; i++)
+            {
+                cbbTTNV_Thang.Items.Add(i);
+            }
+            cbbTTNV_Thang.SelectedIndex = 0;
+            foreach (var calam in db.CaLams)
+            {
+                cbbTTNV_CaLV.Items.Add(calam.TenCa);
+            }
+            cbbTTNV_CaLV.SelectedIndex = 0;
+        }
+
+        void LoadDataDSNhanVien()
+        {
+            //Phải join bảng để có lương
             var result = from c in db.NhanViens
-                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec};
+                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec/*, Luong = c.Luong.ToString() */};
             dgvNhanVien_DSNV.DataSource = result.ToList();
         }
 
@@ -304,7 +394,7 @@ namespace WindowsFormsTestBunifu
         {
             var result = from c in db.NhanViens
                          where c.MaNV == s
-                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec};
+                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec, Luong = c.Luong.ToString() };
 
             dgvNhanVien_DSNV.DataSource = result.ToList();
         }
@@ -315,7 +405,7 @@ namespace WindowsFormsTestBunifu
             var result = from c in db.HoaDonBans
                          select new { MaHD = c.MaHDB, MaNV = c.MaNV, NgayLap = c.NgayLap, TrangThai = c.TrangThai };
             dgvHD_DSHD.DataSource = result.ToList();
-            
+
         }
 
         // Load thông tin hóa đơn
@@ -323,9 +413,9 @@ namespace WindowsFormsTestBunifu
         {
             txtHD_MaHD.Text = dgvHD_DSHD.CurrentRow.Cells[0].Value.ToString();
             txtHD_MaNV.Text = dgvHD_DSHD.CurrentRow.Cells[1].Value.ToString();
-            dtHD_Ngaylap.Text =dgvHD_DSHD.CurrentRow.Cells[2].Value.ToString();
+            dtHD_Ngaylap.Text = dgvHD_DSHD.CurrentRow.Cells[2].Value.ToString();
             bool done = bool.Parse(dgvHD_DSHD.CurrentRow.Cells[3].Value.ToString());
-            if ( done == true)
+            if (done == true)
             {
                 txtHD_TrangThai.Text = "Đã thanh toán";
             }
@@ -342,7 +432,7 @@ namespace WindowsFormsTestBunifu
             var result = from c in db.DoUongs
                          select new { MaSP = c.MaDU, TenSP = c.TenDU, DonGia = c.DonGia };
             dgvSP_DSSP.DataSource = result.ToList();
-            
+
         }
 
         // Load chi tiết SP
@@ -377,7 +467,7 @@ namespace WindowsFormsTestBunifu
             var result = from c in db.NguyenLieux
                          where c.MaNL == s
                          select new { MaNL = c.MaNL, TenNL = c.TenNL, DonVi = c.DonVi, SLTon = c.SoLuongTon };
-            
+
             dgvKho.DataSource = result.ToList();
         }
 
@@ -432,12 +522,75 @@ namespace WindowsFormsTestBunifu
         {
             txtCTN_TenNL.Text = dgvCTN_DSNL.CurrentRow.Cells[0].Value.ToString();
             txtCTN_TenNCC.Text = dgvCTN_DSNL.CurrentRow.Cells[1].Value.ToString();
-            txtCTN_DonGia.Text = dgvCTN_DSNL.CurrentRow.Cells[2].Value.ToString();
-            txtCTN_SoLuong.Text = dgvCTN_DSNL.CurrentRow.Cells[3].Value.ToString();
+            txtCTN_DonGia.Text = dgvCTN_DSNL.CurrentRow.Cells[3].Value.ToString();
+            txtCTN_SoLuong.Text = dgvCTN_DSNL.CurrentRow.Cells[2].Value.ToString();
         }
 
+        // update thông tin nhân viên
+        private void updateInfoNhanVien()
+        {
+            var result = from c in db.NhanViens
+                         where c.MaNV == txtTTNV_MaNV.Text
+                         select c;
+
+            var userInfo = new NhanVien();
+            userInfo = result.First();
+            userInfo.HoTen = txtTTNV_HoTen.Text;
+            userInfo.DiaChi = txtTTNV_DiaChi.Text;
+            userInfo.SDT = txtTTNV_SDT.Text;
+            userInfo.NgaySinh = DateTime.Parse(dtTTNV_NgaySinh.Text);
+            db.SaveChanges();
+            MessageBox.Show("Cập nhật thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         #endregion
+
+        private void LoadListBan()
+        {
+            foreach (var table in db.Bans)
+            {
+                table.TrangThai = true;
+                //db.SaveChanges();
+            }
+
+            foreach (var hdb in db.HoaDonBans)
+            {
+                if (!hdb.TrangThai)
+                {
+                    var ban = new Ban();
+                    ban.MaBan = hdb.MaBan;
+                    ban.TrangThai = false;
+                    db.SaveChanges();
+                }
+            }
+
+
+            foreach (var table in db.Bans)
+            {
+                Button btn = new Button() { Width = 110, Height = 80 };
+                btn.Text = table.MaBan.ToString();
+                btn.Click += LoadListHDB_Ban;
+                if (table.TrangThai) btn.BackColor = Color.LightGoldenrodYellow;
+                else btn.BackColor = Color.OrangeRed;
+                floBan_ListBan.Controls.Add(btn);
+            }
+
+            foreach (var item in db.DoUongs)
+            {
+                cbbBan_ListSP.Items.Add(item.TenDU);
+            }
+        }
+
+        private void LoadListHDB_Ban(Object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            var result = from hdb in db.HoaDonBans
+                         join ctb in db.ChiTietHDBs on hdb.MaHDB equals ctb.MaHDB
+                         join du in db.DoUongs on ctb.MaDU equals du.MaDU
+                         where hdb.MaBan == btn.Text && hdb.TrangThai == true
+                         select new { hdb.MaHDB, hdb.MaNV, hdb.TrangThai };
+            dgvBan_ListHDB.DataSource = result.ToList();
+        }
 
 
     }

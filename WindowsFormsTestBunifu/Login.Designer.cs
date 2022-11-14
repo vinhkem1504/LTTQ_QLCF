@@ -85,9 +85,10 @@
             this.tabForgotPassword.Controls.Add(this.label8);
             this.tabForgotPassword.Controls.Add(this.label7);
             this.tabForgotPassword.Location = new System.Drawing.Point(4, 4);
+            this.tabForgotPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tabForgotPassword.Name = "tabForgotPassword";
-            this.tabForgotPassword.Padding = new System.Windows.Forms.Padding(3);
-            this.tabForgotPassword.Size = new System.Drawing.Size(512, 522);
+            this.tabForgotPassword.Padding = new System.Windows.Forms.Padding(2);
+            this.tabForgotPassword.Size = new System.Drawing.Size(382, 422);
             this.tabForgotPassword.TabIndex = 2;
             this.tabForgotPassword.Text = "Quên mật khẩu";
             // 
@@ -95,9 +96,10 @@
             // 
             this.picReturnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picReturnLogin.Image = global::WindowsFormsTestBunifu.Properties.Resources.arrow_small_left1;
-            this.picReturnLogin.Location = new System.Drawing.Point(191, 344);
+            this.picReturnLogin.Location = new System.Drawing.Point(143, 280);
+            this.picReturnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.picReturnLogin.Name = "picReturnLogin";
-            this.picReturnLogin.Size = new System.Drawing.Size(29, 19);
+            this.picReturnLogin.Size = new System.Drawing.Size(22, 15);
             this.picReturnLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picReturnLogin.TabIndex = 8;
             this.picReturnLogin.TabStop = false;
@@ -109,9 +111,10 @@
             this.lblForgotP_Return_Login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblForgotP_Return_Login.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotP_Return_Login.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lblForgotP_Return_Login.Location = new System.Drawing.Point(214, 345);
+            this.lblForgotP_Return_Login.Location = new System.Drawing.Point(160, 280);
+            this.lblForgotP_Return_Login.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblForgotP_Return_Login.Name = "lblForgotP_Return_Login";
-            this.lblForgotP_Return_Login.Size = new System.Drawing.Size(107, 17);
+            this.lblForgotP_Return_Login.Size = new System.Drawing.Size(90, 13);
             this.lblForgotP_Return_Login.TabIndex = 7;
             this.lblForgotP_Return_Login.Text = "Trở về đăng nhập";
             this.lblForgotP_Return_Login.Click += new System.EventHandler(this.panel1_Click);
@@ -136,12 +139,13 @@
             this.btnResetPassword.IdleFillColor = System.Drawing.Color.White;
             this.btnResetPassword.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnResetPassword.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnResetPassword.Location = new System.Drawing.Point(154, 287);
-            this.btnResetPassword.Margin = new System.Windows.Forms.Padding(5);
+            this.btnResetPassword.Location = new System.Drawing.Point(116, 233);
+            this.btnResetPassword.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(205, 51);
+            this.btnResetPassword.Size = new System.Drawing.Size(154, 41);
             this.btnResetPassword.TabIndex = 4;
             this.btnResetPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
             // 
             // txtForgotP_Email
             // 
@@ -170,7 +174,8 @@
             this.txtForgotP_Email.IconRight = null;
             this.txtForgotP_Email.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtForgotP_Email.Lines = new string[0];
-            this.txtForgotP_Email.Location = new System.Drawing.Point(96, 200);
+            this.txtForgotP_Email.Location = new System.Drawing.Point(72, 162);
+            this.txtForgotP_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txtForgotP_Email.MaxLength = 32767;
             this.txtForgotP_Email.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtForgotP_Email.Modified = false;
@@ -196,7 +201,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtForgotP_Email.OnIdleState = stateProperties12;
-            this.txtForgotP_Email.Padding = new System.Windows.Forms.Padding(3);
+            this.txtForgotP_Email.Padding = new System.Windows.Forms.Padding(2);
             this.txtForgotP_Email.PasswordChar = '\0';
             this.txtForgotP_Email.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtForgotP_Email.PlaceholderText = "Enter your email";
@@ -206,7 +211,7 @@
             this.txtForgotP_Email.SelectionLength = 0;
             this.txtForgotP_Email.SelectionStart = 0;
             this.txtForgotP_Email.ShortcutsEnabled = true;
-            this.txtForgotP_Email.Size = new System.Drawing.Size(322, 54);
+            this.txtForgotP_Email.Size = new System.Drawing.Size(242, 44);
             this.txtForgotP_Email.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtForgotP_Email.TabIndex = 3;
             this.txtForgotP_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -222,9 +227,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label9.Location = new System.Drawing.Point(92, 177);
+            this.label9.Location = new System.Drawing.Point(69, 144);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 20);
+            this.label9.Size = new System.Drawing.Size(36, 15);
             this.label9.TabIndex = 2;
             this.label9.Text = "Email";
             // 
@@ -233,9 +239,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(144, 74);
+            this.label8.Location = new System.Drawing.Point(108, 60);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(215, 17);
+            this.label8.Size = new System.Drawing.Size(182, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Đừng lo, chúng tôi sẽ tìm lại cho bạn";
             // 
@@ -244,9 +251,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label7.Location = new System.Drawing.Point(117, 28);
+            this.label7.Location = new System.Drawing.Point(88, 23);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(273, 45);
+            this.label7.Size = new System.Drawing.Size(224, 37);
             this.label7.TabIndex = 0;
             this.label7.Text = "Quên mật khẩu ?";
             // 
@@ -261,9 +269,10 @@
             this.tabLogin.Controls.Add(this.bunifuCustomLabel1);
             this.tabLogin.Controls.Add(this.bbtnLogin);
             this.tabLogin.Location = new System.Drawing.Point(4, 4);
+            this.tabLogin.Margin = new System.Windows.Forms.Padding(2);
             this.tabLogin.Name = "tabLogin";
-            this.tabLogin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLogin.Size = new System.Drawing.Size(512, 522);
+            this.tabLogin.Padding = new System.Windows.Forms.Padding(2);
+            this.tabLogin.Size = new System.Drawing.Size(382, 422);
             this.tabLogin.TabIndex = 0;
             this.tabLogin.Text = "Đăng nhập";
             // 
@@ -285,7 +294,7 @@
             this.btxtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.btxtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.btxtPassword.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.btxtPassword.DefaultText = "";
+            this.btxtPassword.DefaultText = "DinhTrung07";
             this.btxtPassword.FillColor = System.Drawing.Color.White;
             this.btxtPassword.HideSelection = true;
             this.btxtPassword.IconLeft = null;
@@ -293,8 +302,10 @@
             this.btxtPassword.IconPadding = 10;
             this.btxtPassword.IconRight = ((System.Drawing.Image)(resources.GetObject("btxtPassword.IconRight")));
             this.btxtPassword.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btxtPassword.Lines = new string[0];
-            this.btxtPassword.Location = new System.Drawing.Point(113, 230);
+            this.btxtPassword.Lines = new string[] {
+        "DinhTrung07"};
+            this.btxtPassword.Location = new System.Drawing.Point(85, 187);
+            this.btxtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.btxtPassword.MaxLength = 32767;
             this.btxtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.btxtPassword.Modified = false;
@@ -320,7 +331,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.btxtPassword.OnIdleState = stateProperties4;
-            this.btxtPassword.Padding = new System.Windows.Forms.Padding(3);
+            this.btxtPassword.Padding = new System.Windows.Forms.Padding(2);
             this.btxtPassword.PasswordChar = '\0';
             this.btxtPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.btxtPassword.PlaceholderText = "Password";
@@ -328,9 +339,9 @@
             this.btxtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.btxtPassword.SelectedText = "";
             this.btxtPassword.SelectionLength = 0;
-            this.btxtPassword.SelectionStart = 0;
+            this.btxtPassword.SelectionStart = 11;
             this.btxtPassword.ShortcutsEnabled = true;
-            this.btxtPassword.Size = new System.Drawing.Size(341, 41);
+            this.btxtPassword.Size = new System.Drawing.Size(256, 33);
             this.btxtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.btxtPassword.TabIndex = 47;
             this.btxtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -361,7 +372,7 @@
             this.btxtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.btxtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.btxtUsername.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.btxtUsername.DefaultText = "";
+            this.btxtUsername.DefaultText = "DangDinhTrung";
             this.btxtUsername.FillColor = System.Drawing.Color.White;
             this.btxtUsername.HideSelection = true;
             this.btxtUsername.IconLeft = null;
@@ -369,8 +380,10 @@
             this.btxtUsername.IconPadding = 10;
             this.btxtUsername.IconRight = null;
             this.btxtUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.btxtUsername.Lines = new string[0];
-            this.btxtUsername.Location = new System.Drawing.Point(113, 133);
+            this.btxtUsername.Lines = new string[] {
+        "DangDinhTrung"};
+            this.btxtUsername.Location = new System.Drawing.Point(85, 108);
+            this.btxtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.btxtUsername.MaxLength = 32767;
             this.btxtUsername.MinimumSize = new System.Drawing.Size(1, 1);
             this.btxtUsername.Modified = false;
@@ -396,7 +409,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.btxtUsername.OnIdleState = stateProperties8;
-            this.btxtUsername.Padding = new System.Windows.Forms.Padding(3);
+            this.btxtUsername.Padding = new System.Windows.Forms.Padding(2);
             this.btxtUsername.PasswordChar = '\0';
             this.btxtUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.btxtUsername.PlaceholderText = "Username";
@@ -404,9 +417,9 @@
             this.btxtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.btxtUsername.SelectedText = "";
             this.btxtUsername.SelectionLength = 0;
-            this.btxtUsername.SelectionStart = 0;
+            this.btxtUsername.SelectionStart = 13;
             this.btxtUsername.ShortcutsEnabled = true;
-            this.btxtUsername.Size = new System.Drawing.Size(341, 41);
+            this.btxtUsername.Size = new System.Drawing.Size(256, 33);
             this.btxtUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.btxtUsername.TabIndex = 46;
             this.btxtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -423,9 +436,10 @@
             this.blblFogotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.blblFogotPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blblFogotPassword.ForeColor = System.Drawing.Color.SeaGreen;
-            this.blblFogotPassword.Location = new System.Drawing.Point(343, 383);
+            this.blblFogotPassword.Location = new System.Drawing.Point(257, 311);
+            this.blblFogotPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.blblFogotPassword.Name = "blblFogotPassword";
-            this.blblFogotPassword.Size = new System.Drawing.Size(111, 17);
+            this.blblFogotPassword.Size = new System.Drawing.Size(90, 13);
             this.blblFogotPassword.TabIndex = 40;
             this.blblFogotPassword.Text = "quên mật khẩu ?";
             this.blblFogotPassword.Click += new System.EventHandler(this.blblFogotPassword_Click);
@@ -437,10 +451,10 @@
             this.bimgPassword.BackColor = System.Drawing.Color.LightGray;
             this.bimgPassword.Image = ((System.Drawing.Image)(resources.GetObject("bimgPassword.Image")));
             this.bimgPassword.ImageActive = null;
-            this.bimgPassword.Location = new System.Drawing.Point(45, 230);
-            this.bimgPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bimgPassword.Location = new System.Drawing.Point(34, 187);
+            this.bimgPassword.Margin = new System.Windows.Forms.Padding(2);
             this.bimgPassword.Name = "bimgPassword";
-            this.bimgPassword.Size = new System.Drawing.Size(45, 41);
+            this.bimgPassword.Size = new System.Drawing.Size(34, 33);
             this.bimgPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bimgPassword.TabIndex = 43;
             this.bimgPassword.TabStop = false;
@@ -451,10 +465,10 @@
             this.bimgUser.BackColor = System.Drawing.Color.LightGray;
             this.bimgUser.Image = ((System.Drawing.Image)(resources.GetObject("bimgUser.Image")));
             this.bimgUser.ImageActive = null;
-            this.bimgUser.Location = new System.Drawing.Point(45, 133);
-            this.bimgUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bimgUser.Location = new System.Drawing.Point(34, 108);
+            this.bimgUser.Margin = new System.Windows.Forms.Padding(2);
             this.bimgUser.Name = "bimgUser";
-            this.bimgUser.Size = new System.Drawing.Size(45, 41);
+            this.bimgUser.Size = new System.Drawing.Size(34, 33);
             this.bimgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bimgUser.TabIndex = 44;
             this.bimgUser.TabStop = false;
@@ -465,9 +479,10 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(159, 27);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(119, 22);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(214, 39);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(177, 32);
             this.bunifuCustomLabel1.TabIndex = 39;
             this.bunifuCustomLabel1.Text = "ĐĂNG NHẬP";
             // 
@@ -489,10 +504,10 @@
             this.bbtnLogin.IdleFillColor = System.Drawing.Color.White;
             this.bbtnLogin.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bbtnLogin.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bbtnLogin.Location = new System.Drawing.Point(165, 319);
-            this.bbtnLogin.Margin = new System.Windows.Forms.Padding(5);
+            this.bbtnLogin.Location = new System.Drawing.Point(124, 259);
+            this.bbtnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.bbtnLogin.Name = "bbtnLogin";
-            this.bbtnLogin.Size = new System.Drawing.Size(193, 59);
+            this.bbtnLogin.Size = new System.Drawing.Size(145, 48);
             this.bbtnLogin.TabIndex = 36;
             this.bbtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bbtnLogin.Click += new System.EventHandler(this.bbtnLogin_Click);
@@ -505,6 +520,7 @@
             this.pageLogin.Controls.Add(this.tabForgotPassword);
             this.pageLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pageLogin.Location = new System.Drawing.Point(0, 0);
+            this.pageLogin.Margin = new System.Windows.Forms.Padding(2);
             this.pageLogin.Multiline = true;
             this.pageLogin.Name = "pageLogin";
             this.pageLogin.Page = this.tabLogin;
@@ -512,7 +528,7 @@
             this.pageLogin.PageName = "tabLogin";
             this.pageLogin.PageTitle = "Đăng nhập";
             this.pageLogin.SelectedIndex = 0;
-            this.pageLogin.Size = new System.Drawing.Size(520, 551);
+            this.pageLogin.Size = new System.Drawing.Size(390, 448);
             this.pageLogin.TabIndex = 0;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -534,11 +550,11 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 551);
+            this.ClientSize = new System.Drawing.Size(390, 448);
             this.Controls.Add(this.pageLogin);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

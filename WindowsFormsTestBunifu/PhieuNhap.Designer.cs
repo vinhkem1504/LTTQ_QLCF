@@ -34,14 +34,14 @@
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.btnXoaNCC = new System.Windows.Forms.Button();
             this.btnThemNCC = new System.Windows.Forms.Button();
-            this.cbbTenNCC = new System.Windows.Forms.ComboBox();
+            this.cbbMaNCC = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDienThoaiNCC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDiaChiNCC = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMaNCC = new System.Windows.Forms.TextBox();
+            this.txtTenNCC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -92,14 +92,14 @@
             this.groupBox1.Controls.Add(this.txtMaNV);
             this.groupBox1.Controls.Add(this.btnXoaNCC);
             this.groupBox1.Controls.Add(this.btnThemNCC);
-            this.groupBox1.Controls.Add(this.cbbTenNCC);
+            this.groupBox1.Controls.Add(this.cbbMaNCC);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtDienThoaiNCC);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtDiaChiNCC);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtMaNCC);
+            this.groupBox1.Controls.Add(this.txtTenNCC);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtTenNV);
             this.groupBox1.Controls.Add(this.label13);
@@ -144,6 +144,7 @@
             this.btnXoaNCC.TabIndex = 68;
             this.btnXoaNCC.Text = "Xóa NCC";
             this.btnXoaNCC.UseVisualStyleBackColor = false;
+            this.btnXoaNCC.Click += new System.EventHandler(this.btnXoaNCC_Click);
             // 
             // btnThemNCC
             // 
@@ -163,15 +164,16 @@
             this.btnThemNCC.UseVisualStyleBackColor = false;
             this.btnThemNCC.Click += new System.EventHandler(this.btnThemNCC_Click);
             // 
-            // cbbTenNCC
+            // cbbMaNCC
             // 
-            this.cbbTenNCC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTenNCC.FormattingEnabled = true;
-            this.cbbTenNCC.Location = new System.Drawing.Point(521, 37);
-            this.cbbTenNCC.Name = "cbbTenNCC";
-            this.cbbTenNCC.Size = new System.Drawing.Size(192, 21);
-            this.cbbTenNCC.TabIndex = 3;
+            this.cbbMaNCC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaNCC.FormattingEnabled = true;
+            this.cbbMaNCC.Location = new System.Drawing.Point(521, 37);
+            this.cbbMaNCC.Name = "cbbMaNCC";
+            this.cbbMaNCC.Size = new System.Drawing.Size(192, 21);
+            this.cbbMaNCC.TabIndex = 3;
+            this.cbbMaNCC.SelectedIndexChanged += new System.EventHandler(this.cbbMaNCC_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -205,7 +207,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(404, 38);
+            this.label3.Location = new System.Drawing.Point(404, 67);
             this.label3.Margin = new System.Windows.Forms.Padding(7, 20, 7, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 15);
@@ -244,23 +246,23 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(404, 67);
+            this.label2.Location = new System.Drawing.Point(404, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(7, 20, 7, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 15);
             this.label2.TabIndex = 59;
             this.label2.Text = "Mã Nhà Cung Cấp";
             // 
-            // txtMaNCC
+            // txtTenNCC
             // 
-            this.txtMaNCC.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNCC.Location = new System.Drawing.Point(521, 64);
-            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
-            this.txtMaNCC.Name = "txtMaNCC";
-            this.txtMaNCC.ReadOnly = true;
-            this.txtMaNCC.Size = new System.Drawing.Size(192, 21);
-            this.txtMaNCC.TabIndex = 58;
+            this.txtTenNCC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNCC.Location = new System.Drawing.Point(521, 64);
+            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
+            this.txtTenNCC.Name = "txtTenNCC";
+            this.txtTenNCC.ReadOnly = true;
+            this.txtTenNCC.Size = new System.Drawing.Size(192, 21);
+            this.txtTenNCC.TabIndex = 58;
             // 
             // label1
             // 
@@ -368,6 +370,7 @@
             // 
             // cbbMaNL
             // 
+            this.cbbMaNL.DisplayMember = "1";
             this.cbbMaNL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaNL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cbbMaNL.FormattingEnabled = true;
@@ -375,6 +378,7 @@
             this.cbbMaNL.Name = "cbbMaNL";
             this.cbbMaNL.Size = new System.Drawing.Size(124, 21);
             this.cbbMaNL.TabIndex = 77;
+            this.cbbMaNL.SelectedIndexChanged += new System.EventHandler(this.cbbMaNL_SelectedIndexChanged);
             // 
             // txtDonGiaNL
             // 
@@ -394,7 +398,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(7, 41);
+            this.label6.Location = new System.Drawing.Point(7, 38);
             this.label6.Margin = new System.Windows.Forms.Padding(7, 20, 7, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 15);
@@ -458,7 +462,6 @@
             this.txtSoLuongNL.Location = new System.Drawing.Point(113, 64);
             this.txtSoLuongNL.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuongNL.Name = "txtSoLuongNL";
-            this.txtSoLuongNL.ReadOnly = true;
             this.txtSoLuongNL.Size = new System.Drawing.Size(124, 21);
             this.txtSoLuongNL.TabIndex = 69;
             // 
@@ -528,6 +531,7 @@
             this.btnXoaNL.TabIndex = 91;
             this.btnXoaNL.Text = "Xóa";
             this.btnXoaNL.UseVisualStyleBackColor = false;
+            this.btnXoaNL.Click += new System.EventHandler(this.btnXoaNL_Click);
             // 
             // btnThemNL
             // 
@@ -545,6 +549,7 @@
             this.btnThemNL.TabIndex = 89;
             this.btnThemNL.Text = "Thêm";
             this.btnThemNL.UseVisualStyleBackColor = false;
+            this.btnThemNL.Click += new System.EventHandler(this.btnThemNL_Click);
             // 
             // label12
             // 
@@ -670,14 +675,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnXoaNCC;
         private System.Windows.Forms.Button btnThemNCC;
-        private System.Windows.Forms.ComboBox cbbTenNCC;
+        private System.Windows.Forms.ComboBox cbbMaNCC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDienThoaiNCC;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDiaChiNCC;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMaNCC;
+        private System.Windows.Forms.TextBox txtTenNCC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label13;

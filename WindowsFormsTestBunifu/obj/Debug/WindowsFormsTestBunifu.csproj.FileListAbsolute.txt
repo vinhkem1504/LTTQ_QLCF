@@ -55,7 +55,6 @@ D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\bin\Debug\WindowsFormsTestBuni
 D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\bin\Debug\WindowsFormsTestBunifu.pdb
 D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\bin\Debug\EntityFramework.dll
 D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\bin\Debug\EntityFramework.SqlServer.dll
-D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
 D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\bin\Debug\EntityFramework.xml
 D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\bin\Debug\EntityFramework.SqlServer.xml
 D:\Workspace\VS source\BTL\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.csproj.AssemblyReference.cache

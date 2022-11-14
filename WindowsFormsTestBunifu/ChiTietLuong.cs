@@ -17,6 +17,8 @@ namespace WindowsFormsTestBunifu
         public string MaNV { get; set; }
         public int Thang { get; set; }
         public int Nam { get; set; }
+        public Nullable<int> SoNgayLamViec { get; set; }
+        public Nullable<decimal> Luong { get; set; }
     
         public virtual NhanVien NhanVien { get; set; }
     }
