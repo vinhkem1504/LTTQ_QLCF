@@ -47,23 +47,7 @@ namespace WindowsFormsTestBunifu
         public virtual DbSet<Cau5_view> Cau5_view { get; set; }
         public virtual DbSet<Cau6_view> Cau6_view { get; set; }
         public virtual DbSet<Cau7_view> Cau7_view { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
         public virtual int Cau1_proc(string maDoUong, Nullable<int> nam, ObjectParameter sL)
         {
             var maDoUongParameter = maDoUong != null ?

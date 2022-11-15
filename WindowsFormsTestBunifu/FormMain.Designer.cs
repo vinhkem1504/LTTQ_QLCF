@@ -78,6 +78,7 @@ namespace WindowsFormsTestBunifu
             this.btxtNV_Search = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btnDSNV_ChiTietNV = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dtNV_NgayNhanViec = new System.Windows.Forms.DateTimePicker();
             this.dtNV_NTNS = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -168,7 +169,6 @@ namespace WindowsFormsTestBunifu
             this.label63 = new System.Windows.Forms.Label();
             this.txtCTB_TongTien = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.txtCTB_TenSP = new System.Windows.Forms.TextBox();
             this.btnCTB_XoaSP = new System.Windows.Forms.Button();
             this.btnCTB_SuaSP = new System.Windows.Forms.Button();
             this.btnCTB_ThemSP = new System.Windows.Forms.Button();
@@ -212,7 +212,6 @@ namespace WindowsFormsTestBunifu
             this.txtTTNV_Luong = new System.Windows.Forms.TextBox();
             this.cbbTTNV_CaLV = new System.Windows.Forms.ComboBox();
             this.label67 = new System.Windows.Forms.Label();
-            this.btnTTNV_Luong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label66 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.cbbTTNV_Thang = new System.Windows.Forms.ComboBox();
@@ -234,14 +233,13 @@ namespace WindowsFormsTestBunifu
             this.txtTTNV_DiaChi = new System.Windows.Forms.TextBox();
             this.txtTTNV_HoTen = new System.Windows.Forms.TextBox();
             this.txtTTNV_MaNV = new System.Windows.Forms.TextBox();
+            this.btnTTNV_Luong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tabBan = new System.Windows.Forms.TabPage();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.dgvBan_ListHDB = new System.Windows.Forms.DataGridView();
             this.panel24 = new System.Windows.Forms.Panel();
             this.btnBan_ThanhToan = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.cbbBan_ListSP = new System.Windows.Forms.ComboBox();
-            this.nbrBan_SoLuong = new System.Windows.Forms.NumericUpDown();
             this.btnBan_Them = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel22 = new System.Windows.Forms.Panel();
             this.floBan_ListBan = new System.Windows.Forms.FlowLayoutPanel();
@@ -276,7 +274,6 @@ namespace WindowsFormsTestBunifu
             this.label57 = new System.Windows.Forms.Label();
             this.txtCTN_TenNL = new System.Windows.Forms.TextBox();
             this.lblCTN_TenHDN = new System.Windows.Forms.Label();
-            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
@@ -284,6 +281,7 @@ namespace WindowsFormsTestBunifu
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.txtCTN_SoLuong = new System.Windows.Forms.TextBox();
             this.txtCTN_DonGia = new System.Windows.Forms.TextBox();
+            this.cbbCTB_TenSP = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bpicLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -343,7 +341,6 @@ namespace WindowsFormsTestBunifu
             this.panel27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan_ListHDB)).BeginInit();
             this.panel24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nbrBan_SoLuong)).BeginInit();
             this.panel22.SuspendLayout();
             this.tabHoaDonNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -679,10 +676,10 @@ namespace WindowsFormsTestBunifu
             this.bpaPages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bpaPages.Multiline = true;
             this.bpaPages.Name = "bpaPages";
-            this.bpaPages.Page = this.tabBan;
-            this.bpaPages.PageIndex = 8;
-            this.bpaPages.PageName = "tabBan";
-            this.bpaPages.PageTitle = "Bàn";
+            this.bpaPages.Page = this.tabCTHoaDon;
+            this.bpaPages.PageIndex = 4;
+            this.bpaPages.PageName = "tabCTHoaDon";
+            this.bpaPages.PageTitle = "Chi tiết hóa đơn bán";
             this.bpaPages.SelectedIndex = 0;
             this.bpaPages.Size = new System.Drawing.Size(897, 454);
             this.bpaPages.TabIndex = 2;
@@ -843,6 +840,7 @@ namespace WindowsFormsTestBunifu
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.btnDSNV_ChiTietNV);
             this.panel8.Controls.Add(this.dtNV_NgayNhanViec);
             this.panel8.Controls.Add(this.dtNV_NTNS);
             this.panel8.Controls.Add(this.label9);
@@ -865,11 +863,37 @@ namespace WindowsFormsTestBunifu
             this.panel8.Size = new System.Drawing.Size(383, 400);
             this.panel8.TabIndex = 2;
             // 
+            // btnDSNV_ChiTietNV
+            // 
+            this.btnDSNV_ChiTietNV.ActiveBorderThickness = 1;
+            this.btnDSNV_ChiTietNV.ActiveCornerRadius = 20;
+            this.btnDSNV_ChiTietNV.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnDSNV_ChiTietNV.ActiveForecolor = System.Drawing.Color.White;
+            this.btnDSNV_ChiTietNV.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnDSNV_ChiTietNV.BackColor = System.Drawing.Color.Transparent;
+            this.btnDSNV_ChiTietNV.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDSNV_ChiTietNV.BackgroundImage")));
+            this.btnDSNV_ChiTietNV.ButtonText = "Chi tiết ";
+            this.btnDSNV_ChiTietNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDSNV_ChiTietNV.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSNV_ChiTietNV.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnDSNV_ChiTietNV.IdleBorderThickness = 1;
+            this.btnDSNV_ChiTietNV.IdleCornerRadius = 20;
+            this.btnDSNV_ChiTietNV.IdleFillColor = System.Drawing.Color.White;
+            this.btnDSNV_ChiTietNV.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnDSNV_ChiTietNV.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnDSNV_ChiTietNV.Location = new System.Drawing.Point(72, 388);
+            this.btnDSNV_ChiTietNV.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDSNV_ChiTietNV.Name = "btnDSNV_ChiTietNV";
+            this.btnDSNV_ChiTietNV.Size = new System.Drawing.Size(240, 46);
+            this.btnDSNV_ChiTietNV.TabIndex = 38;
+            this.btnDSNV_ChiTietNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDSNV_ChiTietNV.Click += new System.EventHandler(this.btnDSNV_ChiTietNV_Click);
+            // 
             // dtNV_NgayNhanViec
             // 
             this.dtNV_NgayNhanViec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNV_NgayNhanViec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNV_NgayNhanViec.Location = new System.Drawing.Point(143, 313);
+            this.dtNV_NgayNhanViec.Location = new System.Drawing.Point(143, 299);
             this.dtNV_NgayNhanViec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtNV_NgayNhanViec.Name = "dtNV_NgayNhanViec";
             this.dtNV_NgayNhanViec.Size = new System.Drawing.Size(205, 24);
@@ -879,7 +903,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.dtNV_NTNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNV_NTNS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNV_NTNS.Location = new System.Drawing.Point(143, 270);
+            this.dtNV_NTNS.Location = new System.Drawing.Point(143, 256);
             this.dtNV_NTNS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtNV_NTNS.Name = "dtNV_NTNS";
             this.dtNV_NTNS.Size = new System.Drawing.Size(205, 24);
@@ -889,7 +913,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(33, 359);
+            this.label9.Location = new System.Drawing.Point(33, 345);
             this.label9.Margin = new System.Windows.Forms.Padding(9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 18);
@@ -900,7 +924,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 318);
+            this.label7.Location = new System.Drawing.Point(13, 304);
             this.label7.Margin = new System.Windows.Forms.Padding(9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 18);
@@ -911,7 +935,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(51, 276);
+            this.label6.Location = new System.Drawing.Point(51, 262);
             this.label6.Margin = new System.Windows.Forms.Padding(9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 18);
@@ -922,7 +946,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(91, 226);
+            this.label5.Location = new System.Drawing.Point(91, 212);
             this.label5.Margin = new System.Windows.Forms.Padding(9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 18);
@@ -933,7 +957,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(69, 188);
+            this.label4.Location = new System.Drawing.Point(69, 174);
             this.label4.Margin = new System.Windows.Forms.Padding(9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 18);
@@ -944,7 +968,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(69, 142);
+            this.label3.Location = new System.Drawing.Point(69, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 18);
@@ -955,7 +979,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 103);
+            this.label2.Location = new System.Drawing.Point(73, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 18);
@@ -975,7 +999,7 @@ namespace WindowsFormsTestBunifu
             // txtNV_LuongCB
             // 
             this.txtNV_LuongCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNV_LuongCB.Location = new System.Drawing.Point(143, 357);
+            this.txtNV_LuongCB.Location = new System.Drawing.Point(143, 343);
             this.txtNV_LuongCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNV_LuongCB.Name = "txtNV_LuongCB";
             this.txtNV_LuongCB.Size = new System.Drawing.Size(205, 24);
@@ -984,7 +1008,7 @@ namespace WindowsFormsTestBunifu
             // txtNV_SDT
             // 
             this.txtNV_SDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNV_SDT.Location = new System.Drawing.Point(143, 223);
+            this.txtNV_SDT.Location = new System.Drawing.Point(143, 209);
             this.txtNV_SDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNV_SDT.Name = "txtNV_SDT";
             this.txtNV_SDT.Size = new System.Drawing.Size(205, 24);
@@ -993,7 +1017,7 @@ namespace WindowsFormsTestBunifu
             // txtNV_DiaChi
             // 
             this.txtNV_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNV_DiaChi.Location = new System.Drawing.Point(143, 185);
+            this.txtNV_DiaChi.Location = new System.Drawing.Point(143, 171);
             this.txtNV_DiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNV_DiaChi.Name = "txtNV_DiaChi";
             this.txtNV_DiaChi.Size = new System.Drawing.Size(205, 24);
@@ -1002,7 +1026,7 @@ namespace WindowsFormsTestBunifu
             // txtNV_TenNV
             // 
             this.txtNV_TenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNV_TenNV.Location = new System.Drawing.Point(143, 139);
+            this.txtNV_TenNV.Location = new System.Drawing.Point(143, 125);
             this.txtNV_TenNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNV_TenNV.Name = "txtNV_TenNV";
             this.txtNV_TenNV.Size = new System.Drawing.Size(205, 24);
@@ -1011,7 +1035,7 @@ namespace WindowsFormsTestBunifu
             // txtNV_MaNV
             // 
             this.txtNV_MaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNV_MaNV.Location = new System.Drawing.Point(143, 97);
+            this.txtNV_MaNV.Location = new System.Drawing.Point(143, 83);
             this.txtNV_MaNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNV_MaNV.Name = "txtNV_MaNV";
             this.txtNV_MaNV.Size = new System.Drawing.Size(205, 24);
@@ -1227,7 +1251,7 @@ namespace WindowsFormsTestBunifu
             this.btnSP_ThemVaoHD.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(97)))), ((int)(((byte)(61)))));
             this.btnSP_ThemVaoHD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSP_ThemVaoHD.BackgroundImage")));
             this.btnSP_ThemVaoHD.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSP_ThemVaoHD.ButtonText = "Xem số lượng đã bán";
+            this.btnSP_ThemVaoHD.ButtonText = "Thêm";
             this.btnSP_ThemVaoHD.ButtonTextMarginLeft = 0;
             this.btnSP_ThemVaoHD.ColorContrastOnClick = 45;
             this.btnSP_ThemVaoHD.ColorContrastOnHover = 45;
@@ -2126,6 +2150,7 @@ namespace WindowsFormsTestBunifu
             this.btnHD_ThemHD.TabIndex = 0;
             this.btnHD_ThemHD.TabStop = false;
             this.btnHD_ThemHD.Zoom = 10;
+            this.btnHD_ThemHD.Click += new System.EventHandler(this.btnHD_ThemHD_Click);
             // 
             // tabCTHoaDon
             // 
@@ -2193,10 +2218,10 @@ namespace WindowsFormsTestBunifu
             // 
             // panel14
             // 
+            this.panel14.Controls.Add(this.cbbCTB_TenSP);
             this.panel14.Controls.Add(this.label63);
             this.panel14.Controls.Add(this.txtCTB_TongTien);
             this.panel14.Controls.Add(this.label37);
-            this.panel14.Controls.Add(this.txtCTB_TenSP);
             this.panel14.Controls.Add(this.btnCTB_XoaSP);
             this.panel14.Controls.Add(this.btnCTB_SuaSP);
             this.panel14.Controls.Add(this.btnCTB_ThemSP);
@@ -2246,15 +2271,6 @@ namespace WindowsFormsTestBunifu
             this.label37.TabIndex = 59;
             this.label37.Text = "Ghi Chú";
             // 
-            // txtCTB_TenSP
-            // 
-            this.txtCTB_TenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCTB_TenSP.Location = new System.Drawing.Point(101, 129);
-            this.txtCTB_TenSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCTB_TenSP.Name = "txtCTB_TenSP";
-            this.txtCTB_TenSP.Size = new System.Drawing.Size(253, 24);
-            this.txtCTB_TenSP.TabIndex = 58;
-            // 
             // btnCTB_XoaSP
             // 
             this.btnCTB_XoaSP.BackColor = System.Drawing.Color.SeaGreen;
@@ -2283,7 +2299,7 @@ namespace WindowsFormsTestBunifu
             this.btnCTB_SuaSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTB_SuaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnCTB_SuaSP.ForeColor = System.Drawing.Color.White;
-            this.btnCTB_SuaSP.Location = new System.Drawing.Point(139, 338);
+            this.btnCTB_SuaSP.Location = new System.Drawing.Point(140, 338);
             this.btnCTB_SuaSP.Margin = new System.Windows.Forms.Padding(4);
             this.btnCTB_SuaSP.Name = "btnCTB_SuaSP";
             this.btnCTB_SuaSP.Size = new System.Drawing.Size(93, 30);
@@ -2828,13 +2844,13 @@ namespace WindowsFormsTestBunifu
             this.tabPage2.Controls.Add(this.txtTTNV_Luong);
             this.tabPage2.Controls.Add(this.cbbTTNV_CaLV);
             this.tabPage2.Controls.Add(this.label67);
-            this.tabPage2.Controls.Add(this.btnTTNV_Luong);
             this.tabPage2.Controls.Add(this.label66);
             this.tabPage2.Controls.Add(this.label65);
             this.tabPage2.Controls.Add(this.cbbTTNV_Thang);
             this.tabPage2.Controls.Add(this.txtTTNV_Nam);
             this.tabPage2.Controls.Add(this.btnTTNV_ChamCong);
             this.tabPage2.Controls.Add(this.panel26);
+            this.tabPage2.Controls.Add(this.btnTTNV_Luong);
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
@@ -2883,42 +2899,6 @@ namespace WindowsFormsTestBunifu
             this.label67.Size = new System.Drawing.Size(63, 23);
             this.label67.TabIndex = 9;
             this.label67.Text = "Ca làm";
-            // 
-            // btnTTNV_Luong
-            // 
-            this.btnTTNV_Luong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnTTNV_Luong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnTTNV_Luong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTTNV_Luong.BorderRadius = 0;
-            this.btnTTNV_Luong.ButtonText = "Xem lương";
-            this.btnTTNV_Luong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTTNV_Luong.DisabledColor = System.Drawing.Color.Gray;
-            this.btnTTNV_Luong.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnTTNV_Luong.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTTNV_Luong.Iconimage")));
-            this.btnTTNV_Luong.Iconimage_right = null;
-            this.btnTTNV_Luong.Iconimage_right_Selected = null;
-            this.btnTTNV_Luong.Iconimage_Selected = null;
-            this.btnTTNV_Luong.IconMarginLeft = 0;
-            this.btnTTNV_Luong.IconMarginRight = 0;
-            this.btnTTNV_Luong.IconRightVisible = false;
-            this.btnTTNV_Luong.IconRightZoom = 0D;
-            this.btnTTNV_Luong.IconVisible = false;
-            this.btnTTNV_Luong.IconZoom = 90D;
-            this.btnTTNV_Luong.IsTab = false;
-            this.btnTTNV_Luong.Location = new System.Drawing.Point(19, 347);
-            this.btnTTNV_Luong.Margin = new System.Windows.Forms.Padding(5);
-            this.btnTTNV_Luong.Name = "btnTTNV_Luong";
-            this.btnTTNV_Luong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnTTNV_Luong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnTTNV_Luong.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnTTNV_Luong.selected = false;
-            this.btnTTNV_Luong.Size = new System.Drawing.Size(211, 48);
-            this.btnTTNV_Luong.TabIndex = 7;
-            this.btnTTNV_Luong.Text = "Xem lương";
-            this.btnTTNV_Luong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTTNV_Luong.Textcolor = System.Drawing.Color.White;
-            this.btnTTNV_Luong.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTTNV_Luong.Click += new System.EventHandler(this.btnTTNV_Luong_Click);
             // 
             // label66
             // 
@@ -3202,6 +3182,42 @@ namespace WindowsFormsTestBunifu
             this.txtTTNV_MaNV.Size = new System.Drawing.Size(229, 24);
             this.txtTTNV_MaNV.TabIndex = 37;
             // 
+            // btnTTNV_Luong
+            // 
+            this.btnTTNV_Luong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnTTNV_Luong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnTTNV_Luong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTTNV_Luong.BorderRadius = 0;
+            this.btnTTNV_Luong.ButtonText = "Xem lương";
+            this.btnTTNV_Luong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTTNV_Luong.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTTNV_Luong.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTTNV_Luong.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTTNV_Luong.Iconimage")));
+            this.btnTTNV_Luong.Iconimage_right = null;
+            this.btnTTNV_Luong.Iconimage_right_Selected = null;
+            this.btnTTNV_Luong.Iconimage_Selected = null;
+            this.btnTTNV_Luong.IconMarginLeft = 0;
+            this.btnTTNV_Luong.IconMarginRight = 0;
+            this.btnTTNV_Luong.IconRightVisible = false;
+            this.btnTTNV_Luong.IconRightZoom = 0D;
+            this.btnTTNV_Luong.IconVisible = false;
+            this.btnTTNV_Luong.IconZoom = 90D;
+            this.btnTTNV_Luong.IsTab = false;
+            this.btnTTNV_Luong.Location = new System.Drawing.Point(19, 347);
+            this.btnTTNV_Luong.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTTNV_Luong.Name = "btnTTNV_Luong";
+            this.btnTTNV_Luong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnTTNV_Luong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnTTNV_Luong.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTTNV_Luong.selected = false;
+            this.btnTTNV_Luong.Size = new System.Drawing.Size(211, 48);
+            this.btnTTNV_Luong.TabIndex = 7;
+            this.btnTTNV_Luong.Text = "Xem lương";
+            this.btnTTNV_Luong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTTNV_Luong.Textcolor = System.Drawing.Color.White;
+            this.btnTTNV_Luong.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTTNV_Luong.Click += new System.EventHandler(this.btnTTNV_Luong_Click);
+            // 
             // tabBan
             // 
             this.tabBan.Controls.Add(this.panel23);
@@ -3251,8 +3267,6 @@ namespace WindowsFormsTestBunifu
             // panel24
             // 
             this.panel24.Controls.Add(this.btnBan_ThanhToan);
-            this.panel24.Controls.Add(this.cbbBan_ListSP);
-            this.panel24.Controls.Add(this.nbrBan_SoLuong);
             this.panel24.Controls.Add(this.btnBan_Them);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel24.Location = new System.Drawing.Point(0, 0);
@@ -3282,39 +3296,19 @@ namespace WindowsFormsTestBunifu
             this.btnBan_ThanhToan.IconVisible = false;
             this.btnBan_ThanhToan.IconZoom = 90D;
             this.btnBan_ThanhToan.IsTab = false;
-            this.btnBan_ThanhToan.Location = new System.Drawing.Point(224, 53);
+            this.btnBan_ThanhToan.Location = new System.Drawing.Point(0, 53);
             this.btnBan_ThanhToan.Margin = new System.Windows.Forms.Padding(5);
             this.btnBan_ThanhToan.Name = "btnBan_ThanhToan";
             this.btnBan_ThanhToan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnBan_ThanhToan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnBan_ThanhToan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnBan_ThanhToan.selected = false;
-            this.btnBan_ThanhToan.Size = new System.Drawing.Size(130, 28);
+            this.btnBan_ThanhToan.Size = new System.Drawing.Size(163, 39);
             this.btnBan_ThanhToan.TabIndex = 4;
             this.btnBan_ThanhToan.Text = "   Thanh Toán";
             this.btnBan_ThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBan_ThanhToan.Textcolor = System.Drawing.Color.White;
             this.btnBan_ThanhToan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // cbbBan_ListSP
-            // 
-            this.cbbBan_ListSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbBan_ListSP.FormattingEnabled = true;
-            this.cbbBan_ListSP.Location = new System.Drawing.Point(19, 15);
-            this.cbbBan_ListSP.Margin = new System.Windows.Forms.Padding(4);
-            this.cbbBan_ListSP.Name = "cbbBan_ListSP";
-            this.cbbBan_ListSP.Size = new System.Drawing.Size(133, 28);
-            this.cbbBan_ListSP.TabIndex = 3;
-            // 
-            // nbrBan_SoLuong
-            // 
-            this.nbrBan_SoLuong.BackColor = System.Drawing.Color.White;
-            this.nbrBan_SoLuong.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbrBan_SoLuong.Location = new System.Drawing.Point(19, 54);
-            this.nbrBan_SoLuong.Margin = new System.Windows.Forms.Padding(4);
-            this.nbrBan_SoLuong.Name = "nbrBan_SoLuong";
-            this.nbrBan_SoLuong.Size = new System.Drawing.Size(134, 27);
-            this.nbrBan_SoLuong.TabIndex = 2;
             // 
             // btnBan_Them
             // 
@@ -3337,14 +3331,14 @@ namespace WindowsFormsTestBunifu
             this.btnBan_Them.IconVisible = false;
             this.btnBan_Them.IconZoom = 90D;
             this.btnBan_Them.IsTab = false;
-            this.btnBan_Them.Location = new System.Drawing.Point(224, 15);
+            this.btnBan_Them.Location = new System.Drawing.Point(0, 5);
             this.btnBan_Them.Margin = new System.Windows.Forms.Padding(5);
             this.btnBan_Them.Name = "btnBan_Them";
             this.btnBan_Them.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnBan_Them.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnBan_Them.OnHoverTextColor = System.Drawing.Color.White;
             this.btnBan_Them.selected = false;
-            this.btnBan_Them.Size = new System.Drawing.Size(130, 28);
+            this.btnBan_Them.Size = new System.Drawing.Size(163, 45);
             this.btnBan_Them.TabIndex = 0;
             this.btnBan_Them.Text = "Thêm Món";
             this.btnBan_Them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3730,7 +3724,6 @@ namespace WindowsFormsTestBunifu
             this.panel30.Controls.Add(this.label57);
             this.panel30.Controls.Add(this.txtCTN_TenNL);
             this.panel30.Controls.Add(this.lblCTN_TenHDN);
-            this.panel30.Controls.Add(this.bunifuThinButton24);
             this.panel30.Controls.Add(this.label59);
             this.panel30.Controls.Add(this.label60);
             this.panel30.Controls.Add(this.label61);
@@ -3749,7 +3742,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(-3, 338);
+            this.label58.Location = new System.Drawing.Point(-3, 361);
             this.label58.Margin = new System.Windows.Forms.Padding(9);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(77, 20);
@@ -3760,7 +3753,7 @@ namespace WindowsFormsTestBunifu
             // 
             this.txtCTN_TongTien.Enabled = false;
             this.txtCTN_TongTien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCTN_TongTien.Location = new System.Drawing.Point(91, 334);
+            this.txtCTN_TongTien.Location = new System.Drawing.Point(91, 357);
             this.txtCTN_TongTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCTN_TongTien.Name = "txtCTN_TongTien";
             this.txtCTN_TongTien.Size = new System.Drawing.Size(253, 27);
@@ -3815,31 +3808,6 @@ namespace WindowsFormsTestBunifu
             this.lblCTN_TenHDN.TabIndex = 45;
             this.lblCTN_TenHDN.Text = "Hóa đơn : ";
             // 
-            // bunifuThinButton24
-            // 
-            this.bunifuThinButton24.ActiveBorderThickness = 1;
-            this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "Thanh toán hóa đơn";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.IdleBorderThickness = 1;
-            this.bunifuThinButton24.IdleCornerRadius = 20;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(76, 366);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(229, 58);
-            this.bunifuThinButton24.TabIndex = 44;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label59
             // 
             this.label59.AutoSize = true;
@@ -3890,7 +3858,7 @@ namespace WindowsFormsTestBunifu
             this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(255, 57);
+            this.textBox12.Size = new System.Drawing.Size(253, 57);
             this.textBox12.TabIndex = 37;
             // 
             // txtCTN_SoLuong
@@ -3910,6 +3878,14 @@ namespace WindowsFormsTestBunifu
             this.txtCTN_DonGia.Name = "txtCTN_DonGia";
             this.txtCTN_DonGia.Size = new System.Drawing.Size(253, 24);
             this.txtCTN_DonGia.TabIndex = 35;
+            // 
+            // cbbCTB_TenSP
+            // 
+            this.cbbCTB_TenSP.FormattingEnabled = true;
+            this.cbbCTB_TenSP.Location = new System.Drawing.Point(101, 131);
+            this.cbbCTB_TenSP.Name = "cbbCTB_TenSP";
+            this.cbbCTB_TenSP.Size = new System.Drawing.Size(253, 24);
+            this.cbbCTB_TenSP.TabIndex = 62;
             // 
             // frmMain
             // 
@@ -3993,7 +3969,6 @@ namespace WindowsFormsTestBunifu
             this.panel27.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan_ListHDB)).EndInit();
             this.panel24.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nbrBan_SoLuong)).EndInit();
             this.panel22.ResumeLayout(false);
             this.tabHoaDonNhap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -4122,7 +4097,6 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox txtKho_TenNL;
         private System.Windows.Forms.TextBox txtHD_MaNV;
-        private System.Windows.Forms.TextBox txtCTB_TenSP;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -4200,7 +4174,6 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.TextBox txtCTN_TenNL;
         private System.Windows.Forms.Label lblCTN_TenHDN;
-        private BunifuThinButton2 bunifuThinButton24;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
@@ -4233,11 +4206,11 @@ namespace WindowsFormsTestBunifu
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel24;
         private BunifuFlatButton btnBan_ThanhToan;
-        private System.Windows.Forms.ComboBox cbbBan_ListSP;
-        private System.Windows.Forms.NumericUpDown nbrBan_SoLuong;
         private BunifuFlatButton btnBan_Them;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.DataGridView dgvBan_ListHDB;
+        private BunifuThinButton2 btnDSNV_ChiTietNV;
+        private System.Windows.Forms.ComboBox cbbCTB_TenSP;
     }
 }
 

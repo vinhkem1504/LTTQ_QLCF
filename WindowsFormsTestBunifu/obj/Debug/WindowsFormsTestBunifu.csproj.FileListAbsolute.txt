@@ -50,3 +50,4 @@ E:\Nam 3\Ki 2\Done UI\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTes
 E:\Nam 3\Ki 2\Done UI\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.csproj.CopyComplete
 E:\Nam 3\Ki 2\Done UI\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.exe
 E:\Nam 3\Ki 2\Done UI\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.pdb
+E:\Nam 3\Ki 2\Done UI\LTTQ_QLCF\WindowsFormsTestBunifu\obj\Debug\WindowsFormsTestBunifu.frmHoaDonBan.resources

@@ -23,7 +23,7 @@ namespace WindowsFormsTestBunifu
         {
             bpaPages.SelectedIndex = 8;
             bpaPages.AllowTransitions = false;
-            LoadInfoNhanVien();
+            LoadInfoNhanVien(UserInfo.maNV);
             if (!UserInfo.chucVu)
             {
                 LoadDataDSNhanVien();
@@ -65,6 +65,10 @@ namespace WindowsFormsTestBunifu
         // chi tiết hóa đơn bán
         private void bbtnCreateBill_Click(object sender, EventArgs e)
         {
+            foreach(var sp in db.DoUongs)
+            {
+                cbbCTB_TenSP.Items.Add(sp.TenDU);
+            }
             if (txtHD_MaHD.Text != "")
             {
                 // Load thành danh sách SP theo hóa đơn
@@ -74,6 +78,7 @@ namespace WindowsFormsTestBunifu
                 dgvCTB_DSSP.DataSource = result.ToList();
 
                 // Load thông tin
+                lblTenHoaDon.Text = "Hóa đơn : ";
                 lblTenHoaDon.Text = lblTenHoaDon.Text + txtHD_MaHD.Text;
 
                 //txtCTB_TongTien.Text = (int.Parse(txtCTB_SL.Text) * int.Parse(txtCTB_DonGia.Text)).ToString();
@@ -134,6 +139,7 @@ namespace WindowsFormsTestBunifu
 
         private void bpicLogo_Click(object sender, EventArgs e)
         {
+            LoadListBan();
             bpaPages.SelectedIndex = 8;
         }
 
@@ -149,7 +155,7 @@ namespace WindowsFormsTestBunifu
                 // Load thành phần nguyên liệu
                 var result = from c in db.CongThucDoUongs
                              where c.MaDU == txtSP_MaSp.Text
-                             select c;
+                             select new {c.NguyenLieu.MaNL, c.NguyenLieu.TenNL, c.SoLuong};
                 dgvCTSP_DSNL.DataSource = result.ToList();
 
                 // Load thông tin
@@ -349,10 +355,10 @@ namespace WindowsFormsTestBunifu
         #region Method
 
         //Load info nhân viên
-        void LoadInfoNhanVien()
+        void LoadInfoNhanVien(string maNV)
         {
             txtTTNV_MaNV.Enabled = false;
-            var infoNV = db.NhanViens.Find(UserInfo.maNV);
+            var infoNV = db.NhanViens.Find(maNV);
             txtTTNV_MaNV.Text = infoNV.MaNV.ToString();
             txtTTNV_HoTen.Text = infoNV.HoTen.ToString();
             txtTTNV_DiaChi.Text = infoNV.DiaChi.ToString();
@@ -503,7 +509,7 @@ namespace WindowsFormsTestBunifu
         // Cell click chi tiết bán
         void ChiTietSP_HDB()
         {
-            txtCTB_TenSP.Text = dgvCTB_DSSP.CurrentRow.Cells[0].Value.ToString();
+            cbbCTB_TenSP.Text = dgvCTB_DSSP.CurrentRow.Cells[0].Value.ToString();
             txtCTB_SL.Text = dgvCTB_DSSP.CurrentRow.Cells[1].Value.ToString();
             txtCTB_DonGia.Text = dgvCTB_DSSP.CurrentRow.Cells[2].Value.ToString();
 
@@ -548,25 +554,41 @@ namespace WindowsFormsTestBunifu
 
         private void LoadListBan()
         {
+            floBan_ListBan.Controls.Clear();
             foreach(var table in db.Bans)
             {
                 table.TrangThai = true;
                 //db.SaveChanges();
             }
 
-            foreach(var hdb in db.HoaDonBans)
+            foreach (var hdb in db.HoaDonBans)
             {
                 if (!hdb.TrangThai)
                 {
-                    var ban = new Ban();
-                    ban.MaBan = hdb.MaBan;
-                    ban.TrangThai = false;
-                    db.SaveChanges();
-                }      
+                    foreach (var ban in db.Bans)
+                    {
+                        if (ban.MaBan == hdb.MaBan)
+                        {
+                            ban.TrangThai = false;
+                            //db.SaveChanges();
+                        }
+                    }
+                }
             }
-            
+            //db.SaveChanges();
+            /*foreach (var ban in db.Bans)
+            {
+                foreach(var hdb in db.HoaDonBans)
+                {
+                    if (!hdb.TrangThai)
+                    {
+                        ban.TrangThai = false;
+                    }
+                }
+            }*/
 
-            foreach(var table in db.Bans)
+
+            foreach (var table in db.Bans)
             {
                 Button btn = new Button() { Width = 110, Height = 80 };
                 btn.Text = table.MaBan.ToString();
@@ -575,11 +597,10 @@ namespace WindowsFormsTestBunifu
                 else btn.BackColor = Color.OrangeRed;
                 floBan_ListBan.Controls.Add(btn);
             }
+            db.SaveChanges();
 
-            foreach(var item in db.DoUongs)
-            {
-                cbbBan_ListSP.Items.Add(item.TenDU);
-            }
+            
+
         }
 
         private void LoadListHDB_Ban(Object sender, EventArgs e)
@@ -592,14 +613,14 @@ namespace WindowsFormsTestBunifu
 
             var result = from v in db.Cau6_view
                          join hdb in db.HoaDonBans on v.MaHDB equals hdb.MaHDB
-                         where hdb.MaBan == btn.Text
+                         where hdb.MaBan == btn.Text && hdb.TrangThai == false
                          select new { v.MaHDB, v.MaNV, v.NgayLap, v.TriGia };
             dgvBan_ListHDB.DataSource = result.ToList();
         }
 
         private void btnSP_ThemVaoHD_Click(object sender, EventArgs e)
         {
-            ObjectParameter sl = new ObjectParameter("sL", typeof(int));
+            /*ObjectParameter sl = new ObjectParameter("sL", typeof(int));
             db.Cau1_proc(txtSP_MaSp.Text, 2022, sl);
             if(sl.Value.ToString() != "")
             {
@@ -608,8 +629,27 @@ namespace WindowsFormsTestBunifu
             else
             {
                 MessageBox.Show("Đã bán được 0 sản phẩm");
+            }*/
+            
+        }
+
+        private void btnDSNV_ChiTietNV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadInfoNhanVien(txtNV_MaNV.Text);
+                bpaPages.SelectedIndex = 7;
+            }
+            catch
+            {
+                MessageBox.Show("Hãy chọn nhân viên muốn xem thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
+        private void btnHD_ThemHD_Click(object sender, EventArgs e)
+        {
+            frmHoaDonBan hdb = new frmHoaDonBan();
+            hdb.ShowDialog();
+        }
     }
 }
