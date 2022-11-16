@@ -60,5 +60,10 @@ namespace WindowsFormsTestBunifu
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau1_proc", maDoUongParameter, namParameter, sL);
         }
+
+        internal object Entry()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
