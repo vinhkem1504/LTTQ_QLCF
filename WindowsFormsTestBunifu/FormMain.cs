@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Bunifu.Framework.Lib;
+using System;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,7 +13,7 @@ namespace WindowsFormsTestBunifu
     {
 
         QLCafeEntities1 db = new QLCafeEntities1();
-
+ 
         bool exit = true;
 
         public frmMain()
@@ -58,6 +61,7 @@ namespace WindowsFormsTestBunifu
 
         private void bbtnBill_Click(object sender, EventArgs e)
         {
+            LoadDataHoaDon();
             bpaPages.SelectedIndex = 3;
         }
 
@@ -80,8 +84,19 @@ namespace WindowsFormsTestBunifu
                 lblTenHoaDon.Text = "Hóa đơn : ";
                 lblTenHoaDon.Text = lblTenHoaDon.Text + txtHD_MaHD.Text;
 
-                //txtCTB_TongTien.Text = (int.Parse(txtCTB_SL.Text) * int.Parse(txtCTB_DonGia.Text)).ToString();
+                tinhTienHDB();
 
+                if(string.Compare(txtHD_TrangThai.Text,"Đã thanh toán") == 0)
+                {
+                    btnCTB_ThanhToanHoaDon.Visible = false;
+                    btnCTB_SuaSP.Enabled = false;
+                    btnCTB_ThemSP.Enabled = false;
+                    btnCTB_XoaSP.Enabled = false;
+                }
+                else
+                {
+                    btnCTB_ThanhToanHoaDon.Visible = true;
+                }
                 bpaPages.SelectedIndex = 4;
             }
             else
@@ -98,8 +113,34 @@ namespace WindowsFormsTestBunifu
 
         private void btnCTB_ThanhToanHoaDon_Click(object sender, EventArgs e)
         {
-            frmHoaDon cTietHDB = new frmHoaDon();
+            string[] l_string = lblTenHoaDon.Text.Split(' ');
+            string maHDB = l_string[3];
+            DataTable dtSP = new DataTable();
+            foreach (DataGridViewColumn col in dgvCTB_DSSP.Columns)
+            {
+                dtSP.Columns.Add(col.Name);
+            }
+
+            foreach (DataGridViewRow row in dgvCTB_DSSP.Rows)
+            {
+                DataRow dRow = dtSP.NewRow();
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    dRow[cell.ColumnIndex] = cell.Value;
+                }
+                dtSP.Rows.Add(dRow);
+            }
+
+            //dgvSP = (DataTable)dgvCTB_DSSP.DataSource;
+            string tongTien = txtCTB_TongTien.Text;
+            DateTime ngayLap = dtHD_Ngaylap.Value;
+            string maNV = txtHD_MaNV.Text;
+            frmHoaDon cTietHDB = new frmHoaDon(maHDB, dtSP, tongTien, ngayLap, maNV);
             cTietHDB.ShowDialog();
+
+            LoadListBan();
+            dgvBan_ListHDB.DataSource = null;
+            bpaPages.SelectedIndex = 8;
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -125,6 +166,11 @@ namespace WindowsFormsTestBunifu
 
         private void bbtnLogout_Click(object sender, EventArgs e)
         {
+            UserInfo.userName = "";
+            UserInfo.passWord = "";
+            UserInfo.email = "";
+            UserInfo.chucVu = new bool();
+            UserInfo.maNV = "";
             exit = false;
             this.Close();
             //Form frm = Application.OpenForms["frmLogin"];
@@ -348,10 +394,113 @@ namespace WindowsFormsTestBunifu
             }
 
         }
+        
+        private void btnSP_ThemVaoHD_Click(object sender, EventArgs e)
+        {
+            /*ObjectParameter sl = new ObjectParameter("sL", typeof(int));
+            db.Cau1_proc(txtSP_MaSp.Text, 2022, sl);
+            if(sl.Value.ToString() != "")
+            {
+                MessageBox.Show("Đã bán được " + sl.Value.ToString() + " sản phẩm");
+            }
+            else
+            {
+                MessageBox.Show("Đã bán được 0 sản phẩm");
+            }*/
+
+        }
+
+        private void btnDSNV_ChiTietNV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadInfoNhanVien(txtNV_MaNV.Text);
+                bpaPages.SelectedIndex = 7;
+            }
+            catch
+            {
+                MessageBox.Show("Hãy chọn nhân viên muốn xem thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnHD_ThemHD_Click(object sender, EventArgs e)
+        {
+            frmHoaDonBan hdb = new frmHoaDonBan();
+            hdb.ShowDialog();
+        }
+
+        private void btnBan_Them_Click_1(object sender, EventArgs e)
+        {
+            string maHDB = "";
+            if (dgvBan_ListHDB.Rows.Count > 0)
+            {
+                maHDB = dgvBan_ListHDB.CurrentRow.Cells[0].Value.ToString();
+                LoadChiTietHDB(maHDB);
+            }
+            else
+                MessageBox.Show("Chọn hóa đơn");
+        }
+
+        private void cbbCTB_TenSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var result = from sp in db.DoUongs
+                         where sp.TenDU == cbbCTB_TenSP.Text
+                         select new { sp.DonGia };
+            txtCTB_DonGia.Text = result.First().DonGia.ToString();
+            txtCTB_SL.Text = "1";
+        }
+        private void btnCTB_ThemSP_Click(object sender, EventArgs e)
+        {
+            addSanPham();
+
+        }
+
+        private void btnCTB_XoaSP_Click(object sender, EventArgs e)
+        {
+            delSanPham();
+
+        }
+
+        private void btnCTB_SuaSP_Click(object sender, EventArgs e)
+        {
+            updateSanPham();
+
+        }
         #endregion
 
 
         #region Method
+
+        //Load chi tiết hóa đơn
+        private void LoadChiTietHDB(string MaHDB)
+        {
+            foreach (var sp in db.DoUongs)
+            {
+                cbbCTB_TenSP.Items.Add(sp.TenDU);
+            }
+
+            // Load thành danh sách SP theo hóa đơn
+            var result = from c in db.ChiTietHDBs
+                            where c.MaHDB == MaHDB
+                            select new { Ten = c.DoUong.TenDU, SoLuong = c.SoLuongBan, DonGia = c.DoUong.DonGia };
+            dgvCTB_DSSP.DataSource = result.ToList();
+
+            // Load thông tin
+            lblTenHoaDon.Text = "Hóa đơn : ";
+            lblTenHoaDon.Text = lblTenHoaDon.Text + MaHDB;
+
+            var r = from v in db.Cau6_view
+                         join hdb in db.HoaDonBans on v.MaHDB equals hdb.MaHDB
+                         where hdb.MaBan == MaHDB
+                         select new { v.TriGia };
+            dgvBan_ListHDB.DataSource = result.ToList();
+
+            tinhTienHDB();
+
+            bpaPages.SelectedIndex = 4;
+
+
+        }
 
         //Load info nhân viên
         void LoadInfoNhanVien(string maNV)
@@ -550,17 +699,173 @@ namespace WindowsFormsTestBunifu
             MessageBox.Show("Cập nhật thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        #endregion
+        // Tính tiền hóa đơn
+        private void tinhTienHDB()
+        {
+            float tongTien = 0;
+            for (int i = 0; i < dgvCTB_DSSP.Rows.Count; i++)
+            {
+                int sl = 0;
+                float donGia = 0;
+                sl = int.Parse(dgvCTB_DSSP.Rows[i].Cells[1].Value.ToString());
+                donGia = float.Parse(dgvCTB_DSSP.Rows[i].Cells[2].Value.ToString());
+                tongTien += sl * donGia;
+            }
+
+            txtCTB_TongTien.Text = tongTien.ToString();
+        }
+
+        //Sửa sản phẩm
+        private void updateSanPham()
+        {
+            string[] l_string = lblTenHoaDon.Text.Split(' ');
+            string MaHDB = l_string[3];
+
+            var result = from c in db.ChiTietHDBs
+                         where c.MaHDB == MaHDB && c.DoUong.TenDU == cbbCTB_TenSP.Text
+                         select c;
+            var up = new ChiTietHDB();
+            up.MaHDB = result.First().MaHDB;
+            up.MaDU = result.First().MaDU;
+            up.KhuyenMai = result.First().KhuyenMai;
+            up.SoLuongBan = int.Parse(txtCTB_SL.Text);
+
+            db.ChiTietHDBs.Remove(result.First());
+            db.ChiTietHDBs.Add(up);
+            db.SaveChanges();
+            MessageBox.Show("Sửa thành công !");
+
+            var result1 = from c in db.ChiTietHDBs
+                          where c.MaHDB == MaHDB
+                          select new { Ten = c.DoUong.TenDU, SoLuong = c.SoLuongBan, DonGia = c.DoUong.DonGia };
+            dgvCTB_DSSP.DataSource = result1.ToList();
+            tinhTienHDB();
+        }
+        //Xóa sản phẩm
+        private void delSanPham()
+        {
+            string[] l_string = lblTenHoaDon.Text.Split(' ');
+            string MaHDB = l_string[3];
+
+            try
+            {
+                string tenSP = dgvCTB_DSSP.CurrentRow.Cells[0].Value.ToString();
+                var result = from c in db.ChiTietHDBs
+                             where c.DoUong.TenDU == tenSP && c.MaHDB == MaHDB
+                             select c;
+                db.ChiTietHDBs.Remove(result.First());
+                db.SaveChanges();
+                MessageBox.Show("Xóa thành công !");
+                //MessageBox.Show(dgvCTB_DSSP.Rows.Count.ToString());
+
+                var result1 = from c in db.ChiTietHDBs
+                              where c.MaHDB == MaHDB
+                              select new { Ten = c.DoUong.TenDU, SoLuong = c.SoLuongBan, DonGia = c.DoUong.DonGia };
+                dgvCTB_DSSP.DataSource = result1.ToList();
+
+                if (dgvCTB_DSSP.Rows.Count == 0)
+                {
+                    var hdb = db.HoaDonBans.Find(MaHDB);
+                    db.HoaDonBans.Remove(hdb);
+                    LoadListBan();
+                    db.SaveChanges();
+                    bpaPages.SelectedIndex = 8;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Không có sản phẩm !");
+            }
+
+            tinhTienHDB();
+        }
+        // Thêm SP
+        private void addSanPham()
+        {
+            var result = from sp in db.DoUongs
+                         where sp.TenDU == cbbCTB_TenSP.Text
+                         select new { sp.MaDU };
+            string maSp = result.First().MaDU;
+            var r = new ChiTietHDB();
+            string[] l_string = lblTenHoaDon.Text.Split(' ');
+            r.MaHDB = l_string[3];
+            r.MaDU = maSp;
+            r.SoLuongBan = int.Parse(txtCTB_SL.Text);
+            r.KhuyenMai = null;
+
+            int d = 0;
+            for (int i = 0; i < dgvCTB_DSSP.Rows.Count; i++)
+            {
+                string ten = dgvCTB_DSSP.Rows[i].Cells[0].Value.ToString();
+                var sp = from c in db.DoUongs
+                         where c.TenDU == ten
+                         select new { c.MaDU };
+                if (r.MaDU == sp.First().MaDU)
+                {
+                    var hdb = from c in db.ChiTietHDBs
+                              where c.MaHDB == r.MaHDB && c.DoUong.TenDU == ten
+                              select c;
+
+                    var up = new ChiTietHDB();
+                    up.MaHDB = hdb.First().MaHDB;
+                    up.MaDU = hdb.First().MaDU;
+                    up.KhuyenMai = hdb.First().KhuyenMai;
+                    up.SoLuongBan = r.SoLuongBan + (int)dgvCTB_DSSP.Rows[i].Cells[1].Value;
+
+                    db.ChiTietHDBs.Remove(hdb.First());
+                    db.ChiTietHDBs.Add(up);
+                    //r.SoLuongBan += (int)dgvCTB_DSSP.Rows[i].Cells[1].Value;
+                    d++;
+                    break;
+                }
+            }
+
+            if (d == 0)
+                db.ChiTietHDBs.Add(r);
+
+            db.SaveChanges();
+
+            LoadListBan();
+            MessageBox.Show("Thêm thành công !");
+
+            var result1 = from c in db.ChiTietHDBs
+                          where c.MaHDB == r.MaHDB
+                          select new { Ten = c.DoUong.TenDU, SoLuong = c.SoLuongBan, DonGia = c.DoUong.DonGia };
+            dgvCTB_DSSP.DataSource = result1.ToList();
+
+            tinhTienHDB();
+
+        }
+
 
         private void LoadListBan()
         {
+            QLCafeEntities1 dt = new QLCafeEntities1();
             floBan_ListBan.Controls.Clear();
-            foreach (var table in db.Bans)
+            foreach (var table in dt.Bans)
             {
                 table.TrangThai = true;
                 //db.SaveChanges();
             }
+            //db.SaveChanges();
 
+            foreach (var table in dt.Bans)
+            {
+                var result = from hdb in dt.HoaDonBans
+                             where hdb.MaBan == table.MaBan
+                             select hdb;
+                foreach (var b in result)
+                {
+                    if(b.TrangThai == false)
+                    {
+                        table.TrangThai = false;
+                        break;
+                    }
+                }
+                //db.SaveChanges();
+            }
+            db.SaveChanges();
+            /*
             foreach (var hdb in db.HoaDonBans)
             {
                 if (!hdb.TrangThai)
@@ -575,8 +880,9 @@ namespace WindowsFormsTestBunifu
                     }
                 }
             }
-            //db.SaveChanges();
-            /*foreach (var ban in db.Bans)
+            db.SaveChanges();*/
+            /*
+            foreach (var ban in db.Bans)
             {
                 foreach(var hdb in db.HoaDonBans)
                 {
@@ -585,22 +891,34 @@ namespace WindowsFormsTestBunifu
                         ban.TrangThai = false;
                     }
                 }
-            }*/
-
-
-            foreach (var table in db.Bans)
+            }
+            
+            */
+            foreach (var table in dt.Bans)
             {
                 Button btn = new Button() { Width = 110, Height = 80 };
                 btn.Text = table.MaBan.ToString();
-                btn.Click += LoadListHDB_Ban;
+                if (table.TrangThai) 
+                {
+                    btn.Click += new EventHandler(newHDB_TheoBan);
+                    //LoadListBan();
+                }
+                else
+                {
+                    btn.Click += LoadListHDB_Ban;
+                }
                 if (table.TrangThai) btn.BackColor = Color.LightGoldenrodYellow;
                 else btn.BackColor = Color.OrangeRed;
                 floBan_ListBan.Controls.Add(btn);
             }
-            db.SaveChanges();
+        }
 
-
-
+        private void newHDB_TheoBan(Object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            frmHoaDonBan hdb = new frmHoaDonBan(btn.Text);
+            hdb.ShowDialog();
+            LoadListBan();
         }
 
         private void LoadListHDB_Ban(Object sender, EventArgs e)
@@ -618,38 +936,63 @@ namespace WindowsFormsTestBunifu
             dgvBan_ListHDB.DataSource = result.ToList();
         }
 
-        private void btnSP_ThemVaoHD_Click(object sender, EventArgs e)
-        {
-            /*ObjectParameter sl = new ObjectParameter("sL", typeof(int));
-            db.Cau1_proc(txtSP_MaSp.Text, 2022, sl);
-            if(sl.Value.ToString() != "")
-            {
-                MessageBox.Show("Đã bán được " + sl.Value.ToString() + " sản phẩm");
-            }
-            else
-            {
-                MessageBox.Show("Đã bán được 0 sản phẩm");
-            }*/
 
-        }
 
-        private void btnDSNV_ChiTietNV_Click(object sender, EventArgs e)
+
+        #endregion
+
+        private void btnBan_ThanhToan_Click_1(object sender, EventArgs e)
         {
             try
             {
-                LoadInfoNhanVien(txtNV_MaNV.Text);
-                bpaPages.SelectedIndex = 7;
-            }
-            catch
-            {
-                MessageBox.Show("Hãy chọn nhân viên muốn xem thông tin !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+                if (dgvBan_ListHDB.Rows.Count > 0)
+                {
+                    string maHDB = dgvBan_ListHDB.CurrentRow.Cells[0].Value.ToString();
+                    string tongTien = dgvBan_ListHDB.CurrentRow.Cells[3].Value.ToString();
+                    string maNV = dgvBan_ListHDB.CurrentRow.Cells[1].Value.ToString();
+                    DateTime ngayLap = DateTime.Parse(dgvBan_ListHDB.CurrentRow.Cells[2].Value.ToString());
+                    var result = from hdb in db.ChiTietHDBs
+                                 where hdb.MaHDB == maHDB
+                                 select new { hdb.DoUong.TenDU, hdb.SoLuongBan, hdb.DoUong.DonGia };
 
-        private void btnHD_ThemHD_Click(object sender, EventArgs e)
-        {
-            frmHoaDonBan hdb = new frmHoaDonBan();
-            hdb.ShowDialog();
+                    dgvCTB_DSSP.DataSource = result.ToList();
+                    DataTable dtSP = new DataTable();
+                    foreach (DataGridViewColumn col in dgvCTB_DSSP.Columns)
+                    {
+                        dtSP.Columns.Add(col.Name);
+                    }
+
+                    foreach (DataGridViewRow row in dgvCTB_DSSP.Rows)
+                    {
+                        DataRow dRow = dtSP.NewRow();
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            dRow[cell.ColumnIndex] = cell.Value;
+                        }
+                        dtSP.Rows.Add(dRow);
+                    }
+                    frmHoaDon cTietHDB = new frmHoaDon(maHDB, dtSP, tongTien, ngayLap, maNV);
+                    cTietHDB.ShowDialog();
+
+                    var maBan = db.HoaDonBans.Find(maHDB);
+
+                    foreach(var table in db.Bans)
+                    {
+                        if(string.Compare(table.MaBan, maBan.MaBan) == 0)
+                        {
+                            table.TrangThai = true;
+                        }
+                    }
+                    db.SaveChanges();
+                    LoadListBan();
+                    dgvBan_ListHDB.DataSource = null;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                MessageBox.Show("Chọn hóa đơn muốn thanh toán !");
+            }
         }
     }
 }

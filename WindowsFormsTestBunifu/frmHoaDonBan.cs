@@ -20,6 +20,13 @@ namespace WindowsFormsTestBunifu
             InitializeComponent();
         }
 
+        public frmHoaDonBan(string maBan)
+        {
+            InitializeComponent();
+            cbbHDB_MaBan.Text = maBan;
+            cbbHDB_MaBan.Enabled = false;
+        }
+
         private void btnCTB_ThemSP_Click(object sender, EventArgs e)
         {
             addSanPham();
@@ -49,15 +56,24 @@ namespace WindowsFormsTestBunifu
             hdb.TrangThai = false;
             dt.HoaDonBans.Add(hdb);
 
-            foreach (DataRow items in table_DSSP.Rows)
+            try
             {
-                var chiTietBan = new ChiTietHDB();
-                chiTietBan.MaDU = items.ItemArray[0].ToString();
-                chiTietBan.SoLuongBan = int.Parse(items.ItemArray[2].ToString());
-                chiTietBan.MaHDB = txtHDB_MaHDB.Text;
-                dt.ChiTietHDBs.Add(chiTietBan);
+                foreach (DataRow items in table_DSSP.Rows)
+                {
+                    var chiTietBan = new ChiTietHDB();
+                    chiTietBan.MaDU = items.ItemArray[0].ToString();
+                    chiTietBan.SoLuongBan = int.Parse(items.ItemArray[2].ToString());
+                    chiTietBan.MaHDB = txtHDB_MaHDB.Text;
+                    dt.ChiTietHDBs.Add(chiTietBan);
+                }
+                dt.SaveChanges();
             }
-            dt.SaveChanges();
+            catch
+            {
+                MessageBox.Show("Không để trống !");
+                check = false;
+                return;
+            }
 
             MessageBox.Show("Tạo hóa đơn thành công !");
             this.Close();
@@ -197,6 +213,7 @@ namespace WindowsFormsTestBunifu
             }
             cbbHDB_TenSp.SelectedIndex = 0;
             txtHDB_Soluong.Text = "1";
+            cbbHDB_MaNV.SelectedIndex = 0;
         }
 
         private void frmHoaDonBan_FormClosing(object sender, FormClosingEventArgs e)
@@ -217,7 +234,13 @@ namespace WindowsFormsTestBunifu
 
         private void btnHDB_XacNhan_Click(object sender, EventArgs e)
         {
-            insertHDB();
+            if (dgvHDB_DSSP.Rows.Count > 1)
+            {
+                //MessageBox.Show(dgvHDB_DSSP.Rows.Count.ToString());
+                insertHDB();
+            } 
+            else
+                MessageBox.Show("Hãy chọn đồ uống !");
         }
     }
 }

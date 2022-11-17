@@ -200,6 +200,7 @@ namespace WindowsFormsTestBunifu
                 frmMain.ShowDialog();
                 makeEmpty();
                 this.Show();
+                login = 0;
             }
             else
             {
@@ -215,6 +216,7 @@ namespace WindowsFormsTestBunifu
             e.Cancel = false;
         }
 
-        #endregion 
+        #endregion
+
     }
 }

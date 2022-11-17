@@ -167,58 +167,10 @@ namespace WindowsFormsTestBunifu
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau1_proc", maDoUongParameter, namParameter, sL);
         }
-    
-        public virtual int Cau2_proc(string maNhanVien, Nullable<int> nam, ObjectParameter hDN, ObjectParameter hDB)
+
+        internal object Entry()
         {
-            var maNhanVienParameter = maNhanVien != null ?
-                new ObjectParameter("MaNhanVien", maNhanVien) :
-                new ObjectParameter("MaNhanVien", typeof(string));
-    
-            var namParameter = nam.HasValue ?
-                new ObjectParameter("Nam", nam) :
-                new ObjectParameter("Nam", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau2_proc", maNhanVienParameter, namParameter, hDN, hDB);
-        }
-    
-        public virtual int Cau3_proc(string maNhanVien, ObjectParameter ten, ObjectParameter sDT)
-        {
-            var maNhanVienParameter = maNhanVien != null ?
-                new ObjectParameter("MaNhanVien", maNhanVien) :
-                new ObjectParameter("MaNhanVien", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau3_proc", maNhanVienParameter, ten, sDT);
-        }
-    
-        public virtual int Cau5_proc(string maNguyenLieu, ObjectParameter tenNguyenLieu, ObjectParameter donGia)
-        {
-            var maNguyenLieuParameter = maNguyenLieu != null ?
-                new ObjectParameter("MaNguyenLieu", maNguyenLieu) :
-                new ObjectParameter("MaNguyenLieu", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau5_proc", maNguyenLieuParameter, tenNguyenLieu, donGia);
-        }
-    
-        public virtual ObjectResult<string> cau7_proc(string tendouong)
-        {
-            var tendouongParameter = tendouong != null ?
-                new ObjectParameter("tendouong", tendouong) :
-                new ObjectParameter("tendouong", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("cau7_proc", tendouongParameter);
-        }
-    
-        public virtual int pro(string maBan, string trangThai)
-        {
-            var maBanParameter = maBan != null ?
-                new ObjectParameter("MaBan", maBan) :
-                new ObjectParameter("MaBan", typeof(string));
-    
-            var trangThaiParameter = trangThai != null ?
-                new ObjectParameter("TrangThai", trangThai) :
-                new ObjectParameter("TrangThai", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pro", maBanParameter, trangThaiParameter);
+            throw new NotImplementedException();
         }
     }
 }
