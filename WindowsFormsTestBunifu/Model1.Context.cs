@@ -41,29 +41,9 @@ namespace WindowsFormsTestBunifu
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
-        public virtual DbSet<Cau1_view> Cau1_view { get; set; }
-        public virtual DbSet<Cau2_view> Cau2_view { get; set; }
-        public virtual DbSet<Cau4_view> Cau4_view { get; set; }
-        public virtual DbSet<Cau5_view> Cau5_view { get; set; }
         public virtual DbSet<Cau6_view> Cau6_view { get; set; }
-        public virtual DbSet<Cau7_view> Cau7_view { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public virtual DbSet<Cau2_view> Cau2_view { get; set; }
+    
         public virtual int Cau1_proc(string maDoUong, Nullable<int> nam, ObjectParameter sL)
         {
             var maDoUongParameter = maDoUong != null ?
@@ -75,6 +55,40 @@ namespace WindowsFormsTestBunifu
                 new ObjectParameter("Nam", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau1_proc", maDoUongParameter, namParameter, sL);
+        }
+    
+       
+    
+        
+    
+        [DbFunction("QLCafeEntities1", "cau9_func")]
+        public virtual IQueryable<cau9_func_Result> cau9_func(Nullable<int> nam)
+        {
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("nam", nam) :
+                new ObjectParameter("nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau9_func_Result>("[QLCafeEntities1].[cau9_func](@nam)", namParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "cau7_func")]
+        public virtual IQueryable<Nullable<decimal>> cau7_func(Nullable<int> nam)
+        {
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("nam", nam) :
+                new ObjectParameter("nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Nullable<decimal>>("[QLCafeEntities1].[cau7_func1](@nam)", namParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "cau8_func")]
+        public virtual IQueryable<Nullable<double>> cau8_func(Nullable<int> nam)
+        {
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("nam", nam) :
+                new ObjectParameter("nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Nullable<double>>("[QLCafeEntities1].[cau8_func1](@nam)", namParameter);
         }
     }
 }

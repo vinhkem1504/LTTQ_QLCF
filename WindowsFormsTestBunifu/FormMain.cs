@@ -4,6 +4,7 @@ using System.Data.Entity.Core.Objects;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using Utilities.BunifuButton.Transitions;
 
 namespace WindowsFormsTestBunifu
 {
@@ -611,5 +612,120 @@ namespace WindowsFormsTestBunifu
             }
         }
 
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            chart1.Visible = true;
+            chart2.Visible = false;
+              chart1.ChartAreas["ChartArea1"].AxisX.Title = "Thang";
+              chart1.ChartAreas["ChartArea1"].AxisY.Title = "Doanh Thu";
+            /*    var result = from c in db.cau7_func(bdtpStartDate.Value, bdtpEndDate.Value)
+                             join x in db.cau8_func(bdtpStartDate.Value, bdtpEndDate.Value)
+                             on c.Thang equals x.Thang
+                             select new { c.Thang, c.DTBan, x.DTNhap };
+            */
+        
+            var result = db.cau9_func(int.Parse( btnYear.Text));
+           
+            DataTable data = new DataTable();
+            data.Columns.Add("Thang", typeof(int));
+            data.Columns.Add("DTNhap", typeof(int));
+            data.Columns.Add("DTBan", typeof(int));
+            
+           
+
+             foreach (var i in result)
+             {
+                 DataRow row;
+                 row = data.NewRow();
+                row["Thang"] = i.Thanga.Value;
+                row["DTBan"] = i.DTBan;
+                row["DTNhap"] = i.DTNhap;
+                 data.Rows.Add(row); 
+             }
+             
+
+             for (int i = 0; i < data.Rows.Count; i++)
+            {
+
+                chart1.Series["Ban"].Points.AddXY(data.Rows[i]["Thang"], data.Rows[i]["DTBan"]);
+                chart1.Series["Nhap"].Points.AddXY(data.Rows[i]["Thang"], data.Rows[i]["DTNhap"]);
+
+
+            }
+            
+            lbDT.Text = "Thống kê năm " + btnYear.Text;
+      
+        //    dtgv.DataSource = data;
+
+        }
+
+        private void btnTop5_Click(object sender, EventArgs e)
+        {
+            var result = db.Cau2_view;
+            chart1.Visible = false;
+            chart2.Visible = true;
+            lbDT.Text = "Top 5 đồ uống bán chạy nhất năm 2022";
+            chart2.ChartAreas["ChartArea1"].AxisX.Title = "Ma do uong";
+            chart2.ChartAreas["ChartArea1"].AxisY.Title = "SL Ban";
+
+            //    dtgv.DataSource = result.ToList();
+
+            DataTable data = new DataTable();
+            data.Columns.Add("MaDU", typeof(string));
+            data.Columns.Add("SLBan", typeof(int));
+
+            foreach (var i in result)
+            {
+                DataRow row;
+                row = data.NewRow();
+                row["MaDU"] = i.MaDU;
+                row["SLBan"] = i.SLBan.Value;
+                data.Rows.Add(row);
+            }
+
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                
+                chart2.Series["SLBan"].Points.AddXY(data.Rows[i]["MaDU"], data.Rows[i]["SLBan"]);
+
+            }
+
+        }
+
+        private void btnDoanhThu_Tong_Click(object sender, EventArgs e)
+        {
+            var tongDTBan = db.cau7_func(int.Parse(btnYear.Text));
+            var tongDTNhap = db.cau8_func(int.Parse(btnYear.Text));
+
+        //    txtSum.Text = "Ban: " + tongDTBan;
+
+            DataTable data = new DataTable();
+            data.Columns.Add("DTBan", typeof(int));
+            DataTable data1 = new DataTable();
+            data1.Columns.Add("DTNhap", typeof(int));
+
+            
+
+            foreach (var i in tongDTBan)
+            {
+                DataRow row;
+                row = data.NewRow();
+                
+                row["DTBan"] = i.Value;
+                data.Rows.Add(row);
+            }
+
+            foreach (var i in tongDTNhap)
+            {
+                DataRow row;
+                row = data1.NewRow();
+                row["DTNhap"] = i.Value;
+                data1.Rows.Add(row);
+            }
+
+             
+
+            txtSum.Text = "Ban: "+data.Rows[0][0].ToString() + " Nhap: "+ data1.Rows[0][0].ToString();
+        }
     }
 }

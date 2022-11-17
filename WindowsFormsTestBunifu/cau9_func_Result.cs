@@ -10,12 +10,11 @@
 namespace WindowsFormsTestBunifu
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Cau4_view
+    public partial class cau9_func_Result
     {
-        public string MaDU { get; set; }
-        public string TenDU { get; set; }
-        public decimal DonGia { get; set; }
+        public Nullable<int> Thanga { get; set; }
+        public decimal DTBan { get; set; }
+        public double DTNhap { get; set; }
     }
 }
