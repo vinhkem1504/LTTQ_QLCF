@@ -905,6 +905,7 @@ namespace WindowsFormsTestBunifu
             this.dtNV_NTNS.Name = "dtNV_NTNS";
             this.dtNV_NTNS.Size = new System.Drawing.Size(155, 21);
             this.dtNV_NTNS.TabIndex = 36;
+            this.dtNV_NTNS.Value = new System.DateTime(2022, 11, 15, 0, 0, 0, 0);
             // 
             // label9
             // 
@@ -1064,6 +1065,7 @@ namespace WindowsFormsTestBunifu
             this.bunifuImageButton2.TabIndex = 13;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // btnNV_XoaNV
             // 
@@ -1078,6 +1080,7 @@ namespace WindowsFormsTestBunifu
             this.btnNV_XoaNV.TabIndex = 12;
             this.btnNV_XoaNV.TabStop = false;
             this.btnNV_XoaNV.Zoom = 10;
+            this.btnNV_XoaNV.Click += new System.EventHandler(this.btnNV_XoaNV_Click);
             // 
             // btnNV_ThemNV
             // 
@@ -1092,6 +1095,7 @@ namespace WindowsFormsTestBunifu
             this.btnNV_ThemNV.TabIndex = 11;
             this.btnNV_ThemNV.TabStop = false;
             this.btnNV_ThemNV.Zoom = 10;
+            this.btnNV_ThemNV.Click += new System.EventHandler(this.btnNV_ThemNV_Click);
             // 
             // tabSanPham
             // 
@@ -1372,6 +1376,7 @@ namespace WindowsFormsTestBunifu
             this.btnSP_XoaSp.TabIndex = 9;
             this.btnSP_XoaSp.TabStop = false;
             this.btnSP_XoaSp.Zoom = 10;
+            this.btnSP_XoaSp.Click += new System.EventHandler(this.btnSP_XoaSp_Click);
             // 
             // btnSP_SuaSp
             // 
@@ -1386,6 +1391,7 @@ namespace WindowsFormsTestBunifu
             this.btnSP_SuaSp.TabIndex = 8;
             this.btnSP_SuaSp.TabStop = false;
             this.btnSP_SuaSp.Zoom = 10;
+            this.btnSP_SuaSp.Click += new System.EventHandler(this.btnSP_SuaSp_Click);
             // 
             // btnSP_ThemSp
             // 
@@ -1400,6 +1406,7 @@ namespace WindowsFormsTestBunifu
             this.btnSP_ThemSp.TabIndex = 7;
             this.btnSP_ThemSp.TabStop = false;
             this.btnSP_ThemSp.Zoom = 10;
+            this.btnSP_ThemSp.Click += new System.EventHandler(this.btnSP_ThemSp_Click);
             // 
             // tabKhoNL
             // 
@@ -1707,6 +1714,7 @@ namespace WindowsFormsTestBunifu
             this.btnXoaHDN.TabIndex = 2;
             this.btnXoaHDN.TabStop = false;
             this.btnXoaHDN.Zoom = 10;
+            this.btnXoaHDN.Click += new System.EventHandler(this.btnXoaHDN_Click);
             // 
             // btnSuaHDN
             // 
@@ -1721,6 +1729,7 @@ namespace WindowsFormsTestBunifu
             this.btnSuaHDN.TabIndex = 1;
             this.btnSuaHDN.TabStop = false;
             this.btnSuaHDN.Zoom = 10;
+            this.btnSuaHDN.Click += new System.EventHandler(this.btnSuaHDN_Click);
             // 
             // btnThemHDN
             // 
@@ -2055,6 +2064,7 @@ namespace WindowsFormsTestBunifu
             this.btnHD_XoaHD.TabIndex = 2;
             this.btnHD_XoaHD.TabStop = false;
             this.btnHD_XoaHD.Zoom = 10;
+            this.btnHD_XoaHD.Click += new System.EventHandler(this.btnHD_XoaHD_Click);
             // 
             // btnHD_SuaHD
             // 
@@ -2069,6 +2079,7 @@ namespace WindowsFormsTestBunifu
             this.btnHD_SuaHD.TabIndex = 1;
             this.btnHD_SuaHD.TabStop = false;
             this.btnHD_SuaHD.Zoom = 10;
+            this.btnHD_SuaHD.Click += new System.EventHandler(this.btnHD_SuaHD_Click);
             // 
             // btnHD_ThemHD
             // 

@@ -169,20 +169,23 @@ namespace WindowsFormsTestBunifu
             decimal tienTru = 0;
             try
             {
-                maNL = dgvChiTietPhieuNhap.CurrentRow.Cells[0].Value.ToString();
-                tienTru = decimal.Parse(dgvChiTietPhieuNhap.CurrentRow.Cells[3].Value.ToString());
-                foreach (DataRow row in table_ChiTietHDN.Rows)
+                if(dgvChiTietPhieuNhap.Rows.Count > 1)
                 {
-                    if (row.ItemArray[0].ToString() == maNL)
+                    maNL = dgvChiTietPhieuNhap.CurrentRow.Cells[0].Value.ToString();
+                    tienTru = decimal.Parse(dgvChiTietPhieuNhap.CurrentRow.Cells[3].Value.ToString());
+                    foreach (DataRow row in table_ChiTietHDN.Rows)
                     {
-                        table_ChiTietHDN.Rows.Remove(row);
-                        break;
+                        if (row.ItemArray[0].ToString() == maNL)
+                        {
+                            table_ChiTietHDN.Rows.Remove(row);
+                            break;
+                        }
                     }
+                    txtTongTienPhieuNhap.Text = (decimal.Parse(txtTongTienPhieuNhap.Text) - tienTru).ToString();
+                    dgvChiTietPhieuNhap.DataSource = table_ChiTietHDN;
                 }
-                txtTongTienPhieuNhap.Text = (decimal.Parse(txtTongTienPhieuNhap.Text) - tienTru).ToString();
-                dgvChiTietPhieuNhap.DataSource = table_ChiTietHDN;
             }
-            catch
+            catch (Exception ex)
             {
                 MessageBox.Show("Xin chọn nguyên liệu cần xóa !", "Thông báo");
             }
