@@ -13,7 +13,6 @@ namespace WindowsFormsTestBunifu
     
     public partial class cau8_func_Result
     {
-        public Nullable<int> Thang { get; set; }
         public Nullable<double> DTNhap { get; set; }
     }
 }

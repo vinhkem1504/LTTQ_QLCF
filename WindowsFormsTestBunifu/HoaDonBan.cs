@@ -25,7 +25,6 @@ namespace WindowsFormsTestBunifu
         public string MaNV { get; set; }
         public System.DateTime NgayLap { get; set; }
         public bool TrangThai { get; set; }
-        public Nullable<int> SLDoUong { get; set; }
     
         public virtual Ban Ban { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

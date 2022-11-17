@@ -41,13 +41,12 @@ namespace WindowsFormsTestBunifu
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
-        public virtual DbSet<Cau1_view> Cau1_view { get; set; }
         public virtual DbSet<Cau2_view> Cau2_view { get; set; }
+        public virtual DbSet<Cau6_view> Cau6_view { get; set; }
+        public virtual DbSet<Cau1_view> Cau1_view { get; set; }
         public virtual DbSet<Cau4_view> Cau4_view { get; set; }
         public virtual DbSet<Cau5_view> Cau5_view { get; set; }
-        public virtual DbSet<Cau6_view> Cau6_view { get; set; }
         public virtual DbSet<Cau7_view> Cau7_view { get; set; }
-        public virtual DbSet<Cau8_view> Cau8_view { get; set; }
     
         [DbFunction("QLCafeEntities1", "Cau1_function")]
         public virtual IQueryable<Cau1_function_Result> Cau1_function(Nullable<int> nam)
@@ -118,31 +117,23 @@ namespace WindowsFormsTestBunifu
         }
     
         [DbFunction("QLCafeEntities1", "cau7_func")]
-        public virtual IQueryable<cau7_func_Result> cau7_func(Nullable<System.DateTime> ngaybd, Nullable<System.DateTime> ngaykt)
+        public virtual IQueryable<cau7_func_Result> cau7_func(Nullable<int> nam)
         {
-            var ngaybdParameter = ngaybd.HasValue ?
-                new ObjectParameter("ngaybd", ngaybd) :
-                new ObjectParameter("ngaybd", typeof(System.DateTime));
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("nam", nam) :
+                new ObjectParameter("nam", typeof(int));
     
-            var ngayktParameter = ngaykt.HasValue ?
-                new ObjectParameter("ngaykt", ngaykt) :
-                new ObjectParameter("ngaykt", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau7_func_Result>("[QLCafeEntities1].[cau7_func](@ngaybd, @ngaykt)", ngaybdParameter, ngayktParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau7_func_Result>("[QLCafeEntities1].[cau7_func](@nam)", namParameter);
         }
     
         [DbFunction("QLCafeEntities1", "cau8_func")]
-        public virtual IQueryable<cau8_func_Result> cau8_func(Nullable<System.DateTime> ngaybd, Nullable<System.DateTime> ngaykt)
+        public virtual IQueryable<cau8_func_Result> cau8_func(Nullable<int> nam)
         {
-            var ngaybdParameter = ngaybd.HasValue ?
-                new ObjectParameter("ngaybd", ngaybd) :
-                new ObjectParameter("ngaybd", typeof(System.DateTime));
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("nam", nam) :
+                new ObjectParameter("nam", typeof(int));
     
-            var ngayktParameter = ngaykt.HasValue ?
-                new ObjectParameter("ngaykt", ngaykt) :
-                new ObjectParameter("ngaykt", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau8_func_Result>("[QLCafeEntities1].[cau8_func](@ngaybd, @ngaykt)", ngaybdParameter, ngayktParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau8_func_Result>("[QLCafeEntities1].[cau8_func](@nam)", namParameter);
         }
     
         [DbFunction("QLCafeEntities1", "cau9_func")]
@@ -167,10 +158,58 @@ namespace WindowsFormsTestBunifu
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau1_proc", maDoUongParameter, namParameter, sL);
         }
-
-        internal object Entry()
+    
+        public virtual int Cau2_proc(string maNhanVien, Nullable<int> nam, ObjectParameter hDN, ObjectParameter hDB)
         {
-            throw new NotImplementedException();
+            var maNhanVienParameter = maNhanVien != null ?
+                new ObjectParameter("MaNhanVien", maNhanVien) :
+                new ObjectParameter("MaNhanVien", typeof(string));
+    
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("Nam", nam) :
+                new ObjectParameter("Nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau2_proc", maNhanVienParameter, namParameter, hDN, hDB);
+        }
+    
+        public virtual int Cau3_proc(string maNhanVien, ObjectParameter ten, ObjectParameter sDT)
+        {
+            var maNhanVienParameter = maNhanVien != null ?
+                new ObjectParameter("MaNhanVien", maNhanVien) :
+                new ObjectParameter("MaNhanVien", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau3_proc", maNhanVienParameter, ten, sDT);
+        }
+    
+        public virtual int Cau5_proc(string maNguyenLieu, ObjectParameter tenNguyenLieu, ObjectParameter donGia)
+        {
+            var maNguyenLieuParameter = maNguyenLieu != null ?
+                new ObjectParameter("MaNguyenLieu", maNguyenLieu) :
+                new ObjectParameter("MaNguyenLieu", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau5_proc", maNguyenLieuParameter, tenNguyenLieu, donGia);
+        }
+    
+        public virtual ObjectResult<string> cau7_proc(string tendouong)
+        {
+            var tendouongParameter = tendouong != null ?
+                new ObjectParameter("tendouong", tendouong) :
+                new ObjectParameter("tendouong", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("cau7_proc", tendouongParameter);
+        }
+    
+        public virtual int pro(string maBan, string trangThai)
+        {
+            var maBanParameter = maBan != null ?
+                new ObjectParameter("MaBan", maBan) :
+                new ObjectParameter("MaBan", typeof(string));
+    
+            var trangThaiParameter = trangThai != null ?
+                new ObjectParameter("TrangThai", trangThai) :
+                new ObjectParameter("TrangThai", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pro", maBanParameter, trangThaiParameter);
         }
     }
 }

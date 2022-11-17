@@ -33,7 +33,6 @@
     <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="SoLuongBan" Type="int" />
     <Property Name="KhuyenMai" Type="nvarchar" MaxLength="255" />
-    <Property Name="ThanhTien" Type="money" />
   </EntityType>
   <EntityType Name="ChiTietHDN">
     <Key>
@@ -82,7 +81,6 @@
     <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="NgayLap" Type="datetime" Nullable="false" />
     <Property Name="TrangThai" Type="bit" Nullable="false" />
-    <Property Name="SLDoUong" Type="int" />
   </EntityType>
   <EntityType Name="HoaDonNhap">
     <Key>
@@ -160,11 +158,6 @@ warning 6002: The table/view 'QLCafe.dbo.Cau2_view' does not have a primary key 
     <Property Name="SLBan" Type="int" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6013: The table/view 'QLCafe.dbo.Cau3_view' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Cau3_view">
-          <Property Name="ThangDoanhSoCaoNhat2021" Type="int" />
-        </EntityType>-->
-  <!--Errors Found During Generation:
 warning 6002: The table/view 'QLCafe.dbo.Cau4_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Cau4_view">
     <Key>
@@ -205,15 +198,6 @@ warning 6002: The table/view 'QLCafe.dbo.Cau6_view' does not have a primary key 
   <!--Errors Found During Generation:
 warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Cau7_view">
-    <Key>
-      <PropertyRef Name="MaNV" />
-    </Key>
-    <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="SoLanDiLam" Type="int" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QLCafe.dbo.Cau8_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="Cau8_view">
     <Key>
       <PropertyRef Name="MaNV" />
     </Key>
@@ -388,127 +372,26 @@ warning 6002: The table/view 'QLCafe.dbo.Cau8_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="Cau1_function" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="Nam" Type="int" Mode="In" />
-    <ReturnType>
-      <CollectionType>
-        <RowType>
-          <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="HoTen" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="DiaChi" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="SDT" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="NgaySinh" Type="datetime" Nullable="false" />
-          <Property Name="NgayNhanViec" Type="datetime" Nullable="false" />
-          <Property Name="Luong" Type="money" Nullable="false" />
-        </RowType>
-      </CollectionType>
-    </ReturnType>
-  </Function>
   <Function Name="Cau1_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaDoUong" Type="nvarchar" Mode="In" />
     <Parameter Name="Nam" Type="int" Mode="In" />
     <Parameter Name="SL" Type="int" Mode="InOut" />
   </Function>
-  <Function Name="cau2_function" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="Sonam" Type="int" Mode="In" />
-    <ReturnType>
-      <CollectionType>
-        <RowType>
-          <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="HoTen" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="DiaChi" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="SDT" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="NgaySinh" Type="datetime" Nullable="false" />
-          <Property Name="NgayNhanViec" Type="datetime" Nullable="false" />
-          <Property Name="Luong" Type="money" Nullable="false" />
-        </RowType>
-      </CollectionType>
-    </ReturnType>
-  </Function>
-  <Function Name="Cau2_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="MaNhanVien" Type="nvarchar" Mode="In" />
-    <Parameter Name="Nam" Type="int" Mode="In" />
-    <Parameter Name="HDN" Type="int" Mode="InOut" />
-    <Parameter Name="HDB" Type="int" Mode="InOut" />
-  </Function>
-  <Function Name="Cau3_function" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="NCC" Type="nvarchar" Mode="In" />
-    <ReturnType>
-      <CollectionType>
-        <RowType>
-          <Property Name="TenNL" Type="nvarchar" MaxLength="255" Nullable="false" />
-        </RowType>
-      </CollectionType>
-    </ReturnType>
-  </Function>
-  <Function Name="Cau3_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="MaNhanVien" Type="nvarchar" Mode="In" />
-    <Parameter Name="Ten" Type="nvarchar" Mode="InOut" />
-    <Parameter Name="SDT" Type="varchar" Mode="InOut" />
-  </Function>
-  <Function Name="Cau4_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="SoTrang" Type="int" Mode="In" />
-    <Parameter Name="KichThuocTrang" Type="int" Mode="In" />
-    <ReturnType>
-      <CollectionType>
-        <RowType>
-          <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="DonGia" Type="money" Nullable="false" />
-        </RowType>
-      </CollectionType>
-    </ReturnType>
-  </Function>
-  <Function Name="Cau5_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="MaDoUong" Type="nvarchar(max)" Mode="In" />
-    <ReturnType>
-      <CollectionType>
-        <RowType>
-          <Property Name="Số lượng tối đa có thể làm" Type="float" />
-          <Property Name="Đơn vị" Type="nvarchar" MaxLength="3" Nullable="false" />
-        </RowType>
-      </CollectionType>
-    </ReturnType>
-  </Function>
-  <Function Name="Cau5_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="MaNguyenLieu" Type="varchar" Mode="In" />
-    <Parameter Name="TenNguyenLieu" Type="nvarchar" Mode="InOut" />
-    <Parameter Name="DonGia" Type="money" Mode="InOut" />
-  </Function>
-  <Function Name="Cau6_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="thang" Type="int" Mode="In" />
+  <Function Name="cau7_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="nam" Type="int" Mode="In" />
     <ReturnType>
       <CollectionType>
         <RowType>
-          <Property Name="MaBan" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="SoKhachNgoi" Type="int" Nullable="false" />
-        </RowType>
-      </CollectionType>
-    </ReturnType>
-  </Function>
-  <Function Name="cau7_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="ngaybd" Type="date" Mode="In" />
-    <Parameter Name="ngaykt" Type="date" Mode="In" />
-    <ReturnType>
-      <CollectionType>
-        <RowType>
-          <Property Name="Thang" Type="int" />
           <Property Name="DTBan" Type="money" />
         </RowType>
       </CollectionType>
     </ReturnType>
   </Function>
-  <Function Name="cau7_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="tendouong" Type="nvarchar" Mode="In" />
-  </Function>
   <Function Name="cau8_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="ngaybd" Type="date" Mode="In" />
-    <Parameter Name="ngaykt" Type="date" Mode="In" />
+    <Parameter Name="nam" Type="int" Mode="In" />
     <ReturnType>
       <CollectionType>
         <RowType>
-          <Property Name="Thang" Type="int" />
           <Property Name="DTNhap" Type="float" />
         </RowType>
       </CollectionType>
@@ -525,10 +408,6 @@ warning 6002: The table/view 'QLCafe.dbo.Cau8_view' does not have a primary key 
         </RowType>
       </CollectionType>
     </ReturnType>
-  </Function>
-  <Function Name="pro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="MaBan" Type="nvarchar" Mode="In" />
-    <Parameter Name="TrangThai" Type="nvarchar" Mode="In" />
   </Function>
   <EntityContainer Name="QLCafeModelStoreContainer">
     <EntitySet Name="Ban" EntityType="Self.Ban" Schema="dbo" store:Type="Tables" />
@@ -588,12 +467,6 @@ warning 6002: The table/view 'QLCafe.dbo.Cau8_view' does not have a primary key 
     [Cau7_view].[MaNV] AS [MaNV], 
     [Cau7_view].[SoLanDiLam] AS [SoLanDiLam]
     FROM [dbo].[Cau7_view] AS [Cau7_view]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Cau8_view" EntityType="Self.Cau8_view" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Cau8_view].[MaNV] AS [MaNV], 
-    [Cau8_view].[SoLanDiLam] AS [SoLanDiLam]
-    FROM [dbo].[Cau8_view] AS [Cau8_view]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__ChiTietCaL__MaCa__29572725" Association="Self.FK__ChiTietCaL__MaCa__29572725">
       <End Role="CaLam" EntitySet="CaLam" />
