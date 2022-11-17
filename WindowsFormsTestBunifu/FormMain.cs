@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.Data;
 using System.Data.Entity.Core.Objects;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace WindowsFormsTestBunifu
@@ -113,12 +116,6 @@ namespace WindowsFormsTestBunifu
             }
 
         }
-
-        private void bunifuImageButton15_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void bbtnLogout_Click(object sender, EventArgs e)
         {
             exit = false;
@@ -173,6 +170,7 @@ namespace WindowsFormsTestBunifu
         private void dgvNhanVien_DSNV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ChiTietLoadNhanVien();
+            txtNV_MaNV.Enabled = false;
         }
 
         // tìm kiếm nvien
@@ -184,6 +182,7 @@ namespace WindowsFormsTestBunifu
         private void dgvKho_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ChiTietNguyenLieu();
+            txtKho_MaNL.Enabled = false;
         }
 
         // Icon right click - tìm kiếm nguyên liệu
@@ -195,11 +194,13 @@ namespace WindowsFormsTestBunifu
         private void dgvSP_DSSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ChiTietSP();
+            txtSP_MaSp.Enabled = false;
         }
 
         private void dgvHD_DSHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ChiTietHDB();
+            txtHD_MaHD.Enabled = false;
         }
 
         private void dgvCTB_DSSP_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -610,6 +611,374 @@ namespace WindowsFormsTestBunifu
                 MessageBox.Show("Đã bán được 0 sản phẩm");
             }
         }
+        void ResetNV()
+        {
+            txtNV_MaNV.Text = "";
+            txtNV_TenNV.Text = "";
+            txtNV_DiaChi.Text = "";
+            txtNV_SDT.Text = "";
+            dtNV_NTNS.Value = DateTime.Now;
+            dtNV_NgayNhanViec.Value = DateTime.Now;
+            txtNV_LuongCB.Text = "0";
+            txtNV_MaNV.Enabled = true;
+        }
+        void ResetSP()
+        {
+            txtSP_MaSp.Text = "";
+            txtSP_TenSp.Text = "";
+            txtSP_DonGia.Text = "0";
+            txtSP_MaSp.Enabled = true;
+        }
+        void ResetNL()
+        {
+            txtKho_MaNL.Text = "";
+            txtKho_TenNL.Text = "";
+            txtKho_Donvi.Text = "";
+            txtKho_SL.Text = "0";
+            txtKho_MaNL.Enabled = true;
+        }
+        void ResetHDB()
+        {
+            txtHD_MaHD.Text = "";
+            txtHD_MaNV.Text = "";
+            txtHD_TrangThai.Text = "";
+            txtHD_Ghichu.Text = "";
+            txtHD_MaHD.Enabled=true;
+        }
+        //Kiểm tra tính hoàn chỉnh dữ liệu của thông tin
+        void KiemTraNV()
+        {
+            int dnv = 0;
+            if (txtNV_MaNV.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập mã nhân viên!");
+                dnv=1;
+            }
+            if(txtNV_TenNV.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập tên nhân viên!");
+                dnv = 1;
+            }
+            if(txtNV_DiaChi.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập địa chỉ!");
+                dnv = 1;
+            }
+            if (txtNV_SDT.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập số điện thoại!");
+                dnv = 1;
+            }
+            if (decimal.Parse(txtNV_LuongCB.Text) == 0)
+            {
+                MessageBox.Show("Bạn chưa nhập lương!");
+                dnv = 1;
+            }
+            if (dnv == 1)
+            {
+                ResetNV();
+            }
+        }
+        void KiemTraSP()
+        {
+            int dsp = 0;
+            if (txtSP_MaSp.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập mã sản phẩm!");
+                dsp = 1;
+            }
+            if (txtSP_TenSp.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập tên sản phẩm!");
+                dsp = 1;
+            }
+            if (decimal.Parse(txtSP_DonGia.Text) == 0)
+            {
+                MessageBox.Show("Bạn chưa nhập đơn giá!");
+                dsp = 1;
+            }
+            if (dsp == 1)
+            {
+                ResetSP();
+            }
+        }
+        void KiemTraNL()
+        {
+            int dnl = 0;
+            if (txtKho_MaNL.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập mã nguyên liệu!");
+                dnl = 1;
+            }
+            if (txtKho_TenNL.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập tên nguyên liệu!");
+                dnl = 1;
+            }
+            if (txtKho_Donvi.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập đơn vị nguyên liệu!");
+                dnl = 1;
+            }
+            if (float.Parse(txtKho_SL.Text) == 0)
+            {
+                MessageBox.Show("Bạn chưa nhập số lượng nguyên liệu!");
+                dnl = 1;
+            }
+            if (dnl == 1)
+            {
+                ResetNL();
+            }
+        }
+        void KiemTraHDB()
+        {
+            int dhdb = 0;
+            if(txtHD_MaHD.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập mã hóa đơn!");
+                dhdb = 1;
+            }
+            if(txtHD_MaNV.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập mã nhân viên!");
+                dhdb = 1;
+            }
+            if(txtHD_TrangThai.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập trạng thái!");
+                dhdb = 1;
+            }
+            if(dhdb == 1)
+            {
+                ResetHDB();
+            }
+        }
+        //Thêm nhân viên
+        private void btnNV_ThemNV_Click(object sender, EventArgs e)
+        {
+            NhanVien nv = new NhanVien() { MaNV = txtNV_MaNV.Text, HoTen = txtNV_TenNV.Text, DiaChi = txtNV_DiaChi.Text, SDT = txtNV_SDT.Text, NgaySinh = DateTime.Parse(dtNV_NTNS.Text), NgayNhanViec = DateTime.Parse(dtNV_NgayNhanViec.Text), Luong = decimal.Parse(txtNV_LuongCB.Text) };
+            KiemTraNV();
+            if (txtNV_MaNV.Text != "")
+            {
+                if (txtNV_MaNV.Text == dgvNhanVien_DSNV.CurrentRow.Cells[0].Value.ToString())
+                {
+                    ResetNV();
+                }
+                else
+                {
+                    db.NhanViens.Add(nv);
+                    db.SaveChanges();
+                    MessageBox.Show("Thêm mới thành công!");
+                    LoadDataDSNhanVien();
+                }
+            }
+        }
+        //Sửa nhân viên
+        private void btnNV_XoaNV_Click(object sender, EventArgs e)
+        {
+            var result = from c in db.NhanViens
+                         where c.MaNV == txtNV_MaNV.Text
+                         select c;
 
+            var nv = new NhanVien();
+            nv = result.First();
+            nv.HoTen = txtNV_TenNV.Text;
+            nv.DiaChi = txtNV_DiaChi.Text;
+            nv.SDT = txtNV_SDT.Text;
+            nv.NgaySinh = DateTime.Parse(dtNV_NTNS.Text);
+            nv.NgayNhanViec = DateTime.Parse(dtNV_NgayNhanViec.Text);
+            nv.Luong = decimal.Parse(txtNV_LuongCB.Text);
+            KiemTraNV();
+            if(txtNV_TenNV.Text != "")
+            {
+                db.SaveChanges();
+                MessageBox.Show("Sửa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            LoadDataDSNhanVien();
+        }
+        //Xóa nhân viên
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Có hay Không",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    NhanVien nv = db.NhanViens.Where(p => p.MaNV == txtNV_MaNV.Text).SingleOrDefault();
+                    db.NhanViens.Remove(nv);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn không được xóa!");
+                }
+                LoadDataDSNhanVien();
+            }
+        }
+        //Thêm sản phẩm
+        private void btnSP_ThemSp_Click(object sender, EventArgs e)
+        {
+            DoUong sp = new DoUong() { MaDU = txtSP_MaSp.Text, TenDU = txtSP_TenSp.Text, DonGia = decimal.Parse(txtSP_DonGia.Text) };
+            KiemTraSP();
+            if (txtSP_MaSp.Text != "") 
+            {
+                if (txtSP_MaSp.Text == dgvSP_DSSP.CurrentRow.Cells[0].Value.ToString())
+                {
+                    ResetSP();
+                }
+                else
+                {
+                    db.DoUongs.Add(sp);
+                    db.SaveChanges();
+                    MessageBox.Show("Thêm mới thành công!");
+                    LoadDataSanPham();
+                }   
+            }  
+        }
+        //Sửa sản phẩm
+        private void btnSP_SuaSp_Click(object sender, EventArgs e)
+        {
+            var result = from c in db.DoUongs
+                         where c.MaDU == txtSP_MaSp.Text
+                         select c;
+
+            var sp = new DoUong();
+            sp = result.First();
+            sp.TenDU = txtSP_TenSp.Text;
+            sp.DonGia = decimal.Parse(txtSP_DonGia.Text);
+            KiemTraSP();
+            if (txtSP_MaSp.Text != "")
+            {
+                db.SaveChanges();
+                LoadDataSanPham();
+                MessageBox.Show("Sửa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }  
+        }
+        //Xóa sản phẩm
+        private void btnSP_XoaSp_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Có hay Không",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    DoUong sp = db.DoUongs.Where(p => p.MaDU == txtSP_MaSp.Text).SingleOrDefault();
+                    db.DoUongs.Remove(sp);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn không được xóa!");
+                }
+                LoadDataSanPham();
+            }
+        }
+        //Thêm Nhiên liệu
+        private void bunifuImageButton15_Click(object sender, EventArgs e)
+        {
+            NguyenLieu nl = new NguyenLieu() { MaNL = txtKho_MaNL.Text, TenNL = txtKho_TenNL.Text, DonVi = txtKho_Donvi.Text, SoLuongTon = float.Parse(txtKho_SL.Text) };
+            KiemTraNL();
+            if(txtKho_MaNL.Text != "")
+            {
+                if (txtKho_MaNL.Text == dgvKho.CurrentRow.Cells[0].Value.ToString())
+                {
+                    ResetNL();
+                }
+                else
+                {
+                    db.NguyenLieux.Add(nl);
+                    db.SaveChanges();
+                    MessageBox.Show("Thêm mới thành công!");
+                    LoadDataNguyenLieu();
+                }               
+            }     
+        }
+        //Sửa thông tin nguyên liệu
+        private void btnSuaHDN_Click(object sender, EventArgs e)
+        {
+            /*var result = from c in db.NguyenLieux
+                         where c.MaNL == txtKho_MaNL.Text
+                         select c;
+
+            var nl = new NguyenLieu();
+            nl = result.First();*/
+            NguyenLieu nl = db.NguyenLieux.Where(p => p.MaNL == txtKho_MaNL.Text).SingleOrDefault();
+            nl.TenNL = txtKho_TenNL.Text;
+            nl.DonVi = txtKho_Donvi.Text;
+            nl.SoLuongTon = int.Parse(txtKho_SL.Text);
+            KiemTraNL();
+            if (txtKho_MaNL.Text != "")
+            {
+                db.SaveChanges();
+                LoadDataNguyenLieu();
+                MessageBox.Show("Sửa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        //Xóa nguyên liệu
+        private void btnXoaHDN_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Có hay Không",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    NguyenLieu nl = db.NguyenLieux.Where(p => p.MaNL == txtKho_MaNL.Text).SingleOrDefault();
+                    db.NguyenLieux.Remove(nl);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn không được xóa!");
+                }
+                LoadDataNguyenLieu();
+            }
+        }
+        //Sửa thông tin hóa đơn
+        private void btnHD_SuaHD_Click(object sender, EventArgs e)
+        {
+            /*var result = from c in db.HoaDonBans
+                         where c.MaBan == txtHD_MaHD.Text
+                         select c;
+
+            var hdb = new HoaDonBan();
+            hdb = result.First();*/
+            HoaDonBan hdb = db.HoaDonBans.Where(p => p.MaHDB == txtHD_MaHD.Text).SingleOrDefault();
+            hdb.MaNV = txtHD_MaNV.Text;
+            hdb.NgayLap = DateTime.Parse(dtHD_Ngaylap.Text);
+            if (txtHD_TrangThai.Text == "Đã thanh toán")
+            {
+                hdb.TrangThai = true;
+            }
+            if (txtHD_TrangThai.Text == "Chưa thanh toán")
+            {
+                hdb.TrangThai = false;
+            }
+            KiemTraHDB();
+            if(txtHD_MaHD.Text != "")
+            {
+                db.SaveChanges();
+                MessageBox.Show("Sửa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            LoadDataHoaDon();
+        }
+        //Xóa hóa đơn bán
+        private void btnHD_XoaHD_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Có hay Không",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    HoaDonBan hdb = db.HoaDonBans.Where(p => p.MaHDB == txtHD_MaHD.Text).SingleOrDefault();
+                    db.HoaDonBans.Remove(hdb);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn không được xóa!");
+                }
+                LoadDataHoaDon();
+            }
+        }
     }
 }
