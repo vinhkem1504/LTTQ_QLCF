@@ -138,7 +138,11 @@ namespace WindowsFormsTestBunifu
         {
             try
             {
-
+                var ncc = db.NhaCungCaps.Find(cbbMaNCC.Text);
+                db.NhaCungCaps.Remove(ncc);
+                db.SaveChanges();
+                LoadCbbMaNhaCungCap();
+                MessageBox.Show("Xóa nhà cung cấp thành công!", "Thông báo");
             }
             catch (Exception)
             {
