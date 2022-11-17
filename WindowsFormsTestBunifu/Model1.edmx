@@ -18,7 +18,6 @@
           </Key>
           <Property Name="MaCa" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="TenCa" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Luong" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="ChiTietCaLam">
           <Key>
@@ -39,6 +38,7 @@
           <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="SoLuongBan" Type="int" />
           <Property Name="KhuyenMai" Type="nvarchar" MaxLength="255" />
+          <Property Name="ThanhTien" Type="money" />
         </EntityType>
         <EntityType Name="ChiTietHDN">
           <Key>
@@ -58,6 +58,8 @@
           <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Thang" Type="int" Nullable="false" />
           <Property Name="Nam" Type="int" Nullable="false" />
+          <Property Name="SoNgayLamViec" Type="int" />
+          <Property Name="Luong" Type="money" />
         </EntityType>
         <EntityType Name="CongThucDoUong">
           <Key>
@@ -85,6 +87,7 @@
           <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="NgayLap" Type="datetime" Nullable="false" />
           <Property Name="TrangThai" Type="bit" Nullable="false" />
+          <Property Name="SLDoUong" Type="int" />
         </EntityType>
         <EntityType Name="HoaDonNhap">
           <Key>
@@ -124,6 +127,7 @@
           <Property Name="SDT" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="NgaySinh" Type="datetime" Nullable="false" />
           <Property Name="NgayNhanViec" Type="datetime" Nullable="false" />
+          <Property Name="Luong" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -134,6 +138,92 @@
           <Property Name="MatKhau" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="LoaiTK" Type="bit" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau1_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau1_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+            <PropertyRef Name="DonGia" />
+            <PropertyRef Name="MaNL" />
+          </Key>
+          <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DonGia" Type="money" Nullable="false" />
+          <Property Name="MaNL" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau2_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau2_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+          </Key>
+          <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SLBan" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'QLCafe.dbo.Cau3_view' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Cau3_view">
+          <Property Name="ThangDoanhSoCaoNhat2021" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau4_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau4_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+            <PropertyRef Name="DonGia" />
+          </Key>
+          <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DonGia" Type="money" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau5_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau5_view">
+          <Key>
+            <PropertyRef Name="MaNL" />
+            <PropertyRef Name="TenNL" />
+            <PropertyRef Name="DonVi" />
+          </Key>
+          <Property Name="MaNL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenNL" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DonVi" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SoLuongTieuThu" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau6_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau6_view">
+          <Key>
+            <PropertyRef Name="MaHDB" />
+            <PropertyRef Name="NgayLap" />
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaHDB" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NgayLap" Type="datetime" Nullable="false" />
+          <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TriGia" Type="money" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau7_view">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SoLanDiLam" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau8_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau8_view">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SoLanDiLam" Type="int" />
         </EntityType>
         <Association Name="FK__ChiTietCaL__MaCa__29572725">
           <End Role="CaLam" Type="Self.CaLam" Multiplicity="1" />
@@ -303,6 +393,148 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="Cau1_function" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nam" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+                <Property Name="HoTen" Type="nvarchar" MaxLength="255" Nullable="false" />
+                <Property Name="DiaChi" Type="nvarchar" MaxLength="255" Nullable="false" />
+                <Property Name="SDT" Type="varchar" MaxLength="20" Nullable="false" />
+                <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+                <Property Name="NgayNhanViec" Type="datetime" Nullable="false" />
+                <Property Name="Luong" Type="money" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="Cau1_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaDoUong" Type="nvarchar" Mode="In" />
+          <Parameter Name="Nam" Type="int" Mode="In" />
+          <Parameter Name="SL" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="cau2_function" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Sonam" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+                <Property Name="HoTen" Type="nvarchar" MaxLength="255" Nullable="false" />
+                <Property Name="DiaChi" Type="nvarchar" MaxLength="255" Nullable="false" />
+                <Property Name="SDT" Type="varchar" MaxLength="20" Nullable="false" />
+                <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+                <Property Name="NgayNhanViec" Type="datetime" Nullable="false" />
+                <Property Name="Luong" Type="money" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="Cau2_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaNhanVien" Type="nvarchar" Mode="In" />
+          <Parameter Name="Nam" Type="int" Mode="In" />
+          <Parameter Name="HDN" Type="int" Mode="InOut" />
+          <Parameter Name="HDB" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="Cau3_function" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NCC" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="TenNL" Type="nvarchar" MaxLength="255" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="Cau3_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaNhanVien" Type="nvarchar" Mode="In" />
+          <Parameter Name="Ten" Type="nvarchar" Mode="InOut" />
+          <Parameter Name="SDT" Type="varchar" Mode="InOut" />
+        </Function>
+        <Function Name="Cau4_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SoTrang" Type="int" Mode="In" />
+          <Parameter Name="KichThuocTrang" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+                <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+                <Property Name="DonGia" Type="money" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="Cau5_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaDoUong" Type="nvarchar(max)" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Số lượng tối đa có thể làm" Type="float" />
+                <Property Name="Đơn vị" Type="nvarchar" MaxLength="3" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="Cau5_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaNguyenLieu" Type="varchar" Mode="In" />
+          <Parameter Name="TenNguyenLieu" Type="nvarchar" Mode="InOut" />
+          <Parameter Name="DonGia" Type="money" Mode="InOut" />
+        </Function>
+        <Function Name="Cau6_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="thang" Type="int" Mode="In" />
+          <Parameter Name="nam" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="MaBan" Type="varchar" MaxLength="100" Nullable="false" />
+                <Property Name="SoKhachNgoi" Type="int" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="cau7_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngaybd" Type="date" Mode="In" />
+          <Parameter Name="ngaykt" Type="date" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Thang" Type="int" />
+                <Property Name="DTBan" Type="money" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="cau7_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tendouong" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="cau8_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngaybd" Type="date" Mode="In" />
+          <Parameter Name="ngaykt" Type="date" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Thang" Type="int" />
+                <Property Name="DTNhap" Type="float" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="cau9_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nam" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Thanga" Type="int" />
+                <Property Name="DTBan" Type="money" Nullable="false" />
+                <Property Name="DTNhap" Type="float" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="pro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaBan" Type="nvarchar" Mode="In" />
+          <Parameter Name="TrangThai" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="QLCafeModelStoreContainer">
           <EntitySet Name="Ban" EntityType="Self.Ban" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CaLam" EntityType="Self.CaLam" Schema="dbo" store:Type="Tables" />
@@ -318,6 +550,56 @@
           <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cau1_view" EntityType="Self.Cau1_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau1_view].[MaDU] AS [MaDU], 
+    [Cau1_view].[TenDU] AS [TenDU], 
+    [Cau1_view].[DonGia] AS [DonGia], 
+    [Cau1_view].[MaNL] AS [MaNL]
+    FROM [dbo].[Cau1_view] AS [Cau1_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau2_view" EntityType="Self.Cau2_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau2_view].[MaDU] AS [MaDU], 
+    [Cau2_view].[TenDU] AS [TenDU], 
+    [Cau2_view].[SLBan] AS [SLBan]
+    FROM [dbo].[Cau2_view] AS [Cau2_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau4_view" EntityType="Self.Cau4_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau4_view].[MaDU] AS [MaDU], 
+    [Cau4_view].[TenDU] AS [TenDU], 
+    [Cau4_view].[DonGia] AS [DonGia]
+    FROM [dbo].[Cau4_view] AS [Cau4_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau5_view" EntityType="Self.Cau5_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau5_view].[MaNL] AS [MaNL], 
+    [Cau5_view].[TenNL] AS [TenNL], 
+    [Cau5_view].[DonVi] AS [DonVi], 
+    [Cau5_view].[SoLuongTieuThu] AS [SoLuongTieuThu]
+    FROM [dbo].[Cau5_view] AS [Cau5_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau6_view" EntityType="Self.Cau6_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau6_view].[MaHDB] AS [MaHDB], 
+    [Cau6_view].[NgayLap] AS [NgayLap], 
+    [Cau6_view].[MaNV] AS [MaNV], 
+    [Cau6_view].[TriGia] AS [TriGia]
+    FROM [dbo].[Cau6_view] AS [Cau6_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau7_view" EntityType="Self.Cau7_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau7_view].[MaNV] AS [MaNV], 
+    [Cau7_view].[SoLanDiLam] AS [SoLanDiLam]
+    FROM [dbo].[Cau7_view] AS [Cau7_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau8_view" EntityType="Self.Cau8_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau8_view].[MaNV] AS [MaNV], 
+    [Cau8_view].[SoLanDiLam] AS [SoLanDiLam]
+    FROM [dbo].[Cau8_view] AS [Cau8_view]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__ChiTietCaL__MaCa__29572725" Association="Self.FK__ChiTietCaL__MaCa__29572725">
             <End Role="CaLam" EntitySet="CaLam" />
             <End Role="ChiTietCaLam" EntitySet="ChiTietCaLam" />
@@ -380,6 +662,53 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="Cau1_function_Result">
+          <Property Name="MaNV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" />
+          <Property Name="NgayNhanViec" Type="DateTime" Nullable="false" />
+          <Property Name="Luong" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="cau2_function_Result">
+          <Property Name="MaNV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" />
+          <Property Name="NgayNhanViec" Type="DateTime" Nullable="false" />
+          <Property Name="Luong" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Cau3_function_Result">
+          <Property Name="TenNL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Cau4_func_Result">
+          <Property Name="MaDU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenDU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Cau5_func_Result">
+          <Property Name="Số_lượng_tối_đa_có_thể_làm" Type="Double" />
+          <Property Name="Đơn_vị" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Cau6_func_Result">
+          <Property Name="MaBan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SoKhachNgoi" Type="Int32" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="cau7_func_Result">
+          <Property Name="Thang" Type="Int32" />
+          <Property Name="DTBan" Type="Decimal" Precision="19" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="cau8_func_Result">
+          <Property Name="Thang" Type="Int32" />
+          <Property Name="DTNhap" Type="Double" />
+        </ComplexType>
+        <ComplexType Name="cau9_func_Result">
+          <Property Name="Thanga" Type="Int32" />
+          <Property Name="DTBan" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="DTNhap" Type="Double" Nullable="false" />
+        </ComplexType>
         <EntityType Name="Ban">
           <Key>
             <PropertyRef Name="MaBan" />
@@ -394,7 +723,6 @@
           </Key>
           <Property Name="MaCa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenCa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Luong" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <NavigationProperty Name="ChiTietCaLams" Relationship="Self.FK__ChiTietCaL__MaCa__29572725" FromRole="CaLam" ToRole="ChiTietCaLam" />
         </EntityType>
         <EntityType Name="ChiTietCaLam">
@@ -418,6 +746,7 @@
           <Property Name="MaDU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SoLuongBan" Type="Int32" />
           <Property Name="KhuyenMai" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="HoaDonBan" Relationship="Self.FK__ChiTietHD__MaHDB__4D94879B" FromRole="ChiTietHDB" ToRole="HoaDonBan" />
           <NavigationProperty Name="DoUong" Relationship="Self.FK__ChiTietHDB__MaDU__4E88ABD4" FromRole="ChiTietHDB" ToRole="DoUong" />
         </EntityType>
@@ -441,6 +770,8 @@
           <Property Name="MaNV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Thang" Type="Int32" Nullable="false" />
           <Property Name="Nam" Type="Int32" Nullable="false" />
+          <Property Name="SoNgayLamViec" Type="Int32" />
+          <Property Name="Luong" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK__ChiTietLuo__MaNV__2C3393D0" FromRole="ChiTietLuong" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="CongThucDoUong">
@@ -473,6 +804,7 @@
           <Property Name="MaNV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+          <Property Name="SLDoUong" Type="Int32" />
           <NavigationProperty Name="Ban" Relationship="Self.FK__HoaDonBan__MaBan__48CFD27E" FromRole="HoaDonBan" ToRole="Ban" />
           <NavigationProperty Name="ChiTietHDBs" Relationship="Self.FK__ChiTietHD__MaHDB__4D94879B" FromRole="HoaDonBan" ToRole="ChiTietHDB" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK__HoaDonBan__MaNV__49C3F6B7" FromRole="HoaDonBan" ToRole="NhanVien" />
@@ -521,6 +853,7 @@
           <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="NgayNhanViec" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Luong" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <NavigationProperty Name="ChiTietCaLams" Relationship="Self.FK__ChiTietCaL__MaNV__286302EC" FromRole="NhanVien" ToRole="ChiTietCaLam" />
           <NavigationProperty Name="ChiTietLuongs" Relationship="Self.FK__ChiTietLuo__MaNV__2C3393D0" FromRole="NhanVien" ToRole="ChiTietLuong" />
           <NavigationProperty Name="HoaDonBans" Relationship="Self.FK__HoaDonBan__MaNV__49C3F6B7" FromRole="NhanVien" ToRole="HoaDonBan" />
@@ -537,6 +870,73 @@
           <Property Name="LoaiTK" Type="Boolean" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK__TaiKhoan__MaNV__2F10007B" FromRole="TaiKhoan" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="Cau1_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+            <PropertyRef Name="DonGia" />
+            <PropertyRef Name="MaNL" />
+          </Key>
+          <Property Name="MaDU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenDU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="MaNL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cau2_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+          </Key>
+          <Property Name="MaDU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenDU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SLBan" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Cau4_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+            <PropertyRef Name="DonGia" />
+          </Key>
+          <Property Name="MaDU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenDU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cau5_view">
+          <Key>
+            <PropertyRef Name="MaNL" />
+            <PropertyRef Name="TenNL" />
+            <PropertyRef Name="DonVi" />
+          </Key>
+          <Property Name="MaNL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenNL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DonVi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SoLuongTieuThu" Type="Double" />
+        </EntityType>
+        <EntityType Name="Cau6_view">
+          <Key>
+            <PropertyRef Name="MaHDB" />
+            <PropertyRef Name="NgayLap" />
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaHDB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MaNV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TriGia" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Cau7_view">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SoLanDiLam" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Cau8_view">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SoLanDiLam" Type="Int32" />
         </EntityType>
         <Association Name="FK__HoaDonBan__MaBan__48CFD27E">
           <End Role="Ban" Type="Self.Ban" Multiplicity="1" />
@@ -706,7 +1106,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QLCafeEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLCafeEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Bans" EntityType="Self.Ban" />
           <EntitySet Name="CaLams" EntityType="Self.CaLam" />
           <EntitySet Name="ChiTietCaLams" EntityType="Self.ChiTietCaLam" />
@@ -721,6 +1121,13 @@
           <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+          <EntitySet Name="Cau1_view" EntityType="Self.Cau1_view" />
+          <EntitySet Name="Cau2_view" EntityType="Self.Cau2_view" />
+          <EntitySet Name="Cau4_view" EntityType="Self.Cau4_view" />
+          <EntitySet Name="Cau5_view" EntityType="Self.Cau5_view" />
+          <EntitySet Name="Cau6_view" EntityType="Self.Cau6_view" />
+          <EntitySet Name="Cau7_view" EntityType="Self.Cau7_view" />
+          <EntitySet Name="Cau8_view" EntityType="Self.Cau8_view" />
           <AssociationSet Name="FK__HoaDonBan__MaBan__48CFD27E" Association="Self.FK__HoaDonBan__MaBan__48CFD27E">
             <End Role="Ban" EntitySet="Bans" />
             <End Role="HoaDonBan" EntitySet="HoaDonBans" />
@@ -777,13 +1184,72 @@
             <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
           </AssociationSet>
+          <FunctionImport Name="Cau1_function" IsComposable="true" ReturnType="Collection(QLCafeModel.Cau1_function_Result)">
+            <Parameter Name="Nam" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="cau2_function" IsComposable="true" ReturnType="Collection(QLCafeModel.cau2_function_Result)">
+            <Parameter Name="Sonam" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Cau3_function" IsComposable="true" ReturnType="Collection(QLCafeModel.Cau3_function_Result)">
+            <Parameter Name="NCC" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cau4_func" IsComposable="true" ReturnType="Collection(QLCafeModel.Cau4_func_Result)">
+            <Parameter Name="SoTrang" Mode="In" Type="Int32" />
+            <Parameter Name="KichThuocTrang" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Cau5_func" IsComposable="true" ReturnType="Collection(QLCafeModel.Cau5_func_Result)">
+            <Parameter Name="MaDoUong" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cau6_func" IsComposable="true" ReturnType="Collection(QLCafeModel.Cau6_func_Result)">
+            <Parameter Name="thang" Mode="In" Type="Int32" />
+            <Parameter Name="nam" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="cau7_func" IsComposable="true" ReturnType="Collection(QLCafeModel.cau7_func_Result)">
+            <Parameter Name="ngaybd" Mode="In" Type="DateTime" />
+            <Parameter Name="ngaykt" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="cau8_func" IsComposable="true" ReturnType="Collection(QLCafeModel.cau8_func_Result)">
+            <Parameter Name="ngaybd" Mode="In" Type="DateTime" />
+            <Parameter Name="ngaykt" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="cau9_func" IsComposable="true" ReturnType="Collection(QLCafeModel.cau9_func_Result)">
+            <Parameter Name="nam" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Cau1_proc">
+            <Parameter Name="MaDoUong" Mode="In" Type="String" />
+            <Parameter Name="Nam" Mode="In" Type="Int32" />
+            <Parameter Name="SL" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Cau2_proc">
+            <Parameter Name="MaNhanVien" Mode="In" Type="String" />
+            <Parameter Name="Nam" Mode="In" Type="Int32" />
+            <Parameter Name="HDN" Mode="InOut" Type="Int32" />
+            <Parameter Name="HDB" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Cau3_proc">
+            <Parameter Name="MaNhanVien" Mode="In" Type="String" />
+            <Parameter Name="Ten" Mode="InOut" Type="String" />
+            <Parameter Name="SDT" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cau5_proc">
+            <Parameter Name="MaNguyenLieu" Mode="In" Type="String" />
+            <Parameter Name="TenNguyenLieu" Mode="InOut" Type="String" />
+            <Parameter Name="DonGia" Mode="InOut" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="cau7_proc" ReturnType="Collection(String)">
+            <Parameter Name="tendouong" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pro">
+            <Parameter Name="MaBan" Mode="In" Type="String" />
+            <Parameter Name="TrangThai" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLCafeModelStoreContainer" CdmEntityContainer="QLCafeEntities">
+        <EntityContainerMapping StorageEntityContainer="QLCafeModelStoreContainer" CdmEntityContainer="QLCafeEntities1">
           <EntitySetMapping Name="Bans">
             <EntityTypeMapping TypeName="QLCafeModel.Ban">
               <MappingFragment StoreEntitySet="Ban">
@@ -797,7 +1263,6 @@
               <MappingFragment StoreEntitySet="CaLam">
                 <ScalarProperty Name="MaCa" ColumnName="MaCa" />
                 <ScalarProperty Name="TenCa" ColumnName="TenCa" />
-                <ScalarProperty Name="Luong" ColumnName="Luong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -817,6 +1282,7 @@
                 <ScalarProperty Name="MaDU" ColumnName="MaDU" />
                 <ScalarProperty Name="SoLuongBan" ColumnName="SoLuongBan" />
                 <ScalarProperty Name="KhuyenMai" ColumnName="KhuyenMai" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -835,6 +1301,8 @@
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="Thang" ColumnName="Thang" />
                 <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="SoNgayLamViec" ColumnName="SoNgayLamViec" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -864,6 +1332,7 @@
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="SLDoUong" ColumnName="SLDoUong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -907,6 +1376,7 @@
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
                 <ScalarProperty Name="NgayNhanViec" ColumnName="NgayNhanViec" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -921,6 +1391,159 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Cau1_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau1_view">
+              <MappingFragment StoreEntitySet="Cau1_view">
+                <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+                <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="MaNL" ColumnName="MaNL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau2_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau2_view">
+              <MappingFragment StoreEntitySet="Cau2_view">
+                <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+                <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+                <ScalarProperty Name="SLBan" ColumnName="SLBan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau4_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau4_view">
+              <MappingFragment StoreEntitySet="Cau4_view">
+                <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+                <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau5_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau5_view">
+              <MappingFragment StoreEntitySet="Cau5_view">
+                <ScalarProperty Name="MaNL" ColumnName="MaNL" />
+                <ScalarProperty Name="TenNL" ColumnName="TenNL" />
+                <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+                <ScalarProperty Name="SoLuongTieuThu" ColumnName="SoLuongTieuThu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau6_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau6_view">
+              <MappingFragment StoreEntitySet="Cau6_view">
+                <ScalarProperty Name="MaHDB" ColumnName="MaHDB" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="TriGia" ColumnName="TriGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau7_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau7_view">
+              <MappingFragment StoreEntitySet="Cau7_view">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="SoLanDiLam" ColumnName="SoLanDiLam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau8_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau8_view">
+              <MappingFragment StoreEntitySet="Cau8_view">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="SoLanDiLam" ColumnName="SoLanDiLam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionName="QLCafeModel.Store.Cau1_function" FunctionImportName="Cau1_function">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCafeModel.Cau1_function_Result">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="NgayNhanViec" ColumnName="NgayNhanViec" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLCafeModel.Store.cau2_function" FunctionImportName="cau2_function">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCafeModel.cau2_function_Result">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="NgayNhanViec" ColumnName="NgayNhanViec" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLCafeModel.Store.Cau3_function" FunctionImportName="Cau3_function">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCafeModel.Cau3_function_Result">
+                <ScalarProperty Name="TenNL" ColumnName="TenNL" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLCafeModel.Store.Cau4_func" FunctionImportName="Cau4_func">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCafeModel.Cau4_func_Result">
+                <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+                <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLCafeModel.Store.Cau5_func" FunctionImportName="Cau5_func">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCafeModel.Cau5_func_Result">
+                <ScalarProperty Name="Số_lượng_tối_đa_có_thể_làm" ColumnName="Số lượng tối đa có thể làm" />
+                <ScalarProperty Name="Đơn_vị" ColumnName="Đơn vị" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLCafeModel.Store.Cau6_func" FunctionImportName="Cau6_func">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCafeModel.Cau6_func_Result">
+                <ScalarProperty Name="MaBan" ColumnName="MaBan" />
+                <ScalarProperty Name="SoKhachNgoi" ColumnName="SoKhachNgoi" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLCafeModel.Store.cau7_func" FunctionImportName="cau7_func">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCafeModel.cau7_func_Result">
+                <ScalarProperty Name="Thang" ColumnName="Thang" />
+                <ScalarProperty Name="DTBan" ColumnName="DTBan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLCafeModel.Store.cau8_func" FunctionImportName="cau8_func">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCafeModel.cau8_func_Result">
+                <ScalarProperty Name="Thang" ColumnName="Thang" />
+                <ScalarProperty Name="DTNhap" ColumnName="DTNhap" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLCafeModel.Store.cau9_func" FunctionImportName="cau9_func">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCafeModel.cau9_func_Result">
+                <ScalarProperty Name="Thanga" ColumnName="Thanga" />
+                <ScalarProperty Name="DTBan" ColumnName="DTBan" />
+                <ScalarProperty Name="DTNhap" ColumnName="DTNhap" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Cau1_proc" FunctionName="QLCafeModel.Store.Cau1_proc" />
+          <FunctionImportMapping FunctionImportName="Cau2_proc" FunctionName="QLCafeModel.Store.Cau2_proc" />
+          <FunctionImportMapping FunctionImportName="Cau3_proc" FunctionName="QLCafeModel.Store.Cau3_proc" />
+          <FunctionImportMapping FunctionImportName="Cau5_proc" FunctionName="QLCafeModel.Store.Cau5_proc" />
+          <FunctionImportMapping FunctionImportName="cau7_proc" FunctionName="QLCafeModel.Store.cau7_proc" />
+          <FunctionImportMapping FunctionImportName="pro" FunctionName="QLCafeModel.Store.pro" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

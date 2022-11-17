@@ -12,15 +12,11 @@ namespace WindowsFormsTestBunifu
     using System;
     using System.Collections.Generic;
     
-    public partial class ChiTietHDB
+    public partial class Cau6_view
     {
         public string MaHDB { get; set; }
-        public string MaDU { get; set; }
-        public Nullable<int> SoLuongBan { get; set; }
-        public string KhuyenMai { get; set; }
-        public Nullable<decimal> ThanhTien { get; set; }
-    
-        public virtual HoaDonBan HoaDonBan { get; set; }
-        public virtual DoUong DoUong { get; set; }
+        public System.DateTime NgayLap { get; set; }
+        public string MaNV { get; set; }
+        public Nullable<decimal> TriGia { get; set; }
     }
 }

@@ -22,7 +22,6 @@ namespace WindowsFormsTestBunifu
     
         public string MaCa { get; set; }
         public string TenCa { get; set; }
-        public decimal Luong { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietCaLam> ChiTietCaLams { get; set; }

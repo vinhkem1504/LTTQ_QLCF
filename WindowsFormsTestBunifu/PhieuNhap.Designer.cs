@@ -33,7 +33,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.btnXoaNCC = new System.Windows.Forms.Button();
-            this.btnThemNCC = new System.Windows.Forms.Button();
+            this.btnCapNhatNCC = new System.Windows.Forms.Button();
             this.cbbMaNCC = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDienThoaiNCC = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtSoLuongNL = new System.Windows.Forms.TextBox();
+            this.txtSoLuongNhap = new System.Windows.Forms.TextBox();
             this.txtTenNL = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             this.btnXoaNL = new System.Windows.Forms.Button();
             this.btnThemNL = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtTongTIenPhieuNhap = new System.Windows.Forms.TextBox();
+            this.txtTongTienPhieuNhap = new System.Windows.Forms.TextBox();
             this.dgvChiTietPhieuNhap = new System.Windows.Forms.DataGridView();
             this.btnXacNhanLap = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnHuyPhieuNhap = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -91,7 +91,7 @@
             // 
             this.groupBox1.Controls.Add(this.txtMaNV);
             this.groupBox1.Controls.Add(this.btnXoaNCC);
-            this.groupBox1.Controls.Add(this.btnThemNCC);
+            this.groupBox1.Controls.Add(this.btnCapNhatNCC);
             this.groupBox1.Controls.Add(this.cbbMaNCC);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtDienThoaiNCC);
@@ -138,31 +138,31 @@
             this.btnXoaNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnXoaNCC.ForeColor = System.Drawing.Color.White;
-            this.btnXoaNCC.Location = new System.Drawing.Point(625, 154);
+            this.btnXoaNCC.Location = new System.Drawing.Point(611, 154);
             this.btnXoaNCC.Name = "btnXoaNCC";
-            this.btnXoaNCC.Size = new System.Drawing.Size(88, 28);
+            this.btnXoaNCC.Size = new System.Drawing.Size(102, 28);
             this.btnXoaNCC.TabIndex = 68;
             this.btnXoaNCC.Text = "Xóa NCC";
             this.btnXoaNCC.UseVisualStyleBackColor = false;
             this.btnXoaNCC.Click += new System.EventHandler(this.btnXoaNCC_Click);
             // 
-            // btnThemNCC
+            // btnCapNhatNCC
             // 
-            this.btnThemNCC.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnThemNCC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThemNCC.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnThemNCC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SeaGreen;
-            this.btnThemNCC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnThemNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnThemNCC.ForeColor = System.Drawing.Color.White;
-            this.btnThemNCC.Location = new System.Drawing.Point(521, 154);
-            this.btnThemNCC.Name = "btnThemNCC";
-            this.btnThemNCC.Size = new System.Drawing.Size(88, 28);
-            this.btnThemNCC.TabIndex = 66;
-            this.btnThemNCC.Text = "Thêm NCC";
-            this.btnThemNCC.UseVisualStyleBackColor = false;
-            this.btnThemNCC.Click += new System.EventHandler(this.btnThemNCC_Click);
+            this.btnCapNhatNCC.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCapNhatNCC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCapNhatNCC.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btnCapNhatNCC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SeaGreen;
+            this.btnCapNhatNCC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnCapNhatNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapNhatNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnCapNhatNCC.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhatNCC.Location = new System.Drawing.Point(503, 154);
+            this.btnCapNhatNCC.Name = "btnCapNhatNCC";
+            this.btnCapNhatNCC.Size = new System.Drawing.Size(102, 28);
+            this.btnCapNhatNCC.TabIndex = 66;
+            this.btnCapNhatNCC.Text = "Cập nhật NCC";
+            this.btnCapNhatNCC.UseVisualStyleBackColor = false;
+            this.btnCapNhatNCC.Click += new System.EventHandler(this.btnCapNhatNCC_Click);
             // 
             // cbbMaNCC
             // 
@@ -355,7 +355,7 @@
             this.groupBox2.Controls.Add(this.txtThanhTien);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtSoLuongNL);
+            this.groupBox2.Controls.Add(this.txtSoLuongNhap);
             this.groupBox2.Controls.Add(this.txtTenNL);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -455,15 +455,18 @@
             this.label9.TabIndex = 70;
             this.label9.Text = "Số Lượng";
             // 
-            // txtSoLuongNL
+            // txtSoLuongNhap
             // 
-            this.txtSoLuongNL.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSoLuongNL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuongNL.Location = new System.Drawing.Point(113, 64);
-            this.txtSoLuongNL.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSoLuongNL.Name = "txtSoLuongNL";
-            this.txtSoLuongNL.Size = new System.Drawing.Size(124, 21);
-            this.txtSoLuongNL.TabIndex = 69;
+            this.txtSoLuongNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSoLuongNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuongNhap.Location = new System.Drawing.Point(113, 64);
+            this.txtSoLuongNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSoLuongNhap.Name = "txtSoLuongNhap";
+            this.txtSoLuongNhap.ReadOnly = true;
+            this.txtSoLuongNhap.Size = new System.Drawing.Size(124, 21);
+            this.txtSoLuongNhap.TabIndex = 69;
+            this.txtSoLuongNhap.TextChanged += new System.EventHandler(this.txtSoLuongNL_TextChanged);
+            this.txtSoLuongNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuongNL_KeyPress);
             // 
             // txtTenNL
             // 
@@ -564,16 +567,16 @@
             this.label12.TabIndex = 88;
             this.label12.Text = "Tổng Tiền";
             // 
-            // txtTongTIenPhieuNhap
+            // txtTongTienPhieuNhap
             // 
-            this.txtTongTIenPhieuNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTongTIenPhieuNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTIenPhieuNhap.Location = new System.Drawing.Point(601, 346);
-            this.txtTongTIenPhieuNhap.Margin = new System.Windows.Forms.Padding(2, 2, 7, 2);
-            this.txtTongTIenPhieuNhap.Name = "txtTongTIenPhieuNhap";
-            this.txtTongTIenPhieuNhap.ReadOnly = true;
-            this.txtTongTIenPhieuNhap.Size = new System.Drawing.Size(135, 21);
-            this.txtTongTIenPhieuNhap.TabIndex = 87;
+            this.txtTongTienPhieuNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTongTienPhieuNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTienPhieuNhap.Location = new System.Drawing.Point(601, 346);
+            this.txtTongTienPhieuNhap.Margin = new System.Windows.Forms.Padding(2, 2, 7, 2);
+            this.txtTongTienPhieuNhap.Name = "txtTongTienPhieuNhap";
+            this.txtTongTienPhieuNhap.ReadOnly = true;
+            this.txtTongTienPhieuNhap.Size = new System.Drawing.Size(135, 21);
+            this.txtTongTienPhieuNhap.TabIndex = 87;
             // 
             // dgvChiTietPhieuNhap
             // 
@@ -645,7 +648,7 @@
             this.Controls.Add(this.btnXoaNL);
             this.Controls.Add(this.btnThemNL);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtTongTIenPhieuNhap);
+            this.Controls.Add(this.txtTongTienPhieuNhap);
             this.Controls.Add(this.btnXacNhanLap);
             this.Controls.Add(this.btnHuyPhieuNhap);
             this.Controls.Add(this.dgvChiTietPhieuNhap);
@@ -674,7 +677,7 @@
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnXoaNCC;
-        private System.Windows.Forms.Button btnThemNCC;
+        private System.Windows.Forms.Button btnCapNhatNCC;
         private System.Windows.Forms.ComboBox cbbMaNCC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDienThoaiNCC;
@@ -695,7 +698,7 @@
         private System.Windows.Forms.TextBox txtThanhTien;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtSoLuongNL;
+        private System.Windows.Forms.TextBox txtSoLuongNhap;
         private System.Windows.Forms.TextBox txtTenNL;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -703,7 +706,7 @@
         private System.Windows.Forms.Button btnXoaNL;
         private System.Windows.Forms.Button btnThemNL;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtTongTIenPhieuNhap;
+        private System.Windows.Forms.TextBox txtTongTienPhieuNhap;
         private System.Windows.Forms.DataGridView dgvChiTietPhieuNhap;
         private Bunifu.Framework.UI.BunifuThinButton2 btnXacNhanLap;
         private Bunifu.Framework.UI.BunifuThinButton2 btnHuyPhieuNhap;

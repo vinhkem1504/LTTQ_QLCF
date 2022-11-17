@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLCafeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLCafeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ban">
           <Key>
             <PropertyRef Name="MaBan" />
@@ -146,6 +146,78 @@
           <Property Name="MatKhau" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="LoaiTK" Type="bit" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau1_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau1_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+            <PropertyRef Name="DonGia" />
+            <PropertyRef Name="MaNL" />
+          </Key>
+          <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DonGia" Type="money" Nullable="false" />
+          <Property Name="MaNL" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau2_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau2_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+          </Key>
+          <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SLBan" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau4_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau4_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+            <PropertyRef Name="DonGia" />
+          </Key>
+          <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DonGia" Type="money" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau5_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau5_view">
+          <Key>
+            <PropertyRef Name="MaNL" />
+            <PropertyRef Name="TenNL" />
+            <PropertyRef Name="DonVi" />
+          </Key>
+          <Property Name="MaNL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenNL" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DonVi" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SoLuongTieuThu" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau6_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau6_view">
+          <Key>
+            <PropertyRef Name="MaHDB" />
+            <PropertyRef Name="NgayLap" />
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaHDB" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NgayLap" Type="datetime" Nullable="false" />
+          <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TriGia" Type="money" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cau7_view">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SoLanDiLam" Type="int" />
         </EntityType>
         <Association Name="FK__ChiTietCaL__MaCa__3B75D760">
           <End Role="CaLam" Type="Self.CaLam" Multiplicity="1" />
@@ -315,6 +387,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="Cau1_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaDoUong" Type="nvarchar" Mode="In" />
+          <Parameter Name="Nam" Type="int" Mode="In" />
+          <Parameter Name="SL" Type="int" Mode="InOut" />
+        </Function>
         <EntityContainer Name="QLCafeModelStoreContainer">
           <EntitySet Name="Ban" EntityType="Self.Ban" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CaLam" EntityType="Self.CaLam" Schema="dbo" store:Type="Tables" />
@@ -331,6 +408,50 @@
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cau1_view" EntityType="Self.Cau1_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau1_view].[MaDU] AS [MaDU], 
+    [Cau1_view].[TenDU] AS [TenDU], 
+    [Cau1_view].[DonGia] AS [DonGia], 
+    [Cau1_view].[MaNL] AS [MaNL]
+    FROM [dbo].[Cau1_view] AS [Cau1_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau2_view" EntityType="Self.Cau2_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau2_view].[MaDU] AS [MaDU], 
+    [Cau2_view].[TenDU] AS [TenDU], 
+    [Cau2_view].[SLBan] AS [SLBan]
+    FROM [dbo].[Cau2_view] AS [Cau2_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau4_view" EntityType="Self.Cau4_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau4_view].[MaDU] AS [MaDU], 
+    [Cau4_view].[TenDU] AS [TenDU], 
+    [Cau4_view].[DonGia] AS [DonGia]
+    FROM [dbo].[Cau4_view] AS [Cau4_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau5_view" EntityType="Self.Cau5_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau5_view].[MaNL] AS [MaNL], 
+    [Cau5_view].[TenNL] AS [TenNL], 
+    [Cau5_view].[DonVi] AS [DonVi], 
+    [Cau5_view].[SoLuongTieuThu] AS [SoLuongTieuThu]
+    FROM [dbo].[Cau5_view] AS [Cau5_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau6_view" EntityType="Self.Cau6_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau6_view].[MaHDB] AS [MaHDB], 
+    [Cau6_view].[NgayLap] AS [NgayLap], 
+    [Cau6_view].[MaNV] AS [MaNV], 
+    [Cau6_view].[TriGia] AS [TriGia]
+    FROM [dbo].[Cau6_view] AS [Cau6_view]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cau7_view" EntityType="Self.Cau7_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cau7_view].[MaNV] AS [MaNV], 
+    [Cau7_view].[SoLanDiLam] AS [SoLanDiLam]
+    FROM [dbo].[Cau7_view] AS [Cau7_view]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__ChiTietCaL__MaCa__3B75D760" Association="Self.FK__ChiTietCaL__MaCa__3B75D760">
             <End Role="CaLam" EntitySet="CaLam" />
             <End Role="ChiTietCaLam" EntitySet="ChiTietCaLam" />
@@ -388,8 +509,7 @@
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -793,7 +913,78 @@
             <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
           </AssociationSet>
+          <EntitySet Name="Cau1_view" EntityType="QLCafeModel.Cau1_view" />
+          <EntitySet Name="Cau2_view" EntityType="QLCafeModel.Cau2_view" />
+          <EntitySet Name="Cau4_view" EntityType="QLCafeModel.Cau4_view" />
+          <EntitySet Name="Cau5_view" EntityType="QLCafeModel.Cau5_view" />
+          <EntitySet Name="Cau6_view" EntityType="QLCafeModel.Cau6_view" />
+          <EntitySet Name="Cau7_view" EntityType="QLCafeModel.Cau7_view" />
+          <FunctionImport Name="Cau1_proc">
+            <Parameter Name="MaDoUong" Mode="In" Type="String" />
+            <Parameter Name="Nam" Mode="In" Type="Int32" />
+            <Parameter Name="SL" Mode="InOut" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
+        <EntityType Name="Cau1_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+            <PropertyRef Name="DonGia" />
+            <PropertyRef Name="MaNL" />
+          </Key>
+          <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="MaNL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Cau2_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+          </Key>
+          <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SLBan" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Cau4_view">
+          <Key>
+            <PropertyRef Name="MaDU" />
+            <PropertyRef Name="TenDU" />
+            <PropertyRef Name="DonGia" />
+          </Key>
+          <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Cau5_view">
+          <Key>
+            <PropertyRef Name="MaNL" />
+            <PropertyRef Name="TenNL" />
+            <PropertyRef Name="DonVi" />
+          </Key>
+          <Property Name="MaNL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TenNL" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DonVi" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SoLuongTieuThu" Type="Double" />
+        </EntityType>
+        <EntityType Name="Cau6_view">
+          <Key>
+            <PropertyRef Name="MaHDB" />
+            <PropertyRef Name="NgayLap" />
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaHDB" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TriGia" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Cau7_view">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SoLanDiLam" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -939,6 +1130,63 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Cau1_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau1_view">
+              <MappingFragment StoreEntitySet="Cau1_view">
+                <ScalarProperty Name="MaNL" ColumnName="MaNL" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+                <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau2_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau2_view">
+              <MappingFragment StoreEntitySet="Cau2_view">
+                <ScalarProperty Name="SLBan" ColumnName="SLBan" />
+                <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+                <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau4_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau4_view">
+              <MappingFragment StoreEntitySet="Cau4_view">
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+                <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau5_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau5_view">
+              <MappingFragment StoreEntitySet="Cau5_view">
+                <ScalarProperty Name="SoLuongTieuThu" ColumnName="SoLuongTieuThu" />
+                <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+                <ScalarProperty Name="TenNL" ColumnName="TenNL" />
+                <ScalarProperty Name="MaNL" ColumnName="MaNL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau6_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau6_view">
+              <MappingFragment StoreEntitySet="Cau6_view">
+                <ScalarProperty Name="TriGia" ColumnName="TriGia" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="MaHDB" ColumnName="MaHDB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cau7_view">
+            <EntityTypeMapping TypeName="QLCafeModel.Cau7_view">
+              <MappingFragment StoreEntitySet="Cau7_view">
+                <ScalarProperty Name="SoLanDiLam" ColumnName="SoLanDiLam" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Cau1_proc" FunctionName="QLCafeModel.Store.Cau1_proc" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

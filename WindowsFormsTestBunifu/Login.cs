@@ -9,7 +9,7 @@ namespace WindowsFormsTestBunifu
 
     public partial class frmLogin : Form
     {
-        private QLCafeEntities db = new QLCafeEntities();
+        private QLCafeEntities1 db = new QLCafeEntities1();
         private int login = 0;
         private string username = "";
         private string password = "";

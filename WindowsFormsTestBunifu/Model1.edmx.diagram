@@ -4,21 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="67174512d8014554825e1a0905ebdf89" Name="Diagram1">
+      <Diagram DiagramId="674c2a64e654431a8dc2fbae478bad52" Name="Diagram1">
         <EntityTypeShape EntityType="QLCafeModel.Ban" Width="1.5" PointX="3.75" PointY="13.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLCafeModel.CaLam" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.CaLam" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLCafeModel.ChiTietCaLam" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLCafeModel.ChiTietHDB" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.ChiTietHDB" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLCafeModel.ChiTietHDN" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLCafeModel.ChiTietLuong" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.ChiTietLuong" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLCafeModel.CongThucDoUong" Width="1.5" PointX="11.25" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QLCafeModel.DoUong" Width="1.5" PointX="6" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLCafeModel.HoaDonBan" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.HoaDonBan" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLCafeModel.HoaDonNhap" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLCafeModel.NguyenLieu" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLCafeModel.NhaCungCap" Width="1.5" PointX="3.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLCafeModel.NhanVien" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLCafeModel.TaiKhoan" Width="1.5" PointX="3" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.NhanVien" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.TaiKhoan" Width="1.5" PointX="3" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau1_view" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau2_view" Width="1.5" PointX="8.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau4_view" Width="1.5" PointX="10.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau5_view" Width="1.5" PointX="10.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau6_view" Width="1.5" PointX="8.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau7_view" Width="1.5" PointX="10.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau8_view" Width="1.5" PointX="12.75" PointY="1.875" IsExpanded="true" />
         <AssociationConnector Association="QLCafeModel.FK__HoaDonBan__MaBan__48CFD27E" ManuallyRouted="false" />
         <AssociationConnector Association="QLCafeModel.FK__ChiTietCaL__MaCa__29572725" ManuallyRouted="false" />
         <AssociationConnector Association="QLCafeModel.FK__ChiTietCaL__MaNV__286302EC" ManuallyRouted="false" />

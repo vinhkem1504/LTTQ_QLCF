@@ -33,6 +33,12 @@
         <AssociationConnector Association="QLCafeModel.FK__HoaDonNha__MaNCC__5070F446" ManuallyRouted="false" />
         <AssociationConnector Association="QLCafeModel.FK__HoaDonNhap__MaNV__5165187F" ManuallyRouted="false" />
         <AssociationConnector Association="QLCafeModel.FK__TaiKhoan__MaNV__412EB0B6" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau1_view" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau2_view" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau4_view" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau5_view" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau6_view" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau7_view" Width="1.5" PointX="10.75" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

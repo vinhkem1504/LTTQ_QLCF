@@ -17,6 +17,7 @@ namespace WindowsFormsTestBunifu
         public string MaNV { get; set; }
         public string MaCa { get; set; }
         public System.DateTime NgayLamViec { get; set; }
+    
         public virtual CaLam CaLam { get; set; }
         public virtual NhanVien NhanVien { get; set; }
     }
