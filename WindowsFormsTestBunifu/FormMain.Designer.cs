@@ -1976,6 +1976,14 @@ namespace WindowsFormsTestBunifu
             this.txtHD_TrangThai.Size = new System.Drawing.Size(164, 21);
             this.txtHD_TrangThai.TabIndex = 11;
             // 
+            // txtHD_TrangThai
+            // 
+            this.txtHD_TrangThai.Location = new System.Drawing.Point(103, 156);
+            this.txtHD_TrangThai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHD_TrangThai.Name = "txtHD_TrangThai";
+            this.txtHD_TrangThai.Size = new System.Drawing.Size(164, 21);
+            this.txtHD_TrangThai.TabIndex = 11;
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
