@@ -31,30 +31,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtMaHD = new System.Windows.Forms.Label();
+            this.lblSDT = new System.Windows.Forms.Label();
+            this.lblDiaChi = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSP = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtKhachTra = new System.Windows.Forms.TextBox();
+            this.txtTienThua = new System.Windows.Forms.TextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.dtpNgayBan = new System.Windows.Forms.DateTimePicker();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSP)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -62,16 +61,15 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.lblLogo);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtMaHD);
+            this.panel1.Controls.Add(this.lblSDT);
+            this.panel1.Controls.Add(this.lblDiaChi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(571, 164);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(571, 177);
+            this.panel1.TabIndex = 8;
             // 
             // lblLogo
             // 
@@ -83,166 +81,151 @@
             this.lblLogo.TabIndex = 6;
             this.lblLogo.Text = "WINDOWS COFFEE";
             // 
-            // label3
+            // txtMaHD
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(179, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "MÃ HÓA ĐƠN :";
+            this.txtMaHD.AutoSize = true;
+            this.txtMaHD.Location = new System.Drawing.Point(191, 135);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(100, 16);
+            this.txtMaHD.TabIndex = 5;
+            this.txtMaHD.Text = "MÃ HÓA ĐƠN : ";
             // 
-            // label2
+            // lblSDT
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Liên lạc";
+            this.lblSDT.AutoSize = true;
+            this.lblSDT.Location = new System.Drawing.Point(98, 94);
+            this.lblSDT.Name = "lblSDT";
+            this.lblSDT.Size = new System.Drawing.Size(167, 16);
+            this.lblSDT.TabIndex = 4;
+            this.lblSDT.Text = "Số điện thoại: 0818 838 828";
             // 
-            // label1
+            // lblDiaChi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Địa chỉ";
+            this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.Location = new System.Drawing.Point(98, 66);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(389, 16);
+            this.lblDiaChi.TabIndex = 3;
+            this.lblDiaChi.Text = "Địa chỉ : WINDOWS COFFEE, 210 Lạc Trung - Hai Bà Trưng - HN";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 164);
+            this.panel2.Location = new System.Drawing.Point(0, 177);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(571, 226);
-            this.panel2.TabIndex = 4;
+            this.panel2.Size = new System.Drawing.Size(571, 194);
+            this.panel2.TabIndex = 9;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvSP);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(571, 226);
+            this.groupBox1.Size = new System.Drawing.Size(571, 194);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
             // 
-            // dataGridView1
+            // dgvSP
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 17);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(565, 207);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSP.Location = new System.Drawing.Point(3, 17);
+            this.dgvSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvSP.Name = "dgvSP";
+            this.dgvSP.RowHeadersWidth = 51;
+            this.dgvSP.RowTemplate.Height = 24;
+            this.dgvSP.Size = new System.Drawing.Size(565, 175);
+            this.dgvSP.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.txtKhachTra);
+            this.panel3.Controls.Add(this.txtTienThua);
+            this.panel3.Controls.Add(this.txtTongTien);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 390);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(0, 371);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(571, 167);
-            this.panel3.TabIndex = 5;
-            this.panel3.UseWaitCursor = true;
+            this.panel3.Size = new System.Drawing.Size(571, 155);
+            this.panel3.TabIndex = 10;
             // 
-            // label7
+            // txtKhachTra
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(62, 135);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(459, 16);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------";
-            this.label7.UseWaitCursor = true;
+            this.txtKhachTra.Location = new System.Drawing.Point(254, 71);
+            this.txtKhachTra.Name = "txtKhachTra";
+            this.txtKhachTra.Size = new System.Drawing.Size(187, 22);
+            this.txtKhachTra.TabIndex = 28;
+            this.txtKhachTra.TextChanged += new System.EventHandler(this.txtKhachTra_TextChanged);
+            // 
+            // txtTienThua
+            // 
+            this.txtTienThua.Enabled = false;
+            this.txtTienThua.Location = new System.Drawing.Point(254, 108);
+            this.txtTienThua.Name = "txtTienThua";
+            this.txtTienThua.Size = new System.Drawing.Size(187, 22);
+            this.txtTienThua.TabIndex = 27;
+            this.txtTienThua.UseWaitCursor = true;
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Enabled = false;
+            this.txtTongTien.Location = new System.Drawing.Point(254, 35);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(187, 22);
+            this.txtTongTien.TabIndex = 25;
+            this.txtTongTien.UseWaitCursor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(98, 103);
+            this.label6.Location = new System.Drawing.Point(107, 111);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 16);
-            this.label6.TabIndex = 6;
+            this.label6.TabIndex = 24;
             this.label6.Text = "Tiền Thừa :";
             this.label6.UseWaitCursor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(98, 66);
+            this.label5.Location = new System.Drawing.Point(107, 74);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 16);
-            this.label5.TabIndex = 5;
+            this.label5.TabIndex = 23;
             this.label5.Text = "Khách Trả :";
             this.label5.UseWaitCursor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 30);
+            this.label4.Location = new System.Drawing.Point(107, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 16);
-            this.label4.TabIndex = 4;
+            this.label4.TabIndex = 22;
             this.label4.Text = "Tổng Tiền :";
             this.label4.UseWaitCursor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(245, 98);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 22);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.UseWaitCursor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(245, 62);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 22);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.UseWaitCursor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(245, 23);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.UseWaitCursor = true;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.bunifuThinButton21);
-            this.panel4.Controls.Add(this.dateTimePicker3);
-            this.panel4.Controls.Add(this.textBox14);
+            this.panel4.Controls.Add(this.dtpNgayBan);
+            this.panel4.Controls.Add(this.txtMaNV);
             this.panel4.Controls.Add(this.label19);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 557);
+            this.panel4.Location = new System.Drawing.Point(0, 526);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(571, 145);
-            this.panel4.TabIndex = 6;
+            this.panel4.Size = new System.Drawing.Size(571, 176);
+            this.panel4.TabIndex = 11;
             // 
             // bunifuThinButton21
             // 
@@ -262,7 +245,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(194, 76);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(203, 104);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(187, 50);
@@ -270,27 +253,29 @@
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // dateTimePicker3
+            // dtpNgayBan
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(245, 39);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(187, 22);
-            this.dateTimePicker3.TabIndex = 16;
+            this.dtpNgayBan.Enabled = false;
+            this.dtpNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayBan.Location = new System.Drawing.Point(254, 67);
+            this.dtpNgayBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpNgayBan.Name = "dtpNgayBan";
+            this.dtpNgayBan.Size = new System.Drawing.Size(187, 22);
+            this.dtpNgayBan.TabIndex = 16;
             // 
-            // textBox14
+            // txtMaNV
             // 
-            this.textBox14.Location = new System.Drawing.Point(245, 6);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(187, 22);
-            this.textBox14.TabIndex = 15;
+            this.txtMaNV.Enabled = false;
+            this.txtMaNV.Location = new System.Drawing.Point(254, 34);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(187, 22);
+            this.txtMaNV.TabIndex = 15;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(98, 46);
+            this.label19.Location = new System.Drawing.Point(107, 74);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(73, 16);
             this.label19.TabIndex = 14;
@@ -299,7 +284,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(98, 9);
+            this.label13.Location = new System.Drawing.Point(107, 37);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(75, 16);
             this.label13.TabIndex = 13;
@@ -315,15 +300,18 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HoaDon";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHoaDon_FormClosing);
+            this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSP)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -335,26 +323,25 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLogo;
+        private System.Windows.Forms.Label txtMaHD;
+        private System.Windows.Forms.Label lblSDT;
+        private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSP;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtTienThua;
+        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.DateTimePicker dtpNgayBan;
+        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtKhachTra;
     }
 }

@@ -10,15 +10,10 @@
 namespace WindowsFormsTestBunifu
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ChiTietNhanVien
+    public partial class Cau5_func_Result
     {
-        public string MaNV { get; set; }
-        public string ChucVu { get; set; }
-        public decimal Luong { get; set; }
-        public int SoNgayLamViec { get; set; }
-    
-        public virtual NhanVien NhanVien { get; set; }
+        public Nullable<double> Số_lượng_tối_đa_có_thể_làm { get; set; }
+        public string Đơn_vị { get; set; }
     }
 }

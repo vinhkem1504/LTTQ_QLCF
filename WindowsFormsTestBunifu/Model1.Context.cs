@@ -12,6 +12,8 @@ namespace WindowsFormsTestBunifu
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class QLCafeEntities1 : DbContext
     {
@@ -26,7 +28,12 @@ namespace WindowsFormsTestBunifu
         }
     
         public virtual DbSet<Ban> Bans { get; set; }
-        public virtual DbSet<ChiTietNhanVien> ChiTietNhanViens { get; set; }
+        public virtual DbSet<CaLam> CaLams { get; set; }
+        public virtual DbSet<ChiTietCaLam> ChiTietCaLams { get; set; }
+        public virtual DbSet<ChiTietHDB> ChiTietHDBs { get; set; }
+        public virtual DbSet<ChiTietHDN> ChiTietHDNs { get; set; }
+        public virtual DbSet<ChiTietLuong> ChiTietLuongs { get; set; }
+        public virtual DbSet<CongThucDoUong> CongThucDoUongs { get; set; }
         public virtual DbSet<DoUong> DoUongs { get; set; }
         public virtual DbSet<HoaDonBan> HoaDonBans { get; set; }
         public virtual DbSet<HoaDonNhap> HoaDonNhaps { get; set; }
@@ -34,8 +41,136 @@ namespace WindowsFormsTestBunifu
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
-        public virtual DbSet<ChiTietHDB> ChiTietHDBs { get; set; }
-        public virtual DbSet<ChiTietHDN> ChiTietHDNs { get; set; }
-        public virtual DbSet<CongThucDoUong> CongThucDoUongs { get; set; }
+        public virtual DbSet<Cau1_view> Cau1_view { get; set; }
+        public virtual DbSet<Cau2_view> Cau2_view { get; set; }
+        public virtual DbSet<Cau4_view> Cau4_view { get; set; }
+        public virtual DbSet<Cau5_view> Cau5_view { get; set; }
+        public virtual DbSet<Cau6_view> Cau6_view { get; set; }
+        public virtual DbSet<Cau7_view> Cau7_view { get; set; }
+        public virtual DbSet<Cau8_view> Cau8_view { get; set; }
+    
+        [DbFunction("QLCafeEntities1", "Cau1_function")]
+        public virtual IQueryable<Cau1_function_Result> Cau1_function(Nullable<int> nam)
+        {
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("Nam", nam) :
+                new ObjectParameter("Nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Cau1_function_Result>("[QLCafeEntities1].[Cau1_function](@Nam)", namParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "cau2_function")]
+        public virtual IQueryable<cau2_function_Result> cau2_function(Nullable<int> sonam)
+        {
+            var sonamParameter = sonam.HasValue ?
+                new ObjectParameter("Sonam", sonam) :
+                new ObjectParameter("Sonam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau2_function_Result>("[QLCafeEntities1].[cau2_function](@Sonam)", sonamParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "Cau3_function")]
+        public virtual IQueryable<Cau3_function_Result> Cau3_function(string nCC)
+        {
+            var nCCParameter = nCC != null ?
+                new ObjectParameter("NCC", nCC) :
+                new ObjectParameter("NCC", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Cau3_function_Result>("[QLCafeEntities1].[Cau3_function](@NCC)", nCCParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "Cau4_func")]
+        public virtual IQueryable<Cau4_func_Result> Cau4_func(Nullable<int> soTrang, Nullable<int> kichThuocTrang)
+        {
+            var soTrangParameter = soTrang.HasValue ?
+                new ObjectParameter("SoTrang", soTrang) :
+                new ObjectParameter("SoTrang", typeof(int));
+    
+            var kichThuocTrangParameter = kichThuocTrang.HasValue ?
+                new ObjectParameter("KichThuocTrang", kichThuocTrang) :
+                new ObjectParameter("KichThuocTrang", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Cau4_func_Result>("[QLCafeEntities1].[Cau4_func](@SoTrang, @KichThuocTrang)", soTrangParameter, kichThuocTrangParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "Cau5_func")]
+        public virtual IQueryable<Cau5_func_Result> Cau5_func(string maDoUong)
+        {
+            var maDoUongParameter = maDoUong != null ?
+                new ObjectParameter("MaDoUong", maDoUong) :
+                new ObjectParameter("MaDoUong", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Cau5_func_Result>("[QLCafeEntities1].[Cau5_func](@MaDoUong)", maDoUongParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "Cau6_func")]
+        public virtual IQueryable<Cau6_func_Result> Cau6_func(Nullable<int> thang, Nullable<int> nam)
+        {
+            var thangParameter = thang.HasValue ?
+                new ObjectParameter("thang", thang) :
+                new ObjectParameter("thang", typeof(int));
+    
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("nam", nam) :
+                new ObjectParameter("nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Cau6_func_Result>("[QLCafeEntities1].[Cau6_func](@thang, @nam)", thangParameter, namParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "cau7_func")]
+        public virtual IQueryable<cau7_func_Result> cau7_func(Nullable<System.DateTime> ngaybd, Nullable<System.DateTime> ngaykt)
+        {
+            var ngaybdParameter = ngaybd.HasValue ?
+                new ObjectParameter("ngaybd", ngaybd) :
+                new ObjectParameter("ngaybd", typeof(System.DateTime));
+    
+            var ngayktParameter = ngaykt.HasValue ?
+                new ObjectParameter("ngaykt", ngaykt) :
+                new ObjectParameter("ngaykt", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau7_func_Result>("[QLCafeEntities1].[cau7_func](@ngaybd, @ngaykt)", ngaybdParameter, ngayktParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "cau8_func")]
+        public virtual IQueryable<cau8_func_Result> cau8_func(Nullable<System.DateTime> ngaybd, Nullable<System.DateTime> ngaykt)
+        {
+            var ngaybdParameter = ngaybd.HasValue ?
+                new ObjectParameter("ngaybd", ngaybd) :
+                new ObjectParameter("ngaybd", typeof(System.DateTime));
+    
+            var ngayktParameter = ngaykt.HasValue ?
+                new ObjectParameter("ngaykt", ngaykt) :
+                new ObjectParameter("ngaykt", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau8_func_Result>("[QLCafeEntities1].[cau8_func](@ngaybd, @ngaykt)", ngaybdParameter, ngayktParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "cau9_func")]
+        public virtual IQueryable<cau9_func_Result> cau9_func(Nullable<int> nam)
+        {
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("nam", nam) :
+                new ObjectParameter("nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau9_func_Result>("[QLCafeEntities1].[cau9_func](@nam)", namParameter);
+        }
+    
+        public virtual int Cau1_proc(string maDoUong, Nullable<int> nam, ObjectParameter sL)
+        {
+            var maDoUongParameter = maDoUong != null ?
+                new ObjectParameter("MaDoUong", maDoUong) :
+                new ObjectParameter("MaDoUong", typeof(string));
+    
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("Nam", nam) :
+                new ObjectParameter("Nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau1_proc", maDoUongParameter, namParameter, sL);
+        }
+
+        internal object Entry()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
