@@ -139,7 +139,7 @@
             this.btnResetPassword.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnResetPassword.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.btnResetPassword.Location = new System.Drawing.Point(155, 287);
-            this.btnResetPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnResetPassword.Margin = new System.Windows.Forms.Padding(5);
             this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.Size = new System.Drawing.Size(205, 50);
             this.btnResetPassword.TabIndex = 4;
@@ -290,7 +290,7 @@
             this.btxtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.btxtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.btxtPassword.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.btxtPassword.DefaultText = "";
+            this.btxtPassword.DefaultText = "1";
             this.btxtPassword.FillColor = System.Drawing.Color.White;
             this.btxtPassword.HideSelection = true;
             this.btxtPassword.IconLeft = null;
@@ -298,7 +298,8 @@
             this.btxtPassword.IconPadding = 10;
             this.btxtPassword.IconRight = ((System.Drawing.Image)(resources.GetObject("btxtPassword.IconRight")));
             this.btxtPassword.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btxtPassword.Lines = new string[0];
+            this.btxtPassword.Lines = new string[] {
+        "1"};
             this.btxtPassword.Location = new System.Drawing.Point(113, 230);
             this.btxtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btxtPassword.MaxLength = 32767;
@@ -334,7 +335,7 @@
             this.btxtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.btxtPassword.SelectedText = "";
             this.btxtPassword.SelectionLength = 0;
-            this.btxtPassword.SelectionStart = 0;
+            this.btxtPassword.SelectionStart = 1;
             this.btxtPassword.ShortcutsEnabled = true;
             this.btxtPassword.Size = new System.Drawing.Size(341, 41);
             this.btxtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
@@ -367,7 +368,7 @@
             this.btxtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.btxtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.btxtUsername.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.btxtUsername.DefaultText = "";
+            this.btxtUsername.DefaultText = "DangDinhTrung";
             this.btxtUsername.FillColor = System.Drawing.Color.White;
             this.btxtUsername.HideSelection = true;
             this.btxtUsername.IconLeft = null;
@@ -375,7 +376,8 @@
             this.btxtUsername.IconPadding = 10;
             this.btxtUsername.IconRight = null;
             this.btxtUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.btxtUsername.Lines = new string[0];
+            this.btxtUsername.Lines = new string[] {
+        "DangDinhTrung"};
             this.btxtUsername.Location = new System.Drawing.Point(113, 133);
             this.btxtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btxtUsername.MaxLength = 32767;
@@ -411,7 +413,7 @@
             this.btxtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.btxtUsername.SelectedText = "";
             this.btxtUsername.SelectionLength = 0;
-            this.btxtUsername.SelectionStart = 0;
+            this.btxtUsername.SelectionStart = 13;
             this.btxtUsername.ShortcutsEnabled = true;
             this.btxtUsername.Size = new System.Drawing.Size(341, 41);
             this.btxtUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
@@ -497,7 +499,7 @@
             this.bbtnLogin.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bbtnLogin.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.bbtnLogin.Location = new System.Drawing.Point(165, 319);
-            this.bbtnLogin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bbtnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.bbtnLogin.Name = "bbtnLogin";
             this.bbtnLogin.Size = new System.Drawing.Size(193, 59);
             this.bbtnLogin.TabIndex = 36;

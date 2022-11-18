@@ -353,7 +353,7 @@ namespace WindowsFormsTestBunifu
                 // Load thông tin
                 lblCTN_TenHDN.Text = "Hóa đơn : ";
                 lblCTN_TenHDN.Text = lblCTN_TenHDN.Text + txtHDN_MaHDN.Text;
-
+                tinhTienHDN();
                 //txtCTB_TongTien.Text = (int.Parse(txtCTB_SL.Text) * int.Parse(txtCTB_DonGia.Text)).ToString();
 
                 bpaPages.SelectedIndex = 10;
@@ -768,7 +768,7 @@ namespace WindowsFormsTestBunifu
             MessageBox.Show("Cập nhật thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        // Tính tiền hóa đơn
+        // Tính tiền hóa đơn bán
         private void tinhTienHDB()
         {
             float tongTien = 0;
@@ -782,6 +782,22 @@ namespace WindowsFormsTestBunifu
             }
 
             txtCTB_TongTien.Text = tongTien.ToString();
+        }
+
+        // Tính tiền hóa đơn Nhập
+        private void tinhTienHDN()
+        {
+            float tongTien = 0;
+            for (int i = 0; i < dgvCTN_DSNL.Rows.Count; i++)
+            {
+                int sl = 0;
+                float donGia = 0;
+                sl = int.Parse(dgvCTN_DSNL.Rows[i].Cells[2].Value.ToString());
+                donGia = float.Parse(dgvCTN_DSNL.Rows[i].Cells[3].Value.ToString());
+                tongTien += sl * donGia;
+            }
+
+            txtCTN_TongTien.Text = tongTien.ToString();
         }
 
         //Sửa sản phẩm
@@ -1288,6 +1304,7 @@ namespace WindowsFormsTestBunifu
         //Thêm Nhiên liệu
         private void bunifuImageButton15_Click(object sender, EventArgs e)
         {
+            ResetNL();
             NguyenLieu nl = new NguyenLieu() { MaNL = txtKho_MaNL.Text, TenNL = txtKho_TenNL.Text, DonVi = txtKho_Donvi.Text, SoLuongTon = float.Parse(txtKho_SL.Text) };
             KiemTraNL();
             if(txtKho_MaNL.Text != "")
@@ -1308,13 +1325,26 @@ namespace WindowsFormsTestBunifu
         //Sửa thông tin nguyên liệu
         private void btnSuaHDN_Click(object sender, EventArgs e)
         {
+            string maNL = "";
+            maNL = txtKho_MaNL.Text;
+            if(maNL != "")
+            {
+                NguyenLieu nl = db.NguyenLieux.Where(p => p.MaNL == maNL).SingleOrDefault();
+                nl.TenNL = txtKho_TenNL.Text;
+                nl.DonVi = txtKho_Donvi.Text;
+                nl.SoLuongTon = int.Parse(txtKho_SL.Text);
+                KiemTraNL();
+                db.SaveChanges();
+                LoadDataNguyenLieu();
+                MessageBox.Show("Sửa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             /*var result = from c in db.NguyenLieux
                          where c.MaNL == txtKho_MaNL.Text
                          select c;
 
             var nl = new NguyenLieu();
             nl = result.First();*/
-            NguyenLieu nl = db.NguyenLieux.Where(p => p.MaNL == txtKho_MaNL.Text).SingleOrDefault();
+            /*NguyenLieu nl = db.NguyenLieux.Where(p => p.MaNL == maNL).SingleOrDefault();
             nl.TenNL = txtKho_TenNL.Text;
             nl.DonVi = txtKho_Donvi.Text;
             nl.SoLuongTon = int.Parse(txtKho_SL.Text);
@@ -1324,7 +1354,7 @@ namespace WindowsFormsTestBunifu
                 db.SaveChanges();
                 LoadDataNguyenLieu();
                 MessageBox.Show("Sửa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }*/
         }
         //Xóa nguyên liệu
         private void btnXoaHDN_Click(object sender, EventArgs e)
