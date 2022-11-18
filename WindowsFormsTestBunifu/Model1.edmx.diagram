@@ -5,40 +5,41 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="674c2a64e654431a8dc2fbae478bad52" Name="Diagram1">
-        <EntityTypeShape EntityType="QLCafeModel.Ban" Width="1.5" PointX="0.75" PointY="11.875" />
+        <EntityTypeShape EntityType="QLCafeModel.Ban" Width="1.5" PointX="3.75" PointY="10.875" />
         <EntityTypeShape EntityType="QLCafeModel.CaLam" Width="1.5" PointX="0.75" PointY="3.875" />
         <EntityTypeShape EntityType="QLCafeModel.ChiTietCaLam" Width="1.5" PointX="3" PointY="4.625" />
-        <EntityTypeShape EntityType="QLCafeModel.ChiTietHDB" Width="1.5" PointX="5.25" PointY="4.625" />
-        <EntityTypeShape EntityType="QLCafeModel.ChiTietHDN" Width="1.5" PointX="8.25" PointY="7.625" />
+        <EntityTypeShape EntityType="QLCafeModel.ChiTietHDB" Width="1.5" PointX="8.25" PointY="7.625" />
+        <EntityTypeShape EntityType="QLCafeModel.ChiTietHDN" Width="1.5" PointX="5.25" PointY="4.625" />
         <EntityTypeShape EntityType="QLCafeModel.ChiTietLuong" Width="1.5" PointX="3" PointY="15.25" />
-        <EntityTypeShape EntityType="QLCafeModel.CongThucDoUong" Width="1.5" PointX="8.25" PointY="4.75" />
-        <EntityTypeShape EntityType="QLCafeModel.DoUong" Width="1.5" PointX="3" PointY="1.625" />
-        <EntityTypeShape EntityType="QLCafeModel.HoaDonBan" Width="1.5" PointX="3" PointY="7.375" />
-        <EntityTypeShape EntityType="QLCafeModel.HoaDonNhap" Width="1.5" PointX="6" PointY="7.5" />
-        <EntityTypeShape EntityType="QLCafeModel.NguyenLieu" Width="1.5" PointX="6" PointY="11.5" />
-        <EntityTypeShape EntityType="QLCafeModel.NhaCungCap" Width="1.5" PointX="3.75" PointY="11.625" />
+        <EntityTypeShape EntityType="QLCafeModel.CongThucDoUong" Width="1.5" PointX="8.25" PointY="4.625" />
+        <EntityTypeShape EntityType="QLCafeModel.DoUong" Width="1.5" PointX="6" PointY="11.625" />
+        <EntityTypeShape EntityType="QLCafeModel.HoaDonBan" Width="1.5" PointX="6" PointY="7.375" />
+        <EntityTypeShape EntityType="QLCafeModel.HoaDonNhap" Width="1.5" PointX="3" PointY="7.5" />
+        <EntityTypeShape EntityType="QLCafeModel.NguyenLieu" Width="1.5" PointX="3" PointY="1.5" />
+        <EntityTypeShape EntityType="QLCafeModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="11.625" />
         <EntityTypeShape EntityType="QLCafeModel.NhanVien" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="QLCafeModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" />
         <EntityTypeShape EntityType="QLCafeModel.TaiKhoan" Width="1.5" PointX="3" PointY="18.25" />
-        <EntityTypeShape EntityType="QLCafeModel.Cau2_view" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="QLCafeModel.Cau6_view" Width="1.5" PointX="7.75" PointY="0.75" />
-        <AssociationConnector Association="QLCafeModel.FK__HoaDonBan__MaBan__48CFD27E" />
-        <AssociationConnector Association="QLCafeModel.FK__ChiTietCaL__MaCa__29572725" />
-        <AssociationConnector Association="QLCafeModel.FK__ChiTietCaL__MaNV__286302EC" />
-        <AssociationConnector Association="QLCafeModel.FK__ChiTietHD__MaHDB__4D94879B" />
-        <AssociationConnector Association="QLCafeModel.FK__ChiTietHDB__MaDU__4E88ABD4" />
-        <AssociationConnector Association="QLCafeModel.FK__ChiTietHD__MaHDN__4222D4EF" />
-        <AssociationConnector Association="QLCafeModel.FK__ChiTietHDN__MaNL__4316F928" />
-        <AssociationConnector Association="QLCafeModel.FK__ChiTietLuo__MaNV__2C3393D0" />
-        <AssociationConnector Association="QLCafeModel.FK__CongThucDo__MaDU__3A81B327" />
-        <AssociationConnector Association="QLCafeModel.FK__CongThucDo__MaNL__3B75D760" />
-        <AssociationConnector Association="QLCafeModel.FK__HoaDonBan__MaNV__49C3F6B7" />
-        <AssociationConnector Association="QLCafeModel.FK__HoaDonNha__MaNCC__3E52440B" />
-        <AssociationConnector Association="QLCafeModel.FK__HoaDonNhap__MaNV__3F466844" />
-        <AssociationConnector Association="QLCafeModel.FK__TaiKhoan__MaNV__2F10007B" />
-        <EntityTypeShape EntityType="QLCafeModel.Cau1_view" Width="1.5" PointX="10.375" PointY="0.75" />
-        <EntityTypeShape EntityType="QLCafeModel.Cau4_view" Width="1.5" PointX="10.375" PointY="3.75" />
-        <EntityTypeShape EntityType="QLCafeModel.Cau5_view" Width="1.5" PointX="10.375" PointY="6.75" />
-        <EntityTypeShape EntityType="QLCafeModel.Cau7_view" Width="1.5" PointX="8.375" PointY="10.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau1_view" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau2_view" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau4_view" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau5_view" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau6_view" Width="1.5" PointX="8.75" PointY="10.75" />
+        <EntityTypeShape EntityType="QLCafeModel.Cau7_view" Width="1.5" PointX="10.75" PointY="9.75" />
+        <AssociationConnector Association="QLCafeModel.FK__HoaDonBan__MaBan__5AEE82B9" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietCaL__MaCa__3B75D760" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietCaL__MaNV__3A81B327" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietHD__MaHDB__5FB337D6" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietHDB__MaDU__60A75C0F" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietHD__MaHDN__5441852A" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietHDN__MaNL__5535A963" />
+        <AssociationConnector Association="QLCafeModel.FK__ChiTietLuo__MaNV__3E52440B" />
+        <AssociationConnector Association="QLCafeModel.FK__CongThucDo__MaDU__4CA06362" />
+        <AssociationConnector Association="QLCafeModel.FK__CongThucDo__MaNL__4D94879B" />
+        <AssociationConnector Association="QLCafeModel.FK__HoaDonBan__MaNV__5BE2A6F2" />
+        <AssociationConnector Association="QLCafeModel.FK__HoaDonNha__MaNCC__5070F446" />
+        <AssociationConnector Association="QLCafeModel.FK__HoaDonNhap__MaNV__5165187F" />
+        <AssociationConnector Association="QLCafeModel.FK__TaiKhoan__MaNV__412EB0B6" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

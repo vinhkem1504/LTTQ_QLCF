@@ -103,6 +103,9 @@ namespace WindowsFormsTestBunifu
                 else
                 {
                     btnCTB_ThanhToanHoaDon.Visible = true;
+                    btnCTB_SuaSP.Enabled = true;
+                    btnCTB_ThemSP.Enabled = true;
+                    btnCTB_XoaSP.Enabled = true;
                 }
                 bpaPages.SelectedIndex = 4;
             }
@@ -437,11 +440,12 @@ namespace WindowsFormsTestBunifu
         // xem lương
         private void btnTTNV_Luong_Click(object sender, EventArgs e)
         {
+            QLCafeEntities1 dt = new QLCafeEntities1();
             int thang = int.Parse(cbbTTNV_Thang.Text);
             int nam = int.Parse(txtTTNV_Nam.Text);
             try
             {
-                var ctl = from ct in db.ChiTietLuongs
+                var ctl = from ct in dt.ChiTietLuongs
                           where ct.MaNV == txtTTNV_MaNV.Text && ct.Thang == thang && nam == ct.Nam
                           select ct;
                 var luong = ctl.First();
@@ -475,6 +479,10 @@ namespace WindowsFormsTestBunifu
             {
                 LoadInfoNhanVien(txtNV_MaNV.Text);
                 bpaPages.SelectedIndex = 7;
+                if(UserInfo.maNV != txtNV_MaNV.Text)
+                {
+                    btnTTNV_ChamCong.Enabled = false;
+                }
             }
             catch
             {
@@ -564,6 +572,8 @@ namespace WindowsFormsTestBunifu
         //Load info nhân viên
         void LoadInfoNhanVien(string maNV)
         {
+            cbbTTNV_CaLV.Items.Clear();
+            cbbTTNV_Thang.Items.Clear();
             txtTTNV_MaNV.Enabled = false;
             var infoNV = db.NhanViens.Find(maNV);
             txtTTNV_MaNV.Text = infoNV.MaNV.ToString();
@@ -588,7 +598,7 @@ namespace WindowsFormsTestBunifu
         {
             //Phải join bảng để có lương
             var result = from c in db.NhanViens
-                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec/*, Luong = c.Luong.ToString() */};
+                         select new { MaNV = c.MaNV, TenNV = c.HoTen, DiaChi = c.DiaChi, SDT = c.SDT, NgaySinh = c.NgaySinh, NgayNhapViec = c.NgayNhanViec, Luong = c.Luong.ToString()};
             dgvNhanVien_DSNV.DataSource = result.ToList();
         }
 
@@ -780,19 +790,27 @@ namespace WindowsFormsTestBunifu
             string[] l_string = lblTenHoaDon.Text.Split(' ');
             string MaHDB = l_string[3];
 
-            var result = from c in db.ChiTietHDBs
-                         where c.MaHDB == MaHDB && c.DoUong.TenDU == cbbCTB_TenSP.Text
-                         select c;
-            var up = new ChiTietHDB();
-            up.MaHDB = result.First().MaHDB;
-            up.MaDU = result.First().MaDU;
-            up.KhuyenMai = result.First().KhuyenMai;
-            up.SoLuongBan = int.Parse(txtCTB_SL.Text);
+            if (cbbCTB_TenSP.Text != "")
+            {
+                var result = from c in db.ChiTietHDBs
+                             where c.MaHDB == MaHDB && c.DoUong.TenDU == cbbCTB_TenSP.Text
+                             select c;
+                var up = new ChiTietHDB();
+                up.MaHDB = result.First().MaHDB;
+                up.MaDU = result.First().MaDU;
+                up.KhuyenMai = result.First().KhuyenMai;
+                up.SoLuongBan = int.Parse(txtCTB_SL.Text);
 
-            db.ChiTietHDBs.Remove(result.First());
-            db.ChiTietHDBs.Add(up);
-            db.SaveChanges();
-            MessageBox.Show("Sửa thành công !");
+                db.ChiTietHDBs.Remove(result.First());
+                db.ChiTietHDBs.Add(up);
+                db.SaveChanges();
+                MessageBox.Show("Sửa thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Chọn sản phẩm trước !");
+                return;
+            }
 
             var result1 = from c in db.ChiTietHDBs
                           where c.MaHDB == MaHDB
@@ -841,10 +859,21 @@ namespace WindowsFormsTestBunifu
         // Thêm SP
         private void addSanPham()
         {
-            var result = from sp in db.DoUongs
-                         where sp.TenDU == cbbCTB_TenSP.Text
-                         select new { sp.MaDU };
-            string maSp = result.First().MaDU;
+            string maSp = "";
+            if (cbbCTB_TenSP.Text != "")
+            {
+                var result = from sp in db.DoUongs
+                             where sp.TenDU == cbbCTB_TenSP.Text
+                             select new { sp.MaDU };
+                maSp = result.First().MaDU;
+            }
+            else
+            {
+                MessageBox.Show("Chọn sản phẩm trước !");
+                return;
+            }
+
+
             var r = new ChiTietHDB();
             string[] l_string = lblTenHoaDon.Text.Split(' ');
             r.MaHDB = l_string[3];
@@ -1417,7 +1446,8 @@ namespace WindowsFormsTestBunifu
             }
             catch (Exception err)
             {
-                throw err;
+                //throw err;
+                MessageBox.Show("Hãy chọn năm muốn xem");
             }
 
         }
@@ -1457,7 +1487,8 @@ namespace WindowsFormsTestBunifu
             }
             catch (Exception err)
             {
-                throw err;
+                //throw err;
+                MessageBox.Show("Hãy chọn năm muốn xem");
             }
 
         }
@@ -1501,7 +1532,7 @@ namespace WindowsFormsTestBunifu
             }
             catch (Exception err)
             {
-                throw err;
+                MessageBox.Show("Hãy chọn năm muốn xem");
             }
         }
     }

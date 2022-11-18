@@ -153,6 +153,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLCafeModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TaiKhoans">
       <EntityTypeMapping TypeName="QLCafeModel.TaiKhoan">
         <MappingFragment StoreEntitySet="TaiKhoan">
@@ -164,30 +175,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Cau2_view">
-      <EntityTypeMapping TypeName="QLCafeModel.Cau2_view">
-        <MappingFragment StoreEntitySet="Cau2_view">
-          <ScalarProperty Name="SLBan" ColumnName="SLBan" />
-          <ScalarProperty Name="TenDU" ColumnName="TenDU" />
-          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Cau6_view">
-      <EntityTypeMapping TypeName="QLCafeModel.Cau6_view">
-        <MappingFragment StoreEntitySet="Cau6_view">
-          <ScalarProperty Name="TriGia" ColumnName="TriGia" />
-          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-          <ScalarProperty Name="MaHDB" ColumnName="MaHDB" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Cau1_view">
       <EntityTypeMapping TypeName="QLCafeModel.Cau1_view">
         <MappingFragment StoreEntitySet="Cau1_view">
           <ScalarProperty Name="MaNL" ColumnName="MaNL" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cau2_view">
+      <EntityTypeMapping TypeName="QLCafeModel.Cau2_view">
+        <MappingFragment StoreEntitySet="Cau2_view">
+          <ScalarProperty Name="SLBan" ColumnName="SLBan" />
           <ScalarProperty Name="TenDU" ColumnName="TenDU" />
           <ScalarProperty Name="MaDU" ColumnName="MaDU" />
         </MappingFragment>
@@ -212,6 +213,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Cau6_view">
+      <EntityTypeMapping TypeName="QLCafeModel.Cau6_view">
+        <MappingFragment StoreEntitySet="Cau6_view">
+          <ScalarProperty Name="TriGia" ColumnName="TriGia" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+          <ScalarProperty Name="MaHDB" ColumnName="MaHDB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Cau7_view">
       <EntityTypeMapping TypeName="QLCafeModel.Cau7_view">
         <MappingFragment StoreEntitySet="Cau7_view">
@@ -220,5 +231,84 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Cau1_function1" FunctionName="QLCafeModel.Store.Cau1_function">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLCafeModel.Cau1_function1_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="NgayNhanViec" ColumnName="NgayNhanViec" />
+          <ScalarProperty Name="Luong" ColumnName="Luong" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="cau2_function1" FunctionName="QLCafeModel.Store.cau2_function">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLCafeModel.cau2_function1_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="NgayNhanViec" ColumnName="NgayNhanViec" />
+          <ScalarProperty Name="Luong" ColumnName="Luong" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Cau2_proc1" FunctionName="QLCafeModel.Store.Cau2_proc" />
+    <FunctionImportMapping FunctionImportName="Cau3_function1" FunctionName="QLCafeModel.Store.Cau3_function" />
+    <FunctionImportMapping FunctionImportName="Cau3_proc1" FunctionName="QLCafeModel.Store.Cau3_proc" />
+    <FunctionImportMapping FunctionImportName="Cau4_func1" FunctionName="QLCafeModel.Store.Cau4_func">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLCafeModel.Cau4_func1_Result">
+          <ScalarProperty Name="MaDU" ColumnName="MaDU" />
+          <ScalarProperty Name="TenDU" ColumnName="TenDU" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Cau5_func1" FunctionName="QLCafeModel.Store.Cau5_func">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLCafeModel.Cau5_func1_Result">
+          <ScalarProperty Name="Số_lượng_tối_đa_có_thể_làm" ColumnName="Số lượng tối đa có thể làm" />
+          <ScalarProperty Name="Đơn_vị" ColumnName="Đơn vị" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Cau6_func1" FunctionName="QLCafeModel.Store.Cau6_func">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLCafeModel.Cau6_func1_Result">
+          <ScalarProperty Name="MaBan" ColumnName="MaBan" />
+          <ScalarProperty Name="SoKhachNgoi" ColumnName="SoKhachNgoi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pro1" FunctionName="QLCafeModel.Store.pro" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLCafeModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLCafeModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLCafeModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLCafeModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLCafeModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QLCafeModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLCafeModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLCafeModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLCafeModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

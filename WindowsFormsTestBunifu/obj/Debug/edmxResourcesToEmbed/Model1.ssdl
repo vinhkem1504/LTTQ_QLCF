@@ -122,6 +122,16 @@
     <Property Name="NgayNhanViec" Type="datetime" Nullable="false" />
     <Property Name="Luong" Type="money" Nullable="false" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
       <PropertyRef Name="TenTK" />
@@ -157,6 +167,11 @@ warning 6002: The table/view 'QLCafe.dbo.Cau2_view' does not have a primary key 
     <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="SLBan" Type="int" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'QLCafe.dbo.Cau3_view' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Cau3_view">
+          <Property Name="ThangDoanhSoCaoNhat2021" Type="int" />
+        </EntityType>-->
   <!--Errors Found During Generation:
 warning 6002: The table/view 'QLCafe.dbo.Cau4_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Cau4_view">
@@ -204,7 +219,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
     <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="SoLanDiLam" Type="int" />
   </EntityType>
-  <Association Name="FK__ChiTietCaL__MaCa__29572725">
+  <Association Name="FK__ChiTietCaL__MaCa__3B75D760">
     <End Role="CaLam" Type="Self.CaLam" Multiplicity="1" />
     <End Role="ChiTietCaLam" Type="Self.ChiTietCaLam" Multiplicity="*" />
     <ReferentialConstraint>
@@ -216,7 +231,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietCaL__MaNV__286302EC">
+  <Association Name="FK__ChiTietCaL__MaNV__3A81B327">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="ChiTietCaLam" Type="Self.ChiTietCaLam" Multiplicity="*" />
     <ReferentialConstraint>
@@ -228,7 +243,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietHD__MaHDB__4D94879B">
+  <Association Name="FK__ChiTietHD__MaHDB__5FB337D6">
     <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="1" />
     <End Role="ChiTietHDB" Type="Self.ChiTietHDB" Multiplicity="*" />
     <ReferentialConstraint>
@@ -240,7 +255,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietHD__MaHDN__4222D4EF">
+  <Association Name="FK__ChiTietHD__MaHDN__5441852A">
     <End Role="HoaDonNhap" Type="Self.HoaDonNhap" Multiplicity="1" />
     <End Role="ChiTietHDN" Type="Self.ChiTietHDN" Multiplicity="*" />
     <ReferentialConstraint>
@@ -252,7 +267,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietHDB__MaDU__4E88ABD4">
+  <Association Name="FK__ChiTietHDB__MaDU__60A75C0F">
     <End Role="DoUong" Type="Self.DoUong" Multiplicity="1" />
     <End Role="ChiTietHDB" Type="Self.ChiTietHDB" Multiplicity="*" />
     <ReferentialConstraint>
@@ -264,7 +279,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietHDN__MaNL__4316F928">
+  <Association Name="FK__ChiTietHDN__MaNL__5535A963">
     <End Role="NguyenLieu" Type="Self.NguyenLieu" Multiplicity="1" />
     <End Role="ChiTietHDN" Type="Self.ChiTietHDN" Multiplicity="*" />
     <ReferentialConstraint>
@@ -276,7 +291,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietLuo__MaNV__2C3393D0">
+  <Association Name="FK__ChiTietLuo__MaNV__3E52440B">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="ChiTietLuong" Type="Self.ChiTietLuong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -288,7 +303,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CongThucDo__MaDU__3A81B327">
+  <Association Name="FK__CongThucDo__MaDU__4CA06362">
     <End Role="DoUong" Type="Self.DoUong" Multiplicity="1" />
     <End Role="CongThucDoUong" Type="Self.CongThucDoUong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -300,7 +315,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CongThucDo__MaNL__3B75D760">
+  <Association Name="FK__CongThucDo__MaNL__4D94879B">
     <End Role="NguyenLieu" Type="Self.NguyenLieu" Multiplicity="1" />
     <End Role="CongThucDoUong" Type="Self.CongThucDoUong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -312,7 +327,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDonBan__MaBan__48CFD27E">
+  <Association Name="FK__HoaDonBan__MaBan__5AEE82B9">
     <End Role="Ban" Type="Self.Ban" Multiplicity="1" />
     <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="*" />
     <ReferentialConstraint>
@@ -324,7 +339,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDonBan__MaNV__49C3F6B7">
+  <Association Name="FK__HoaDonBan__MaNV__5BE2A6F2">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="*" />
     <ReferentialConstraint>
@@ -336,7 +351,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDonNha__MaNCC__3E52440B">
+  <Association Name="FK__HoaDonNha__MaNCC__5070F446">
     <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="1" />
     <End Role="HoaDonNhap" Type="Self.HoaDonNhap" Multiplicity="*" />
     <ReferentialConstraint>
@@ -348,7 +363,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDonNhap__MaNV__3F466844">
+  <Association Name="FK__HoaDonNhap__MaNV__5165187F">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="HoaDonNhap" Type="Self.HoaDonNhap" Multiplicity="*" />
     <ReferentialConstraint>
@@ -360,7 +375,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TaiKhoan__MaNV__2F10007B">
+  <Association Name="FK__TaiKhoan__MaNV__412EB0B6">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
     <ReferentialConstraint>
@@ -372,10 +387,99 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="Cau1_function" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nam" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+          <Property Name="NgayNhanViec" Type="datetime" Nullable="false" />
+          <Property Name="Luong" Type="money" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
   <Function Name="Cau1_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaDoUong" Type="nvarchar" Mode="In" />
     <Parameter Name="Nam" Type="int" Mode="In" />
     <Parameter Name="SL" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="cau2_function" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Sonam" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MaNV" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+          <Property Name="NgayNhanViec" Type="datetime" Nullable="false" />
+          <Property Name="Luong" Type="money" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Cau2_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaNhanVien" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nam" Type="int" Mode="In" />
+    <Parameter Name="HDN" Type="int" Mode="InOut" />
+    <Parameter Name="HDB" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="Cau3_function" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NCC" Type="nvarchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="TenNL" Type="nvarchar" MaxLength="255" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Cau3_proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaNhanVien" Type="nvarchar" Mode="In" />
+    <Parameter Name="Ten" Type="nvarchar" Mode="InOut" />
+    <Parameter Name="SDT" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="Cau4_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SoTrang" Type="int" Mode="In" />
+    <Parameter Name="KichThuocTrang" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MaDU" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenDU" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DonGia" Type="money" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Cau5_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaDoUong" Type="nvarchar(max)" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Số lượng tối đa có thể làm" Type="float" />
+          <Property Name="Đơn vị" Type="nvarchar" MaxLength="3" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Cau6_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="thang" Type="int" Mode="In" />
+    <Parameter Name="nam" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MaBan" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SoKhachNgoi" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
   </Function>
   <Function Name="cau7_func" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="nam" Type="int" Mode="In" />
@@ -409,6 +513,41 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
       </CollectionType>
     </ReturnType>
   </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="pro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaBan" Type="nvarchar" Mode="In" />
+    <Parameter Name="TrangThai" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="QLCafeModelStoreContainer">
     <EntitySet Name="Ban" EntityType="Self.Ban" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CaLam" EntityType="Self.CaLam" Schema="dbo" store:Type="Tables" />
@@ -423,6 +562,7 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
     <EntitySet Name="NguyenLieu" EntityType="Self.NguyenLieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Cau1_view" EntityType="Self.Cau1_view" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -468,59 +608,59 @@ warning 6002: The table/view 'QLCafe.dbo.Cau7_view' does not have a primary key 
     [Cau7_view].[SoLanDiLam] AS [SoLanDiLam]
     FROM [dbo].[Cau7_view] AS [Cau7_view]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__ChiTietCaL__MaCa__29572725" Association="Self.FK__ChiTietCaL__MaCa__29572725">
+    <AssociationSet Name="FK__ChiTietCaL__MaCa__3B75D760" Association="Self.FK__ChiTietCaL__MaCa__3B75D760">
       <End Role="CaLam" EntitySet="CaLam" />
       <End Role="ChiTietCaLam" EntitySet="ChiTietCaLam" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietCaL__MaNV__286302EC" Association="Self.FK__ChiTietCaL__MaNV__286302EC">
+    <AssociationSet Name="FK__ChiTietCaL__MaNV__3A81B327" Association="Self.FK__ChiTietCaL__MaNV__3A81B327">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="ChiTietCaLam" EntitySet="ChiTietCaLam" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHD__MaHDB__4D94879B" Association="Self.FK__ChiTietHD__MaHDB__4D94879B">
+    <AssociationSet Name="FK__ChiTietHD__MaHDB__5FB337D6" Association="Self.FK__ChiTietHD__MaHDB__5FB337D6">
       <End Role="HoaDonBan" EntitySet="HoaDonBan" />
       <End Role="ChiTietHDB" EntitySet="ChiTietHDB" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHD__MaHDN__4222D4EF" Association="Self.FK__ChiTietHD__MaHDN__4222D4EF">
+    <AssociationSet Name="FK__ChiTietHD__MaHDN__5441852A" Association="Self.FK__ChiTietHD__MaHDN__5441852A">
       <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
       <End Role="ChiTietHDN" EntitySet="ChiTietHDN" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHDB__MaDU__4E88ABD4" Association="Self.FK__ChiTietHDB__MaDU__4E88ABD4">
+    <AssociationSet Name="FK__ChiTietHDB__MaDU__60A75C0F" Association="Self.FK__ChiTietHDB__MaDU__60A75C0F">
       <End Role="DoUong" EntitySet="DoUong" />
       <End Role="ChiTietHDB" EntitySet="ChiTietHDB" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHDN__MaNL__4316F928" Association="Self.FK__ChiTietHDN__MaNL__4316F928">
+    <AssociationSet Name="FK__ChiTietHDN__MaNL__5535A963" Association="Self.FK__ChiTietHDN__MaNL__5535A963">
       <End Role="NguyenLieu" EntitySet="NguyenLieu" />
       <End Role="ChiTietHDN" EntitySet="ChiTietHDN" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietLuo__MaNV__2C3393D0" Association="Self.FK__ChiTietLuo__MaNV__2C3393D0">
+    <AssociationSet Name="FK__ChiTietLuo__MaNV__3E52440B" Association="Self.FK__ChiTietLuo__MaNV__3E52440B">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="ChiTietLuong" EntitySet="ChiTietLuong" />
     </AssociationSet>
-    <AssociationSet Name="FK__CongThucDo__MaDU__3A81B327" Association="Self.FK__CongThucDo__MaDU__3A81B327">
+    <AssociationSet Name="FK__CongThucDo__MaDU__4CA06362" Association="Self.FK__CongThucDo__MaDU__4CA06362">
       <End Role="DoUong" EntitySet="DoUong" />
       <End Role="CongThucDoUong" EntitySet="CongThucDoUong" />
     </AssociationSet>
-    <AssociationSet Name="FK__CongThucDo__MaNL__3B75D760" Association="Self.FK__CongThucDo__MaNL__3B75D760">
+    <AssociationSet Name="FK__CongThucDo__MaNL__4D94879B" Association="Self.FK__CongThucDo__MaNL__4D94879B">
       <End Role="NguyenLieu" EntitySet="NguyenLieu" />
       <End Role="CongThucDoUong" EntitySet="CongThucDoUong" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonBan__MaBan__48CFD27E" Association="Self.FK__HoaDonBan__MaBan__48CFD27E">
+    <AssociationSet Name="FK__HoaDonBan__MaBan__5AEE82B9" Association="Self.FK__HoaDonBan__MaBan__5AEE82B9">
       <End Role="Ban" EntitySet="Ban" />
       <End Role="HoaDonBan" EntitySet="HoaDonBan" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonBan__MaNV__49C3F6B7" Association="Self.FK__HoaDonBan__MaNV__49C3F6B7">
+    <AssociationSet Name="FK__HoaDonBan__MaNV__5BE2A6F2" Association="Self.FK__HoaDonBan__MaNV__5BE2A6F2">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="HoaDonBan" EntitySet="HoaDonBan" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonNha__MaNCC__3E52440B" Association="Self.FK__HoaDonNha__MaNCC__3E52440B">
+    <AssociationSet Name="FK__HoaDonNha__MaNCC__5070F446" Association="Self.FK__HoaDonNha__MaNCC__5070F446">
       <End Role="NhaCungCap" EntitySet="NhaCungCap" />
       <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonNhap__MaNV__3F466844" Association="Self.FK__HoaDonNhap__MaNV__3F466844">
+    <AssociationSet Name="FK__HoaDonNhap__MaNV__5165187F" Association="Self.FK__HoaDonNhap__MaNV__5165187F">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
     </AssociationSet>
-    <AssociationSet Name="FK__TaiKhoan__MaNV__2F10007B" Association="Self.FK__TaiKhoan__MaNV__2F10007B">
+    <AssociationSet Name="FK__TaiKhoan__MaNV__412EB0B6" Association="Self.FK__TaiKhoan__MaNV__412EB0B6">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="TaiKhoan" EntitySet="TaiKhoan" />
     </AssociationSet>

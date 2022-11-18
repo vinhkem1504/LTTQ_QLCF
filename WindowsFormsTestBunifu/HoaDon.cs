@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -76,7 +77,7 @@ namespace WindowsFormsTestBunifu
             db.SaveChanges();
 
 
-            /*Excel.Application exApp = new Excel.Application();
+            Excel.Application exApp = new Excel.Application();
             Excel.Workbook exBook = exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
             Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
             try
@@ -174,12 +175,12 @@ namespace WindowsFormsTestBunifu
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }*/
-            if (MessageBox.Show("Đã in hóa đơn thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            }
+            /*if (MessageBox.Show("Đã in hóa đơn thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 success = true;
                 this.Close();
-            }
+            }*/
         }
 
         private void txtKhachTra_TextChanged(object sender, EventArgs e)

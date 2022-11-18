@@ -40,12 +40,13 @@ namespace WindowsFormsTestBunifu
         public virtual DbSet<NguyenLieu> NguyenLieux { get; set; }
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
-        public virtual DbSet<Cau2_view> Cau2_view { get; set; }
-        public virtual DbSet<Cau6_view> Cau6_view { get; set; }
         public virtual DbSet<Cau1_view> Cau1_view { get; set; }
+        public virtual DbSet<Cau2_view> Cau2_view { get; set; }
         public virtual DbSet<Cau4_view> Cau4_view { get; set; }
         public virtual DbSet<Cau5_view> Cau5_view { get; set; }
+        public virtual DbSet<Cau6_view> Cau6_view { get; set; }
         public virtual DbSet<Cau7_view> Cau7_view { get; set; }
     
         [DbFunction("QLCafeEntities1", "Cau1_function")]
@@ -210,6 +211,212 @@ namespace WindowsFormsTestBunifu
                 new ObjectParameter("TrangThai", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pro", maBanParameter, trangThaiParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "Cau1_function1")]
+        public virtual IQueryable<Cau1_function1_Result> Cau1_function1(Nullable<System.DateTime> nam)
+        {
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("Nam", nam) :
+                new ObjectParameter("Nam", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Cau1_function1_Result>("[QLCafeEntities1].[Cau1_function1](@Nam)", namParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "cau2_function1")]
+        public virtual IQueryable<cau2_function1_Result> cau2_function1(Nullable<int> sonam)
+        {
+            var sonamParameter = sonam.HasValue ?
+                new ObjectParameter("Sonam", sonam) :
+                new ObjectParameter("Sonam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<cau2_function1_Result>("[QLCafeEntities1].[cau2_function1](@Sonam)", sonamParameter);
+        }
+    
+        public virtual int Cau2_proc1(string maNhanVien, Nullable<int> nam, ObjectParameter hDN, ObjectParameter hDB)
+        {
+            var maNhanVienParameter = maNhanVien != null ?
+                new ObjectParameter("MaNhanVien", maNhanVien) :
+                new ObjectParameter("MaNhanVien", typeof(string));
+    
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("Nam", nam) :
+                new ObjectParameter("Nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau2_proc1", maNhanVienParameter, namParameter, hDN, hDB);
+        }
+    
+        [DbFunction("QLCafeEntities1", "Cau3_function1")]
+        public virtual IQueryable<string> Cau3_function1(string nCC)
+        {
+            var nCCParameter = nCC != null ?
+                new ObjectParameter("NCC", nCC) :
+                new ObjectParameter("NCC", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<string>("[QLCafeEntities1].[Cau3_function1](@NCC)", nCCParameter);
+        }
+    
+        public virtual int Cau3_proc1(string maNhanVien, ObjectParameter ten, ObjectParameter sDT)
+        {
+            var maNhanVienParameter = maNhanVien != null ?
+                new ObjectParameter("MaNhanVien", maNhanVien) :
+                new ObjectParameter("MaNhanVien", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cau3_proc1", maNhanVienParameter, ten, sDT);
+        }
+    
+        [DbFunction("QLCafeEntities1", "Cau4_func1")]
+        public virtual IQueryable<Cau4_func1_Result> Cau4_func1(Nullable<int> soTrang, Nullable<int> kichThuocTrang)
+        {
+            var soTrangParameter = soTrang.HasValue ?
+                new ObjectParameter("SoTrang", soTrang) :
+                new ObjectParameter("SoTrang", typeof(int));
+    
+            var kichThuocTrangParameter = kichThuocTrang.HasValue ?
+                new ObjectParameter("KichThuocTrang", kichThuocTrang) :
+                new ObjectParameter("KichThuocTrang", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Cau4_func1_Result>("[QLCafeEntities1].[Cau4_func1](@SoTrang, @KichThuocTrang)", soTrangParameter, kichThuocTrangParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "Cau5_func1")]
+        public virtual IQueryable<Cau5_func1_Result> Cau5_func1(string maDoUong)
+        {
+            var maDoUongParameter = maDoUong != null ?
+                new ObjectParameter("MaDoUong", maDoUong) :
+                new ObjectParameter("MaDoUong", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Cau5_func1_Result>("[QLCafeEntities1].[Cau5_func1](@MaDoUong)", maDoUongParameter);
+        }
+    
+        [DbFunction("QLCafeEntities1", "Cau6_func1")]
+        public virtual IQueryable<Cau6_func1_Result> Cau6_func1(Nullable<int> thang, Nullable<int> nam)
+        {
+            var thangParameter = thang.HasValue ?
+                new ObjectParameter("thang", thang) :
+                new ObjectParameter("thang", typeof(int));
+    
+            var namParameter = nam.HasValue ?
+                new ObjectParameter("nam", nam) :
+                new ObjectParameter("nam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Cau6_func1_Result>("[QLCafeEntities1].[Cau6_func1](@thang, @nam)", thangParameter, namParameter);
+        }
+    
+        public virtual int pro1(string maBan, string trangThai)
+        {
+            var maBanParameter = maBan != null ?
+                new ObjectParameter("MaBan", maBan) :
+                new ObjectParameter("MaBan", typeof(string));
+    
+            var trangThaiParameter = trangThai != null ?
+                new ObjectParameter("TrangThai", trangThai) :
+                new ObjectParameter("TrangThai", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pro1", maBanParameter, trangThaiParameter);
+        }
+    
+        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var new_diagramnameParameter = new_diagramname != null ?
+                new ObjectParameter("new_diagramname", new_diagramname) :
+                new ObjectParameter("new_diagramname", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
+        }
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     }
 }

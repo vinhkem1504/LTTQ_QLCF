@@ -116,69 +116,135 @@
     <EntitySet Name="NguyenLieux" EntityType="QLCafeModel.NguyenLieu" />
     <EntitySet Name="NhaCungCaps" EntityType="QLCafeModel.NhaCungCap" />
     <EntitySet Name="NhanViens" EntityType="QLCafeModel.NhanVien" />
+    <EntitySet Name="sysdiagrams" EntityType="QLCafeModel.sysdiagram" />
     <EntitySet Name="TaiKhoans" EntityType="QLCafeModel.TaiKhoan" />
+    <EntitySet Name="Cau1_view" EntityType="QLCafeModel.Cau1_view" />
     <EntitySet Name="Cau2_view" EntityType="QLCafeModel.Cau2_view" />
+    <EntitySet Name="Cau4_view" EntityType="QLCafeModel.Cau4_view" />
+    <EntitySet Name="Cau5_view" EntityType="QLCafeModel.Cau5_view" />
     <EntitySet Name="Cau6_view" EntityType="QLCafeModel.Cau6_view" />
-    <AssociationSet Name="FK__HoaDonBan__MaBan__48CFD27E" Association="QLCafeModel.FK__HoaDonBan__MaBan__48CFD27E">
+    <EntitySet Name="Cau7_view" EntityType="QLCafeModel.Cau7_view" />
+    <AssociationSet Name="FK__HoaDonBan__MaBan__5AEE82B9" Association="QLCafeModel.FK__HoaDonBan__MaBan__5AEE82B9">
       <End Role="Ban" EntitySet="Bans" />
       <End Role="HoaDonBan" EntitySet="HoaDonBans" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietCaL__MaCa__29572725" Association="QLCafeModel.FK__ChiTietCaL__MaCa__29572725">
+    <AssociationSet Name="FK__ChiTietCaL__MaCa__3B75D760" Association="QLCafeModel.FK__ChiTietCaL__MaCa__3B75D760">
       <End Role="CaLam" EntitySet="CaLams" />
       <End Role="ChiTietCaLam" EntitySet="ChiTietCaLams" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietCaL__MaNV__286302EC" Association="QLCafeModel.FK__ChiTietCaL__MaNV__286302EC">
+    <AssociationSet Name="FK__ChiTietCaL__MaNV__3A81B327" Association="QLCafeModel.FK__ChiTietCaL__MaNV__3A81B327">
       <End Role="NhanVien" EntitySet="NhanViens" />
       <End Role="ChiTietCaLam" EntitySet="ChiTietCaLams" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHD__MaHDB__4D94879B" Association="QLCafeModel.FK__ChiTietHD__MaHDB__4D94879B">
+    <AssociationSet Name="FK__ChiTietHD__MaHDB__5FB337D6" Association="QLCafeModel.FK__ChiTietHD__MaHDB__5FB337D6">
       <End Role="HoaDonBan" EntitySet="HoaDonBans" />
       <End Role="ChiTietHDB" EntitySet="ChiTietHDBs" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHDB__MaDU__4E88ABD4" Association="QLCafeModel.FK__ChiTietHDB__MaDU__4E88ABD4">
+    <AssociationSet Name="FK__ChiTietHDB__MaDU__60A75C0F" Association="QLCafeModel.FK__ChiTietHDB__MaDU__60A75C0F">
       <End Role="DoUong" EntitySet="DoUongs" />
       <End Role="ChiTietHDB" EntitySet="ChiTietHDBs" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHD__MaHDN__4222D4EF" Association="QLCafeModel.FK__ChiTietHD__MaHDN__4222D4EF">
+    <AssociationSet Name="FK__ChiTietHD__MaHDN__5441852A" Association="QLCafeModel.FK__ChiTietHD__MaHDN__5441852A">
       <End Role="HoaDonNhap" EntitySet="HoaDonNhaps" />
       <End Role="ChiTietHDN" EntitySet="ChiTietHDNs" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHDN__MaNL__4316F928" Association="QLCafeModel.FK__ChiTietHDN__MaNL__4316F928">
+    <AssociationSet Name="FK__ChiTietHDN__MaNL__5535A963" Association="QLCafeModel.FK__ChiTietHDN__MaNL__5535A963">
       <End Role="NguyenLieu" EntitySet="NguyenLieux" />
       <End Role="ChiTietHDN" EntitySet="ChiTietHDNs" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietLuo__MaNV__2C3393D0" Association="QLCafeModel.FK__ChiTietLuo__MaNV__2C3393D0">
+    <AssociationSet Name="FK__ChiTietLuo__MaNV__3E52440B" Association="QLCafeModel.FK__ChiTietLuo__MaNV__3E52440B">
       <End Role="NhanVien" EntitySet="NhanViens" />
       <End Role="ChiTietLuong" EntitySet="ChiTietLuongs" />
     </AssociationSet>
-    <AssociationSet Name="FK__CongThucDo__MaDU__3A81B327" Association="QLCafeModel.FK__CongThucDo__MaDU__3A81B327">
+    <AssociationSet Name="FK__CongThucDo__MaDU__4CA06362" Association="QLCafeModel.FK__CongThucDo__MaDU__4CA06362">
       <End Role="DoUong" EntitySet="DoUongs" />
       <End Role="CongThucDoUong" EntitySet="CongThucDoUongs" />
     </AssociationSet>
-    <AssociationSet Name="FK__CongThucDo__MaNL__3B75D760" Association="QLCafeModel.FK__CongThucDo__MaNL__3B75D760">
+    <AssociationSet Name="FK__CongThucDo__MaNL__4D94879B" Association="QLCafeModel.FK__CongThucDo__MaNL__4D94879B">
       <End Role="NguyenLieu" EntitySet="NguyenLieux" />
       <End Role="CongThucDoUong" EntitySet="CongThucDoUongs" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonBan__MaNV__49C3F6B7" Association="QLCafeModel.FK__HoaDonBan__MaNV__49C3F6B7">
+    <AssociationSet Name="FK__HoaDonBan__MaNV__5BE2A6F2" Association="QLCafeModel.FK__HoaDonBan__MaNV__5BE2A6F2">
       <End Role="NhanVien" EntitySet="NhanViens" />
       <End Role="HoaDonBan" EntitySet="HoaDonBans" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonNha__MaNCC__3E52440B" Association="QLCafeModel.FK__HoaDonNha__MaNCC__3E52440B">
+    <AssociationSet Name="FK__HoaDonNha__MaNCC__5070F446" Association="QLCafeModel.FK__HoaDonNha__MaNCC__5070F446">
       <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
       <End Role="HoaDonNhap" EntitySet="HoaDonNhaps" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDonNhap__MaNV__3F466844" Association="QLCafeModel.FK__HoaDonNhap__MaNV__3F466844">
+    <AssociationSet Name="FK__HoaDonNhap__MaNV__5165187F" Association="QLCafeModel.FK__HoaDonNhap__MaNV__5165187F">
       <End Role="NhanVien" EntitySet="NhanViens" />
       <End Role="HoaDonNhap" EntitySet="HoaDonNhaps" />
     </AssociationSet>
-    <AssociationSet Name="FK__TaiKhoan__MaNV__2F10007B" Association="QLCafeModel.FK__TaiKhoan__MaNV__2F10007B">
+    <AssociationSet Name="FK__TaiKhoan__MaNV__412EB0B6" Association="QLCafeModel.FK__TaiKhoan__MaNV__412EB0B6">
       <End Role="NhanVien" EntitySet="NhanViens" />
       <End Role="TaiKhoan" EntitySet="TaiKhoans" />
     </AssociationSet>
-    <EntitySet Name="Cau1_view" EntityType="QLCafeModel.Cau1_view" />
-    <EntitySet Name="Cau4_view" EntityType="QLCafeModel.Cau4_view" />
-    <EntitySet Name="Cau5_view" EntityType="QLCafeModel.Cau5_view" />
-    <EntitySet Name="Cau7_view" EntityType="QLCafeModel.Cau7_view" />
+    <FunctionImport Name="Cau1_function1" IsComposable="true" ReturnType="Collection(QLCafeModel.Cau1_function1_Result)">
+      <Parameter Name="Nam" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="cau2_function1" IsComposable="true" ReturnType="Collection(QLCafeModel.cau2_function1_Result)">
+      <Parameter Name="Sonam" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Cau2_proc1">
+      <Parameter Name="MaNhanVien" Mode="In" Type="String" />
+      <Parameter Name="Nam" Mode="In" Type="Int32" />
+      <Parameter Name="HDN" Mode="InOut" Type="Int32" />
+      <Parameter Name="HDB" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Cau3_function1" IsComposable="true" ReturnType="Collection(String)">
+      <Parameter Name="NCC" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cau3_proc1">
+      <Parameter Name="MaNhanVien" Mode="In" Type="String" />
+      <Parameter Name="Ten" Mode="InOut" Type="String" />
+      <Parameter Name="SDT" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cau4_func1" IsComposable="true" ReturnType="Collection(QLCafeModel.Cau4_func1_Result)">
+      <Parameter Name="SoTrang" Mode="In" Type="Int32" />
+      <Parameter Name="KichThuocTrang" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Cau5_func1" IsComposable="true" ReturnType="Collection(QLCafeModel.Cau5_func1_Result)">
+      <Parameter Name="MaDoUong" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cau6_func1" IsComposable="true" ReturnType="Collection(QLCafeModel.Cau6_func1_Result)">
+      <Parameter Name="thang" Mode="In" Type="Int32" />
+      <Parameter Name="nam" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pro1">
+      <Parameter Name="MaBan" Mode="In" Type="String" />
+      <Parameter Name="TrangThai" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QLCafeModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QLCafeModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
   <EntityType Name="Ban">
     <Key>
@@ -186,7 +252,7 @@
     </Key>
     <Property Name="MaBan" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="TrangThai" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="HoaDonBans" Relationship="QLCafeModel.FK__HoaDonBan__MaBan__48CFD27E" FromRole="Ban" ToRole="HoaDonBan" />
+    <NavigationProperty Name="HoaDonBans" Relationship="QLCafeModel.FK__HoaDonBan__MaBan__5AEE82B9" FromRole="Ban" ToRole="HoaDonBan" />
   </EntityType>
   <EntityType Name="CaLam">
     <Key>
@@ -194,7 +260,7 @@
     </Key>
     <Property Name="MaCa" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="TenCa" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="ChiTietCaLams" Relationship="QLCafeModel.FK__ChiTietCaL__MaCa__29572725" FromRole="CaLam" ToRole="ChiTietCaLam" />
+    <NavigationProperty Name="ChiTietCaLams" Relationship="QLCafeModel.FK__ChiTietCaL__MaCa__3B75D760" FromRole="CaLam" ToRole="ChiTietCaLam" />
   </EntityType>
   <EntityType Name="ChiTietCaLam">
     <Key>
@@ -205,8 +271,8 @@
     <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="MaCa" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="NgayLamViec" Type="DateTime" Nullable="false" Precision="0" />
-    <NavigationProperty Name="CaLam" Relationship="QLCafeModel.FK__ChiTietCaL__MaCa__29572725" FromRole="ChiTietCaLam" ToRole="CaLam" />
-    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__ChiTietCaL__MaNV__286302EC" FromRole="ChiTietCaLam" ToRole="NhanVien" />
+    <NavigationProperty Name="CaLam" Relationship="QLCafeModel.FK__ChiTietCaL__MaCa__3B75D760" FromRole="ChiTietCaLam" ToRole="CaLam" />
+    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__ChiTietCaL__MaNV__3A81B327" FromRole="ChiTietCaLam" ToRole="NhanVien" />
   </EntityType>
   <EntityType Name="ChiTietHDB">
     <Key>
@@ -217,8 +283,8 @@
     <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="SoLuongBan" Type="Int32" />
     <Property Name="KhuyenMai" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="HoaDonBan" Relationship="QLCafeModel.FK__ChiTietHD__MaHDB__4D94879B" FromRole="ChiTietHDB" ToRole="HoaDonBan" />
-    <NavigationProperty Name="DoUong" Relationship="QLCafeModel.FK__ChiTietHDB__MaDU__4E88ABD4" FromRole="ChiTietHDB" ToRole="DoUong" />
+    <NavigationProperty Name="HoaDonBan" Relationship="QLCafeModel.FK__ChiTietHD__MaHDB__5FB337D6" FromRole="ChiTietHDB" ToRole="HoaDonBan" />
+    <NavigationProperty Name="DoUong" Relationship="QLCafeModel.FK__ChiTietHDB__MaDU__60A75C0F" FromRole="ChiTietHDB" ToRole="DoUong" />
   </EntityType>
   <EntityType Name="ChiTietHDN">
     <Key>
@@ -228,8 +294,8 @@
     <Property Name="MaHDN" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="MaNL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="SoLuongNhap" Type="Double" />
-    <NavigationProperty Name="HoaDonNhap" Relationship="QLCafeModel.FK__ChiTietHD__MaHDN__4222D4EF" FromRole="ChiTietHDN" ToRole="HoaDonNhap" />
-    <NavigationProperty Name="NguyenLieu" Relationship="QLCafeModel.FK__ChiTietHDN__MaNL__4316F928" FromRole="ChiTietHDN" ToRole="NguyenLieu" />
+    <NavigationProperty Name="HoaDonNhap" Relationship="QLCafeModel.FK__ChiTietHD__MaHDN__5441852A" FromRole="ChiTietHDN" ToRole="HoaDonNhap" />
+    <NavigationProperty Name="NguyenLieu" Relationship="QLCafeModel.FK__ChiTietHDN__MaNL__5535A963" FromRole="ChiTietHDN" ToRole="NguyenLieu" />
   </EntityType>
   <EntityType Name="ChiTietLuong">
     <Key>
@@ -242,7 +308,7 @@
     <Property Name="Nam" Type="Int32" Nullable="false" />
     <Property Name="SoNgayLamViec" Type="Int32" />
     <Property Name="Luong" Type="Decimal" Precision="19" Scale="4" />
-    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__ChiTietLuo__MaNV__2C3393D0" FromRole="ChiTietLuong" ToRole="NhanVien" />
+    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__ChiTietLuo__MaNV__3E52440B" FromRole="ChiTietLuong" ToRole="NhanVien" />
   </EntityType>
   <EntityType Name="CongThucDoUong">
     <Key>
@@ -252,8 +318,8 @@
     <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="MaNL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="SoLuong" Type="Double" />
-    <NavigationProperty Name="DoUong" Relationship="QLCafeModel.FK__CongThucDo__MaDU__3A81B327" FromRole="CongThucDoUong" ToRole="DoUong" />
-    <NavigationProperty Name="NguyenLieu" Relationship="QLCafeModel.FK__CongThucDo__MaNL__3B75D760" FromRole="CongThucDoUong" ToRole="NguyenLieu" />
+    <NavigationProperty Name="DoUong" Relationship="QLCafeModel.FK__CongThucDo__MaDU__4CA06362" FromRole="CongThucDoUong" ToRole="DoUong" />
+    <NavigationProperty Name="NguyenLieu" Relationship="QLCafeModel.FK__CongThucDo__MaNL__4D94879B" FromRole="CongThucDoUong" ToRole="NguyenLieu" />
   </EntityType>
   <EntityType Name="DoUong">
     <Key>
@@ -262,8 +328,8 @@
     <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-    <NavigationProperty Name="ChiTietHDBs" Relationship="QLCafeModel.FK__ChiTietHDB__MaDU__4E88ABD4" FromRole="DoUong" ToRole="ChiTietHDB" />
-    <NavigationProperty Name="CongThucDoUongs" Relationship="QLCafeModel.FK__CongThucDo__MaDU__3A81B327" FromRole="DoUong" ToRole="CongThucDoUong" />
+    <NavigationProperty Name="ChiTietHDBs" Relationship="QLCafeModel.FK__ChiTietHDB__MaDU__60A75C0F" FromRole="DoUong" ToRole="ChiTietHDB" />
+    <NavigationProperty Name="CongThucDoUongs" Relationship="QLCafeModel.FK__CongThucDo__MaDU__4CA06362" FromRole="DoUong" ToRole="CongThucDoUong" />
   </EntityType>
   <EntityType Name="HoaDonBan">
     <Key>
@@ -274,9 +340,9 @@
     <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="TrangThai" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Ban" Relationship="QLCafeModel.FK__HoaDonBan__MaBan__48CFD27E" FromRole="HoaDonBan" ToRole="Ban" />
-    <NavigationProperty Name="ChiTietHDBs" Relationship="QLCafeModel.FK__ChiTietHD__MaHDB__4D94879B" FromRole="HoaDonBan" ToRole="ChiTietHDB" />
-    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__HoaDonBan__MaNV__49C3F6B7" FromRole="HoaDonBan" ToRole="NhanVien" />
+    <NavigationProperty Name="Ban" Relationship="QLCafeModel.FK__HoaDonBan__MaBan__5AEE82B9" FromRole="HoaDonBan" ToRole="Ban" />
+    <NavigationProperty Name="ChiTietHDBs" Relationship="QLCafeModel.FK__ChiTietHD__MaHDB__5FB337D6" FromRole="HoaDonBan" ToRole="ChiTietHDB" />
+    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__HoaDonBan__MaNV__5BE2A6F2" FromRole="HoaDonBan" ToRole="NhanVien" />
   </EntityType>
   <EntityType Name="HoaDonNhap">
     <Key>
@@ -286,9 +352,9 @@
     <Property Name="MaNCC" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="ChiTietHDNs" Relationship="QLCafeModel.FK__ChiTietHD__MaHDN__4222D4EF" FromRole="HoaDonNhap" ToRole="ChiTietHDN" />
-    <NavigationProperty Name="NhaCungCap" Relationship="QLCafeModel.FK__HoaDonNha__MaNCC__3E52440B" FromRole="HoaDonNhap" ToRole="NhaCungCap" />
-    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__HoaDonNhap__MaNV__3F466844" FromRole="HoaDonNhap" ToRole="NhanVien" />
+    <NavigationProperty Name="ChiTietHDNs" Relationship="QLCafeModel.FK__ChiTietHD__MaHDN__5441852A" FromRole="HoaDonNhap" ToRole="ChiTietHDN" />
+    <NavigationProperty Name="NhaCungCap" Relationship="QLCafeModel.FK__HoaDonNha__MaNCC__5070F446" FromRole="HoaDonNhap" ToRole="NhaCungCap" />
+    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__HoaDonNhap__MaNV__5165187F" FromRole="HoaDonNhap" ToRole="NhanVien" />
   </EntityType>
   <EntityType Name="NguyenLieu">
     <Key>
@@ -299,8 +365,8 @@
     <Property Name="DonVi" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="SoLuongTon" Type="Double" Nullable="false" />
-    <NavigationProperty Name="ChiTietHDNs" Relationship="QLCafeModel.FK__ChiTietHDN__MaNL__4316F928" FromRole="NguyenLieu" ToRole="ChiTietHDN" />
-    <NavigationProperty Name="CongThucDoUongs" Relationship="QLCafeModel.FK__CongThucDo__MaNL__3B75D760" FromRole="NguyenLieu" ToRole="CongThucDoUong" />
+    <NavigationProperty Name="ChiTietHDNs" Relationship="QLCafeModel.FK__ChiTietHDN__MaNL__5535A963" FromRole="NguyenLieu" ToRole="ChiTietHDN" />
+    <NavigationProperty Name="CongThucDoUongs" Relationship="QLCafeModel.FK__CongThucDo__MaNL__4D94879B" FromRole="NguyenLieu" ToRole="CongThucDoUong" />
   </EntityType>
   <EntityType Name="NhaCungCap">
     <Key>
@@ -310,7 +376,7 @@
     <Property Name="TenNCC" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="SDT" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="HoaDonNhaps" Relationship="QLCafeModel.FK__HoaDonNha__MaNCC__3E52440B" FromRole="NhaCungCap" ToRole="HoaDonNhap" />
+    <NavigationProperty Name="HoaDonNhaps" Relationship="QLCafeModel.FK__HoaDonNha__MaNCC__5070F446" FromRole="NhaCungCap" ToRole="HoaDonNhap" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -323,11 +389,21 @@
     <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="NgayNhanViec" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Luong" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-    <NavigationProperty Name="ChiTietCaLams" Relationship="QLCafeModel.FK__ChiTietCaL__MaNV__286302EC" FromRole="NhanVien" ToRole="ChiTietCaLam" />
-    <NavigationProperty Name="ChiTietLuongs" Relationship="QLCafeModel.FK__ChiTietLuo__MaNV__2C3393D0" FromRole="NhanVien" ToRole="ChiTietLuong" />
-    <NavigationProperty Name="HoaDonBans" Relationship="QLCafeModel.FK__HoaDonBan__MaNV__49C3F6B7" FromRole="NhanVien" ToRole="HoaDonBan" />
-    <NavigationProperty Name="HoaDonNhaps" Relationship="QLCafeModel.FK__HoaDonNhap__MaNV__3F466844" FromRole="NhanVien" ToRole="HoaDonNhap" />
-    <NavigationProperty Name="TaiKhoans" Relationship="QLCafeModel.FK__TaiKhoan__MaNV__2F10007B" FromRole="NhanVien" ToRole="TaiKhoan" />
+    <NavigationProperty Name="ChiTietCaLams" Relationship="QLCafeModel.FK__ChiTietCaL__MaNV__3A81B327" FromRole="NhanVien" ToRole="ChiTietCaLam" />
+    <NavigationProperty Name="ChiTietLuongs" Relationship="QLCafeModel.FK__ChiTietLuo__MaNV__3E52440B" FromRole="NhanVien" ToRole="ChiTietLuong" />
+    <NavigationProperty Name="HoaDonBans" Relationship="QLCafeModel.FK__HoaDonBan__MaNV__5BE2A6F2" FromRole="NhanVien" ToRole="HoaDonBan" />
+    <NavigationProperty Name="HoaDonNhaps" Relationship="QLCafeModel.FK__HoaDonNhap__MaNV__5165187F" FromRole="NhanVien" ToRole="HoaDonNhap" />
+    <NavigationProperty Name="TaiKhoans" Relationship="QLCafeModel.FK__TaiKhoan__MaNV__412EB0B6" FromRole="NhanVien" ToRole="TaiKhoan" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -338,196 +414,8 @@
     <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="LoaiTK" Type="Boolean" Nullable="false" />
     <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__TaiKhoan__MaNV__2F10007B" FromRole="TaiKhoan" ToRole="NhanVien" />
+    <NavigationProperty Name="NhanVien" Relationship="QLCafeModel.FK__TaiKhoan__MaNV__412EB0B6" FromRole="TaiKhoan" ToRole="NhanVien" />
   </EntityType>
-  <EntityType Name="Cau2_view">
-    <Key>
-      <PropertyRef Name="MaDU" />
-      <PropertyRef Name="TenDU" />
-    </Key>
-    <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="SLBan" Type="Int32" />
-  </EntityType>
-  <EntityType Name="Cau6_view">
-    <Key>
-      <PropertyRef Name="MaHDB" />
-      <PropertyRef Name="NgayLap" />
-      <PropertyRef Name="MaNV" />
-    </Key>
-    <Property Name="MaHDB" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="TriGia" Type="Decimal" Precision="19" Scale="4" />
-  </EntityType>
-  <Association Name="FK__HoaDonBan__MaBan__48CFD27E">
-    <End Type="QLCafeModel.Ban" Role="Ban" Multiplicity="1" />
-    <End Type="QLCafeModel.HoaDonBan" Role="HoaDonBan" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Ban">
-        <PropertyRef Name="MaBan" />
-      </Principal>
-      <Dependent Role="HoaDonBan">
-        <PropertyRef Name="MaBan" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietCaL__MaCa__29572725">
-    <End Type="QLCafeModel.CaLam" Role="CaLam" Multiplicity="1" />
-    <End Type="QLCafeModel.ChiTietCaLam" Role="ChiTietCaLam" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CaLam">
-        <PropertyRef Name="MaCa" />
-      </Principal>
-      <Dependent Role="ChiTietCaLam">
-        <PropertyRef Name="MaCa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietCaL__MaNV__286302EC">
-    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
-    <End Type="QLCafeModel.ChiTietCaLam" Role="ChiTietCaLam" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhanVien">
-        <PropertyRef Name="MaNV" />
-      </Principal>
-      <Dependent Role="ChiTietCaLam">
-        <PropertyRef Name="MaNV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietHD__MaHDB__4D94879B">
-    <End Type="QLCafeModel.HoaDonBan" Role="HoaDonBan" Multiplicity="1" />
-    <End Type="QLCafeModel.ChiTietHDB" Role="ChiTietHDB" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="HoaDonBan">
-        <PropertyRef Name="MaHDB" />
-      </Principal>
-      <Dependent Role="ChiTietHDB">
-        <PropertyRef Name="MaHDB" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietHDB__MaDU__4E88ABD4">
-    <End Type="QLCafeModel.DoUong" Role="DoUong" Multiplicity="1" />
-    <End Type="QLCafeModel.ChiTietHDB" Role="ChiTietHDB" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="DoUong">
-        <PropertyRef Name="MaDU" />
-      </Principal>
-      <Dependent Role="ChiTietHDB">
-        <PropertyRef Name="MaDU" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietHD__MaHDN__4222D4EF">
-    <End Type="QLCafeModel.HoaDonNhap" Role="HoaDonNhap" Multiplicity="1" />
-    <End Type="QLCafeModel.ChiTietHDN" Role="ChiTietHDN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="HoaDonNhap">
-        <PropertyRef Name="MaHDN" />
-      </Principal>
-      <Dependent Role="ChiTietHDN">
-        <PropertyRef Name="MaHDN" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietHDN__MaNL__4316F928">
-    <End Type="QLCafeModel.NguyenLieu" Role="NguyenLieu" Multiplicity="1" />
-    <End Type="QLCafeModel.ChiTietHDN" Role="ChiTietHDN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NguyenLieu">
-        <PropertyRef Name="MaNL" />
-      </Principal>
-      <Dependent Role="ChiTietHDN">
-        <PropertyRef Name="MaNL" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietLuo__MaNV__2C3393D0">
-    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
-    <End Type="QLCafeModel.ChiTietLuong" Role="ChiTietLuong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhanVien">
-        <PropertyRef Name="MaNV" />
-      </Principal>
-      <Dependent Role="ChiTietLuong">
-        <PropertyRef Name="MaNV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CongThucDo__MaDU__3A81B327">
-    <End Type="QLCafeModel.DoUong" Role="DoUong" Multiplicity="1" />
-    <End Type="QLCafeModel.CongThucDoUong" Role="CongThucDoUong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="DoUong">
-        <PropertyRef Name="MaDU" />
-      </Principal>
-      <Dependent Role="CongThucDoUong">
-        <PropertyRef Name="MaDU" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CongThucDo__MaNL__3B75D760">
-    <End Type="QLCafeModel.NguyenLieu" Role="NguyenLieu" Multiplicity="1" />
-    <End Type="QLCafeModel.CongThucDoUong" Role="CongThucDoUong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NguyenLieu">
-        <PropertyRef Name="MaNL" />
-      </Principal>
-      <Dependent Role="CongThucDoUong">
-        <PropertyRef Name="MaNL" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__HoaDonBan__MaNV__49C3F6B7">
-    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
-    <End Type="QLCafeModel.HoaDonBan" Role="HoaDonBan" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhanVien">
-        <PropertyRef Name="MaNV" />
-      </Principal>
-      <Dependent Role="HoaDonBan">
-        <PropertyRef Name="MaNV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__HoaDonNha__MaNCC__3E52440B">
-    <End Type="QLCafeModel.NhaCungCap" Role="NhaCungCap" Multiplicity="1" />
-    <End Type="QLCafeModel.HoaDonNhap" Role="HoaDonNhap" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhaCungCap">
-        <PropertyRef Name="MaNCC" />
-      </Principal>
-      <Dependent Role="HoaDonNhap">
-        <PropertyRef Name="MaNCC" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__HoaDonNhap__MaNV__3F466844">
-    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
-    <End Type="QLCafeModel.HoaDonNhap" Role="HoaDonNhap" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhanVien">
-        <PropertyRef Name="MaNV" />
-      </Principal>
-      <Dependent Role="HoaDonNhap">
-        <PropertyRef Name="MaNV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TaiKhoan__MaNV__2F10007B">
-    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
-    <End Type="QLCafeModel.TaiKhoan" Role="TaiKhoan" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhanVien">
-        <PropertyRef Name="MaNV" />
-      </Principal>
-      <Dependent Role="TaiKhoan">
-        <PropertyRef Name="MaNV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityType Name="Cau1_view">
     <Key>
       <PropertyRef Name="MaDU" />
@@ -539,6 +427,15 @@
     <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="MaNL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Cau2_view">
+    <Key>
+      <PropertyRef Name="MaDU" />
+      <PropertyRef Name="TenDU" />
+    </Key>
+    <Property Name="MaDU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TenDU" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SLBan" Type="Int32" />
   </EntityType>
   <EntityType Name="Cau4_view">
     <Key>
@@ -561,6 +458,17 @@
     <Property Name="DonVi" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="SoLuongTieuThu" Type="Double" />
   </EntityType>
+  <EntityType Name="Cau6_view">
+    <Key>
+      <PropertyRef Name="MaHDB" />
+      <PropertyRef Name="NgayLap" />
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaHDB" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TriGia" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
   <EntityType Name="Cau7_view">
     <Key>
       <PropertyRef Name="MaNV" />
@@ -568,4 +476,214 @@
     <Property Name="MaNV" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="SoLanDiLam" Type="Int32" />
   </EntityType>
+  <Association Name="FK__HoaDonBan__MaBan__5AEE82B9">
+    <End Type="QLCafeModel.Ban" Role="Ban" Multiplicity="1" />
+    <End Type="QLCafeModel.HoaDonBan" Role="HoaDonBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ban">
+        <PropertyRef Name="MaBan" />
+      </Principal>
+      <Dependent Role="HoaDonBan">
+        <PropertyRef Name="MaBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietCaL__MaCa__3B75D760">
+    <End Type="QLCafeModel.CaLam" Role="CaLam" Multiplicity="1" />
+    <End Type="QLCafeModel.ChiTietCaLam" Role="ChiTietCaLam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CaLam">
+        <PropertyRef Name="MaCa" />
+      </Principal>
+      <Dependent Role="ChiTietCaLam">
+        <PropertyRef Name="MaCa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietCaL__MaNV__3A81B327">
+    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+    <End Type="QLCafeModel.ChiTietCaLam" Role="ChiTietCaLam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="ChiTietCaLam">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietHD__MaHDB__5FB337D6">
+    <End Type="QLCafeModel.HoaDonBan" Role="HoaDonBan" Multiplicity="1" />
+    <End Type="QLCafeModel.ChiTietHDB" Role="ChiTietHDB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDonBan">
+        <PropertyRef Name="MaHDB" />
+      </Principal>
+      <Dependent Role="ChiTietHDB">
+        <PropertyRef Name="MaHDB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietHDB__MaDU__60A75C0F">
+    <End Type="QLCafeModel.DoUong" Role="DoUong" Multiplicity="1" />
+    <End Type="QLCafeModel.ChiTietHDB" Role="ChiTietHDB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoUong">
+        <PropertyRef Name="MaDU" />
+      </Principal>
+      <Dependent Role="ChiTietHDB">
+        <PropertyRef Name="MaDU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietHD__MaHDN__5441852A">
+    <End Type="QLCafeModel.HoaDonNhap" Role="HoaDonNhap" Multiplicity="1" />
+    <End Type="QLCafeModel.ChiTietHDN" Role="ChiTietHDN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDonNhap">
+        <PropertyRef Name="MaHDN" />
+      </Principal>
+      <Dependent Role="ChiTietHDN">
+        <PropertyRef Name="MaHDN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietHDN__MaNL__5535A963">
+    <End Type="QLCafeModel.NguyenLieu" Role="NguyenLieu" Multiplicity="1" />
+    <End Type="QLCafeModel.ChiTietHDN" Role="ChiTietHDN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguyenLieu">
+        <PropertyRef Name="MaNL" />
+      </Principal>
+      <Dependent Role="ChiTietHDN">
+        <PropertyRef Name="MaNL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietLuo__MaNV__3E52440B">
+    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+    <End Type="QLCafeModel.ChiTietLuong" Role="ChiTietLuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="ChiTietLuong">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CongThucDo__MaDU__4CA06362">
+    <End Type="QLCafeModel.DoUong" Role="DoUong" Multiplicity="1" />
+    <End Type="QLCafeModel.CongThucDoUong" Role="CongThucDoUong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoUong">
+        <PropertyRef Name="MaDU" />
+      </Principal>
+      <Dependent Role="CongThucDoUong">
+        <PropertyRef Name="MaDU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CongThucDo__MaNL__4D94879B">
+    <End Type="QLCafeModel.NguyenLieu" Role="NguyenLieu" Multiplicity="1" />
+    <End Type="QLCafeModel.CongThucDoUong" Role="CongThucDoUong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguyenLieu">
+        <PropertyRef Name="MaNL" />
+      </Principal>
+      <Dependent Role="CongThucDoUong">
+        <PropertyRef Name="MaNL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDonBan__MaNV__5BE2A6F2">
+    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+    <End Type="QLCafeModel.HoaDonBan" Role="HoaDonBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="HoaDonBan">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDonNha__MaNCC__5070F446">
+    <End Type="QLCafeModel.NhaCungCap" Role="NhaCungCap" Multiplicity="1" />
+    <End Type="QLCafeModel.HoaDonNhap" Role="HoaDonNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaCungCap">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="HoaDonNhap">
+        <PropertyRef Name="MaNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDonNhap__MaNV__5165187F">
+    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+    <End Type="QLCafeModel.HoaDonNhap" Role="HoaDonNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="HoaDonNhap">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaiKhoan__MaNV__412EB0B6">
+    <End Type="QLCafeModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+    <End Type="QLCafeModel.TaiKhoan" Role="TaiKhoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="TaiKhoan">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="Cau1_function1_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="DiaChi" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="SDT" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="NgayNhanViec" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="Luong" Nullable="false" Precision="19" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="cau2_function1_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="DiaChi" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="SDT" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="NgayNhanViec" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="Luong" Nullable="false" Precision="19" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="Cau4_func1_Result">
+    <Property Type="String" Name="MaDU" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="TenDU" Nullable="false" MaxLength="255" />
+    <Property Type="Decimal" Name="DonGia" Nullable="false" Precision="19" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="Cau5_func1_Result">
+    <Property Type="Double" Name="Số_lượng_tối_đa_có_thể_làm" Nullable="true" />
+    <Property Type="String" Name="Đơn_vị" Nullable="false" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="Cau6_func1_Result">
+    <Property Type="String" Name="MaBan" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="SoKhachNgoi" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>
