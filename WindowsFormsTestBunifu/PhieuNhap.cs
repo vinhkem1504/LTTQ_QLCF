@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
 using System.Windows.Forms;
@@ -13,7 +14,6 @@ namespace WindowsFormsTestBunifu
         QLCafeEntities1 db = new QLCafeEntities1();
         DataTable table_ChiTietHDN = new DataTable();
         bool success = false;
-        bool isInsertMode = false;
         public frmPhieuNhap()
         {
             InitializeComponent();
@@ -25,6 +25,8 @@ namespace WindowsFormsTestBunifu
             LoadCbbMaNhaCungCap();
             LoadCbbMaNguyenLieu();
             LoadDataGridView();
+            cbbMaNCC.SelectedIndex = -1;
+            cbbMaNL.SelectedIndex = -1;
         }
         private void frmPhieuNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -67,6 +69,9 @@ namespace WindowsFormsTestBunifu
         {
             if (cbbMaNL.SelectedIndex == -1)
             {
+                txtTenNL.Text = String.Empty;
+                txtDonViNL.Text = String.Empty;
+                txtDonGiaNL.Text = String.Empty;
                 return;
             }
             txtSoLuongNhap.ReadOnly = false;
@@ -91,40 +96,44 @@ namespace WindowsFormsTestBunifu
         }
         private void btnCapNhatNCC_Click(object sender, EventArgs e)
         {
-            cbbMaNCC.SelectedIndex = -1;
             if (btnCapNhatNCC.Text == "Cập nhật NCC")
             {
+                cbbMaNCC.SelectedIndex = -1;
                 txtTenNCC.ReadOnly = txtDiaChiNCC.ReadOnly = txtDienThoaiNCC.ReadOnly = false;
                 btnXoaNCC.Enabled = false;
+                txtTenNCC.Focus();
                 btnCapNhatNCC.Text = "Lưu thay đổi";
             }
-            else if(btnCapNhatNCC.Text == "Lưu thay đổi")
+            else if (btnCapNhatNCC.Text == "Lưu thay đổi")
             {
-                string id = cbbMaNCC.Text != "" ? cbbMaNCC.Text : Autocode(db.NhaCungCaps, "NCC" + 
-                                                                           DateTime.Now.Day.ToString() + 
-                                                                           DateTime.Now.Month.ToString() + 
+                string id = cbbMaNCC.Text != "" ? cbbMaNCC.Text : Autocode(db.NhaCungCaps, "NCC" +
+                                                                           DateTime.Now.Day.ToString() +
+                                                                           DateTime.Now.Month.ToString() +
                                                                            DateTime.Now.Year.ToString());
-                if(id == cbbMaNCC.Text)
+                if (id == cbbMaNCC.Text)
                 {
                     var ncc = db.NhaCungCaps.Find(id);
-                    ncc.TenNCC = txtTenNCC.Text;
-                    ncc.DiaChi = txtDiaChiNCC.Text;
-                    ncc.SDT = txtDienThoaiNCC.Text;
-                } 
+                    ncc.TenNCC = (txtTenNCC.Text == String.Empty) ? "Chưa nhập tên" : txtTenNCC.Text;
+                    ncc.DiaChi = (txtDiaChiNCC.Text == String.Empty) ? "Chưa nhập địa chỉ" : txtDiaChiNCC.Text;
+                    ncc.SDT = (txtDienThoaiNCC.Text == String.Empty) ? "Chưa nhập số điện thoại" : txtDienThoaiNCC.Text;
+                }
                 else
                 {
                     db.NhaCungCaps.Add(new NhaCungCap()
                     {
                         MaNCC = id,
-                        TenNCC = txtTenNCC.Text,
-                        DiaChi = txtDiaChiNCC.Text,
-                        SDT = txtDienThoaiNCC.Text
+                        TenNCC = txtTenNCC.Text == String.Empty ? "Chưa nhập tên" : txtTenNCC.Text,
+                        DiaChi = (txtDiaChiNCC.Text == String.Empty) ? "Chưa nhập địa chỉ" : txtDiaChiNCC.Text,
+                        SDT = (txtDienThoaiNCC.Text == String.Empty) ? "Chưa nhập số điện thoại" : txtDienThoaiNCC.Text
                     });
                 }
+
                 db.SaveChanges();
+                MessageBox.Show($"Đã thêm cập nhật nhà cung cấp có mã {id}", "Thông báo");
                 LoadCbbMaNhaCungCap();
                 txtTenNCC.ReadOnly = txtDiaChiNCC.ReadOnly = txtDienThoaiNCC.ReadOnly = true;
                 btnXoaNCC.Enabled = true;
+                cbbMaNCC.SelectedIndex = -1;
                 btnCapNhatNCC.Text = "Cập nhật NCC";
             }
         }
@@ -138,30 +147,40 @@ namespace WindowsFormsTestBunifu
         {
             try
             {
+                var hdn_ncc = (from hdn in db.HoaDonNhaps
+                               select hdn.MaNCC).ToList();
+                if (hdn_ncc.Contains(cbbMaNCC.Text))
+                {
+                    MessageBox.Show("Nhà cung cấp đã có hóa đơn nhập.\nMời xóa hóa đơn nhập trước khi xóa nhà cung cấp!", "Thông báo");
+                    return;
+                }
+
                 var ncc = db.NhaCungCaps.Find(cbbMaNCC.Text);
+
                 db.NhaCungCaps.Remove(ncc);
                 db.SaveChanges();
                 LoadCbbMaNhaCungCap();
+                cbbMaNCC.SelectedIndex = -1;
                 MessageBox.Show("Xóa nhà cung cấp thành công!", "Thông báo");
             }
-            catch (Exception)
+            catch (ArgumentNullException)
             {
                 MessageBox.Show("Chưa chọn nhà cung cấp muốn xóa", "Thông báo");
             }
-
-
         }
         private void btnThemNL_Click(object sender, EventArgs e)
         {
-            if (cbbMaNL.SelectedIndex != -1)
+            if (cbbMaNL.SelectedIndex == -1)
             {
-                if (txtSoLuongNhap.Text == String.Empty)
-                {
-                    MessageBox.Show("Bạn chưa đặt số lượng muốn nhập!", "Thông báo");
-                    return;
-                }
-                addNguyenLieu();
+                MessageBox.Show("Bạn chưa chọn nguyên liệu muốn nhập!", "Thông báo");
+                return;
             }
+            if (txtSoLuongNhap.Text == String.Empty)
+            {
+                MessageBox.Show("Bạn chưa đặt số lượng muốn nhập!", "Thông báo");
+                return;
+            }
+            addNguyenLieu();
         }
         private void btnXoaNL_Click(object sender, EventArgs e)
         {
@@ -169,25 +188,27 @@ namespace WindowsFormsTestBunifu
             decimal tienTru = 0;
             try
             {
-                if(dgvChiTietPhieuNhap.Rows.Count > 1)
+                if (dgvChiTietPhieuNhap.Rows.Count == 1)
                 {
-                    maNL = dgvChiTietPhieuNhap.CurrentRow.Cells[0].Value.ToString();
-                    tienTru = decimal.Parse(dgvChiTietPhieuNhap.CurrentRow.Cells[3].Value.ToString());
-                    foreach (DataRow row in table_ChiTietHDN.Rows)
-                    {
-                        if (row.ItemArray[0].ToString() == maNL)
-                        {
-                            table_ChiTietHDN.Rows.Remove(row);
-                            break;
-                        }
-                    }
-                    txtTongTienPhieuNhap.Text = (decimal.Parse(txtTongTienPhieuNhap.Text) - tienTru).ToString();
-                    dgvChiTietPhieuNhap.DataSource = table_ChiTietHDN;
+                    MessageBox.Show("Danh sách nguyên liệu nhập trống!", "Thông báo");
+                    return;
                 }
+                maNL = dgvChiTietPhieuNhap.CurrentRow.Cells[0].Value.ToString();
+                tienTru = decimal.Parse(dgvChiTietPhieuNhap.CurrentRow.Cells[4].Value.ToString());
+                foreach (DataRow row in table_ChiTietHDN.Rows)
+                {
+                    if (row.ItemArray[0].ToString() == maNL)
+                    {
+                        table_ChiTietHDN.Rows.Remove(row);
+                        break;
+                    }
+                }
+                txtTongTienPhieuNhap.Text = (decimal.Parse(txtTongTienPhieuNhap.Text) - tienTru).ToString();
+                dgvChiTietPhieuNhap.DataSource = table_ChiTietHDN;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Xin chọn nguyên liệu cần xóa !", "Thông báo");
+                MessageBox.Show("Xóa không thành công!", "Thông báo");
             }
         }
         private void txtSoLuongNL_KeyPress(object sender, KeyPressEventArgs e)
@@ -211,6 +232,7 @@ namespace WindowsFormsTestBunifu
         {
             table_ChiTietHDN.Columns.Add("Mã nguyên liệu", typeof(string));
             table_ChiTietHDN.Columns.Add("Tên nguyên liệu", typeof(string));
+            table_ChiTietHDN.Columns.Add("Đơn vị", typeof(string));
             table_ChiTietHDN.Columns.Add("Số lượng nhập", typeof(int));
             table_ChiTietHDN.Columns.Add("Thành tiền", typeof(decimal));
             dgvChiTietPhieuNhap.DataSource = table_ChiTietHDN;
@@ -255,6 +277,7 @@ namespace WindowsFormsTestBunifu
             row = table_ChiTietHDN.NewRow();
             row["Mã nguyên liệu"] = cbbMaNL.SelectedItem.ToString();
             row["Tên nguyên liệu"] = txtTenNL.Text;
+            row["Đơn vị"] = txtDonViNL.Text;
             row["Số lượng nhập"] = int.Parse(txtSoLuongNhap.Text);
             row["Thành tiền"] = decimal.Parse(txtThanhTien.Text);
 
